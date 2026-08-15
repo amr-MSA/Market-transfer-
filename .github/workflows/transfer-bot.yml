@@ -26,6 +26,7 @@ jobs:
       - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_ADMIN_IDS: ${{ secrets.TELEGRAM_ADMIN_IDS }}
           # Channel list lives in config/channels.json, not a secret.
           # Everything below is optional — the bot degrades gracefully
           # (skips that verification source) if a secret is unset.
@@ -38,7 +39,7 @@ jobs:
         run: |
           git config user.name "transfer-confirmation-bot"
           git config user.email "actions@github.com"
-          git add data/transfers.json
+          git add data/transfers.json data/bot_updates.json config/channels.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore: update transfer state"
           git pull --rebase origin "${GITHUB_REF_NAME}"
