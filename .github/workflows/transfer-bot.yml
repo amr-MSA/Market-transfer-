@@ -1,0 +1,45 @@
+name: Transfer Confirmation Bot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: transfer-confirmation-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # Channel list lives in config/channels.json, not a secret.
+          # Everything below is optional — the bot degrades gracefully
+          # (skips that verification source) if a secret is unset.
+          X_API_BEARER_TOKEN: ${{ secrets.X_API_BEARER_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_APP_IG_USER_ID: ${{ secrets.INSTAGRAM_APP_IG_USER_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m bot.main
+      - name: Persist state
+        run: |
+          git config user.name "transfer-confirmation-bot"
+          git config user.email "actions@github.com"
+          git add data/transfers.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore: update transfer state"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
