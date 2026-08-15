@@ -1,0 +1,18 @@
+# Secrets — never commit real tokens/keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# NOTE: data/transfers.json is intentionally NOT ignored — the GitHub
+# Actions workflow commits it after every run to persist dedup/delivery
+# state between runs. Ignoring it would make the bot re-publish every
+# transfer on every single run.
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
