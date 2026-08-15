@@ -1,0 +1,191 @@
+{
+  "clubs": [
+    {
+      "name": "Arsenal",
+      "domain": "arsenal.com",
+      "aliases": [
+        "Arsenal"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Chelsea",
+      "domain": "chelseafc.com",
+      "aliases": [
+        "Chelsea"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Liverpool",
+      "domain": "liverpoolfc.com",
+      "aliases": [
+        "Liverpool"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Manchester City",
+      "domain": "mancity.com",
+      "aliases": [
+        "Manchester City"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Manchester United",
+      "domain": "manutd.com",
+      "aliases": [
+        "Manchester United"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Tottenham",
+      "domain": "tottenhamhotspur.com",
+      "aliases": [
+        "Tottenham"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Newcastle United",
+      "domain": "newcastleunited.com",
+      "aliases": [
+        "Newcastle United"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Aston Villa",
+      "domain": "avfc.co.uk",
+      "aliases": [
+        "Aston Villa"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Real Madrid",
+      "domain": "realmadrid.com",
+      "aliases": [
+        "Real Madrid"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Barcelona",
+      "domain": "fcbarcelona.com",
+      "aliases": [
+        "Barcelona"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Atletico Madrid",
+      "domain": "atleticodemadrid.com",
+      "aliases": [
+        "Atletico Madrid"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Bayern Munich",
+      "domain": "fcbayern.com",
+      "aliases": [
+        "Bayern Munich"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Borussia Dortmund",
+      "domain": "bvb.de",
+      "aliases": [
+        "Borussia Dortmund"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "domain": "psg.fr",
+      "aliases": [
+        "Paris Saint-Germain"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Juventus",
+      "domain": "juventus.com",
+      "aliases": [
+        "Juventus"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "Inter Milan",
+      "domain": "inter.it",
+      "aliases": [
+        "Inter Milan"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    },
+    {
+      "name": "AC Milan",
+      "domain": "acmilan.com",
+      "aliases": [
+        "AC Milan"
+      ],
+      "official_feeds": [],
+      "x_user_id": "",
+      "x_username": "",
+      "instagram_username": ""
+    }
+  ]
+}

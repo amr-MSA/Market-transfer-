@@ -1,0 +1,18 @@
+{
+  "fabrizio_channel": "https://t.me/s/fabrizioromanotg",
+  "poll_minutes": 5,
+  "request_timeout_seconds": 20,
+  "official_max_age_hours": 24,
+  "publish_unconfirmed": true,
+  "google_news_enabled": true,
+  "user_agent": "TransferConfirmationBot/4.0",
+  "social_verification_enabled": true,
+  "x_enabled": true,
+  "instagram_enabled": true,
+  "social_check_max_age_hours": 24,
+  "official_check_max_age_hours": 24,
+  "channel_send_delay_seconds": 0.35,
+  "gemini_enabled": true,
+  "gemini_model": "gemini-3.6-flash",
+  "state_retention_days": 60
+}
