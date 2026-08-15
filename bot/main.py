@@ -13,6 +13,7 @@ from .social_x import XVerifier
 from .social_instagram import InstagramVerifier
 from .publisher import TelegramPublisher
 from .state import StateStore
+from .admin import TelegramAdmin
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
@@ -72,6 +73,17 @@ def main():
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     if not token: raise RuntimeError("TELEGRAM_BOT_TOKEN is required")
 
+    # GitHub Actions is not a permanent process. Poll Telegram for admin
+    # commands once per run and persist the update offset in the repository.
+    admin_ids = [x.strip() for x in os.getenv("TELEGRAM_ADMIN_IDS", "").split(",") if x.strip()]
+    if admin_ids:
+        admin = TelegramAdmin(
+            token, admin_ids, ROOT/"config/channels.json", ROOT/"data/transfers.json",
+            ROOT/"data/bot_updates.json", settings["request_timeout_seconds"]
+        )
+    else:
+        admin = None
+
     channels_config = load_json(ROOT/"config/channels.json")["channels"]
     channels = [c for c in channels_config if c.get("enabled", True)]
     if not channels:
@@ -119,6 +131,14 @@ def main():
         settings["request_timeout_seconds"],
         settings.get("channel_send_delay_seconds", 0.35)
     )
+
+    if admin:
+        print("[telegram-admin]", admin.process(publisher))
+        # Reload channels after /addchannel so a newly added client channel
+        # can be used by this same run.
+        channels_config = load_json(ROOT/"config/channels.json")["channels"]
+        channels = [c for c in channels_config if c.get("enabled", True)]
+        publisher.channels = channels
 
     for post in source.fetch():
         text = post["text"]
