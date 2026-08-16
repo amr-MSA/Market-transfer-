@@ -13,5 +13,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "2e3ae75c41e46d44d067",
+    "player": "João Cancelo",
+    "to_club": "Barcelona",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64723",
+    "fabrizio_text": "🚨 🔵 🔴 BREAKING: João Cancelo to Barcelona, here we go! Agreement done on contract termination with Al Hilal. Cancelo has authoritazion to travel early next week, as revealed overnight. 🔜 🇵🇹 João agreed all terms with Barça since June and now ready to sign, as @ffpolo confirms. https://t.co/JSAC8rawJO — Fabrizio Romano ( @FabrizioRomano ) Aug 16, 2026",
+    "discovered_at": "2026-08-16T17:34:05.861058+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
