@@ -43,5 +43,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "3c3bd046db124b18b78f",
+    "player": "Guglielmo Vicario",
+    "to_club": "Juventus",
+    "from_club": "Tottenham",
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64764",
+    "fabrizio_text": "🚨 ⚪️ ⚫️ Juventus agree deal to sign Guglielmo Vicario from Tottenham, here we go! Spurs accept loan proposal with buy option clause - not mandatory. Vicario wanted the move and leaves #THFC today. New goalkeeper for Juventus. https://t.co/Ix6nbs9TCn — Fabrizio Romano ( @FabrizioRomano ) Aug 17, 2026",
+    "discovered_at": "2026-08-17T08:08:34.931972+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
