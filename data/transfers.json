@@ -8,11 +8,14 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64694",
     "fabrizio_text": "🚨 🟡 ⚫️ Joey Veerman to Borussia Dortmund, here we go! Deal agreed for €21.5m from PSV Eindhoven. Five year contract and medical booked for the midfielder who’s set to leave PSV. Veerman will undergo his medical tomorrow, as @RikElfrink reports. https://t.co/2CZeCo4Uqs — Fabrizio Romano ( @FabrizioRomano ) Aug 16, 2026",
     "discovered_at": "2026-08-16T12:54:26.212933+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT"
+    },
+    "unconfirmed_published_at": "2026-08-17T12:59:13.103957+00:00"
   },
   {
     "transfer_id": "2e3ae75c41e46d44d067",
