@@ -14,5 +14,15 @@
   "channel_send_delay_seconds": 0.35,
   "gemini_enabled": true,
   "gemini_model": "gemini-3.6-flash",
-  "state_retention_days": 60
+  "state_retention_days": 60,
+  "news_enabled": true,
+  "news_max_age_hours": 2,
+  "news_max_per_run": 1,
+  "news_cooldown_minutes": 15,
+  "news_state_retention_days": 3,
+  "news_semantic_dedup_enabled": true,
+  "news_semantic_dedup_max_candidates": 8,
+  "news_semantic_dedup_threshold": 0.82,
+  "news_gemini_model": "gemini-2.5-flash",
+  "news_gemini_timeout_seconds": 30
 }
