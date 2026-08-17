@@ -28,5 +28,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "4ef124be9d6f778a14b5",
+    "player": "Giannīs Kōnstantelias",
+    "to_club": "Borussia Dortmund",
+    "from_club": "PAOK",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64760",
+    "fabrizio_text": "🚨 🟡 ⚫️ Borussia Dortmund have agreed deal to sign Giannīs Kōnstantelias, here we go! Documents signed between clubs and player side needed next, then time for club statement. Giannīs was in Dortmund on Sunday. Fee worth €32m add-ons included and 15% sell-on clause to PAOK. https://t.co/GoRLrq3eG9 — Fabrizio Romano ( @FabrizioRomano ) Aug 17, 2026",
+    "discovered_at": "2026-08-17T06:22:01.006150+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
