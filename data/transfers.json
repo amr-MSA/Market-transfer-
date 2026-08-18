@@ -88,5 +88,20 @@
       "-1003938445195": "SENT"
     },
     "unconfirmed_published_at": "2026-08-18T14:06:01.329115+00:00"
+  },
+  {
+    "transfer_id": "944f57de5f71e6ff0153",
+    "player": "Aaron Wan-Bissaka",
+    "to_club": "Aston Villa",
+    "from_club": "West Ham",
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64852",
+    "fabrizio_text": "🚨 🟣 🔵 Breaking: Aston Villa agree deal to sign Aaron Wan-Bissaka from West Ham, here we go! Deal in place on loan with mandatory buy clause, green light from the player to #AVFC project. Agreement between all parties. Green light for medical. https://t.co/COpiNOBHFe — Fabrizio Romano ( @FabrizioRomano ) Aug 18, 2026",
+    "discovered_at": "2026-08-18T17:14:30.097443+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
