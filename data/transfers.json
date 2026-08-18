@@ -80,10 +80,13 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64782",
     "fabrizio_text": "🚨 🔴 ⚫️ AC Milan agree deal to sign Diego Moreira from RC Strasbourg, here we go! Verbal agreement with paperwork being prepared at €50m fee plus add-ons and sell-on clause. More details to follow. Moreira only wanted AC Milan despite bids from Germany and UK. 🫱🏻‍🫲🏼 https://t.co/N7boxdyNaY — Fabrizio Romano ( @FabrizioRomano ) Aug 17, 2026",
     "discovered_at": "2026-08-17T13:43:32.528984+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT"
+    },
+    "unconfirmed_published_at": "2026-08-18T14:06:01.329115+00:00"
   }
 ]
