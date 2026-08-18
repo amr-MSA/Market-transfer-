@@ -26,11 +26,14 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64723",
     "fabrizio_text": "🚨 🔵 🔴 BREAKING: João Cancelo to Barcelona, here we go! Agreement done on contract termination with Al Hilal. Cancelo has authoritazion to travel early next week, as revealed overnight. 🔜 🇵🇹 João agreed all terms with Barça since June and now ready to sign, as @ffpolo confirms. https://t.co/JSAC8rawJO — Fabrizio Romano ( @FabrizioRomano ) Aug 16, 2026",
     "discovered_at": "2026-08-16T17:34:05.861058+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT"
+    },
+    "unconfirmed_published_at": "2026-08-18T12:37:03.508306+00:00"
   },
   {
     "transfer_id": "4ef124be9d6f778a14b5",
@@ -41,11 +44,14 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64760",
     "fabrizio_text": "🚨 🟡 ⚫️ Borussia Dortmund have agreed deal to sign Giannīs Kōnstantelias, here we go! Documents signed between clubs and player side needed next, then time for club statement. Giannīs was in Dortmund on Sunday. Fee worth €32m add-ons included and 15% sell-on clause to PAOK. https://t.co/GoRLrq3eG9 — Fabrizio Romano ( @FabrizioRomano ) Aug 17, 2026",
     "discovered_at": "2026-08-17T06:22:01.006150+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT"
+    },
+    "unconfirmed_published_at": "2026-08-18T12:37:03.508306+00:00"
   },
   {
     "transfer_id": "3c3bd046db124b18b78f",
@@ -56,11 +62,14 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64764",
     "fabrizio_text": "🚨 ⚪️ ⚫️ Juventus agree deal to sign Guglielmo Vicario from Tottenham, here we go! Spurs accept loan proposal with buy option clause - not mandatory. Vicario wanted the move and leaves #THFC today. New goalkeeper for Juventus. https://t.co/Ix6nbs9TCn — Fabrizio Romano ( @FabrizioRomano ) Aug 17, 2026",
     "discovered_at": "2026-08-17T08:08:34.931972+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT"
+    },
+    "unconfirmed_published_at": "2026-08-18T12:37:03.508306+00:00"
   },
   {
     "transfer_id": "fb689fadee50fc128997",
