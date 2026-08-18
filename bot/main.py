@@ -88,8 +88,6 @@ def main():
 
     channels_config = load_json(ROOT/"config/channels.json")["channels"]
     channels = [c for c in channels_config if c.get("enabled", True)]
-    if not channels:
-        raise RuntimeError("No enabled channels in config/channels.json")
 
     store = StateStore(ROOT/"data/transfers.json")
     state = store.load()
@@ -158,6 +156,12 @@ def main():
         channels_config = load_json(ROOT/"config/channels.json")["channels"]
         channels = [c for c in channels_config if c.get("enabled", True)]
         publisher.channels = channels
+
+    # An admin-only run is valid when there are no client channels yet.
+    # This is what allows /addchannel to bootstrap the first channel.
+    if not channels:
+        print("[channels] no enabled channels; admin work complete")
+        return
 
     # --------------------------------------------------------------
     # Year-round football news layer
