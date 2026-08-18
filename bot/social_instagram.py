@@ -1,6 +1,14 @@
 import requests
 from datetime import datetime, timedelta, timezone
 from .normalize import clean_text, name_match
+import re
+
+_TRANSFER_KEYWORDS = re.compile(
+    r"\b(sign(?:s|ed|ing)?|join(?:s|ed|ing)?|official|confirm(?:s|ed)?|"
+    r"complet(?:e|es|ed|ion)|welcome|unveil(?:s|ed)?|deal|transfer|"
+    r"loan|permanent|medical|contract)\b",
+    re.I,
+)
 
 # Graph API version isolated in one place rather than hard-coded inline,
 # so bumping it later is a one-line change.
@@ -49,6 +57,8 @@ class InstagramVerifier:
             if not name_match(player, caption):
                 continue
             if not any(name_match(alias, caption) for alias in club_aliases if alias):
+                continue
+            if not _TRANSFER_KEYWORDS.search(caption):
                 continue
             return {
                 "url": post.get("permalink"),

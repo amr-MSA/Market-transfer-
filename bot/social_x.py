@@ -1,6 +1,14 @@
 import requests
 from datetime import datetime, timedelta, timezone
 from .normalize import clean_text, name_match
+import re
+
+_TRANSFER_KEYWORDS = re.compile(
+    r"\b(sign(?:s|ed|ing)?|join(?:s|ed|ing)?|official|confirm(?:s|ed)?|"
+    r"complet(?:e|es|ed|ion)|welcome|unveil(?:s|ed)?|deal|transfer|"
+    r"loan|permanent|medical|contract)\b",
+    re.I,
+)
 
 class XVerifier:
     """Reads recent posts from a configured official X account.
@@ -46,6 +54,8 @@ class XVerifier:
             if not name_match(player, text):
                 continue
             if not any(name_match(alias, text) for alias in club_aliases if alias):
+                continue
+            if not _TRANSFER_KEYWORDS.search(text):
                 continue
             return {
                 "url": f"https://x.com/i/web/status/{post['id']}",

@@ -6,7 +6,7 @@ from .clubs import find_club
 from .fabrizio import FabrizioSource
 from .formatting import official_message, here_we_go_message, football_news_message
 from .news_sources import FootballNewsSource
-from .news_state import NewsState
+from .news_dedup import NewsDedupStore
 from .gemini_extractor import GeminiExtractor
 from .normalize import contains_here_we_go, fingerprint
 from .official import OfficialVerifier
@@ -146,9 +146,9 @@ def main():
                 settings.get("user_agent", "TransferConfirmationBot/5.0"),
                 settings.get("news_max_age_hours", 2),
             )
-            news_state = NewsState(
+            news_state = NewsDedupStore(
                 ROOT / "data/news.json",
-                settings.get("news_state_retention_days", 3),
+                settings.get("news_state_retention_days", 7),
             )
 
     if admin:
@@ -163,119 +163,49 @@ def main():
     # Year-round football news layer
     # --------------------------------------------------------------
     if news_source and news_state:
-        from .event_deduplicator import (
-            EventDeduplicator,
-            GeminiEventComparer,
-        )
+        from .news_extractor import GeminiNewsExtractor
 
         news_data = news_state.prune(news_state.load())
         candidates = news_source.fetch()
 
-        gemini = None
+        extractor = None
         gemini_key = os.getenv("GEMINI_API_KEY")
-        if (
-            gemini_key
-            and settings.get("news_semantic_dedup_enabled", True)
-        ):
-            gemini = GeminiEventComparer(
+        if gemini_key and settings.get("news_semantic_dedup_enabled", True):
+            extractor = GeminiNewsExtractor(
                 gemini_key,
-                settings.get("news_gemini_model", "gemini-2.5-flash"),
                 settings.get("news_gemini_timeout_seconds", 30),
+                settings.get("news_gemini_model", "gemini-2.5-flash"),
             )
 
-        deduplicator = EventDeduplicator(
-            news_data.setdefault("events", []),
-            gemini=gemini,
-            threshold=float(
-                settings.get("news_semantic_dedup_threshold", 0.82)
-            ),
-            max_candidates=int(
-                settings.get("news_semantic_dedup_max_candidates", 8)
-            ),
-        )
-
         max_per_run = max(0, int(settings.get("news_max_per_run", 1)))
-        cooldown_minutes = max(
-            0,
-            int(settings.get("news_cooldown_minutes", 15)),
-        )
-        channel_ids = [str(c["id"]) for c in channels]
-
-        latest_news = news_state.latest_publish_time(news_data)
-        now_news = datetime.now(timezone.utc)
-        cooldown_active = (
-            latest_news is not None
-            and now_news - latest_news
-            < timedelta(minutes=cooldown_minutes)
-        )
-
         sent_this_run = 0
 
-        if not cooldown_active:
-            for item in candidates:
-                if sent_this_run >= max_per_run:
-                    break
+        for item in candidates:
+            if sent_this_run >= max_per_run:
+                break
 
-                if news_state.was_fully_published(
-                    news_data,
-                    item["id"],
-                    channel_ids,
-                ):
-                    continue
+            # A strict structured event is required before an article can
+            # enter the seven-day duplicate cache.
+            if not extractor:
+                continue
 
-                event, method = deduplicator.find_or_create(
-                    item,
-                    news_data["events"],
-                )
-                deduplicator.attach(event, item)
+            event = extractor.extract(item)
+            if not event:
+                print(f"[news-skip] Gemini rejected: {item['title']!r}")
+                continue
 
-                print(
-                    f"[news-dedup] {method}: "
-                    f"{item['title']!r} -> {event['event_id']}"
-                )
+            if news_state.contains(news_data, event):
+                print(f"[news-duplicate] {event}")
+                continue
 
-                # If this exact event already produced a publication,
-                # don't publish another copy merely because a new source
-                # reported it. The new source is retained in the event.
-                if event.get("published_at"):
-                    continue
+            text = football_news_message(item)
+            results = publisher.send(text)
 
-                item_state = news_state.get(
-                    news_data,
-                    item["id"],
-                )
-                delivery = item_state.get("delivery", {})
-
-                pending_channels = [
-                    c for c in channels
-                    if delivery.get(str(c["id"])) != "SENT"
-                ]
-
-                if not pending_channels:
-                    continue
-
-                text = football_news_message(item)
-                results = publisher.send(
-                    text,
-                    channels=pending_channels,
-                )
-
-                news_state.mark_result(
-                    news_data,
-                    item["id"],
-                    results,
-                    now_news,
-                )
-
-                if results and all(r["ok"] for r in results):
-                    event["published_at"] = now_news.isoformat()
-                    event["published_url"] = item.get("url")
-                    sent_this_run += 1
-                else:
-                    print(
-                        f"[news-publish-partial] "
-                        f"title={item['title']!r}"
-                    )
+            if results and all(result["ok"] for result in results):
+                news_state.add(news_data, event)
+                sent_this_run += 1
+            else:
+                print(f"[news-publish-failed] title={item['title']!r}")
 
         news_state.save(news_data)
 

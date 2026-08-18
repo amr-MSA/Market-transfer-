@@ -31,13 +31,16 @@ class TelegramAdmin:
 
     def _load_updates(self):
         if not self.updates_path.exists():
-            return {"offset": 0}
+            return {"offset": 0, "addchannel_mode": False}
         try:
             with self.updates_path.open(encoding="utf-8") as f:
                 data = json.load(f)
-            return data if isinstance(data, dict) else {"offset": 0}
+            if not isinstance(data, dict):
+                return {"offset": 0, "addchannel_mode": False}
+            data.setdefault("addchannel_mode", False)
+            return data
         except (OSError, ValueError):
-            return {"offset": 0}
+            return {"offset": 0, "addchannel_mode": False}
 
     def _save_updates(self, data):
         self.updates_path.parent.mkdir(parents=True, exist_ok=True)
@@ -139,6 +142,8 @@ class TelegramAdmin:
             text = (message.get("text") or "").strip()
             chat_id = message.get("chat", {}).get("id")
 
+            addchannel_mode = bool(updates_state.get("addchannel_mode", False))
+
             if text == "/myid":
                 self._send(chat_id, f"🆔 Your Telegram ID is:\n{user_id}")
             elif text == "/health":
@@ -151,17 +156,22 @@ class TelegramAdmin:
                 total = len(results)
                 self._send(chat_id, f"🧪 Channel test complete: {ok}/{total} channels succeeded.")
             elif text == "/addchannel":
-                self._send(chat_id, "➕ Add-channel mode ready. Forward any post from the channel to me.")
+                updates_state["addchannel_mode"] = True
+                self._send(chat_id, "➕ Add-channel mode enabled. Forward one post from the target channel to me.")
+            elif text == "/cancel":
+                updates_state["addchannel_mode"] = False
+                self._send(chat_id, "🛑 Add-channel mode cancelled.")
             elif text.startswith("/"):
-                self._send(chat_id, "Commands: /myid /health /test /testchannel /addchannel")
+                self._send(chat_id, "Commands: /myid /health /test /testchannel /addchannel /cancel")
             else:
                 channel = self._forwarded_channel(message)
-                if channel:
+                if channel and addchannel_mode:
                     added = self._add_channel(channel)
+                    updates_state["addchannel_mode"] = False
                     status = "added" if added else "already existed; enabled"
                     self._send(chat_id, f"✅ Channel {status}.\n\nName: {channel['name']}\nID: {channel['id']}")
                 else:
-                    self._send(chat_id, "ℹ️ Forward a post from a Telegram channel to add it. Use /addchannel first if you like.")
+                    self._send(chat_id, "ℹ️ Use /addchannel first, then forward one post from the target channel.")
             processed += 1
 
         self._save_updates(updates_state)
