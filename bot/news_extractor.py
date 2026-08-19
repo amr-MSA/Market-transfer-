@@ -40,7 +40,7 @@ class GeminiNewsExtractor:
     is populated only for transfers and loans.
     """
 
-    def __init__(self, api_key, timeout=30, model="gemini-2.5-flash"):
+    def __init__(self, api_key, timeout=30, model="gemini-3.6-flash"):
         self.api_key = api_key
         self.timeout = timeout
         self.model = model
