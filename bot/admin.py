@@ -1,8 +1,11 @@
 import json
 import os
+import re
+import shlex
 from pathlib import Path
 
 import requests
+from .content_types import ALL, CONTENT_TYPES, normalize_content_types
 
 
 class TelegramAdmin:
@@ -81,19 +84,97 @@ class TelegramAdmin:
             return {"id": str(old["id"]), "name": old.get("title") or str(old["id"])}
         return None
 
+    @staticmethod
+    def _normalize_channel_id(value):
+        value = str(value or "").strip()
+        if re.fullmatch(r"-?\d+", value):
+            return value
+        if re.fullmatch(r"@[A-Za-z0-9_]{5,}", value):
+            return value
+        return None
+
     def _add_channel(self, channel):
+        channel_id = self._normalize_channel_id(channel.get("id"))
+        if not channel_id:
+            raise ValueError("Invalid channel ID. Use a numeric ID such as -1001234567890 or a public @username.")
+
         data = self._load_channels()
         channels = data.setdefault("channels", [])
         for existing in channels:
-            if str(existing.get("id")) == str(channel["id"]):
+            if str(existing.get("id")) == channel_id:
                 existing["enabled"] = True
                 if channel.get("name"):
                     existing["name"] = channel["name"]
                 self._save_channels(data)
                 return False
-        channels.append({"id": channel["id"], "name": channel["name"], "enabled": True})
+        channels.append({
+            "id": channel_id,
+            "name": channel.get("name") or channel_id,
+            "enabled": True,
+            "content_types": [ALL],
+        })
         self._save_channels(data)
         return True
+
+    def _set_channel_types(self, channel_id, values):
+        channel_id = self._normalize_channel_id(channel_id)
+        if not channel_id:
+            raise ValueError("Invalid channel ID.")
+        content_types = normalize_content_types(values)
+        data = self._load_channels()
+        for channel in data.get("channels", []):
+            if str(channel.get("id")) == channel_id:
+                channel["content_types"] = content_types
+                self._save_channels(data)
+                return content_types
+        return None
+
+    def _set_channel_enabled(self, channel_id, enabled):
+        channel_id = self._normalize_channel_id(channel_id)
+        if not channel_id:
+            raise ValueError("Invalid channel ID.")
+        data = self._load_channels()
+        for channel in data.get("channels", []):
+            if str(channel.get("id")) == channel_id:
+                channel["enabled"] = enabled
+                self._save_channels(data)
+                return True
+        return False
+
+    def _remove_channel(self, channel_id):
+        channel_id = self._normalize_channel_id(channel_id)
+        if not channel_id:
+            raise ValueError("Invalid channel ID.")
+        data = self._load_channels()
+        before = len(data.get("channels", []))
+        data["channels"] = [c for c in data.get("channels", []) if str(c.get("id")) != channel_id]
+        if len(data["channels"]) == before:
+            return False
+        self._save_channels(data)
+        return True
+
+    def _list_channels(self):
+        channels = self._load_channels().get("channels", [])
+        if not channels:
+            return "📢 No channels configured.\n\nUse /addchannel <channel_id> [name]."
+        lines = ["📢 Configured channels:"]
+        for channel in channels:
+            status = "enabled" if channel.get("enabled", True) else "disabled"
+            subscriptions = channel.get("content_types") or [ALL]
+            types = "الكل" if ALL in subscriptions else "، ".join(subscriptions)
+            lines.append(f"• {channel.get('name') or channel.get('id')} — {channel.get('id')} — {status}\n  الأنواع: {types}")
+        return "\n".join(lines)
+
+    @staticmethod
+    def _command_parts(text):
+        try:
+            parts = shlex.split(text)
+        except ValueError:
+            return [], ""
+        if not parts:
+            return [], ""
+        command = parts[0].split("@", 1)[0].lower()
+        return parts[1:], command
 
     def _health(self):
         channels = self._load_channels().get("channels", [])
@@ -141,37 +222,100 @@ class TelegramAdmin:
 
             text = (message.get("text") or "").strip()
             chat_id = message.get("chat", {}).get("id")
-
+            args, command = self._command_parts(text)
             addchannel_mode = bool(updates_state.get("addchannel_mode", False))
 
-            if text == "/myid":
+            if command == "/myid":
                 self._send(chat_id, f"🆔 Your Telegram ID is:\n{user_id}")
-            elif text == "/health":
+            elif command == "/health":
                 self._send(chat_id, self._health())
-            elif text == "/test":
+            elif command == "/test":
                 self._send(chat_id, self._test_parser())
-            elif text == "/testchannel":
+            elif command == "/testchannel":
                 results = publisher.send("🧪 Transfer Bot Test\n\nTelegram delivery is working correctly.")
                 ok = sum(1 for r in results if r["ok"])
                 total = len(results)
                 self._send(chat_id, f"🧪 Channel test complete: {ok}/{total} channels succeeded.")
-            elif text == "/addchannel":
-                updates_state["addchannel_mode"] = True
-                self._send(chat_id, "➕ Add-channel mode enabled. Forward one post from the target channel to me.")
-            elif text == "/cancel":
+            elif command == "/channels":
+                self._send(chat_id, self._list_channels())
+            elif command == "/types":
+                self._send(
+                    chat_id,
+                    "أنواع المحتوى المدعومة:\n" + "، ".join(CONTENT_TYPES) +
+                    "\n\nاستخدم: /settypes <channel_id> انتقال,إعارة,هدف\n"
+                    "أو: /settypes <channel_id> الكل"
+                )
+            elif command == "/addchannel":
+                if not args:
+                    updates_state["addchannel_mode"] = True
+                    self._send(
+                        chat_id,
+                        "➕ أرسل المعرّف مباشرة بهذا الشكل:\n/addchannel -1001234567890 اسم القناة\n"
+                        "أو لقناة عامة:\n/addchannel @channel_username اسم القناة\n\n"
+                        "ويمكنك أيضًا إعادة توجيه منشور كطريقة احتياطية."
+                    )
+                else:
+                    try:
+                        channel_id = args[0]
+                        name = " ".join(args[1:]).strip() or channel_id
+                        added = self._add_channel({"id": channel_id, "name": name})
+                        updates_state["addchannel_mode"] = False
+                        status = "تمت الإضافة والتفعيل" if added else "كانت موجودة وتم تفعيلها"
+                        self._send(chat_id, f"✅ {status}.\n\nالاسم: {name}\nالمعرّف: {channel_id}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+            elif command in {"/removechannel", "/disablechannel", "/enablechannel"}:
+                if len(args) != 1:
+                    self._send(chat_id, f"ℹ️ الاستخدام: {command} <channel_id>")
+                else:
+                    try:
+                        if command == "/removechannel":
+                            changed = self._remove_channel(args[0])
+                            action = "حُذفت" if changed else "غير موجودة"
+                        else:
+                            changed = self._set_channel_enabled(args[0], command == "/enablechannel")
+                            action = "فُعّلت" if command == "/enablechannel" and changed else "عُطّلت" if changed else "غير موجودة"
+                        self._send(chat_id, f"✅ القناة {action}.")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+            elif command == "/settypes":
+                if len(args) < 2:
+                    self._send(
+                        chat_id,
+                        "ℹ️ الاستخدام: /settypes <channel_id> انتقال,إعارة,هدف\n"
+                        "للاشتراك بكل الأخبار: /settypes <channel_id> الكل"
+                    )
+                else:
+                    try:
+                        content_types = self._set_channel_types(args[0], " ".join(args[1:]))
+                        if content_types is None:
+                            self._send(chat_id, "❌ القناة غير موجودة.")
+                        else:
+                            display = "الكل" if ALL in content_types else "، ".join(content_types)
+                            self._send(chat_id, f"✅ تم تحديث أنواع المحتوى: {display}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}\nاستخدم /types لعرض الخيارات.")
+            elif command == "/cancel":
                 updates_state["addchannel_mode"] = False
-                self._send(chat_id, "🛑 Add-channel mode cancelled.")
-            elif text.startswith("/"):
-                self._send(chat_id, "Commands: /myid /health /test /testchannel /addchannel /cancel")
+                self._send(chat_id, "🛑 تم إلغاء وضع إضافة القناة.")
+            elif command.startswith("/"):
+                self._send(
+                    chat_id,
+                    "الأوامر: /myid /health /test /testchannel /channels /types /addchannel "
+                    "/settypes /removechannel /enablechannel /disablechannel /cancel"
+                )
             else:
                 channel = self._forwarded_channel(message)
                 if channel and addchannel_mode:
-                    added = self._add_channel(channel)
-                    updates_state["addchannel_mode"] = False
-                    status = "added" if added else "already existed; enabled"
-                    self._send(chat_id, f"✅ Channel {status}.\n\nName: {channel['name']}\nID: {channel['id']}")
+                    try:
+                        added = self._add_channel(channel)
+                        updates_state["addchannel_mode"] = False
+                        status = "تمت الإضافة" if added else "كانت موجودة وتم تفعيلها"
+                        self._send(chat_id, f"✅ {status}.\n\nالاسم: {channel['name']}\nالمعرّف: {channel['id']}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
                 else:
-                    self._send(chat_id, "ℹ️ Use /addchannel first, then forward one post from the target channel.")
+                    self._send(chat_id, "ℹ️ استخدم /addchannel <channel_id> [name] لإضافة قناة مباشرة.")
             processed += 1
 
         self._save_updates(updates_state)

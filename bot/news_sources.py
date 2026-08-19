@@ -41,7 +41,12 @@ class FootballNewsSource:
                 print(f"[news-source] {source.get('name', url)} returned no entries")
                 continue
 
-            for entry in feed.entries:
+            try:
+                max_items = max(1, int(source.get("max_items", 12)))
+            except (TypeError, ValueError):
+                max_items = 12
+
+            for entry in feed.entries[:max_items]:
                 link = (entry.get("link") or "").strip()
                 if not link or link in seen_urls:
                     continue

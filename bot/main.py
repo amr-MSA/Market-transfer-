@@ -5,8 +5,10 @@ from dotenv import load_dotenv
 from .clubs import find_club
 from .fabrizio import FabrizioSource
 from .formatting import official_message, here_we_go_message, football_news_message
+from .analysis import analyze_news_event, analyze_transfer
 from .news_sources import FootballNewsSource
 from .news_dedup import NewsDedupStore
+from .content_types import channels_for_content
 from .gemini_extractor import GeminiExtractor
 from .normalize import contains_here_we_go, fingerprint
 from .official import OfficialVerifier
@@ -182,10 +184,12 @@ def main():
             )
 
         max_per_run = max(0, int(settings.get("news_max_per_run", 1)))
+        max_classifications = max(0, int(settings.get("news_max_classifications_per_run", 3)))
         sent_this_run = 0
+        classified_this_run = 0
 
         for item in candidates:
-            if sent_this_run >= max_per_run:
+            if sent_this_run >= max_per_run or classified_this_run >= max_classifications:
                 break
 
             # A strict structured event is required before an article can
@@ -193,20 +197,34 @@ def main():
             if not extractor:
                 continue
 
+            if news_state.has_article(news_data, item["id"]):
+                continue
+
             event = extractor.extract(item)
+            classified_this_run += 1
             if not event:
+                news_state.mark_article(news_data, item["id"])
                 print(f"[news-skip] Gemini rejected: {item['title']!r}")
                 continue
 
             if news_state.contains(news_data, event):
+                news_state.mark_article(news_data, item["id"])
                 print(f"[news-duplicate] {event}")
                 continue
 
-            text = football_news_message(item)
-            results = publisher.send(text)
+            analysis = analyze_news_event(event, item)
+            text = football_news_message(item, analysis)
+            news_targets = channels_for_content(channels, event["type"])
+            if not news_targets:
+                print(f"[news-no-target] type={event['type']} title={item['title']!r}")
+                news_state.add(news_data, event)
+                news_state.mark_article(news_data, item["id"])
+                continue
+            results = publisher.send(text, channels=news_targets)
 
             if results and all(result["ok"] for result in results):
                 news_state.add(news_data, event)
+                news_state.mark_article(news_data, item["id"])
                 sent_this_run += 1
             else:
                 print(f"[news-publish-failed] title={item['title']!r}")
@@ -276,8 +294,11 @@ def main():
                 t["official_evidence"] = evidence
 
         if evidence:
-            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"])
-            delivered = _deliver(publisher, channels, text, t["official_delivery"])
+            analysis = analyze_transfer(t, "OFFICIAL")
+            t["analysis"] = analysis
+            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis)
+            transfer_targets = channels_for_content(channels, "انتقال")
+            delivered = _deliver(publisher, transfer_targets, text, t["official_delivery"])
             if delivered:
                 t.update(
                     status="OFFICIAL",
@@ -292,8 +313,11 @@ def main():
 
         discovered = datetime.fromisoformat(t["discovered_at"].replace("Z","+00:00"))
         if now - discovered >= expiry and settings["publish_unconfirmed"]:
-            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"])
-            delivered = _deliver(publisher, channels, text, t["unconfirmed_delivery"])
+            analysis = analyze_transfer(t, "HERE_WE_GO")
+            t["analysis"] = analysis
+            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis)
+            transfer_targets = channels_for_content(channels, "انتقال")
+            delivered = _deliver(publisher, transfer_targets, text, t["unconfirmed_delivery"])
             if delivered:
                 t.update(status="HERE_WE_GO", unconfirmed_sent=True, unconfirmed_published_at=now.isoformat())
             # else: retried next cycle
