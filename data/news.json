@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T19:38:22.523355+00:00",
+  "updated_at": "2026-08-19T19:56:48.097165+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -25,6 +25,14 @@
       "player": "Ezri Konsa",
       "entity_type": "player",
       "seen_at": "2026-08-19T19:38:22.523330+00:00"
+    },
+    {
+      "type": "انضباط",
+      "from": "Chelsea",
+      "to": null,
+      "player": "Liam Delap",
+      "entity_type": "player",
+      "seen_at": "2026-08-19T19:56:48.097127+00:00"
     }
   ],
   "articles": [
@@ -87,6 +95,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c98vz9jvg0vo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-19T19:38:22.523355+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5y4nel5gddo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T19:56:48.097165+00:00"
     }
   ]
 }
