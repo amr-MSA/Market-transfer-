@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T20:54:19.127030+00:00",
+  "updated_at": "2026-08-19T21:19:28.268144+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -33,6 +33,14 @@
       "player": "Liam Delap",
       "entity_type": "player",
       "seen_at": "2026-08-19T19:56:48.097127+00:00"
+    },
+    {
+      "type": "هدف",
+      "from": "Celtic",
+      "to": null,
+      "player": "Camilo Duran",
+      "entity_type": "player",
+      "seen_at": "2026-08-19T21:19:15.444623+00:00"
     }
   ],
   "articles": [
@@ -99,6 +107,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c5y4nel5gddo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-19T19:56:48.097165+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cp8xg9j7gnko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T21:19:10.705926+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/crmrydv4ww0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T21:19:15.444654+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c1j1397zg1xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T21:19:28.268144+00:00"
     }
   ]
 }
