@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T19:10:36.877718+00:00",
+  "updated_at": "2026-08-19T19:18:32.373586+00:00",
   "events": [],
   "articles": [
     {
@@ -38,6 +38,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/19/aston-villa-al-hilal-ollie-watkins",
       "seen_at": "2026-08-19T19:10:36.877718+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/sensible-soccer-clubs-signing-players-transfers-football-daily",
+      "seen_at": "2026-08-19T19:18:32.095372+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clylk1wexgno?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T19:18:32.228385+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/aston-villa-transfer-not-just-big-in-japan-zion-suzuki-has-what-it-takes-to-follow-emiliano-martinez",
+      "seen_at": "2026-08-19T19:18:32.373586+00:00"
     }
   ]
 }

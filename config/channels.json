@@ -4,6 +4,14 @@
       "id": "-1003938445195",
       "name": "Goool News",
       "enabled": true
+    },
+    {
+      "id": "@limitless_dv",
+      "name": "قناة الاختبار",
+      "enabled": true,
+      "content_types": [
+        "*"
+      ]
     }
   ]
 }
