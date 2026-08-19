@@ -88,38 +88,5 @@
       "-1003938445195": "SENT"
     },
     "unconfirmed_published_at": "2026-08-18T14:06:01.329115+00:00"
-  },
-  {
-    "transfer_id": "944f57de5f71e6ff0153",
-    "player": "Aaron Wan-Bissaka",
-    "to_club": "Aston Villa",
-    "from_club": "West Ham",
-    "extraction_method": "regex",
-    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64852",
-    "fabrizio_text": "🚨 🟣 🔵 Breaking: Aston Villa agree deal to sign Aaron Wan-Bissaka from West Ham, here we go! Deal in place on loan with mandatory buy clause, green light from the player to #AVFC project. Agreement between all parties. Green light for medical. https://t.co/COpiNOBHFe — Fabrizio Romano ( @FabrizioRomano ) Aug 18, 2026",
-    "discovered_at": "2026-08-18T17:14:30.097443+00:00",
-    "status": "HERE_WE_GO",
-    "official_sent": false,
-    "official_delivery": {},
-    "unconfirmed_sent": true,
-    "unconfirmed_delivery": {
-      "-1003938445195": "SENT"
-    },
-    "unconfirmed_published_at": "2026-08-19T17:41:12.437143+00:00"
-  },
-  {
-    "transfer_id": "a0ebaf33204cf9b4a027",
-    "player": "Ezri Konsa",
-    "to_club": "Arsenal",
-    "from_club": "Aston Villa",
-    "extraction_method": "regex",
-    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64921",
-    "fabrizio_text": "🚨 🔴 ⚪️ BREAKING: Arsenal agree deal to sign Ezri Konsa from Aston Villa, here we go! Fee agreed at £50m plus add-ons and long term deal in place with English defender. Konsa will undergo his medical in next 48h then signing in at #AFC — follows @TheAthleticFC . https://t.co/nXwrQ5Ebo5 — Fabrizio Romano ( @FabrizioRomano ) Aug 19, 2026",
-    "discovered_at": "2026-08-19T14:08:37.733755+00:00",
-    "status": "WAITING_OFFICIAL",
-    "official_sent": false,
-    "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
   }
 ]
