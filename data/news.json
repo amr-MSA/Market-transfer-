@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T21:19:28.268144+00:00",
+  "updated_at": "2026-08-19T21:45:23.785692+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -41,6 +41,22 @@
       "player": "Camilo Duran",
       "entity_type": "player",
       "seen_at": "2026-08-19T21:19:15.444623+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Borussia Mönchengladbach",
+      "to": null,
+      "player": "Manu Koné",
+      "entity_type": "player",
+      "seen_at": "2026-08-19T21:45:04.960692+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Manchester City",
+      "to": null,
+      "player": "Manu Koné",
+      "entity_type": "club",
+      "seen_at": "2026-08-19T21:45:23.785663+00:00"
     }
   ],
   "articles": [
@@ -119,6 +135,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c1j1397zg1xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-19T21:19:28.268144+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cn0n4qlxyq7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T21:45:04.960725+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c0m73y34nglo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T21:45:05.171139+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/manchester-city-target-romas-manu-kone-as-spurs-talk-over-savinho-and-marmoush-deal",
+      "seen_at": "2026-08-19T21:45:23.785692+00:00"
     }
   ]
 }
