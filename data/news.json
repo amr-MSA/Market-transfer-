@@ -1,7 +1,32 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T19:18:32.373586+00:00",
-  "events": [],
+  "updated_at": "2026-08-19T19:38:22.523355+00:00",
+  "events": [
+    {
+      "type": "تصريح",
+      "from": "Fifa",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-19T19:37:51.414175+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Liverpool",
+      "to": null,
+      "player": "Curtis Jones",
+      "entity_type": "player",
+      "seen_at": "2026-08-19T19:38:01.959102+00:00"
+    },
+    {
+      "type": "انتقال",
+      "from": "Aston Villa",
+      "to": "Arsenal",
+      "player": "Ezri Konsa",
+      "entity_type": "player",
+      "seen_at": "2026-08-19T19:38:22.523330+00:00"
+    }
+  ],
   "articles": [
     {
       "id": "https://www.theguardian.com/football/2026/aug/19/sheffield-united-chair-could-be-disqualified-dispute-35m-debt-club-purchase",
@@ -50,6 +75,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/19/aston-villa-transfer-not-just-big-in-japan-zion-suzuki-has-what-it-takes-to-follow-emiliano-martinez",
       "seen_at": "2026-08-19T19:18:32.373586+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/fifth-fifa-vice-president-turns-against-infantino-saying-he-has-lost-confidence-in-him",
+      "seen_at": "2026-08-19T19:37:51.414207+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clye43vge5jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T19:38:01.959129+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c98vz9jvg0vo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T19:38:22.523355+00:00"
     }
   ]
 }
