@@ -41,3 +41,29 @@ def test_prune_after_seven_days(tmp_path):
     }]}
     store.prune(data)
     assert data["events"] == []
+
+
+def test_same_week_keeps_events_and_new_week_resets_them(tmp_path):
+    store = NewsDedupStore(tmp_path / "news.json")
+    sunday = datetime(2026, 8, 23, 23, 59, tzinfo=timezone.utc)
+    monday = datetime(2026, 8, 24, 0, 1, tzinfo=timezone.utc)
+    event = {"type": "هدف", "from": "A", "to": None, "player": "Player X"}
+    data = {"week_start": None, "updated_at": None, "events": []}
+    store.add(data, event, sunday)
+    store.prune(data, sunday)
+    assert store.contains(data, event)
+    store.prune(data, monday)
+    assert not store.contains(data, event)
+
+
+def test_article_is_marked_once_and_resets_with_new_week(tmp_path):
+    store = NewsDedupStore(tmp_path / "news.json")
+    sunday = datetime(2026, 8, 23, 23, 59, tzinfo=timezone.utc)
+    monday = datetime(2026, 8, 24, 0, 1, tzinfo=timezone.utc)
+    data = {"week_start": None, "updated_at": None, "events": [], "articles": []}
+    store.mark_article(data, "https://example.test/article", sunday)
+    store.mark_article(data, "https://example.test/article", sunday)
+    assert len(data["articles"]) == 1
+    assert store.has_article(data, "https://example.test/article")
+    store.reset_for_week(data, monday)
+    assert not store.has_article(data, "https://example.test/article")
