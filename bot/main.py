@@ -180,7 +180,7 @@ def main():
             extractor = GeminiNewsExtractor(
                 gemini_key,
                 settings.get("news_gemini_timeout_seconds", 30),
-                settings.get("news_gemini_model", "gemini-2.5-flash"),
+                settings.get("news_gemini_model", "gemini-3.6-flash"),
             )
 
         max_per_run = max(0, int(settings.get("news_max_per_run", 1)))
