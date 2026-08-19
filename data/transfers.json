@@ -88,5 +88,20 @@
       "-1003938445195": "SENT"
     },
     "unconfirmed_published_at": "2026-08-18T14:06:01.329115+00:00"
+  },
+  {
+    "transfer_id": "a0ebaf33204cf9b4a027",
+    "player": "Ezri Konsa",
+    "to_club": "Arsenal",
+    "from_club": "Aston Villa",
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/64921",
+    "fabrizio_text": "🚨 🔴 ⚪️ BREAKING: Arsenal agree deal to sign Ezri Konsa from Aston Villa, here we go! Fee agreed at £50m plus add-ons and long term deal in place with English defender. Konsa will undergo his medical in next 48h then signing in at #AFC — follows @TheAthleticFC . https://t.co/nXwrQ5Ebo5 — Fabrizio Romano ( @FabrizioRomano ) Aug 19, 2026",
+    "discovered_at": "2026-08-19T18:41:46.511045+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]

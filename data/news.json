@@ -1,6 +1,19 @@
 {
-  "week_start": null,
-  "updated_at": null,
+  "week_start": "2026-08-17",
+  "updated_at": "2026-08-19T18:41:45.578785+00:00",
   "events": [],
-  "articles": []
+  "articles": [
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/sheffield-united-chair-could-be-disqualified-dispute-35m-debt-club-purchase",
+      "seen_at": "2026-08-19T18:41:45.322295+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/19/premer-league-fixtures-coventry-ipswich-hull",
+      "seen_at": "2026-08-19T18:41:45.452920+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clylkxekeleo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T18:41:45.578785+00:00"
+    }
+  ]
 }
