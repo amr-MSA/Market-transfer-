@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-19T22:56:10.014032+00:00",
+  "updated_at": "2026-08-19T23:20:43.684553+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -65,6 +65,14 @@
       "player": null,
       "entity_type": "match",
       "seen_at": "2026-08-19T22:34:59.436802+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Newcastle",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-19T23:20:43.684520+00:00"
     }
   ],
   "articles": [
@@ -159,6 +167,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/19/celtic-lask-champions-league-playoff-match-report",
       "seen_at": "2026-08-19T22:34:59.436836+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c2k7en0lxkjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-19T23:20:40.971996+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-2026-27-preview-no-17-newcastle",
+      "seen_at": "2026-08-19T23:20:43.684553+00:00"
     }
   ]
 }
