@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T23:00:59.301600+00:00",
+  "updated_at": "2026-08-20T23:33:35.396534+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -531,6 +531,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c98v73n24j2o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T22:38:31.097324+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/premier-league-2026-27-preview-no-19-sunderland",
+      "seen_at": "2026-08-20T23:33:35.063110+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/premier-league-10-things-to-look-out-for-as-new-season-kicks-off",
+      "seen_at": "2026-08-20T23:33:35.231068+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/european-playoffs-rangers-scrape-first-leg-win-as-brighton-draw-in-norway",
+      "seen_at": "2026-08-20T23:33:35.396534+00:00"
     }
   ]
 }
