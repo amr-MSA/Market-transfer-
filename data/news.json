@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T10:52:16.628341+00:00",
+  "updated_at": "2026-08-20T11:15:25.879629+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -137,6 +137,30 @@
       "player": "Manor Solomon",
       "entity_type": "player",
       "seen_at": "2026-08-20T10:18:41.883132+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Inter",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T11:15:11.886753+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Nottingham Forest",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T11:15:23.117434+00:00"
+    },
+    {
+      "type": "تصريح",
+      "from": "Coventry",
+      "to": null,
+      "player": null,
+      "entity_type": "manager",
+      "seen_at": "2026-08-20T11:15:25.879600+00:00"
     }
   ],
   "articles": [
@@ -311,6 +335,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr7kydmyj70o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T10:18:41.883164+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/serie-a-preview-inter-milan-juventus-como-roma-napoli",
+      "seen_at": "2026-08-20T11:15:11.886785+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-2026-27-preview-no-18-nottingham-forest",
+      "seen_at": "2026-08-20T11:15:23.117466+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/frank-lampard-coventry-play-without-fear-premier-league",
+      "seen_at": "2026-08-20T11:15:25.879629+00:00"
     }
   ]
 }
