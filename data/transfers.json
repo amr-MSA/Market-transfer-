@@ -98,10 +98,23 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/64921",
     "fabrizio_text": "🚨 🔴 ⚪️ BREAKING: Arsenal agree deal to sign Ezri Konsa from Aston Villa, here we go! Fee agreed at £50m plus add-ons and long term deal in place with English defender. Konsa will undergo his medical in next 48h then signing in at #AFC — follows @TheAthleticFC . https://t.co/nXwrQ5Ebo5 — Fabrizio Romano ( @FabrizioRomano ) Aug 19, 2026",
     "discovered_at": "2026-08-19T18:41:46.511045+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Ezri Konsa من Aston Villa إلى Arsenal — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "unconfirmed_published_at": "2026-08-20T19:02:17.906513+00:00"
   }
 ]
