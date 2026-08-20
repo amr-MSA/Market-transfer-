@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T07:12:53.952177+00:00",
+  "updated_at": "2026-08-20T07:58:05.182826+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -97,6 +97,14 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-20T07:12:53.952151+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Newcastle United",
+      "to": null,
+      "player": "Nico González",
+      "entity_type": "player",
+      "seen_at": "2026-08-20T07:58:05.182798+00:00"
     }
   ],
   "articles": [
@@ -223,6 +231,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/womens-super-league-finances-club-by-club-breakdown-verdict",
       "seen_at": "2026-08-20T07:12:53.952177+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2dwdxqylwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T07:57:40.415547+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/audio/2026/aug/20/premier-league-season-preview-hull-city-to-tottenham-football-weekly",
+      "seen_at": "2026-08-20T07:57:55.021244+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/football-transfer-rumours-newcastle-nico-gonzalez-manchester-united-aston-villa",
+      "seen_at": "2026-08-20T07:58:05.182826+00:00"
     }
   ]
 }
