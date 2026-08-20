@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T16:56:36.611097+00:00",
+  "updated_at": "2026-08-20T17:27:07.163490+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -431,6 +431,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/maracana-to-host-opening-game-and-final-at-next-years-womens-world-cup",
       "seen_at": "2026-08-20T16:56:36.611097+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gknq7d8d5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T17:27:06.852854+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/the-balogun-affair-premier-league-referees-newsletter",
+      "seen_at": "2026-08-20T17:27:07.010630+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/michael-carrick-rejects-talk-of-easy-start-to-season-for-manchester-united",
+      "seen_at": "2026-08-20T17:27:07.163490+00:00"
     }
   ]
 }
