@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T11:15:25.879629+00:00",
+  "updated_at": "2026-08-20T11:45:40.222681+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -161,6 +161,14 @@
       "player": null,
       "entity_type": "manager",
       "seen_at": "2026-08-20T11:15:25.879600+00:00"
+    },
+    {
+      "type": "تعيين مدرب",
+      "from": "Newcastle United",
+      "to": null,
+      "player": null,
+      "entity_type": "manager",
+      "seen_at": "2026-08-20T11:45:40.222650+00:00"
     }
   ],
   "articles": [
@@ -347,6 +355,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/frank-lampard-coventry-play-without-fear-premier-league",
       "seen_at": "2026-08-20T11:15:25.879629+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c171k9kd94zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T11:45:40.222681+00:00"
     }
   ]
 }
