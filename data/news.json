@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T09:17:11.815877+00:00",
+  "updated_at": "2026-08-20T09:52:57.865257+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -121,6 +121,14 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-20T09:17:11.815841+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Manchester City",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T09:52:57.865229+00:00"
     }
   ],
   "articles": [
@@ -283,6 +291,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cyvlr6mz15no?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T09:17:11.815877+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5yr3w58qnlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T09:52:54.484506+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/instant-classics-odd-inspirations-and-barcodes-2025-26s-best-and-worst-kits",
+      "seen_at": "2026-08-20T09:52:57.865257+00:00"
     }
   ]
 }
