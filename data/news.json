@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T07:58:05.182826+00:00",
+  "updated_at": "2026-08-20T08:40:37.473971+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -243,6 +243,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/football-transfer-rumours-newcastle-nico-gonzalez-manchester-united-aston-villa",
       "seen_at": "2026-08-20T07:58:05.182826+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/opening-half-hour-of-tnt-sports-premier-league-broadcasts-to-be-shown-on-youtube",
+      "seen_at": "2026-08-20T08:40:24.414289+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwymr0n2x1ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T08:40:29.791818+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-newcomers-newcastle-arsenal-brentford-everton-leeds-villa-coventry-hull-ipswich-transfer-window",
+      "seen_at": "2026-08-20T08:40:37.473971+00:00"
     }
   ]
 }
