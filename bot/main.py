@@ -220,7 +220,11 @@ def main():
                 news_state.add(news_data, event)
                 news_state.mark_article(news_data, item["id"])
                 continue
-            results = publisher.send(text, channels=news_targets)
+            results = publisher.send(
+                text,
+                channels=news_targets,
+                image_url=item.get("image_url"),
+            )
 
             if results and all(result["ok"] for result in results):
                 news_state.add(news_data, event)

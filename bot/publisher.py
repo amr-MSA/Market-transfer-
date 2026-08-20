@@ -20,24 +20,31 @@ class TelegramPublisher:
         # per-chat rate limit when fanning out to many channels
         self.send_delay_seconds = send_delay_seconds
 
-    def _send_to_chat(self, chat_id, text):
-        r = requests.post(
-            f"https://api.telegram.org/bot{self.token}/sendMessage",
-            json={
+    def _send_to_chat(self, chat_id, text, image_url=None):
+        if image_url and len(text) <= 1024:
+            endpoint = f"https://api.telegram.org/bot{self.token}/sendPhoto"
+            payload = {
+                "chat_id": chat_id,
+                "photo": image_url,
+                "caption": text,
+                "parse_mode": "HTML",
+            }
+        else:
+            endpoint = f"https://api.telegram.org/bot{self.token}/sendMessage"
+            payload = {
                 "chat_id": chat_id,
                 "text": text,
                 "parse_mode": "HTML",
                 "disable_web_page_preview": False,
-            },
-            timeout=self.timeout,
-        )
+            }
+        r = requests.post(endpoint, json=payload, timeout=self.timeout)
         r.raise_for_status()
         data = r.json()
         if not data.get("ok"):
             raise RuntimeError(data)
         return data
 
-    def send(self, text, channels=None):
+    def send(self, text, channels=None, image_url=None):
         """Send text to channels (default: every enabled channel).
 
         Pass an explicit `channels` subset to retry delivery only to
@@ -53,7 +60,10 @@ class TelegramPublisher:
             chat_id = channel["id"]
             name = channel.get("name", chat_id)
             try:
-                data = self._send_to_chat(chat_id, text)
+                if image_url:
+                    data = self._send_to_chat(chat_id, text, image_url=image_url)
+                else:
+                    data = self._send_to_chat(chat_id, text)
                 results.append({"channel": name, "id": chat_id, "ok": True, "response": data})
             except Exception as e:
                 # Do not raise: one broken channel (bot kicked, no admin

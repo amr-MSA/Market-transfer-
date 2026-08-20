@@ -71,6 +71,13 @@ def analyze_news_event(event, item=None):
 
     return {
         "category": event_type,
+        "event": {
+            "type": event_type,
+            "from": frm or None,
+            "to": to or None,
+            "player": player or None,
+            "entity_type": entity_type,
+        },
         "importance": _NEWS_IMPORTANCE.get(event_type, "منخفضة"),
         "completeness_score": score,
         "summary": summary,

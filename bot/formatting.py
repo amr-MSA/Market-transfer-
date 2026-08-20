@@ -1,6 +1,5 @@
 from html import escape
 
-
 _CONTENT_TYPE_ICONS = {
     "انتقال": "🔁",
     "إعارة": "↔️",
@@ -57,7 +56,7 @@ def official_message(player, frm, to, url, analysis=None):
     return (
         f"🟢 <b>رسمي | {player}</b>\n\n"
         f"🔁 {move}\n\n"
-        "تم تأكيد الصفقة رسمياً من النادي."
+        "تم تأكيد الصفقة رسميًا من النادي."
         f"{_analysis_block(analysis)}\n🔗 {_url(url)}"
     )
 
@@ -68,9 +67,26 @@ def here_we_go_message(player, frm, to, url, analysis=None):
     return (
         f"🟡 <b>Here We Go | {player}</b>\n\n"
         f"🔁 {move}\n\n"
-        "فابريزيو رومانو أكد الصفقة، لكن الإعلان الرسمي لم يصدر بعد."
+        "فابريزيو رومانو أكد الاتفاق، بانتظار الإعلان الرسمي من النادي."
         f"{_analysis_block(analysis)}\n🔗 {_url(url)}"
     )
+
+
+def _news_event_line(analysis):
+    if not analysis:
+        return ""
+    event = analysis.get("event") or {}
+    event_type = event.get("type") or analysis.get("category")
+    player = event.get("player")
+    frm = event.get("from")
+    to = event.get("to")
+    if event_type in {"انتقال", "إعارة"} and player and frm and to:
+        return f"<b>{_text(player)}</b> · {_text(frm)} → {_text(to)}"
+    if player and frm:
+        return f"<b>{_text(player)}</b> · {_text(frm)}"
+    if frm:
+        return f"مرتبط بـ <b>{_text(frm)}</b>"
+    return ""
 
 
 def football_news_message(item, analysis=None):
@@ -78,14 +94,13 @@ def football_news_message(item, analysis=None):
     title = _text(item.get("title"), "خبر كرة قدم")
     source = _text(item.get("source"), "مصدر إخباري")
     url = _url(item.get("url"))
-    block = _analysis_block(analysis)
-    content_type = analysis.get("category") if analysis else None
-    type_icon = _CONTENT_TYPE_ICONS.get(content_type, "📰")
-    category_line = f"{type_icon} <b>{_text(content_type)}</b>\n" if content_type else ""
-    summary = _text(analysis.get("summary")) if analysis and analysis.get("summary") else ""
-    summary_line = f"\n\n{summary}" if summary else ""
+    event_type = (analysis or {}).get("category") or "أخبار كرة قدم"
+    type_icon = _CONTENT_TYPE_ICONS.get(event_type, "📰")
+    event_line = _news_event_line(analysis)
+    event_block = f"\n\n{event_line}" if event_line else ""
     return (
-        f"{category_line}<b>{title}</b>{summary_line}\n\n"
-        f"المصدر: {source}{block}\n"
-        f"🔗 {url}"
+        f"{type_icon} <b>{_text(event_type)}</b>\n\n"
+        f"<b>{title}</b>{event_block}\n\n"
+        f"🗞 <i>{source}</i>\n"
+        f"🔗 <a href=\"{url}\">قراءة الخبر الكامل</a>"
     )

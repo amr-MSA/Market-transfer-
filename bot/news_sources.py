@@ -62,6 +62,7 @@ class FootballNewsSource:
 
                 title = self._clean(entry.get("title", ""))
                 summary = self._clean(entry.get("summary", entry.get("description", "")))
+                image = self._image_url(entry, entry.get("summary", entry.get("description", "")))
 
                 if not title:
                     continue
@@ -74,6 +75,7 @@ class FootballNewsSource:
                     "url": link,
                     "source": source.get("name") or self._host(link),
                     "published_at": published.isoformat(),
+                    "image_url": image,
                 })
 
         results.sort(key=lambda x: x["published_at"], reverse=True)
@@ -98,6 +100,31 @@ class FootballNewsSource:
     def _clean(value):
         value = html.unescape(re.sub(r"<[^>]+>", " ", value or ""))
         return re.sub(r"\s+", " ", value).strip()
+
+    @staticmethod
+    def _image_url(entry, raw_summary=""):
+        candidates = []
+        for key in ("media_content", "media_thumbnail"):
+            value = entry.get(key, [])
+            if isinstance(value, dict):
+                value = [value]
+            if isinstance(value, list):
+                candidates.extend(value)
+        for key in ("image", "thumbnail"):
+            value = entry.get(key)
+            if isinstance(value, dict):
+                candidates.append(value)
+            elif isinstance(value, str):
+                candidates.append({"url": value})
+        for candidate in candidates:
+            if isinstance(candidate, dict):
+                value = candidate.get("url") or candidate.get("href")
+                if isinstance(value, str) and value.startswith(("https://", "http://")):
+                    return value
+        match = re.search(r'<img[^>]+src=["\\\']([^"\\\']+)', raw_summary or "", flags=re.I)
+        if match and match.group(1).startswith(("https://", "http://")):
+            return match.group(1)
+        return None
 
     @staticmethod
     def _host(url):
