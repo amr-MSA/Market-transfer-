@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T09:52:57.865257+00:00",
+  "updated_at": "2026-08-20T10:18:41.883164+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -129,6 +129,14 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-20T09:52:57.865229+00:00"
+    },
+    {
+      "type": "انضباط",
+      "from": "West Ham",
+      "to": null,
+      "player": "Manor Solomon",
+      "entity_type": "player",
+      "seen_at": "2026-08-20T10:18:41.883132+00:00"
     }
   ],
   "articles": [
@@ -299,6 +307,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/instant-classics-odd-inspirations-and-barcodes-2025-26s-best-and-worst-kits",
       "seen_at": "2026-08-20T09:52:57.865257+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr7kydmyj70o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T10:18:41.883164+00:00"
     }
   ]
 }
