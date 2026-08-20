@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T16:20:24.262917+00:00",
+  "updated_at": "2026-08-20T16:56:36.611097+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -177,6 +177,22 @@
       "player": "Joao Cancelo",
       "entity_type": "player",
       "seen_at": "2026-08-20T14:46:27.538326+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Tottenham Hotspur",
+      "to": null,
+      "player": "Terry Dyson",
+      "entity_type": "player",
+      "seen_at": "2026-08-20T16:56:29.755966+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Brazil",
+      "to": null,
+      "player": null,
+      "entity_type": "match",
+      "seen_at": "2026-08-20T16:56:36.611063+00:00"
     }
   ],
   "articles": [
@@ -403,6 +419,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/arteta-desire-ambition-title-defence-myles-lewis-skelly-will-stay-arsenal",
       "seen_at": "2026-08-20T15:52:36.568801+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/terry-dyson-tottenham-dies-aged-91",
+      "seen_at": "2026-08-20T16:56:29.756006+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/enzo-fernandez-chelsea-xabi-alonso-manchester-city-transfer",
+      "seen_at": "2026-08-20T16:56:29.897301+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/maracana-to-host-opening-game-and-final-at-next-years-womens-world-cup",
+      "seen_at": "2026-08-20T16:56:36.611097+00:00"
     }
   ]
 }
