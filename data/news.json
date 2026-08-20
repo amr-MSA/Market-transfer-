@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T15:18:18.084692+00:00",
+  "updated_at": "2026-08-20T15:52:36.568801+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -399,6 +399,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/yirenkyi-completes-rapid-journey-from-ghana-to-coventry-via-denmark",
       "seen_at": "2026-08-20T15:18:18.084692+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/arteta-desire-ambition-title-defence-myles-lewis-skelly-will-stay-arsenal",
+      "seen_at": "2026-08-20T15:52:36.568801+00:00"
     }
   ]
 }
