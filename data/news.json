@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T20:47:38.071781+00:00",
+  "updated_at": "2026-08-20T21:13:27.695398+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -503,6 +503,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/confident-matthias-jaissle-asks-newcastle-to-avoid-the-negativity-from-outside",
       "seen_at": "2026-08-20T19:49:31.246008+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/czxqvllyg72o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T21:13:27.512266+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c5y3ny87r84o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T21:13:27.695398+00:00"
     }
   ]
 }
