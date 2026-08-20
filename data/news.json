@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T05:19:37.600046+00:00",
+  "updated_at": "2026-08-20T05:52:14.872926+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -175,6 +175,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-2026-27-preview-no-17-newcastle",
       "seen_at": "2026-08-19T23:20:43.684553+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cp8edryd7plo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T05:52:13.219192+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cwyl718g865o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T05:52:14.872926+00:00"
     }
   ]
 }
