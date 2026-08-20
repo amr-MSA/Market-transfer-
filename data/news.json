@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T14:02:03.020440+00:00",
+  "updated_at": "2026-08-20T14:46:28.704918+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -169,6 +169,14 @@
       "player": null,
       "entity_type": "manager",
       "seen_at": "2026-08-20T11:45:40.222650+00:00"
+    },
+    {
+      "type": "انتقال",
+      "from": "Al-Hilal",
+      "to": "Barcelona",
+      "player": "Joao Cancelo",
+      "entity_type": "player",
+      "seen_at": "2026-08-20T14:46:27.538326+00:00"
     }
   ],
   "articles": [
@@ -375,6 +383,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/west-ham-condemn-offensive-divisive-chant-about-israel-winger-manor-solomon",
       "seen_at": "2026-08-20T14:02:03.020440+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c20j30vnxkmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T14:46:27.538363+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cp30ggvqj0do?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T14:46:28.704918+00:00"
     }
   ]
 }
