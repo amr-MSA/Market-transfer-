@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T08:40:37.473971+00:00",
+  "updated_at": "2026-08-20T09:17:11.815877+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -105,6 +105,22 @@
       "player": "Nico González",
       "entity_type": "player",
       "seen_at": "2026-08-20T07:58:05.182798+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Spurs",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T09:16:40.393991+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Barcelona",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T09:17:11.815841+00:00"
     }
   ],
   "articles": [
@@ -255,6 +271,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-newcomers-newcastle-arsenal-brentford-everton-leeds-villa-coventry-hull-ipswich-transfer-window",
       "seen_at": "2026-08-20T08:40:37.473971+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cz645z0w3ypo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T09:16:40.394027+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwyrk8xgr0lo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T09:16:53.987079+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cyvlr6mz15no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T09:17:11.815877+00:00"
     }
   ]
 }
