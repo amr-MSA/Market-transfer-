@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T19:17:23.184262+00:00",
+  "updated_at": "2026-08-20T19:49:31.246008+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -209,6 +209,14 @@
       "player": "Taylor Harwood-Bellis",
       "entity_type": "player",
       "seen_at": "2026-08-20T19:17:23.060148+00:00"
+    },
+    {
+      "type": "تصريح",
+      "from": "Newcastle",
+      "to": null,
+      "player": null,
+      "entity_type": "manager",
+      "seen_at": "2026-08-20T19:49:31.245975+00:00"
     }
   ],
   "articles": [
@@ -483,6 +491,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c79g2z11r81o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T19:17:23.184262+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/gianni-infantino-eyes-junior-tournament-dominican-republic-route-out-of-fifa-crisis",
+      "seen_at": "2026-08-20T19:49:28.792066+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/premier-league-returns-arsenal-sense-opportunity",
+      "seen_at": "2026-08-20T19:49:28.911420+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/confident-matthias-jaissle-asks-newcastle-to-avoid-the-negativity-from-outside",
+      "seen_at": "2026-08-20T19:49:31.246008+00:00"
     }
   ]
 }
