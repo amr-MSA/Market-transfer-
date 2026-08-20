@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T21:13:27.695398+00:00",
+  "updated_at": "2026-08-20T21:44:41.862900+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -511,6 +511,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c5y3ny87r84o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T21:13:27.695398+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/ronaldinho-46-serie-c-ravenna-unveiling-comeback",
+      "seen_at": "2026-08-20T21:44:41.691055+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c39eg04p08eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T21:44:41.862900+00:00"
     }
   ]
 }
