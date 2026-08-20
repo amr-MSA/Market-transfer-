@@ -45,5 +45,5 @@ def test_news_message_contains_structured_summary():
         {"title": "Player X injured", "source": "Source"},
     )
     message = football_news_message({"title": "Player X injured", "source": "Source", "url": "https://example.test"}, analysis)
-    assert "التصنيف: إصابة" in message
+    assert "🩺 <b>إصابة</b>" in message
     assert "Player X" in message
