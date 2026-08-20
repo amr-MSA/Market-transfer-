@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T06:20:39.459958+00:00",
+  "updated_at": "2026-08-20T07:12:53.952177+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -73,6 +73,30 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-19T23:20:43.684520+00:00"
+    },
+    {
+      "type": "استحواذ",
+      "from": "Liverpool",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T07:12:42.921867+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Manchester United",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T07:12:50.445598+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Women’s Super League",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-20T07:12:53.952151+00:00"
     }
   ],
   "articles": [
@@ -187,6 +211,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cj36grvmrz4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T06:20:39.459958+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4g31egre74o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T07:12:42.921898+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/manchester-united-may-regret-not-backing-michael-carrick",
+      "seen_at": "2026-08-20T07:12:50.445625+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/womens-super-league-finances-club-by-club-breakdown-verdict",
+      "seen_at": "2026-08-20T07:12:53.952177+00:00"
     }
   ]
 }
