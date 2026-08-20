@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T13:14:14.369498+00:00",
+  "updated_at": "2026-08-20T14:02:03.020440+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -371,6 +371,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/fans-petition-infantino-resignation-fifa-president",
       "seen_at": "2026-08-20T13:14:14.369498+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/west-ham-condemn-offensive-divisive-chant-about-israel-winger-manor-solomon",
+      "seen_at": "2026-08-20T14:02:03.020440+00:00"
     }
   ]
 }
