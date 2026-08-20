@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T12:15:25.891905+00:00",
+  "updated_at": "2026-08-20T13:14:14.369498+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -359,6 +359,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c171k9kd94zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T11:45:40.222681+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c0jl03lv775o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-20T13:14:12.955398+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/psgs-ligue-1-home-opener-moved-to-rennes-after-paris-pitch-damaged-by-heat",
+      "seen_at": "2026-08-20T13:14:13.110653+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/20/fans-petition-infantino-resignation-fifa-president",
+      "seen_at": "2026-08-20T13:14:14.369498+00:00"
     }
   ]
 }
