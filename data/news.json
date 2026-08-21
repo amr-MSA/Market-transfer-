@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T11:57:57.005842+00:00",
+  "updated_at": "2026-08-21T12:53:17.992892+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -329,6 +329,22 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-21T11:35:08.035119+00:00"
+    },
+    {
+      "type": "إعارة",
+      "from": "Chelsea",
+      "to": "Crystal Palace",
+      "player": "Axel Disasi",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T12:53:15.470898+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Hull City",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T12:53:17.992862+00:00"
     }
   ],
   "articles": [
@@ -719,6 +735,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/21/premier-league-2026-27-preview-no-20-tottenham",
       "seen_at": "2026-08-21T11:35:08.035153+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/crystal-palace-axel-disasi-loan-chelsea-manchester-city-adam-wharton-transfer-window-premier-league",
+      "seen_at": "2026-08-21T12:53:15.470927+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/manchester-united-midfield-rebuild-michael-carrick-hull-premier-league",
+      "seen_at": "2026-08-21T12:53:15.595506+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/sergej-jakirovic-hull-premier-league-return",
+      "seen_at": "2026-08-21T12:53:17.992892+00:00"
     }
   ]
 }
