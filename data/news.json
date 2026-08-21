@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T11:02:20.033790+00:00",
+  "updated_at": "2026-08-21T11:35:08.035153+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -313,6 +313,22 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-21T09:28:19.744662+00:00"
+    },
+    {
+      "type": "إصابة",
+      "from": "Bayern Munich",
+      "to": null,
+      "player": "Jamal Musiala",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T11:34:55.075923+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Tottenham Hotspur",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T11:35:08.035119+00:00"
     }
   ],
   "articles": [
@@ -695,6 +711,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cvg0jgy929do?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T10:39:10.767865+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crl7g5ypdeeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T11:34:55.075961+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/premier-league-2026-27-preview-no-20-tottenham",
+      "seen_at": "2026-08-21T11:35:08.035153+00:00"
     }
   ]
 }
