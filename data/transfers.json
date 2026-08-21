@@ -116,20 +116,5 @@
       "summary": "Ezri Konsa من Aston Villa إلى Arsenal — المرحلة: Here We Go غير رسمي بعد."
     },
     "unconfirmed_published_at": "2026-08-20T19:02:17.906513+00:00"
-  },
-  {
-    "transfer_id": "056842a50891f5dbae33",
-    "player": "Dominik Livaković",
-    "to_club": "Barcelona",
-    "from_club": "Fenerbahçe",
-    "extraction_method": "gemini",
-    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65038",
-    "fabrizio_text": "🚨 🔵 🔴 Barcelona have reached a verbal agreement for Dominik Livaković to join from Fenerbahçe, here we go! €2m initial fee, €2m add-ons. Plan to sign Livaković as backup GK from June 2027 when Szczesny leaves. This season, Livaković will go out on loan as reported — follows https://t.co/sGVRnMYa12 — Fabrizio Romano ( @FabrizioRomano ) Aug 21, 2026",
-    "discovered_at": "2026-08-21T13:38:08.876966+00:00",
-    "status": "WAITING_OFFICIAL",
-    "official_sent": false,
-    "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
   }
 ]
