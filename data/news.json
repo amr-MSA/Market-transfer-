@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T14:56:43.432148+00:00",
+  "updated_at": "2026-08-21T15:33:28.332860+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -361,6 +361,14 @@
       "player": "Rachel Daly",
       "entity_type": "player",
       "seen_at": "2026-08-21T13:38:08.231415+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Chelsea",
+      "to": null,
+      "player": "Mykhailo Mudryk",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T15:32:28.252747+00:00"
     }
   ],
   "articles": [
@@ -787,6 +795,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c98v7p1pr3eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T14:56:43.432148+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gjv4xq2l8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T15:32:28.252783+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckg97jpkkego?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T15:32:58.299503+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cdrv1nx150jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T15:33:28.332860+00:00"
     }
   ]
 }
