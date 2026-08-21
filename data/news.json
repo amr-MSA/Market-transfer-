@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T12:53:17.992892+00:00",
+  "updated_at": "2026-08-21T13:38:08.231442+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -345,6 +345,22 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-21T12:53:17.992862+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "England Women U20s",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T13:37:43.308912+00:00"
+    },
+    {
+      "type": "تصريح",
+      "from": "Aston Villa",
+      "to": null,
+      "player": "Rachel Daly",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T13:38:08.231415+00:00"
     }
   ],
   "articles": [
@@ -747,6 +763,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/21/sergej-jakirovic-hull-premier-league-return",
       "seen_at": "2026-08-21T12:53:17.992892+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c2el8j10vl3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T13:37:43.308945+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/aston-villa-rachel-daly-womens-super-league-england-lionesses",
+      "seen_at": "2026-08-21T13:38:08.231442+00:00"
     }
   ]
 }
