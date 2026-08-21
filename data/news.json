@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T08:04:39.951256+00:00",
+  "updated_at": "2026-08-21T08:55:02.754877+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -281,6 +281,30 @@
       "player": null,
       "entity_type": "match",
       "seen_at": "2026-08-21T08:04:39.951223+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Manchester City",
+      "to": null,
+      "player": "Savinho",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T08:54:30.355033+00:00"
+    },
+    {
+      "type": "تصريح",
+      "from": "Brighton",
+      "to": null,
+      "player": "Lia Walti",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T08:54:46.466235+00:00"
+    },
+    {
+      "type": "مباراة",
+      "from": "Premier League",
+      "to": null,
+      "player": null,
+      "entity_type": "match",
+      "seen_at": "2026-08-21T08:55:02.754843+00:00"
     }
   ],
   "articles": [
@@ -631,6 +655,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cewrv5gnpyro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T08:04:39.951256+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/21/premier-league-returns-with-arsenal-v-coventry-transfer-news-and-more-football-live",
+      "seen_at": "2026-08-21T08:54:30.355067+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cdrv86006r4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T08:54:46.466258+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cn9nqzny7n7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T08:55:02.754877+00:00"
     }
   ]
 }
