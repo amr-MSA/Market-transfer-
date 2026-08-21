@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T05:21:13.632832+00:00",
+  "updated_at": "2026-08-21T05:53:08.460630+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -225,6 +225,14 @@
       "player": null,
       "entity_type": "match",
       "seen_at": "2026-08-20T22:38:31.097288+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Aston Villa",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T05:53:08.460598+00:00"
     }
   ],
   "articles": [
@@ -543,6 +551,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/20/european-playoffs-rangers-scrape-first-leg-win-as-brighton-draw-in-norway",
       "seen_at": "2026-08-20T23:33:35.396534+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c20j3vjvy48o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T05:53:08.460630+00:00"
     }
   ]
 }
