@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T08:55:02.754877+00:00",
+  "updated_at": "2026-08-21T09:28:20.784252+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -305,6 +305,14 @@
       "player": null,
       "entity_type": "match",
       "seen_at": "2026-08-21T08:55:02.754843+00:00"
+    },
+    {
+      "type": "مباراة",
+      "from": "Uefa",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T09:28:19.744662+00:00"
     }
   ],
   "articles": [
@@ -667,6 +675,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cn9nqzny7n7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T08:55:02.754877+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/uefa-concacaf-talks-set-up-combined-nations-league-tournament",
+      "seen_at": "2026-08-21T09:28:19.744696+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2ldd3yyy0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T09:28:20.536681+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gxxyyn8yeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T09:28:20.784252+00:00"
     }
   ]
 }
