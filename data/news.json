@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T13:38:08.231442+00:00",
+  "updated_at": "2026-08-21T14:17:36.968485+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -771,6 +771,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/21/aston-villa-rachel-daly-womens-super-league-england-lionesses",
       "seen_at": "2026-08-21T13:38:08.231442+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4g3n9zryx8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T14:17:36.696449+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clyjmd19887o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T14:17:36.839733+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c9v4wj07e8eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T14:17:36.968485+00:00"
     }
   ]
 }
