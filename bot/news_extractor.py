@@ -1,5 +1,6 @@
 import json
 import re
+from pathlib import Path
 
 import requests
 
@@ -24,6 +25,7 @@ CONTENT_TYPES = (
     "تصريح",
     "انضباط",
     "أخبار ناد",
+    "أخرى",
 )
 
 _ALLOWED_ENTITIES = ("player", "club", "manager", "match")
@@ -40,10 +42,11 @@ class GeminiNewsExtractor:
     is populated only for transfers and loans.
     """
 
-    def __init__(self, api_key, timeout=30, model="gemini-3.6-flash"):
+    def __init__(self, api_key, timeout=30, model="gemini-3.6-flash", prompt_dir=None):
         self.api_key = api_key
         self.timeout = timeout
         self.model = model
+        self.prompt_dir = Path(prompt_dir) if prompt_dir else None
         self.endpoint = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{model}:generateContent"
@@ -53,6 +56,7 @@ class GeminiNewsExtractor:
         prompt = {
             "task": "Classify one football news article into one structured event. "
                     "Return null only when the article is not a meaningful football news item.",
+            "classification_prompt": self._read_prompt("classify.txt"),
             "allowed_types": list(CONTENT_TYPES),
             "rules": [
                 "Return JSON only and do not write commentary.",
@@ -141,6 +145,14 @@ class GeminiNewsExtractor:
             "player": player,
             "entity_type": entity_type,
         }
+
+    def _read_prompt(self, name):
+        if not self.prompt_dir:
+            return ""
+        try:
+            return (self.prompt_dir / name).read_text(encoding="utf-8").strip()
+        except OSError:
+            return ""
 
     @staticmethod
     def _clean(value):

@@ -10,6 +10,7 @@ from .news_sources import FootballNewsSource
 from .news_dedup import NewsDedupStore
 from .content_types import channels_for_content
 from .gemini_extractor import GeminiExtractor
+from .editorial import GeminiEditorialWriter
 from .normalize import contains_here_we_go, fingerprint
 from .official import OfficialVerifier
 from .parser import parse_transfer
@@ -110,12 +111,21 @@ def main():
                 social_max_age
             )
 
+    gemini_key = os.getenv("GEMINI_API_KEY")
     gemini_extractor = None
-    if settings.get("gemini_enabled", True) and os.getenv("GEMINI_API_KEY"):
+    editorial_writer = None
+    if settings.get("gemini_enabled", True) and gemini_key:
         gemini_extractor = GeminiExtractor(
-            os.getenv("GEMINI_API_KEY"),
+            gemini_key,
             settings["request_timeout_seconds"],
             settings.get("gemini_model", "gemini-3.6-flash")
+        )
+    if settings.get("editorial_enabled", True) and gemini_key:
+        editorial_writer = GeminiEditorialWriter(
+            gemini_key,
+            ROOT / settings.get("editorial_prompt_dir", "prompts"),
+            settings.get("editorial_timeout_seconds", 30),
+            settings.get("news_gemini_model", "gemini-3.6-flash"),
         )
 
     verifier = OfficialVerifier(
@@ -175,12 +185,12 @@ def main():
         candidates = news_source.fetch()
 
         extractor = None
-        gemini_key = os.getenv("GEMINI_API_KEY")
         if gemini_key and settings.get("news_semantic_dedup_enabled", True):
             extractor = GeminiNewsExtractor(
                 gemini_key,
                 settings.get("news_gemini_timeout_seconds", 30),
                 settings.get("news_gemini_model", "gemini-3.6-flash"),
+                ROOT / settings.get("editorial_prompt_dir", "prompts"),
             )
 
         max_per_run = max(0, int(settings.get("news_max_per_run", 1)))
@@ -213,7 +223,10 @@ def main():
                 continue
 
             analysis = analyze_news_event(event, item)
-            text = football_news_message(item, analysis)
+            editorial = None
+            if editorial_writer:
+                editorial = editorial_writer.write(item, event, status="خبر صحفي")
+            text = football_news_message(item, analysis, editorial)
             news_targets = channels_for_content(channels, event["type"])
             if not news_targets:
                 print(f"[news-no-target] type={event['type']} title={item['title']!r}")
@@ -300,7 +313,21 @@ def main():
         if evidence:
             analysis = analyze_transfer(t, "OFFICIAL")
             t["analysis"] = analysis
-            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis)
+            editorial = None
+            if editorial_writer:
+                editorial_event = {
+                    "type": "انتقال",
+                    "from": t.get("from_club"),
+                    "to": t.get("to_club"),
+                    "player": t.get("player"),
+                    "entity_type": "player",
+                }
+                editorial = editorial_writer.write(
+                    {"title": t.get("fabrizio_text"), "summary": t.get("fabrizio_text"), "source": "Fabrizio Romano"},
+                    editorial_event,
+                    status="رسمي",
+                )
+            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial)
             transfer_targets = channels_for_content(channels, "انتقال")
             delivered = _deliver(publisher, transfer_targets, text, t["official_delivery"])
             if delivered:
@@ -319,7 +346,21 @@ def main():
         if now - discovered >= expiry and settings["publish_unconfirmed"]:
             analysis = analyze_transfer(t, "HERE_WE_GO")
             t["analysis"] = analysis
-            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis)
+            editorial = None
+            if editorial_writer:
+                editorial_event = {
+                    "type": "انتقال",
+                    "from": t.get("from_club"),
+                    "to": t.get("to_club"),
+                    "player": t.get("player"),
+                    "entity_type": "player",
+                }
+                editorial = editorial_writer.write(
+                    {"title": t.get("fabrizio_text"), "summary": t.get("fabrizio_text"), "source": "Fabrizio Romano"},
+                    editorial_event,
+                    status="Here We Go",
+                )
+            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial)
             transfer_targets = channels_for_content(channels, "انتقال")
             delivered = _deliver(publisher, transfer_targets, text, t["unconfirmed_delivery"])
             if delivered:
