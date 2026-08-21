@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T17:46:41.597905+00:00",
+  "updated_at": "2026-08-21T18:15:07.150129+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -377,6 +377,14 @@
       "player": null,
       "entity_type": "match",
       "seen_at": "2026-08-21T17:46:30.105263+00:00"
+    },
+    {
+      "type": "تصريح",
+      "from": "Arsenal",
+      "to": null,
+      "player": "Viktor Gyokeres",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T18:15:07.150095+00:00"
     }
   ],
   "articles": [
@@ -843,6 +851,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/21/fifa-leandro-paredes-argentina-spain-world-cup-final-brawl",
       "seen_at": "2026-08-21T17:46:41.597905+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cy5dxg3kv6eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T18:15:07.150129+00:00"
     }
   ]
 }
