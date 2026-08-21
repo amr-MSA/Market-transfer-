@@ -35,8 +35,29 @@ def test_messages_include_analysis_and_escape_html():
     )
     message = official_message("A < B", "Club A", "Club B", "https://example.test?a=1&b=2", analysis)
     assert "A &lt; B" in message
-    assert "تحليل سريع" in message
+    assert "تحليل سريع" not in message
     assert "a=1&amp;b=2" in message
+
+
+def test_editorial_transfer_message_is_short_and_uses_arabic_names():
+    editorial = {
+        "section": "انتقال",
+        "headline": "أرسنال يتوصل إلى اتفاق لضم إزري كونسا",
+        "lead": "إزري كونسا (Ezri Konsa) ينتقل من أستون فيلا (Aston Villa) إلى أرسنال (Arsenal).",
+        "detail": "التفاصيل الرسمية قيد الانتظار.",
+        "player_ar": "إزري كونسا",
+        "player_original": "Ezri Konsa",
+        "from_ar": "أستون فيلا",
+        "from_original": "Aston Villa",
+        "to_ar": "أرسنال",
+        "to_original": "Arsenal",
+    }
+    message = official_message(
+        "Ezri Konsa", "Aston Villa", "Arsenal", "https://example.test", editorial=editorial
+    )
+    assert "إزري كونسا (Ezri Konsa)" in message
+    assert "تحليل سريع" not in message
+    assert message.count("إزري كونسا (Ezri Konsa)") == 1
 
 
 def test_news_message_contains_structured_summary():
