@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T17:13:22.006391+00:00",
+  "updated_at": "2026-08-21T17:46:41.597905+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -369,6 +369,14 @@
       "player": "Mykhailo Mudryk",
       "entity_type": "player",
       "seen_at": "2026-08-21T15:32:28.252747+00:00"
+    },
+    {
+      "type": "مباراة",
+      "from": "Arsenal",
+      "to": null,
+      "player": null,
+      "entity_type": "match",
+      "seen_at": "2026-08-21T17:46:30.105263+00:00"
     }
   ],
   "articles": [
@@ -823,6 +831,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ce97ky3vkx4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T16:45:05.396060+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/21/arsenal-v-coventry-city-premier-league-live",
+      "seen_at": "2026-08-21T17:46:30.105297+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2reg3de87o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T17:46:41.443924+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/fifa-leandro-paredes-argentina-spain-world-cup-final-brawl",
+      "seen_at": "2026-08-21T17:46:41.597905+00:00"
     }
   ]
 }
