@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T06:27:09.030752+00:00",
+  "updated_at": "2026-08-21T07:25:07.400356+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -233,6 +233,30 @@
       "player": null,
       "entity_type": "club",
       "seen_at": "2026-08-21T05:53:08.460598+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Tottenham Hotspur",
+      "to": null,
+      "player": "Omar Marmoush",
+      "entity_type": "player",
+      "seen_at": "2026-08-21T07:24:46.469388+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Paris Saint-Germain",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T07:24:48.378371+00:00"
+    },
+    {
+      "type": "أخبار ناد",
+      "from": "Premier League",
+      "to": null,
+      "player": null,
+      "entity_type": "club",
+      "seen_at": "2026-08-21T07:25:07.400326+00:00"
     }
   ],
   "articles": [
@@ -559,6 +583,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwyl0r8g4lwo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T06:27:09.030752+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr49yypz01eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T07:24:46.469421+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/psg-team-europe-ligue-1-survive-france-premier-league",
+      "seen_at": "2026-08-21T07:24:48.378402+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/21/new-rules-managers-pundits-premier-league-season-2026-2027",
+      "seen_at": "2026-08-21T07:25:07.400356+00:00"
     }
   ]
 }
