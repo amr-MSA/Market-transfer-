@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-21T16:01:37.717766+00:00",
+  "updated_at": "2026-08-21T16:45:05.396060+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -815,6 +815,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cpw9e1dz9kko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-21T16:01:37.717766+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/sport/2026/aug/21/the-premier-league-returns-f1s-dutch-grand-prix-and-the-greatest-rivalry-follow-with-us",
+      "seen_at": "2026-08-21T16:45:05.193620+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ce97ky3vkx4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-21T16:45:05.396060+00:00"
     }
   ]
 }
