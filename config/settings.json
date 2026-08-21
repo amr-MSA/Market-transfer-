@@ -25,5 +25,8 @@
   "news_semantic_dedup_max_candidates": 8,
   "news_semantic_dedup_threshold": 0.82,
   "news_gemini_model": "gemini-3.6-flash",
-  "news_gemini_timeout_seconds": 30
+  "news_gemini_timeout_seconds": 30,
+  "editorial_enabled": true,
+  "editorial_prompt_dir": "prompts",
+  "editorial_timeout_seconds": 30
 }
