@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T21:54:36.402343+00:00",
+  "updated_at": "2026-08-22T22:14:47.782608+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -627,6 +627,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd9w1zkw7x8o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T21:36:54.940022+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/roberto-de-zerbi-brentford-tottenham-premier-league",
+      "seen_at": "2026-08-22T22:14:47.782608+00:00"
     }
   ]
 }
