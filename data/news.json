@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T20:00:56.862847+00:00",
+  "updated_at": "2026-08-22T20:32:41.994766+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -619,6 +619,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/carrick-manchester-united-shock-defeat-by-hull",
       "seen_at": "2026-08-22T20:00:56.862847+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cd696j44jqyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T20:32:41.994766+00:00"
     }
   ]
 }
