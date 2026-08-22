@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T15:29:44.034196+00:00",
+  "updated_at": "2026-08-22T15:49:12.305938+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -531,6 +531,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/championship-roundup-millwall-norwich-west-ham-norwich-charlton",
       "seen_at": "2026-08-22T15:29:44.034196+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c87n78p070do?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T15:49:12.039882+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/22/brentford-v-tottenham-premier-league-live",
+      "seen_at": "2026-08-22T15:49:12.305938+00:00"
     }
   ]
 }
