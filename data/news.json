@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T13:40:28.556020+00:00",
+  "updated_at": "2026-08-22T13:57:58.443745+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -515,6 +515,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cpw94jp02xxo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T13:40:28.556020+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/hull-manchester-united-premier-league-match-report",
+      "seen_at": "2026-08-22T13:57:58.443745+00:00"
     }
   ]
 }
