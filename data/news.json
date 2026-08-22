@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T18:33:21.342746+00:00",
+  "updated_at": "2026-08-22T19:00:50.049063+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -579,6 +579,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c8dnd416pzyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T18:33:21.342746+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/brentford-tottenham-premier-league-match-report",
+      "seen_at": "2026-08-22T19:00:49.910549+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/gianni-infantino-fifa-football-politics-world-cup-election",
+      "seen_at": "2026-08-22T19:00:50.049063+00:00"
     }
   ]
 }
