@@ -116,5 +116,20 @@
       "summary": "Ezri Konsa من Aston Villa إلى Arsenal — المرحلة: Here We Go غير رسمي بعد."
     },
     "unconfirmed_published_at": "2026-08-20T19:02:17.906513+00:00"
+  },
+  {
+    "transfer_id": "ce74ed7bde25714652ed",
+    "player": "Leon Goretzka",
+    "to_club": "Aston Villa",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65105",
+    "fabrizio_text": "🚨 🟣 🔵 Leon Goretzka to Aston Villa, here we go! Verbal agreement in place with the German midfielder after direct call with Unai Emery. Verbal green light to #AVFC project with club planning for medical and signature this upcoming week. Documents ready - follows @MatteMoretto . https://t.co/i6wnuKy1LS — Fabrizio Romano ( @FabrizioRomano ) Aug 22, 2026",
+    "discovered_at": "2026-08-22T13:40:29.543143+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
