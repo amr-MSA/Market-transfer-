@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-20T19:02:15.241706+00:00",
+  "updated_at": "2026-08-22T11:35:12.792092+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -467,6 +467,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c7vg26r2yd1o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-20T18:36:47.099986+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/22/hull-city-v-manchester-united-premier-league-live",
+      "seen_at": "2026-08-22T11:35:12.543804+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/lionel-messi-fine-slapping-opposition-player-quinn-sullivanmls-soccer-football",
+      "seen_at": "2026-08-22T11:35:12.676523+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cg5l9qz1dvno?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T11:35:12.792092+00:00"
     }
   ]
 }
