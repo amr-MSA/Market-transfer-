@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T11:35:12.792092+00:00",
+  "updated_at": "2026-08-22T11:54:02.951323+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -479,6 +479,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cg5l9qz1dvno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T11:35:12.792092+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj636ewwz46o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T11:53:32.830502+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx25xy7p9zpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T11:53:32.978887+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/hairdressers-fifa-infantino-sky-reporter-bald-football-world-cup",
+      "seen_at": "2026-08-22T11:54:02.951323+00:00"
     }
   ]
 }
