@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T22:14:47.782608+00:00",
+  "updated_at": "2026-08-22T22:41:25.014351+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -631,6 +631,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/roberto-de-zerbi-brentford-tottenham-premier-league",
       "seen_at": "2026-08-22T22:14:47.782608+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/enzo-maresca-new-rodri-barcelona-bournemouth-premier-league",
+      "seen_at": "2026-08-22T22:41:25.014351+00:00"
     }
   ]
 }
