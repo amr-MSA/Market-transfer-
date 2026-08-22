@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T12:19:40.452958+00:00",
+  "updated_at": "2026-08-22T13:05:37.645224+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -503,6 +503,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/alexander-isak-braces-furious-newcastle-reunion-liverpool",
       "seen_at": "2026-08-22T12:19:40.452958+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/22/nottingham-forest-v-leeds-everton-v-crystal-palace-efl-and-more-football-clockwatch-live",
+      "seen_at": "2026-08-22T13:05:37.376812+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/politics/2026/aug/22/andy-burnham-uk-host-mens-world-cup-football-2042",
+      "seen_at": "2026-08-22T13:05:37.645224+00:00"
     }
   ]
 }
