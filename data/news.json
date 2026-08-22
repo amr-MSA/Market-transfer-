@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T19:47:47.180729+00:00",
+  "updated_at": "2026-08-22T20:00:56.862847+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -611,6 +611,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/clyl5ejxj2wo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T19:47:47.180729+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/aston-villa-upheaval-unai-emery-exodus-key-players-youthful-arrivals",
+      "seen_at": "2026-08-22T20:00:56.723681+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/carrick-manchester-united-shock-defeat-by-hull",
+      "seen_at": "2026-08-22T20:00:56.862847+00:00"
     }
   ]
 }
