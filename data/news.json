@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T19:00:50.049063+00:00",
+  "updated_at": "2026-08-22T19:29:21.421450+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -587,6 +587,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/gianni-infantino-fifa-football-politics-world-cup-election",
       "seen_at": "2026-08-22T19:00:50.049063+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/european-football-inter-napoli-real-madrid",
+      "seen_at": "2026-08-22T19:29:19.023186+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cqx75yq28rwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T19:29:21.271874+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cvg0214evlmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T19:29:21.421450+00:00"
     }
   ]
 }
