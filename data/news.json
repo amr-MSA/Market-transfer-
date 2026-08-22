@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T16:00:54.399337+00:00",
+  "updated_at": "2026-08-22T16:34:34.530232+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -539,6 +539,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/aug/22/brentford-v-tottenham-premier-league-live",
       "seen_at": "2026-08-22T15:49:12.305938+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/ipswich-sunderland-premier-league-match-report",
+      "seen_at": "2026-08-22T16:34:33.995969+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62x2z0k0p6o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T16:34:34.268868+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/22/nottingham-forest-leeds-premier-league-match-report",
+      "seen_at": "2026-08-22T16:34:34.530232+00:00"
     }
   ]
 }
