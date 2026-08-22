@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T21:13:06.757936+00:00",
+  "updated_at": "2026-08-22T21:36:54.940022+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -623,6 +623,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd696j44jqyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-22T20:32:41.994766+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cd9w1zkw7x8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T21:36:54.940022+00:00"
     }
   ]
 }
