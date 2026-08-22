@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-22T16:55:54.874206+00:00",
+  "updated_at": "2026-08-22T17:18:03.316973+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -555,6 +555,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/22/everton-crystal-palace-premier-league-match-report",
       "seen_at": "2026-08-22T16:55:54.874206+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cn5n57dwewko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-22T17:18:03.316973+00:00"
     }
   ]
 }
