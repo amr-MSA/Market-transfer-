@@ -159,5 +159,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "96a78b7a9af94a2b07d7",
+    "player": "Omar Marmoush",
+    "to_club": "Tottenham",
+    "from_club": "Man City",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65166",
+    "fabrizio_text": "🚨 💣 BREAKING: Tottenham reach verbal agreement with Man City to sign Omar Marmoush, here we go! Verbal agreement done on initial loan with buy clause to become mandatory under certain conditions at £50m. Marmoush said yes to #THFC days ago, travel and medical on Monday. ⚪️ 🇪🇬 https://t.co/yfq0lOUB8N — Fabrizio Romano ( @FabrizioRomano ) Aug 23, 2026",
+    "discovered_at": "2026-08-23T15:44:49.161919+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
