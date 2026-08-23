@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T04:57:02.590662+00:00",
+  "updated_at": "2026-08-23T05:29:38.128175+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -643,6 +643,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/womens-super-league-2026-27-preview-no-2-aston-villa",
       "seen_at": "2026-08-22T23:59:14.620582+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c4gvjep9wr2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T05:29:38.128175+00:00"
     }
   ]
 }
