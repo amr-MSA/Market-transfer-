@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T11:57:00.173688+00:00",
+  "updated_at": "2026-08-23T12:35:27.847899+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -687,6 +687,10 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/aug/23/manchester-city-v-bournemouth-premier-league-live",
       "seen_at": "2026-08-23T11:57:00.173688+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clyjy0e0pkzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T12:35:27.847899+00:00"
     }
   ]
 }
