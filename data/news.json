@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T14:09:24.539974+00:00",
+  "updated_at": "2026-08-23T14:37:06.181315+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -711,6 +711,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/manchester-city-agree-deal-lille-ayyoub-bouaddi-transfer",
       "seen_at": "2026-08-23T13:49:06.689201+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/23/newcastle-united-v-liverpool-premier-league-live",
+      "seen_at": "2026-08-23T14:37:03.050759+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4g4g83v25yo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T14:37:03.216991+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/european-football-psg-rennes-torino-milan-elche-barcelona-bayern-munich-harry-kane",
+      "seen_at": "2026-08-23T14:37:06.181315+00:00"
     }
   ]
 }
