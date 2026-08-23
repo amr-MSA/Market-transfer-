@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T16:57:06.973267+00:00",
+  "updated_at": "2026-08-23T17:20:41.008821+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -759,6 +759,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c20j3vjvy48o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-23T16:57:06.973267+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/unai-emery-feels-ollie-watkins-should-explain-absence-from-aston-villa-loss-brighton",
+      "seen_at": "2026-08-23T17:20:41.008821+00:00"
     }
   ]
 }
