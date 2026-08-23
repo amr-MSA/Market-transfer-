@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T06:42:08.627800+00:00",
+  "updated_at": "2026-08-23T07:20:53.297928+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -651,6 +651,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd69dd1q4qlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-23T06:42:08.627800+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/23/isak-returns-to-newcastle-with-liverpool-premier-league-buildup-and-more-matchday-live",
+      "seen_at": "2026-08-23T07:20:51.016967+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/lincoln-spirits-soar-despite-defeat-on-second-tier-return-65-years-in-the-making",
+      "seen_at": "2026-08-23T07:20:53.297928+00:00"
     }
   ]
 }
