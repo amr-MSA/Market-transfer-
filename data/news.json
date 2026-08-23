@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T07:20:53.297928+00:00",
+  "updated_at": "2026-08-23T07:52:18.203934+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -659,6 +659,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/lincoln-spirits-soar-despite-defeat-on-second-tier-return-65-years-in-the-making",
       "seen_at": "2026-08-23T07:20:53.297928+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3w0wpy86z7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T07:52:17.217460+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gddy77ev3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T07:52:18.203934+00:00"
     }
   ]
 }
