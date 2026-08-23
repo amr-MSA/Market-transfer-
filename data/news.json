@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T23:07:38.977744+00:00",
+  "updated_at": "2026-08-23T23:33:22.189892+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -815,6 +815,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cdewe13009do?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-23T23:07:38.977744+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ce343r7245no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T23:33:19.845793+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/womens-super-league-2026-27-preview-no-3-birmingham-city",
+      "seen_at": "2026-08-23T23:33:19.998731+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/aleksander-ceferin-gianni-infantino-world-cup-fifa-uefa-super-league",
+      "seen_at": "2026-08-23T23:33:22.189892+00:00"
     }
   ]
 }
