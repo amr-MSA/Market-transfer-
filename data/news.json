@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T11:38:02.251318+00:00",
+  "updated_at": "2026-08-23T11:57:00.173688+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -675,6 +675,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/jean-philippe-mateta-dispute-crystal-palace-contract-transfer-window",
       "seen_at": "2026-08-23T11:14:41.717663+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgxg1g8nkro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T11:56:30.263456+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c1414my6165o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T11:56:57.876568+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/23/manchester-city-v-bournemouth-premier-league-live",
+      "seen_at": "2026-08-23T11:57:00.173688+00:00"
     }
   ]
 }

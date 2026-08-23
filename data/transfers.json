@@ -131,5 +131,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "33020cf4baa1bf9c82a6",
+    "player": "Ayyoub Bouaddi",
+    "to_club": "Manchester City",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65148",
+    "fabrizio_text": "🚨 🔵 ⚪️ BREAKING: Ayyoub Bouaddi to Manchester City, here we go! Deal agreed club to club. Fee to reach €100m package with add-ons, as @FabriceHawkins reports. Green light from Lille to the sale. Bouaddi agreed terms with City in July and now set to join #MCFC project. https://t.co/qcbMqphude — Fabrizio Romano ( @FabrizioRomano ) Aug 23, 2026",
+    "discovered_at": "2026-08-23T11:57:01.123431+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
