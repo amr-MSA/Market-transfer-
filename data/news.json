@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T14:57:29.673936+00:00",
+  "updated_at": "2026-08-23T15:24:09.257771+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -723,6 +723,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/european-football-psg-rennes-torino-milan-elche-barcelona-bayern-munich-harry-kane",
       "seen_at": "2026-08-23T14:37:06.181315+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cy0j01pr0p0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T15:24:06.962678+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/brighton-aston-villa-premier-league-match-report",
+      "seen_at": "2026-08-23T15:24:09.257771+00:00"
     }
   ]
 }
