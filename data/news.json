@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-17",
-  "updated_at": "2026-08-23T22:31:17.158048+00:00",
+  "updated_at": "2026-08-23T22:51:38.823979+00:00",
   "events": [
     {
       "type": "تصريح",
@@ -807,6 +807,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/newcastle-liverpool-entertainment-emotional-kevin-keegan",
       "seen_at": "2026-08-23T22:31:17.158048+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cwy4y5k4kg4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-23T22:51:38.823979+00:00"
     }
   ]
 }
