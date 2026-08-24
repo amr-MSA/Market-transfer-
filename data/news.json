@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T19:43:31.796210+00:00",
+  "updated_at": "2026-08-24T20:42:49.182679+00:00",
   "events": [],
   "articles": [
     {
@@ -146,6 +146,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c8xkl50ylweo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T19:43:31.796210+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/manchester-city-agree-34m-deal-for-allan-elias-as-nico-gonzalez-nears-newcastle-move",
+      "seen_at": "2026-08-24T20:42:49.182679+00:00"
     }
   ]
 }
