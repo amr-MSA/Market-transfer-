@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T14:56:13.086552+00:00",
+  "updated_at": "2026-08-24T15:37:05.309345+00:00",
   "events": [],
   "articles": [
     {
@@ -86,6 +86,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/rennes-psg-best-rest-ligue-1-ferran-torres",
       "seen_at": "2026-08-24T14:56:13.086552+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/toddler-pitch-invader-mls-minnesota-united-san-jose-earthquakes",
+      "seen_at": "2026-08-24T15:37:00.431842+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cpwl87rlqjvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T15:37:02.643842+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/julian-alvarez-walks-alone-at-atletico-madrid-barcelona-transfer-saga-la-liga",
+      "seen_at": "2026-08-24T15:37:05.309345+00:00"
     }
   ]
 }
