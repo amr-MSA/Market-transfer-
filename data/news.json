@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T21:40:50.387028+00:00",
+  "updated_at": "2026-08-24T22:00:58.817588+00:00",
   "events": [],
   "articles": [
     {
@@ -166,6 +166,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/fulham-chelsea-premier-league-match-report",
       "seen_at": "2026-08-24T21:40:50.387028+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ckgx2ke9jgvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T22:00:58.645900+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/nottingham-forest-liam-delap-chelsea-tranfer-window",
+      "seen_at": "2026-08-24T22:00:58.817588+00:00"
     }
   ]
 }
