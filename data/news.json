@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T00:27:16.461001+00:00",
+  "updated_at": "2026-08-24T02:07:56.816564+00:00",
   "events": [],
   "articles": [
     {
@@ -14,6 +14,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/womens-super-league-2026-27-preview-no-3-birmingham-city",
       "seen_at": "2026-08-24T00:27:16.461001+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/aleksander-ceferin-gianni-infantino-world-cup-fifa-uefa-super-league",
+      "seen_at": "2026-08-24T02:07:53.440542+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cwy4y5k4kg4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T02:07:53.601220+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/23/european-football-psg-rennes-torino-milan-elche-barcelona-bayern-munich-harry-kane",
+      "seen_at": "2026-08-24T02:07:56.816564+00:00"
     }
   ]
 }
