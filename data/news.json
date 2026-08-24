@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T22:58:26.114210+00:00",
+  "updated_at": "2026-08-24T23:25:53.545436+00:00",
   "events": [],
   "articles": [
     {
@@ -186,6 +186,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-chelsea-xabi-alonso-fulham",
       "seen_at": "2026-08-24T22:58:26.114210+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/womens-super-league-2026-27-preview-no-4-brighton",
+      "seen_at": "2026-08-24T23:25:52.175193+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cg59814gvj9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T23:25:53.545436+00:00"
     }
   ]
 }
