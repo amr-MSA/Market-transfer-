@@ -182,10 +182,23 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/65166",
     "fabrizio_text": "🚨 💣 BREAKING: Tottenham reach verbal agreement with Man City to sign Omar Marmoush, here we go! Verbal agreement done on initial loan with buy clause to become mandatory under certain conditions at £50m. Marmoush said yes to #THFC days ago, travel and medical on Monday. ⚪️ 🇪🇬 https://t.co/yfq0lOUB8N — Fabrizio Romano ( @FabrizioRomano ) Aug 23, 2026",
     "discovered_at": "2026-08-23T15:44:49.161919+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Omar Marmoush من Man City إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "unconfirmed_published_at": "2026-08-24T16:07:58.852248+00:00"
   }
 ]

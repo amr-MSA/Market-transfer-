@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T15:37:05.309345+00:00",
+  "updated_at": "2026-08-24T16:07:57.998658+00:00",
   "events": [],
   "articles": [
     {
@@ -98,6 +98,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/julian-alvarez-walks-alone-at-atletico-madrid-barcelona-transfer-saga-la-liga",
       "seen_at": "2026-08-24T15:37:05.309345+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/liverpool-newcastle-united-premier-league-andoni-iraola",
+      "seen_at": "2026-08-24T16:07:57.838534+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-soap-opera-tottenham-hotspur-football-daily-newsletter",
+      "seen_at": "2026-08-24T16:07:57.998658+00:00"
     }
   ]
 }
