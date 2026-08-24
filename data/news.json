@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T08:23:58.314109+00:00",
+  "updated_at": "2026-08-24T09:11:46.667817+00:00",
   "events": [],
   "articles": [
     {
@@ -54,6 +54,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/football-transfer-rumour-mill-julian-alvarez-arsenal-booed-atletico",
       "seen_at": "2026-08-24T08:23:58.314109+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqxvj8j7gy8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T09:11:46.667817+00:00"
     }
   ]
 }
