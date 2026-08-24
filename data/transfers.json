@@ -154,11 +154,24 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/65148",
     "fabrizio_text": "🚨 🔵 ⚪️ BREAKING: Ayyoub Bouaddi to Manchester City, here we go! Deal agreed club to club. Fee to reach €100m package with add-ons, as @FabriceHawkins reports. Green light from Lille to the sale. Bouaddi agreed terms with City in July and now set to join #MCFC project. https://t.co/qcbMqphude — Fabrizio Romano ( @FabrizioRomano ) Aug 23, 2026",
     "discovered_at": "2026-08-23T11:57:01.123431+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Ayyoub Bouaddi إلى Manchester City — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "unconfirmed_published_at": "2026-08-24T12:15:54.682000+00:00"
   },
   {
     "transfer_id": "96a78b7a9af94a2b07d7",
