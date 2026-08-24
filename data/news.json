@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T06:24:16.338730+00:00",
+  "updated_at": "2026-08-24T07:36:01.141838+00:00",
   "events": [],
   "articles": [
     {
@@ -30,6 +30,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c5yrrzn1dnno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T05:41:58.338145+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-10-talking-points-from-opening-weekend-action",
+      "seen_at": "2026-08-24T07:35:38.614597+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/chelsea-change-course-with-alonso-primed-to-banish-the-chaos-of-youth",
+      "seen_at": "2026-08-24T07:35:46.393810+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckge725zy1zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T07:36:01.141838+00:00"
     }
   ]
 }
