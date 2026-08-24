@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T19:09:51.102335+00:00",
+  "updated_at": "2026-08-24T19:43:31.796210+00:00",
   "events": [],
   "articles": [
     {
@@ -134,6 +134,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cj4jxwxxvqyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T19:09:51.102335+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/post-pep-premier-league-era-begins-with-blast-of-hyper-managed-shock-and-awe",
+      "seen_at": "2026-08-24T19:43:31.471748+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cpveylz0n8go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T19:43:31.638547+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8xkl50ylweo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T19:43:31.796210+00:00"
     }
   ]
 }
