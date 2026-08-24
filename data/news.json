@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T07:36:01.141838+00:00",
+  "updated_at": "2026-08-24T08:23:58.314109+00:00",
   "events": [],
   "articles": [
     {
@@ -42,6 +42,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckge725zy1zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T07:36:01.141838+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cz6465pj4njo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T08:23:40.715618+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cgmkmpj03zmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T08:23:48.527257+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/football-transfer-rumour-mill-julian-alvarez-arsenal-booed-atletico",
+      "seen_at": "2026-08-24T08:23:58.314109+00:00"
     }
   ]
 }
