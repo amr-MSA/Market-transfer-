@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T04:58:52.996760+00:00",
+  "updated_at": "2026-08-24T05:41:58.338145+00:00",
   "events": [],
   "articles": [
     {
@@ -26,6 +26,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/23/european-football-psg-rennes-torino-milan-elche-barcelona-bayern-munich-harry-kane",
       "seen_at": "2026-08-24T02:07:56.816564+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5yrrzn1dnno?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T05:41:58.338145+00:00"
     }
   ]
 }
