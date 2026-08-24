@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T22:36:18.846206+00:00",
+  "updated_at": "2026-08-24T22:58:26.114210+00:00",
   "events": [],
   "articles": [
     {
@@ -178,6 +178,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/crl6r2wgd35o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T22:36:18.846206+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62e2y1p7njo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T22:58:25.786429+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-chelsea-xabi-alonso-fulham",
+      "seen_at": "2026-08-24T22:58:26.114210+00:00"
     }
   ]
 }
