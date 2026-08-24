@@ -200,5 +200,20 @@
       "summary": "Omar Marmoush من Man City إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
     },
     "unconfirmed_published_at": "2026-08-24T16:07:58.852248+00:00"
+  },
+  {
+    "transfer_id": "0e45d341b9c52579d747",
+    "player": "Kamil Grabara",
+    "to_club": "Juventus",
+    "from_club": "Wolfsburg",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65210",
+    "fabrizio_text": "🚨 ⚪️ ⚫️ Juventus agree loan deal to sign Kamil Grabara from Wolfsburg, here we go! Initial loan with buy option clause as Grabara said yes to Juventus two days ago. Di Gregorio to Bournemouth, Mattia Perin to Palermo and now Grabara to Juventus. 🇵🇱 https://t.co/yHmqNWdfDo — Fabrizio Romano ( @FabrizioRomano ) Aug 24, 2026",
+    "discovered_at": "2026-08-24T17:54:00.352596+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]

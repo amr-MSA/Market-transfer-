@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T17:22:22.945017+00:00",
+  "updated_at": "2026-08-24T17:53:59.546886+00:00",
   "events": [],
   "articles": [
     {
@@ -118,6 +118,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c750nd7yq7yo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T16:53:23.462386+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/24/fulham-v-chelsea-premier-league-live",
+      "seen_at": "2026-08-24T17:53:59.546886+00:00"
     }
   ]
 }
