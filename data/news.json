@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T21:06:43.380250+00:00",
+  "updated_at": "2026-08-24T21:40:50.387028+00:00",
   "events": [],
   "articles": [
     {
@@ -158,6 +158,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cddv72gj7qro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T21:06:43.380250+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cgk4k444rmmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T21:40:48.352152+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/fulham-chelsea-premier-league-match-report",
+      "seen_at": "2026-08-24T21:40:50.387028+00:00"
     }
   ]
 }
