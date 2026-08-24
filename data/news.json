@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T14:06:10.947598+00:00",
+  "updated_at": "2026-08-24T14:56:13.086552+00:00",
   "events": [],
   "articles": [
     {
@@ -74,6 +74,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2zn8ynj9eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T13:17:02.174218+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5y589nwjk9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T14:56:07.112333+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c750nd2419ko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T14:56:09.021970+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/rennes-psg-best-rest-ligue-1-ferran-torres",
+      "seen_at": "2026-08-24T14:56:13.086552+00:00"
     }
   ]
 }
