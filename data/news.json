@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T16:07:57.998658+00:00",
+  "updated_at": "2026-08-24T16:53:23.462386+00:00",
   "events": [],
   "articles": [
     {
@@ -106,6 +106,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-soap-opera-tottenham-hotspur-football-daily-newsletter",
       "seen_at": "2026-08-24T16:07:57.998658+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq63ry9q6jzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T16:53:17.541038+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/sport/2026/aug/24/san-francisco-49ers-owner-jed-york-pleads-no-contest-after-arrest-at-ohio-trailer-park",
+      "seen_at": "2026-08-24T16:53:17.731483+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c750nd7yq7yo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T16:53:23.462386+00:00"
     }
   ]
 }
