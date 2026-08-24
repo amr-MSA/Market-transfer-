@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-24T18:25:51.682407+00:00",
+  "updated_at": "2026-08-24T19:09:51.102335+00:00",
   "events": [],
   "articles": [
     {
@@ -122,6 +122,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/aug/24/fulham-v-chelsea-premier-league-live",
       "seen_at": "2026-08-24T17:53:59.546886+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c0469r217q5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T19:09:47.783464+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/24/gianni-infantino-fifa-players-resign-football-politics",
+      "seen_at": "2026-08-24T19:09:50.971057+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj4jxwxxvqyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-24T19:09:51.102335+00:00"
     }
   ]
 }
