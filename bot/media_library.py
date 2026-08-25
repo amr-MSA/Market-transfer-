@@ -1,7 +1,7 @@
-"""Private Telegram-backed archive for approved football person images.
+"""Telegram-backed, context-aware archive for approved football images.
 
-Telegram keeps the media file; this module keeps the durable, searchable
-metadata needed to match a player/manager and reuse its `file_id` safely.
+Telegram stores the binary media; this module owns the durable index that
+matches a person, club stint, and approved image without confusing old kits.
 """
 
 from __future__ import annotations
@@ -22,7 +22,11 @@ _PERSON_TYPES = {"player", "manager"}
 
 
 class MediaLibrary:
-    """Persistent index for private Telegram media-library messages."""
+    """Persistent index for private Telegram media-library messages.
+
+    Person IDs never change. Club-and-year keys describe visual context, so a
+    player can have a distinct approved image for every club stint.
+    """
 
     def __init__(self, path):
         self.path = Path(path)
@@ -30,11 +34,13 @@ class MediaLibrary:
     @staticmethod
     def empty():
         return {
-            "version": 1,
+            "version": 2,
             "updated_at": None,
             "next_person_number": 1,
-            "next_asset_number": 1,
+            "next_club_number": 1,
             "people": {},
+            "clubs": {},
+            "stints": {},
             "assets": {},
         }
 
@@ -45,13 +51,7 @@ class MediaLibrary:
             data = json.loads(self.path.read_text(encoding="utf-8"))
         except (OSError, TypeError, ValueError):
             return self.empty()
-        if not isinstance(data, dict) or not isinstance(data.get("people"), dict) or not isinstance(data.get("assets"), dict):
-            return self.empty()
-        data.setdefault("version", 1)
-        data.setdefault("updated_at", None)
-        data.setdefault("next_person_number", 1)
-        data.setdefault("next_asset_number", 1)
-        return data
+        return self._upgrade(data)
 
     def save(self, data):
         self.path.parent.mkdir(parents=True, exist_ok=True)
@@ -67,57 +67,126 @@ class MediaLibrary:
             if os.path.exists(tmp_name):
                 os.unlink(tmp_name)
 
-    def find_media(self, data, person, entity_type):
-        """Return the best approved library image for one unambiguous person."""
-        normalized = self._normalize(person)
-        if not normalized or entity_type not in _PERSON_TYPES:
-            return None
-        matches = []
-        for record in data.get("people", {}).values():
-            aliases = [record.get("name"), *(record.get("aliases") or [])]
-            if record.get("entity_type") == entity_type and normalized in {self._normalize(alias) for alias in aliases}:
-                matches.append(record)
-        if len(matches) != 1:
+    def find_media(self, data, person, entity_type, club=None, year=None):
+        """Return the best approved image for a person in the requested club.
+
+        A generic approved portrait may serve as a fallback. An image tied to
+        another club is deliberately never used when a club was requested.
+        """
+        person_record = self._find_person(data, person, entity_type)
+        if not person_record:
             return None
 
-        person_record = matches[0]
+        club_requested = bool(self._normalize(club))
+        target_club = self._find_club(data, club) if club_requested else None
+        target_year = self._coerce_year(year)
         candidates = []
         for asset_id in person_record.get("asset_ids", []):
             asset = data.get("assets", {}).get(asset_id)
-            if asset and asset.get("status") == "APPROVED" and asset.get("telegram_file_id"):
-                candidates.append(asset)
+            if not asset or asset.get("status") != "APPROVED" or not asset.get("telegram_file_id"):
+                continue
+
+            asset_club_id = asset.get("club_id")
+            if club_requested:
+                if target_club and asset_club_id == target_club["club_id"]:
+                    context_rank = 2
+                elif not asset_club_id:
+                    context_rank = 1
+                else:
+                    continue
+            else:
+                context_rank = 1 if not asset_club_id else 0
+
+            year_rank = int(bool(target_year and asset.get("start_year") == target_year))
+            candidates.append((context_rank, year_rank, int(asset.get("quality_score", 0)), asset.get("added_at") or "", asset))
+
         if not candidates:
             return None
-        best = max(candidates, key=lambda asset: (int(asset.get("quality_score", 0)), asset.get("added_at") or ""))
-        return self._as_media(best)
+        return self._as_media(max(candidates, key=lambda item: item[:-1])[-1])
+
+    def reserve_contextual_ids(self, data, person, entity_type, club=None, start_year=None):
+        """Reserve stable person, club/stint, and context-specific image IDs."""
+        if entity_type not in _PERSON_TYPES:
+            raise ValueError("entity_type must be player or manager")
+        person_name = str(person or "").strip()
+        if not person_name:
+            raise ValueError("person name is required")
+
+        person_record = self._find_person(data, person_name, entity_type)
+        if not person_record:
+            person_id = f"P{int(data.get('next_person_number', 1)):07d}"
+            data["next_person_number"] = int(data.get("next_person_number", 1)) + 1
+            person_record = {
+                "person_id": person_id,
+                "name": person_name,
+                "aliases": [],
+                "entity_type": entity_type,
+                "asset_ids": [],
+                "stint_ids": [],
+                "created_at": self._now(),
+            }
+            data.setdefault("people", {})[person_id] = person_record
+
+        club_record = None
+        stint_record = None
+        year = self._coerce_year(start_year)
+        if club:
+            if not year:
+                raise ValueError("club-specific images require a four-digit start year")
+            club_record = self._find_club(data, club)
+            if not club_record:
+                club_id = f"C{int(data.get('next_club_number', 1)):04d}"
+                data["next_club_number"] = int(data.get("next_club_number", 1)) + 1
+                club_record = {
+                    "club_id": club_id,
+                    "name": str(club).strip(),
+                    "aliases": [],
+                    "created_at": self._now(),
+                }
+                data.setdefault("clubs", {})[club_id] = club_record
+
+            club_code = club_record["club_id"][1:]
+            person_code = person_record["person_id"][1:]
+            stint_id = f"ST-{club_code}-{year}-{person_code}"
+            stint_record = data.setdefault("stints", {}).get(stint_id)
+            if not stint_record:
+                stint_record = {
+                    "stint_id": stint_id,
+                    "person_id": person_record["person_id"],
+                    "club_id": club_record["club_id"],
+                    "start_year": year,
+                    "asset_ids": [],
+                    "visual_key": f"{club_code}-{year}-{person_code}",
+                    "created_at": self._now(),
+                }
+                data["stints"][stint_id] = stint_record
+                person_record.setdefault("stint_ids", []).append(stint_id)
+
+        context_assets = (stint_record or person_record).get("asset_ids", [])
+        sequence = len(context_assets) + 1
+        person_code = person_record["person_id"][1:]
+        if stint_record:
+            club_code = club_record["club_id"][1:]
+            asset_id = f"IMG-{club_code}-{year}-{person_code}-{sequence:02d}"
+        else:
+            asset_id = f"IMG-GEN-{person_code}-{sequence:02d}"
+        return person_record, club_record, stint_record, asset_id
 
     def reserve_ids(self, data, person, entity_type):
-        """Get an existing person id or reserve stable ids for a new asset."""
-        normalized = self._normalize(person)
-        for record in data.get("people", {}).values():
-            aliases = [record.get("name"), *(record.get("aliases") or [])]
-            if record.get("entity_type") == entity_type and normalized in {self._normalize(alias) for alias in aliases}:
-                asset_id = self._next_asset_id(data)
-                return record, asset_id
+        """Compatibility wrapper for generic portraits used by auto-import."""
+        person_record, _, _, asset_id = self.reserve_contextual_ids(data, person, entity_type)
+        return person_record, asset_id
 
-        person_id = f"P{int(data.get('next_person_number', 1)):07d}"
-        data["next_person_number"] = int(data.get("next_person_number", 1)) + 1
-        person_record = {
-            "person_id": person_id,
-            "name": str(person).strip(),
-            "aliases": [],
-            "entity_type": entity_type,
-            "asset_ids": [],
-            "created_at": self._now(),
-        }
-        data.setdefault("people", {})[person_id] = person_record
-        return person_record, self._next_asset_id(data)
-
-    def add_archived_media(self, data, person_record, asset_id, media, archive):
+    def add_archived_media(self, data, person_record, asset_id, media, archive, club_record=None, stint_record=None):
         """Save one successfully archived Telegram photo and its provenance."""
         asset = {
             "asset_id": asset_id,
             "person_id": person_record["person_id"],
+            "club_id": club_record.get("club_id") if club_record else None,
+            "stint_id": stint_record.get("stint_id") if stint_record else None,
+            "start_year": stint_record.get("start_year") if stint_record else None,
+            "context_type": "club_stint" if stint_record else "generic",
+            "visual_key": stint_record.get("visual_key") if stint_record else f"GEN-{person_record['person_id'][1:]}",
             "telegram_file_id": archive["file_id"],
             "telegram_file_unique_id": archive.get("file_unique_id"),
             "telegram_message_id": archive.get("message_id"),
@@ -133,6 +202,8 @@ class MediaLibrary:
         }
         data.setdefault("assets", {})[asset_id] = asset
         person_record.setdefault("asset_ids", []).append(asset_id)
+        if stint_record:
+            stint_record.setdefault("asset_ids", []).append(asset_id)
         data["updated_at"] = self._now()
         return self._as_media(asset)
 
@@ -145,10 +216,15 @@ class MediaLibrary:
             and bool(media.get("url"))
         )
 
-    def _next_asset_id(self, data):
-        asset_id = f"IMG{int(data.get('next_asset_number', 1)):07d}"
-        data["next_asset_number"] = int(data.get("next_asset_number", 1)) + 1
-        return asset_id
+    @staticmethod
+    def manual_media(source_url, license_name, credit_name="Administrator confirmed"):
+        return {
+            "source": "manual",
+            "url": source_url,
+            "credit_url": source_url,
+            "credit_name": credit_name,
+            "credit_license": license_name,
+        }
 
     @staticmethod
     def _as_media(asset):
@@ -160,7 +236,60 @@ class MediaLibrary:
             "credit_url": asset.get("source_url"),
             "library_asset_id": asset.get("asset_id"),
             "library_person_id": asset.get("person_id"),
+            "library_club_id": asset.get("club_id"),
+            "library_stint_id": asset.get("stint_id"),
         }
+
+    def _upgrade(self, data):
+        if not isinstance(data, dict) or not isinstance(data.get("people"), dict) or not isinstance(data.get("assets"), dict):
+            return self.empty()
+        data["version"] = 2
+        data.setdefault("updated_at", None)
+        data.setdefault("next_person_number", 1)
+        data.setdefault("next_club_number", 1)
+        data.setdefault("clubs", {})
+        data.setdefault("stints", {})
+        for person in data["people"].values():
+            person.setdefault("asset_ids", [])
+            person.setdefault("stint_ids", [])
+            person.setdefault("aliases", [])
+        for asset in data["assets"].values():
+            asset.setdefault("club_id", None)
+            asset.setdefault("stint_id", None)
+            asset.setdefault("start_year", None)
+            asset.setdefault("context_type", "generic")
+            asset.setdefault("visual_key", f"GEN-{str(asset.get('person_id') or '')[1:]}")
+        return data
+
+    def _find_person(self, data, person, entity_type):
+        normalized = self._normalize(person)
+        if not normalized or entity_type not in _PERSON_TYPES:
+            return None
+        matches = []
+        for record in data.get("people", {}).values():
+            aliases = [record.get("name"), *(record.get("aliases") or [])]
+            if record.get("entity_type") == entity_type and normalized in {self._normalize(alias) for alias in aliases}:
+                matches.append(record)
+        return matches[0] if len(matches) == 1 else None
+
+    def _find_club(self, data, club):
+        normalized = self._normalize(club)
+        if not normalized:
+            return None
+        matches = []
+        for record in data.get("clubs", {}).values():
+            aliases = [record.get("name"), *(record.get("aliases") or [])]
+            if normalized in {self._normalize(alias) for alias in aliases}:
+                matches.append(record)
+        return matches[0] if len(matches) == 1 else None
+
+    @staticmethod
+    def _coerce_year(value):
+        try:
+            year = int(value)
+        except (TypeError, ValueError):
+            return None
+        return year if 1850 <= year <= 2200 else None
 
     @staticmethod
     def _quality_score(archive):
@@ -182,7 +311,7 @@ class MediaLibrary:
 
 
 class TelegramMediaArchive:
-    """Uploads an approved external image once and returns Telegram file ids."""
+    """Uploads approved images once and returns reusable Telegram file IDs."""
 
     def __init__(self, token, chat_id, timeout=20):
         self.chat_id = str(chat_id) if chat_id else None
@@ -193,21 +322,27 @@ class TelegramMediaArchive:
     def enabled(self):
         return bool(self.chat_id)
 
-    def archive(self, media, person_record, asset_id):
+    def archive(self, media, person_record, asset_id, club_record=None, stint_record=None):
         if not self.enabled or not MediaLibrary.is_archivable(media):
             return None
-        caption = (
-            f"LIBRARY_ASSET\n"
-            f"person_id={person_record['person_id']}\n"
-            f"asset_id={asset_id}\n"
-            f"name={person_record['name']}\n"
-            f"source={media.get('source')}\n"
-            f"license={media.get('credit_license')}"
+        return self._send_photo(
+            media["url"],
+            self._caption(person_record, asset_id, media.get("source"), media.get("credit_license"), club_record, stint_record),
         )
+
+    def archive_manual(self, file_id, person_record, asset_id, license_name, club_record, stint_record):
+        if not self.enabled or not file_id or not license_name:
+            return None
+        return self._send_photo(
+            file_id,
+            self._caption(person_record, asset_id, "manual", license_name, club_record, stint_record),
+        )
+
+    def _send_photo(self, photo, caption):
         try:
             response = requests.post(
                 self.endpoint,
-                json={"chat_id": self.chat_id, "photo": media["url"], "caption": caption},
+                json={"chat_id": self.chat_id, "photo": photo, "caption": caption},
                 timeout=self.timeout,
             )
             response.raise_for_status()
@@ -218,13 +353,35 @@ class TelegramMediaArchive:
             photos = message.get("photo") or []
             if not photos:
                 return None
-            photo = photos[-1]
+            photo_data = photos[-1]
             return {
-                "file_id": photo.get("file_id"),
-                "file_unique_id": photo.get("file_unique_id"),
+                "file_id": photo_data.get("file_id"),
+                "file_unique_id": photo_data.get("file_unique_id"),
                 "message_id": message.get("message_id"),
-                "width": photo.get("width"),
-                "height": photo.get("height"),
+                "width": photo_data.get("width"),
+                "height": photo_data.get("height"),
             }
         except (ValueError, requests.RequestException):
             return None
+
+    @staticmethod
+    def _caption(person_record, asset_id, source, license_name, club_record=None, stint_record=None):
+        lines = [
+            "LIBRARY_ASSET",
+            f"person_id={person_record['person_id']}",
+            f"asset_id={asset_id}",
+            f"name={person_record['name']}",
+            f"source={source}",
+            f"license={license_name}",
+        ]
+        if club_record and stint_record:
+            lines.extend([
+                "context=club_stint",
+                f"club_id={club_record['club_id']}",
+                f"club={club_record['name']}",
+                f"start_year={stint_record['start_year']}",
+                f"visual_key={stint_record['visual_key']}",
+            ])
+        else:
+            lines.append("context=generic")
+        return "\n".join(lines)

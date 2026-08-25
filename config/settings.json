@@ -39,5 +39,9 @@
   "media_library_auto_archive": true,
   "media_library_channel_id": "-1004403267589",
   "media_library_channel_name": "Foootballdb",
-  "media_library_path": "data/media_library.json"
+  "media_library_path": "data/media_library.json",
+  "identity_cards_enabled": true,
+  "identity_cards_channel_id": null,
+  "identity_cards_channel_name": null,
+  "identity_cards_path": "data/identity_cards.json"
 }

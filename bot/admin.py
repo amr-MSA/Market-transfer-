@@ -6,6 +6,11 @@ from pathlib import Path
 
 import requests
 from .content_types import ALL, CONTENT_TYPES, normalize_content_types
+from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
+from .media_library import MediaLibrary, TelegramMediaArchive
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class TelegramAdmin:
@@ -35,17 +40,19 @@ class TelegramAdmin:
 
     def _load_updates(self):
         if not self.updates_path.exists():
-            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
+            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False, "identity_cards_mode": False, "manual_media": None}
         try:
             with self.updates_path.open(encoding="utf-8") as f:
                 data = json.load(f)
             if not isinstance(data, dict):
-                return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
+                return {"offset": 0, "addchannel_mode": False, "media_library_mode": False, "identity_cards_mode": False, "manual_media": None}
             data.setdefault("addchannel_mode", False)
             data.setdefault("media_library_mode", False)
+            data.setdefault("identity_cards_mode", False)
+            data.setdefault("manual_media", None)
             return data
         except (OSError, ValueError):
-            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
+            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False, "identity_cards_mode": False, "manual_media": None}
 
     def _save_updates(self, data):
         self.updates_path.parent.mkdir(parents=True, exist_ok=True)
@@ -113,6 +120,39 @@ class TelegramAdmin:
         if re.fullmatch(r"@[A-Za-z0-9_]{5,}", value):
             return value
         return None
+
+    @staticmethod
+    def _public_channel_reference(value):
+        value = str(value or "").strip()
+        if re.fullmatch(r"@[A-Za-z0-9_]{5,}", value):
+            return value
+        match = re.fullmatch(r"https?://(?:t\.me|telegram\.me)/([A-Za-z0-9_]{5,})/?", value, flags=re.IGNORECASE)
+        return f"@{match.group(1)}" if match else None
+
+    def _resolve_public_channel(self, value):
+        reference = self._public_channel_reference(value)
+        if not reference:
+            raise ValueError("استخدم رابط قناة عامة صحيحًا مثل https://t.me/channel_name. أما القناة الخاصة فأعد توجيه منشور منها.")
+        chat = self._api("getChat", {"chat_id": reference}) or {}
+        if chat.get("type") != "channel" or chat.get("id") is None:
+            raise ValueError("الرابط لا يشير إلى قناة Telegram عامة.")
+        me = self._api("getMe") or {}
+        membership = self._api("getChatMember", {"chat_id": chat["id"], "user_id": me.get("id")}) or {}
+        if membership.get("status") not in {"administrator", "creator"} or membership.get("can_post_messages") is False:
+            raise ValueError("أضف البوت مشرفًا في القناة بصلاحية نشر الرسائل أولًا.")
+        return {"id": str(chat["id"]), "name": chat.get("title") or reference}
+
+    def _channel_from_input(self, value, name=None):
+        reference = self._public_channel_reference(value)
+        if reference:
+            channel = self._resolve_public_channel(value)
+            if name:
+                channel["name"] = name
+            return channel
+        channel_id = self._normalize_channel_id(value)
+        if not channel_id:
+            raise ValueError("استخدم رابطًا عامًا أو معرف قناة رقميًا. للقنوات الخاصة، أعد توجيه منشور منها.")
+        return {"id": channel_id, "name": name or channel_id}
 
     def _add_channel(self, channel):
         channel_id = self._normalize_channel_id(channel.get("id"))
@@ -186,6 +226,17 @@ class TelegramAdmin:
         self._save_settings(settings)
         return settings["media_library_channel_name"], channel_id
 
+    def _set_identity_cards_library(self, channel):
+        channel_id = self._normalize_channel_id(channel.get("id"))
+        if not channel_id:
+            raise ValueError("Invalid identity-cards channel ID.")
+        settings = self._load_settings()
+        settings["identity_cards_enabled"] = True
+        settings["identity_cards_channel_id"] = channel_id
+        settings["identity_cards_channel_name"] = channel.get("name") or channel_id
+        self._save_settings(settings)
+        return settings["identity_cards_channel_name"], channel_id
+
     def _media_library_status(self):
         settings = self._load_settings()
         channel_id = settings.get("media_library_channel_id")
@@ -197,6 +248,93 @@ class TelegramAdmin:
             f"المعرّف: {channel_id}\n"
             "الحفظ التلقائي: مفعّل"
         )
+
+    def _identity_cards_status(self):
+        settings = self._load_settings()
+        channel_id = settings.get("identity_cards_channel_id")
+        if not channel_id:
+            return "🪪 قناة بطاقات الهوية: غير مربوطة بعد. استخدم /setidentitylibrary."
+        return (
+            "🪪 بطاقات الهوية: مفعّلة\n"
+            f"القناة: {settings.get('identity_cards_channel_name') or channel_id}\n"
+            f"المعرّف: {channel_id}"
+        )
+
+    @staticmethod
+    def _manual_media_context(args):
+        if len(args) != 6:
+            raise ValueError(
+                'الاستخدام: /addmedia "اسم الشخص" player "النادي أو -" "السنة أو -" "رابط المصدر" "الرخصة"'
+            )
+        person, raw_type, raw_club, raw_year, source_url, license_name = args
+        entity_type = {"player": "player", "لاعب": "player", "manager": "manager", "مدرب": "manager"}.get(raw_type.casefold())
+        if not entity_type:
+            raise ValueError("النوع يجب أن يكون player أو manager.")
+        club = None if raw_club.strip().casefold() in {"-", "generic", "عام"} else raw_club.strip()
+        year = None if raw_year.strip() == "-" else raw_year.strip()
+        if club and (not year or not year.isdigit() or not 1850 <= int(year) <= 2200):
+            raise ValueError("صورة النادي تحتاج سنة بداية صحيحة من أربعة أرقام.")
+        if not club and year:
+            raise ValueError("استخدم - للسنة عندما تكون الصورة عامة بلا نادٍ.")
+        if not source_url.startswith(("https://", "http://")):
+            raise ValueError("أدخل رابط المصدر الكامل للصورة.")
+        if len(license_name.strip()) < 2:
+            raise ValueError("أدخل الرخصة أو وصفًا واضحًا لحق الاستخدام.")
+        return {
+            "person": person.strip(),
+            "entity_type": entity_type,
+            "club": club,
+            "start_year": int(year) if year else None,
+            "source_url": source_url.strip(),
+            "license": license_name.strip(),
+        }
+
+    def _archive_manual_media(self, file_id, context):
+        settings = self._load_settings()
+        channel_id = settings.get("media_library_channel_id")
+        if not channel_id:
+            raise ValueError("اربط قناة المكتبة أولًا عبر /setmedialibrary.")
+        library = MediaLibrary(ROOT / settings.get("media_library_path", "data/media_library.json"))
+        data = library.load()
+        person, club, stint, asset_id = library.reserve_contextual_ids(
+            data,
+            context["person"],
+            context["entity_type"],
+            context.get("club"),
+            context.get("start_year"),
+        )
+        archive = TelegramMediaArchive(self.token, channel_id, self.timeout)
+        result = archive.archive_manual(
+            file_id,
+            person,
+            asset_id,
+            context["license"],
+            club,
+            stint,
+        )
+        if not result or not result.get("file_id"):
+            raise ValueError("تعذر حفظ الصورة في قناة المكتبة. تحقق من صلاحية نشر الرسائل للبوت.")
+        media = MediaLibrary.manual_media(context["source_url"], context["license"])
+        library.add_archived_media(data, person, asset_id, media, result, club, stint)
+        library.save(data)
+        self._sync_identity_cards(settings, person, club)
+        return person, club, stint, asset_id
+
+    def _sync_identity_cards(self, settings, person_record, organization_record=None):
+        registry = IdentityCardRegistry(ROOT / settings.get("identity_cards_path", "data/identity_cards.json"))
+        data = registry.load()
+        person_card = registry.ensure_person(data, person_record)
+        organization_card = registry.ensure_organization(data, organization_record)
+        cards = TelegramIdentityCards(self.token, settings.get("identity_cards_channel_id"), self.timeout)
+        if cards.enabled:
+            person_message_id = cards.upsert(person_card, registry.person_text(person_card))
+            if person_message_id:
+                person_card["card_message_id"] = person_message_id
+            if organization_card:
+                organization_message_id = cards.upsert(organization_card, registry.organization_text(organization_card))
+                if organization_message_id:
+                    organization_card["card_message_id"] = organization_message_id
+        registry.save(data)
 
     def _list_channels(self):
         channels = self._load_channels().get("channels", [])
@@ -270,6 +408,8 @@ class TelegramAdmin:
             args, command = self._command_parts(text)
             addchannel_mode = bool(updates_state.get("addchannel_mode", False))
             media_library_mode = bool(updates_state.get("media_library_mode", False))
+            identity_cards_mode = bool(updates_state.get("identity_cards_mode", False))
+            manual_media = updates_state.get("manual_media")
 
             if command == "/myid":
                 self._send(chat_id, f"🆔 Your Telegram ID is:\n{user_id}")
@@ -286,12 +426,13 @@ class TelegramAdmin:
                 self._send(chat_id, self._list_channels())
             elif command == "/medialibrary":
                 self._send(chat_id, self._media_library_status())
+            elif command == "/identitycards":
+                self._send(chat_id, self._identity_cards_status())
             elif command == "/setmedialibrary":
                 if args:
                     try:
-                        channel_id = args[0]
-                        name = " ".join(args[1:]).strip() or channel_id
-                        name, channel_id = self._set_media_library({"id": channel_id, "name": name})
+                        channel = self._channel_from_input(args[0], " ".join(args[1:]).strip() or None)
+                        name, channel_id = self._set_media_library(channel)
                         updates_state["media_library_mode"] = False
                         self._send(chat_id, f"✅ تم ربط مكتبة الصور تلقائيًا.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
                     except ValueError as exc:
@@ -299,12 +440,46 @@ class TelegramAdmin:
                 else:
                     updates_state["media_library_mode"] = True
                     updates_state["addchannel_mode"] = False
+                    updates_state["identity_cards_mode"] = False
                     self._send(
                         chat_id,
-                        "🗂 أعد توجيه أي منشور من قناة مكتبة الصور الخاصة الآن.\n"
-                        "يجب أن يكون البوت مشرفًا فيها بصلاحية نشر الرسائل.\n\n"
-                        "لإلغاء العملية استخدم /cancel.",
+                        "🗂 أعد توجيه أي منشور من قناة مكتبة الصور الخاصة.\n"
+                        "يمكنك إرسال هذا التوجيه مباشرة بعد الأمر؛ لا حاجة لانتظار رد البوت.\n"
+                        "يجب أن يكون البوت مشرفًا فيها بصلاحية نشر الرسائل.",
                     )
+            elif command == "/setidentitylibrary":
+                if args:
+                    try:
+                        channel = self._channel_from_input(args[0], " ".join(args[1:]).strip() or None)
+                        name, channel_id = self._set_identity_cards_library(channel)
+                        updates_state["identity_cards_mode"] = False
+                        self._send(chat_id, f"✅ تم ربط قناة بطاقات الهوية.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+                else:
+                    updates_state["identity_cards_mode"] = True
+                    updates_state["addchannel_mode"] = False
+                    updates_state["media_library_mode"] = False
+                    self._send(
+                        chat_id,
+                        "🪪 أعد توجيه أي منشور من قناة بطاقات الهوية الخاصة.\n"
+                        "يمكنك إرسال هذا التوجيه مباشرة بعد الأمر؛ لا حاجة لانتظار رد البوت.\n"
+                        "يجب أن يكون البوت مشرفًا فيها بصلاحية نشر الرسائل.",
+                    )
+            elif command == "/addmedia":
+                try:
+                    updates_state["manual_media"] = self._manual_media_context(args)
+                    updates_state["addchannel_mode"] = False
+                    updates_state["media_library_mode"] = False
+                    updates_state["identity_cards_mode"] = False
+                    self._send(
+                        chat_id,
+                        "🖼 أرسل الصورة الآن كصورة Telegram (وليس كملف).\n"
+                        "سيحفظها البوت في المكتبة مع النادي والسنة والرخصة التي أدخلتها.\n\n"
+                        "للإلغاء استخدم /cancel.",
+                    )
+                except ValueError as exc:
+                    self._send(chat_id, f"❌ {exc}")
             elif command == "/types":
                 self._send(
                     chat_id,
@@ -323,12 +498,11 @@ class TelegramAdmin:
                     )
                 else:
                     try:
-                        channel_id = args[0]
-                        name = " ".join(args[1:]).strip() or channel_id
-                        added = self._add_channel({"id": channel_id, "name": name})
+                        channel = self._channel_from_input(args[0], " ".join(args[1:]).strip() or None)
+                        added = self._add_channel(channel)
                         updates_state["addchannel_mode"] = False
                         status = "تمت الإضافة والتفعيل" if added else "كانت موجودة وتم تفعيلها"
-                        self._send(chat_id, f"✅ {status}.\n\nالاسم: {name}\nالمعرّف: {channel_id}")
+                        self._send(chat_id, f"✅ {status}.\n\nالاسم: {channel['name']}\nالمعرّف: {channel['id']}")
                     except ValueError as exc:
                         self._send(chat_id, f"❌ {exc}")
             elif command in {"/removechannel", "/disablechannel", "/enablechannel"}:
@@ -365,21 +539,48 @@ class TelegramAdmin:
             elif command == "/cancel":
                 updates_state["addchannel_mode"] = False
                 updates_state["media_library_mode"] = False
-                self._send(chat_id, "🛑 تم إلغاء وضع إضافة القناة.")
+                updates_state["identity_cards_mode"] = False
+                updates_state["manual_media"] = None
+                self._send(chat_id, "🛑 تم إلغاء العملية الحالية.")
             elif command.startswith("/"):
                 self._send(
                     chat_id,
                     "الأوامر: /myid /health /test /testchannel /channels /types /addchannel "
                     "/settypes /removechannel /enablechannel /disablechannel /setmedialibrary "
-                    "/medialibrary /cancel"
+                    "/medialibrary /setidentitylibrary /identitycards /addmedia /cancel"
                 )
             else:
                 channel = self._forwarded_channel(message)
-                if channel and media_library_mode:
+                photos = message.get("photo") or []
+                if manual_media:
+                    if not photos:
+                        self._send(chat_id, "ℹ️ أرسل الصورة كصورة Telegram الآن، أو استخدم /cancel.")
+                    else:
+                        try:
+                            person, club, stint, asset_id = self._archive_manual_media(photos[-1].get("file_id"), manual_media)
+                            updates_state["manual_media"] = None
+                            context_label = f"{club['name']} — {stint['start_year']}" if club and stint else "صورة عامة"
+                            self._send(
+                                chat_id,
+                                "✅ أُضيفت الصورة إلى المكتبة.\n\n"
+                                f"الشخص: {person['name']} ({person['person_id']})\n"
+                                f"السياق: {context_label}\n"
+                                f"الأصل: {asset_id}",
+                            )
+                        except ValueError as exc:
+                            self._send(chat_id, f"❌ {exc}")
+                elif channel and media_library_mode:
                     try:
                         name, channel_id = self._set_media_library(channel)
                         updates_state["media_library_mode"] = False
                         self._send(chat_id, f"✅ تم ربط مكتبة الصور.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+                elif channel and identity_cards_mode:
+                    try:
+                        name, channel_id = self._set_identity_cards_library(channel)
+                        updates_state["identity_cards_mode"] = False
+                        self._send(chat_id, f"✅ تم ربط قناة بطاقات الهوية.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
                     except ValueError as exc:
                         self._send(chat_id, f"❌ {exc}")
                 elif channel and addchannel_mode:

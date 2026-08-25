@@ -11,23 +11,62 @@ def _wikimedia_media():
     }
 
 
-def test_library_assigns_stable_person_and_asset_ids_then_reuses_file_id(tmp_path):
+def test_library_assigns_contextual_club_stint_ids_and_reuses_matching_file_id(tmp_path):
     library = MediaLibrary(tmp_path / "media_library.json")
     data = library.load()
 
-    person, asset_id = library.reserve_ids(data, "Ezri Konsa", "player")
+    person, arsenal, arsenal_stint, arsenal_asset = library.reserve_contextual_ids(
+        data, "Ezri Konsa", "player", "Arsenal", 2026
+    )
     stored = library.add_archived_media(
+        data,
+        person,
+        arsenal_asset,
+        _wikimedia_media(),
+        {"file_id": "arsenal-file", "file_unique_id": "arsenal-u", "message_id": 9, "width": 960, "height": 1200},
+        arsenal,
+        arsenal_stint,
+    )
+
+    same_person, villa, villa_stint, villa_asset = library.reserve_contextual_ids(
+        data, "Ezri Konsa", "player", "Aston Villa", 2019
+    )
+    library.add_archived_media(
+        data,
+        same_person,
+        villa_asset,
+        _wikimedia_media(),
+        {"file_id": "villa-file", "file_unique_id": "villa-u", "message_id": 10, "width": 960, "height": 1200},
+        villa,
+        villa_stint,
+    )
+
+    assert person["person_id"] == "P0000001"
+    assert same_person["person_id"] == "P0000001"
+    assert arsenal["club_id"] == "C0001"
+    assert arsenal_stint["stint_id"] == "ST-0001-2026-0000001"
+    assert arsenal_asset == "IMG-0001-2026-0000001-01"
+    assert villa_asset == "IMG-0002-2019-0000001-01"
+    assert stored["url"] == "arsenal-file"
+    assert library.find_media(data, "Ezri Konsa", "player", club="Arsenal")["url"] == "arsenal-file"
+    assert library.find_media(data, "Ezri Konsa", "player", club="Aston Villa")["url"] == "villa-file"
+    assert library.find_media(data, "Ezri Konsa", "player", club="Chelsea") is None
+
+
+def test_generic_portrait_is_only_a_fallback_when_no_club_image_matches(tmp_path):
+    library = MediaLibrary(tmp_path / "media_library.json")
+    data = library.load()
+    person, asset_id = library.reserve_ids(data, "Thomas Frank", "manager")
+    library.add_archived_media(
         data,
         person,
         asset_id,
         _wikimedia_media(),
-        {"file_id": "telegram-file", "file_unique_id": "unique-file", "message_id": 9, "width": 960, "height": 1200},
+        {"file_id": "generic-file", "file_unique_id": "generic-u", "message_id": 7, "width": 960, "height": 1200},
     )
 
-    assert person["person_id"] == "P0000001"
-    assert asset_id == "IMG0000001"
-    assert stored["url"] == "telegram-file"
-    assert library.find_media(data, "Ezri Konsa", "player")["url"] == "telegram-file"
+    assert asset_id == "IMG-GEN-0000001-01"
+    assert library.find_media(data, "Thomas Frank", "manager", club="Tottenham")["url"] == "generic-file"
 
 
 def test_library_does_not_archive_media_without_a_verifiable_license():

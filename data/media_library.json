@@ -1,8 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "updated_at": null,
   "next_person_number": 1,
-  "next_asset_number": 1,
+  "next_club_number": 1,
   "people": {},
+  "clubs": {},
+  "stints": {},
   "assets": {}
 }

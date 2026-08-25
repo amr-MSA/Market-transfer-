@@ -2,6 +2,7 @@ import json
 
 import pytest
 
+import bot.admin as admin_module
 from bot.admin import TelegramAdmin
 
 
@@ -99,3 +100,107 @@ def test_medialibrary_command_links_a_forwarded_private_channel(tmp_path):
     assert settings["media_library_channel_name"] == "Media Vault"
     assert settings["media_library_auto_archive"] is True
     assert any("تم ربط مكتبة الصور" in text for _, text in sent)
+
+
+def test_addchannel_resolves_a_public_telegram_link_and_checks_posting_rights(tmp_path):
+    admin = make_admin(tmp_path)
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+
+    def api(method, payload=None):
+        if method == "getUpdates":
+            return [{"update_id": 1, "message": {"from": {"id": 7}, "chat": {"id": 7}, "text": "/addchannel https://t.me/arsenal"}}]
+        if method == "getChat":
+            assert payload == {"chat_id": "@arsenal"}
+            return {"id": -100999, "type": "channel", "title": "Arsenal"}
+        if method == "getMe":
+            return {"id": 77}
+        if method == "getChatMember":
+            assert payload == {"chat_id": -100999, "user_id": 77}
+            return {"status": "administrator", "can_post_messages": True}
+        return None
+
+    admin._api = api
+    admin.process(Publisher())
+
+    saved = json.loads((tmp_path / "channels.json").read_text(encoding="utf-8"))
+    assert saved["channels"][0]["id"] == "-100999"
+    assert saved["channels"][0]["name"] == "Arsenal"
+    assert any("تمت الإضافة" in text for _, text in sent)
+
+
+def test_identity_cards_channel_links_from_forwarded_message(tmp_path):
+    admin = make_admin(tmp_path)
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+    admin._api = lambda method, payload=None: [
+        {"update_id": 1, "message": {"from": {"id": 7}, "chat": {"id": 7}, "text": "/setidentitylibrary"}},
+        {
+            "update_id": 2,
+            "message": {
+                "from": {"id": 7},
+                "chat": {"id": 7},
+                "forward_origin": {"type": "channel", "chat": {"id": -100555, "title": "Identity Cards"}},
+            },
+        },
+    ] if method == "getUpdates" else None
+
+    admin.process(Publisher())
+
+    settings = json.loads((tmp_path / "settings.json").read_text(encoding="utf-8"))
+    assert settings["identity_cards_channel_id"] == "-100555"
+    assert settings["identity_cards_channel_name"] == "Identity Cards"
+    assert any("تم ربط قناة بطاقات الهوية" in text for _, text in sent)
+
+
+def test_addmedia_archives_a_contextual_club_image(tmp_path, monkeypatch):
+    admin = make_admin(tmp_path)
+    settings_path = tmp_path / "settings.json"
+    settings_path.write_text(
+        json.dumps({"media_library_enabled": True, "media_library_channel_id": "-100777"}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(admin_module, "ROOT", tmp_path)
+    monkeypatch.setattr(
+        admin_module.TelegramMediaArchive,
+        "archive_manual",
+        lambda self, *args: {
+            "file_id": "library-file",
+            "file_unique_id": "library-unique",
+            "message_id": 18,
+            "width": 960,
+            "height": 1200,
+        },
+    )
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+    admin._api = lambda method, payload=None: [
+        {
+            "update_id": 1,
+            "message": {
+                "from": {"id": 7},
+                "chat": {"id": 7},
+                "text": '/addmedia "Ezri Konsa" player Arsenal 2026 https://commons.example/konsa "CC BY-SA 4.0"',
+            },
+        },
+        {
+            "update_id": 2,
+            "message": {
+                "from": {"id": 7},
+                "chat": {"id": 7},
+                "photo": [{"file_id": "incoming-small"}, {"file_id": "incoming-large"}],
+            },
+        },
+    ] if method == "getUpdates" else None
+
+    admin.process(Publisher())
+
+    data = json.loads((tmp_path / "data" / "media_library.json").read_text(encoding="utf-8"))
+    asset = data["assets"]["IMG-0001-2026-0000001-01"]
+    assert asset["club_id"] == "C0001"
+    assert asset["stint_id"] == "ST-0001-2026-0000001"
+    assert asset["telegram_file_id"] == "library-file"
+    cards = json.loads((tmp_path / "data" / "identity_cards.json").read_text(encoding="utf-8"))
+    assert cards["people"]["P0000001"]["canonical_name"] == "Ezri Konsa"
+    assert cards["organizations"]["C0001"]["canonical_name"] == "Arsenal"
+    assert any("أُضيفت الصورة" in text for _, text in sent)

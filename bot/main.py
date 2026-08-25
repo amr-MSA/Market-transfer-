@@ -28,10 +28,15 @@ load_dotenv(ROOT / ".env")
 _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
 
 
-def _resolve_media(selector, library, library_data, archive, person, entity_type, source_url):
-    """Reuse a private approved image before making an external lookup."""
+def _resolve_media(selector, library, library_data, archive, person, entity_type, source_url, club=None, year=None):
+    """Reuse the best approved club-context image before external lookup.
+
+    Automatic Wikimedia imports stay generic because the source lookup cannot
+    prove the kit or club shown in a portrait. Club-specific images enter via
+    the explicit administrator workflow with a declared club and start year.
+    """
     if library:
-        stored = library.find_media(library_data, person, entity_type)
+        stored = library.find_media(library_data, person, entity_type, club=club, year=year)
         if stored:
             return stored, False
 
@@ -206,6 +211,10 @@ def main():
 
     if admin:
         print("[telegram-admin]", admin.process(publisher))
+        if media_library:
+            # An administrator can add a club-context image in this same
+            # polling cycle; reload it before any news is processed.
+            media_library_data = media_library.load()
         # Reload channels after /addchannel so a newly added client channel
         # can be used by this same run.
         channels_config = load_json(ROOT/"config/channels.json")["channels"]
@@ -309,6 +318,7 @@ def main():
                     event.get("person") or event.get("player"),
                     event.get("entity_type"),
                     item.get("image_url"),
+                    club=event.get("from") or event.get("to"),
                 )
                 media_library_dirty = media_library_dirty or archived
             media = record.get("media") if isinstance(record.get("media"), dict) else None
@@ -425,6 +435,7 @@ def main():
                     t.get("player"),
                     "player",
                     t.get("fabrizio_image_url"),
+                    club=t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
             media = t.get("media") if isinstance(t.get("media"), dict) else None
@@ -476,6 +487,7 @@ def main():
                     t.get("player"),
                     "player",
                     t.get("fabrizio_image_url"),
+                    club=t.get("from_club") or t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
             media = t.get("media") if isinstance(t.get("media"), dict) else None
