@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T18:03:20.802451+00:00",
+  "updated_at": "2026-08-25T18:52:50.840196+00:00",
   "events": [],
   "articles": [
     {
@@ -282,6 +282,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4gkekgvz7go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-25T17:04:27.215815+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/gary-lineker-roy-keane-the-rest-is-football",
+      "seen_at": "2026-08-25T18:52:50.840196+00:00"
     }
   ],
   "published": {}
