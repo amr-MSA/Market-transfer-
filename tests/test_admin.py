@@ -161,6 +161,23 @@ def test_addmedia_archives_a_contextual_club_image(tmp_path, monkeypatch):
         encoding="utf-8",
     )
     monkeypatch.setattr(admin_module, "ROOT", tmp_path)
+    class IdentitySource:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def candidates(self, name, entity_type):
+            return [{
+                "identity_key": "wikidata:Q99",
+                "canonical_name": name,
+                "aliases": [name],
+                "birth_date": "1997-10-23",
+                "nationality_ids": ["Q145"],
+                "position_ids": ["Q193592"],
+                "source_url": "https://www.wikidata.org/wiki/Q99",
+                "verified_at": "2026-08-25T00:00:00+00:00",
+            }]
+
+    monkeypatch.setattr(admin_module, "WikidataIdentitySource", IdentitySource)
     monkeypatch.setattr(
         admin_module.TelegramMediaArchive,
         "archive_manual",
@@ -202,5 +219,7 @@ def test_addmedia_archives_a_contextual_club_image(tmp_path, monkeypatch):
     assert asset["telegram_file_id"] == "library-file"
     cards = json.loads((tmp_path / "data" / "identity_cards.json").read_text(encoding="utf-8"))
     assert cards["people"]["P0000001"]["canonical_name"] == "Ezri Konsa"
+    assert cards["people"]["P0000001"]["identity_key"] == "wikidata:Q99"
+    assert cards["people"]["P0000001"]["identity_status"] == "VERIFIED"
     assert cards["organizations"]["C0001"]["canonical_name"] == "Arsenal"
     assert any("أُضيفت الصورة" in text for _, text in sent)

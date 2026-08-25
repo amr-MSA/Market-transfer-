@@ -10,6 +10,8 @@ from .news_sources import FootballNewsSource
 from .news_state import NewsState
 from .media import NewsImageSelector
 from .media_library import MediaLibrary, TelegramMediaArchive
+from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
+from .identity_resolver import IdentityResolver, WikidataIdentitySource
 from .content_types import channels_for_content
 from .gemini_extractor import GeminiExtractor
 from .editorial import GeminiEditorialWriter
@@ -28,27 +30,51 @@ load_dotenv(ROOT / ".env")
 _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
 
 
-def _resolve_media(selector, library, library_data, archive, person, entity_type, source_url, club=None, year=None):
+def _resolve_media(
+    selector, library, library_data, archive, person, entity_type, source_url,
+    identity_registry=None, identity_data=None, identity_cards=None, identity_source=None,
+    club=None, year=None,
+):
     """Reuse the best approved club-context image before external lookup.
 
     Automatic Wikimedia imports stay generic because the source lookup cannot
     prove the kit or club shown in a portrait. Club-specific images enter via
     the explicit administrator workflow with a declared club and start year.
     """
-    if library:
-        stored = library.find_media(library_data, person, entity_type, club=club, year=year)
+    identity = None
+    if identity_registry and identity_data and person:
+        identity = IdentityResolver(identity_registry, identity_source).resolve(identity_data, person, entity_type)
+    person_card = identity.get("card") if identity else None
+    person_id = person_card.get("person_id") if person_card else None
+
+    if library and person_id:
+        stored = library.find_media(library_data, person, entity_type, club=club, year=year, person_id=person_id)
         if stored:
-            return stored, False
+            return stored, False, False
 
     media = selector.select(source_url, person, entity_type)
     if not media or not library or not archive or not archive.enabled or not MediaLibrary.is_archivable(media):
-        return media, False
+        return media, False, False
 
-    person_record, asset_id = library.reserve_ids(library_data, person, entity_type)
+    # A name-only match is never enough to create a reusable identity asset.
+    if not identity or identity.get("status") in {"AMBIGUOUS", "NOT_FOUND"}:
+        return media, False, False
+
+    person_record, asset_id = library.reserve_ids(library_data, person, entity_type, person_id=person_id)
+    if identity_registry and identity_data:
+        person_card = identity_registry.ensure_person(identity_data, person_record)
+        if identity.get("facts"):
+            identity_registry.apply_facts(identity_data, person_card, identity["facts"])
     archived = archive.archive(media, person_record, asset_id)
     if not archived or not archived.get("file_id"):
-        return media, False
-    return library.add_archived_media(library_data, person_record, asset_id, media, archived), True
+        return media, False, False
+    identity_changed = bool(person_card and identity_registry)
+    if person_card and identity_cards and identity_cards.enabled:
+        message_id = identity_cards.upsert(person_card, identity_registry.person_text(person_card))
+        if message_id:
+            person_card["card_message_id"] = message_id
+            identity_changed = True
+    return library.add_archived_media(library_data, person_record, asset_id, media, archived), True, identity_changed
 
 
 def load_json(path):
@@ -182,6 +208,14 @@ def main():
     media_library_data = None
     media_archive = None
     media_library_dirty = False
+    identity_registry = None
+    identity_data = None
+    identity_cards = None
+    identity_dirty = False
+    identity_source = WikidataIdentitySource(
+        settings.get("request_timeout_seconds", 20),
+        settings.get("user_agent", "TransferConfirmationBot/5.0"),
+    )
     if settings.get("media_library_enabled", True):
         media_library = MediaLibrary(ROOT / settings.get("media_library_path", "data/media_library.json"))
         media_library_data = media_library.load()
@@ -191,6 +225,14 @@ def main():
                 settings.get("media_library_channel_id"),
                 settings.get("request_timeout_seconds", 20),
             )
+    if settings.get("identity_cards_enabled", True):
+        identity_registry = IdentityCardRegistry(ROOT / settings.get("identity_cards_path", "data/identity_cards.json"))
+        identity_data = identity_registry.load()
+        identity_cards = TelegramIdentityCards(
+            token,
+            settings.get("identity_cards_channel_id"),
+            settings.get("request_timeout_seconds", 20),
+        )
 
     news_source = None
     news_state = None
@@ -215,6 +257,8 @@ def main():
             # An administrator can add a club-context image in this same
             # polling cycle; reload it before any news is processed.
             media_library_data = media_library.load()
+        if identity_registry:
+            identity_data = identity_registry.load()
         # Reload channels after /addchannel so a newly added client channel
         # can be used by this same run.
         channels_config = load_json(ROOT/"config/channels.json")["channels"]
@@ -310,7 +354,7 @@ def main():
                 continue
 
             if "media" not in record:
-                record["media"], archived = _resolve_media(
+                record["media"], archived, identity_updated = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -318,9 +362,14 @@ def main():
                     event.get("person") or event.get("player"),
                     event.get("entity_type"),
                     item.get("image_url"),
+                    identity_registry,
+                    identity_data,
+                    identity_cards,
+                    identity_source,
                     club=event.get("from") or event.get("to"),
                 )
                 media_library_dirty = media_library_dirty or archived
+                identity_dirty = identity_dirty or identity_updated
             media = record.get("media") if isinstance(record.get("media"), dict) else None
             analysis = analyze_news_event(event, item)
             editorial = None
@@ -427,7 +476,7 @@ def main():
                     status="رسمي",
                 )
             if "media" not in t:
-                t["media"], archived = _resolve_media(
+                t["media"], archived, identity_updated = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -435,9 +484,14 @@ def main():
                     t.get("player"),
                     "player",
                     t.get("fabrizio_image_url"),
+                    identity_registry,
+                    identity_data,
+                    identity_cards,
+                    identity_source,
                     club=t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
+                identity_dirty = identity_dirty or identity_updated
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -479,7 +533,7 @@ def main():
                     status="Here We Go",
                 )
             if "media" not in t:
-                t["media"], archived = _resolve_media(
+                t["media"], archived, identity_updated = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -487,9 +541,14 @@ def main():
                     t.get("player"),
                     "player",
                     t.get("fabrizio_image_url"),
+                    identity_registry,
+                    identity_data,
+                    identity_cards,
+                    identity_source,
                     club=t.get("from_club") or t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
+                identity_dirty = identity_dirty or identity_updated
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -508,6 +567,8 @@ def main():
     store.save(list(by_id.values()))
     if media_library and media_library_dirty:
         media_library.save(media_library_data)
+    if identity_registry and identity_dirty:
+        identity_registry.save(identity_data)
 
 if __name__ == "__main__":
     main()

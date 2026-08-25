@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from .identity_resolver import normalize_name
 
 
 class IdentityCardRegistry:
@@ -22,7 +23,7 @@ class IdentityCardRegistry:
 
     @staticmethod
     def empty():
-        return {"version": 1, "updated_at": None, "people": {}, "organizations": {}}
+        return {"version": 2, "updated_at": None, "people": {}, "organizations": {}, "identity_index": {}, "name_index": {}}
 
     def load(self):
         if not self.path.exists():
@@ -33,13 +34,15 @@ class IdentityCardRegistry:
             return self.empty()
         if not isinstance(data, dict):
             return self.empty()
-        data.setdefault("version", 1)
+        data["version"] = 2
         data.setdefault("updated_at", None)
         data.setdefault("people", {})
         data.setdefault("organizations", {})
+        self.rebuild_indexes(data)
         return data
 
     def save(self, data):
+        self.rebuild_indexes(data)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp_name = tempfile.mkstemp(dir=self.path.parent, suffix=".tmp")
         try:
@@ -64,8 +67,10 @@ class IdentityCardRegistry:
                 "entity_type": person_record.get("entity_type"),
                 "identity_key": None,
                 "birth_date": None,
-                "nationality": None,
-                "position": None,
+                "nationality_ids": [],
+                "position_ids": [],
+                "identity_source_url": None,
+                "identity_verified_at": None,
                 "identity_status": "PENDING_VERIFICATION",
                 "card_message_id": None,
                 "created_at": self._now(),
@@ -75,6 +80,49 @@ class IdentityCardRegistry:
         card["entity_type"] = person_record.get("entity_type")
         data["updated_at"] = self._now()
         return card
+
+    def find_person_by_identity_key(self, data, identity_key):
+        person_id = (data.get("identity_index") or {}).get(identity_key)
+        return (data.get("people") or {}).get(person_id) if person_id else None
+
+    def find_people_by_name(self, data, name, entity_type=None):
+        candidate_ids = (data.get("name_index") or {}).get(normalize_name(name), [])
+        cards = [(data.get("people") or {}).get(person_id) for person_id in candidate_ids]
+        cards = [card for card in cards if card]
+        return [card for card in cards if not entity_type or card.get("entity_type") == entity_type]
+
+    def apply_facts(self, data, card, facts):
+        existing_key = card.get("identity_key")
+        incoming_key = facts.get("identity_key")
+        if existing_key and incoming_key and existing_key != incoming_key:
+            raise ValueError("identity key conflict")
+        card["identity_key"] = incoming_key or existing_key
+        card["canonical_name"] = facts.get("canonical_name") or card.get("canonical_name")
+        aliases = [card.get("canonical_name"), *(card.get("aliases") or []), *(facts.get("aliases") or [])]
+        card["aliases"] = list(dict.fromkeys(alias for alias in aliases if alias))
+        card["birth_date"] = facts.get("birth_date") or card.get("birth_date")
+        card["nationality_ids"] = facts.get("nationality_ids") or card.get("nationality_ids") or []
+        card["position_ids"] = facts.get("position_ids") or card.get("position_ids") or []
+        card["identity_source_url"] = facts.get("source_url") or card.get("identity_source_url")
+        card["identity_verified_at"] = facts.get("verified_at") or card.get("identity_verified_at")
+        card["identity_status"] = "VERIFIED" if card.get("identity_key") else "PENDING_VERIFICATION"
+        data["updated_at"] = self._now()
+        return card
+
+    @staticmethod
+    def rebuild_indexes(data):
+        identity_index = {}
+        name_index = {}
+        for person_id, card in (data.get("people") or {}).items():
+            identity_key = card.get("identity_key")
+            if identity_key and identity_key not in identity_index:
+                identity_index[identity_key] = person_id
+            for alias in [card.get("canonical_name"), *(card.get("aliases") or [])]:
+                normalized = normalize_name(alias)
+                if normalized:
+                    name_index.setdefault(normalized, []).append(person_id)
+        data["identity_index"] = identity_index
+        data["name_index"] = {key: list(dict.fromkeys(values)) for key, values in name_index.items()}
 
     def ensure_organization(self, data, organization_record):
         if not organization_record:
@@ -109,8 +157,8 @@ class IdentityCardRegistry:
                 f"role={card.get('entity_type') or 'unknown'}",
                 f"identity_key={card.get('identity_key') or 'PENDING'}",
                 f"birth_date={card.get('birth_date') or 'PENDING'}",
-                f"nationality={card.get('nationality') or 'PENDING'}",
-                f"position={card.get('position') or 'PENDING'}",
+                f"nationality_ids={','.join(card.get('nationality_ids') or []) or 'PENDING'}",
+                f"position_ids={','.join(card.get('position_ids') or []) or 'PENDING'}",
                 f"status={card.get('identity_status') or 'PENDING_VERIFICATION'}",
             ]
         )

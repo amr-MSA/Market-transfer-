@@ -67,13 +67,15 @@ class MediaLibrary:
             if os.path.exists(tmp_name):
                 os.unlink(tmp_name)
 
-    def find_media(self, data, person, entity_type, club=None, year=None):
+    def find_media(self, data, person, entity_type, club=None, year=None, person_id=None):
         """Return the best approved image for a person in the requested club.
 
         A generic approved portrait may serve as a fallback. An image tied to
         another club is deliberately never used when a club was requested.
         """
-        person_record = self._find_person(data, person, entity_type)
+        person_record = data.get("people", {}).get(person_id) if person_id else self._find_person(data, person, entity_type)
+        if person_record and person_record.get("entity_type") != entity_type:
+            return None
         if not person_record:
             return None
 
@@ -104,7 +106,7 @@ class MediaLibrary:
             return None
         return self._as_media(max(candidates, key=lambda item: item[:-1])[-1])
 
-    def reserve_contextual_ids(self, data, person, entity_type, club=None, start_year=None):
+    def reserve_contextual_ids(self, data, person, entity_type, club=None, start_year=None, person_id=None):
         """Reserve stable person, club/stint, and context-specific image IDs."""
         if entity_type not in _PERSON_TYPES:
             raise ValueError("entity_type must be player or manager")
@@ -112,12 +114,15 @@ class MediaLibrary:
         if not person_name:
             raise ValueError("person name is required")
 
-        person_record = self._find_person(data, person_name, entity_type)
+        person_record = data.get("people", {}).get(person_id) if person_id else self._find_person(data, person_name, entity_type)
+        if person_record and person_record.get("entity_type") != entity_type:
+            raise ValueError("person_id belongs to a different entity type")
         if not person_record:
-            person_id = f"P{int(data.get('next_person_number', 1)):07d}"
-            data["next_person_number"] = int(data.get("next_person_number", 1)) + 1
+            resolved_person_id = person_id or f"P{int(data.get('next_person_number', 1)):07d}"
+            numeric_id = int(str(resolved_person_id).removeprefix("P") or 0)
+            data["next_person_number"] = max(int(data.get("next_person_number", 1)), numeric_id + 1)
             person_record = {
-                "person_id": person_id,
+                "person_id": resolved_person_id,
                 "name": person_name,
                 "aliases": [],
                 "entity_type": entity_type,
@@ -172,9 +177,9 @@ class MediaLibrary:
             asset_id = f"IMG-GEN-{person_code}-{sequence:02d}"
         return person_record, club_record, stint_record, asset_id
 
-    def reserve_ids(self, data, person, entity_type):
+    def reserve_ids(self, data, person, entity_type, person_id=None):
         """Compatibility wrapper for generic portraits used by auto-import."""
-        person_record, _, _, asset_id = self.reserve_contextual_ids(data, person, entity_type)
+        person_record, _, _, asset_id = self.reserve_contextual_ids(data, person, entity_type, person_id=person_id)
         return person_record, asset_id
 
     def add_archived_media(self, data, person_record, asset_id, media, archive, club_record=None, stint_record=None):

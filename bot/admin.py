@@ -7,6 +7,7 @@ from pathlib import Path
 import requests
 from .content_types import ALL, CONTENT_TYPES, normalize_content_types
 from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
+from .identity_resolver import IdentityResolver, WikidataIdentitySource
 from .media_library import MediaLibrary, TelegramMediaArchive
 
 
@@ -296,13 +297,30 @@ class TelegramAdmin:
             raise ValueError("اربط قناة المكتبة أولًا عبر /setmedialibrary.")
         library = MediaLibrary(ROOT / settings.get("media_library_path", "data/media_library.json"))
         data = library.load()
+        registry = IdentityCardRegistry(ROOT / settings.get("identity_cards_path", "data/identity_cards.json"))
+        registry_data = registry.load()
+        decision = IdentityResolver(
+            registry,
+            WikidataIdentitySource(self.timeout, settings.get("user_agent", "TransferConfirmationBot/5.0")),
+        ).resolve(registry_data, context["person"], context["entity_type"])
+        if decision["status"] in {"AMBIGUOUS", "NOT_FOUND"}:
+            raise ValueError("تعذر حسم هوية الشخص بأمان. لم تُحفظ الصورة؛ راجع الاسم أو أضف بيانات هوية موثوقة أولًا.")
+
+        known_card = decision.get("card")
+        person_id = known_card.get("person_id") if known_card else None
         person, club, stint, asset_id = library.reserve_contextual_ids(
             data,
             context["person"],
             context["entity_type"],
             context.get("club"),
             context.get("start_year"),
+            person_id=person_id,
         )
+        person_card = registry.ensure_person(registry_data, person)
+        facts = decision.get("facts")
+        if facts:
+            registry.apply_facts(registry_data, person_card, facts)
+        registry.save(registry_data)
         archive = TelegramMediaArchive(self.token, channel_id, self.timeout)
         result = archive.archive_manual(
             file_id,
