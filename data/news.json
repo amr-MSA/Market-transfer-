@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T15:53:21.881141+00:00",
+  "updated_at": "2026-08-25T16:24:33.016951+00:00",
   "events": [],
   "articles": [
     {
@@ -258,6 +258,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/football-daily-email-tottenham-savinho-savio",
       "seen_at": "2026-08-25T15:53:21.881141+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgy42l2v5go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T16:24:32.662766+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clykngy3gldo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T16:24:32.824041+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/manchester-united-sign-carlos-baleba-brighton",
+      "seen_at": "2026-08-25T16:24:33.016951+00:00"
     }
   ]
 }
