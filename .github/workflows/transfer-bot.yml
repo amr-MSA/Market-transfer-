@@ -19,6 +19,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Synchronize latest state
+        run: |
+          # A queued manual run can begin from an older checkout after a
+          # scheduled run has already saved new JSON state. Refresh before
+          # the bot reads or writes state, while the concurrency lock is held.
+          git pull --ff-only origin "${GITHUB_REF_NAME}"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -42,5 +48,4 @@ jobs:
           git add data/transfers.json data/bot_updates.json data/news.json data/media_library.json config/channels.json config/settings.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore: update transfer state"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
