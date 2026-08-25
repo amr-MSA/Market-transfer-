@@ -41,7 +41,7 @@
   "media_library_channel_name": "Foootballdb",
   "media_library_path": "data/media_library.json",
   "identity_cards_enabled": true,
-  "identity_cards_channel_id": null,
-  "identity_cards_channel_name": null,
+  "identity_cards_channel_id": "-1004312139219",
+  "identity_cards_channel_name": "بطائق اللاعبين",
   "identity_cards_path": "data/identity_cards.json"
 }
