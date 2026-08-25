@@ -16,6 +16,7 @@ import requests
 
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 _FOOTBALL_TERMS = ("football", "soccer", "association football")
+_ORGANIZATION_TERMS = ("football club", "association football club", "national football team", "soccer club")
 
 
 class WikidataIdentitySource:
@@ -23,7 +24,7 @@ class WikidataIdentitySource:
         self.timeout = timeout
         self.headers = {"User-Agent": user_agent, "Accept-Encoding": "gzip, deflate"}
 
-    def candidates(self, name, entity_type):
+    def candidates(self, name, entity_type, organization=None):
         try:
             response = requests.get(
                 WIKIDATA_API,
@@ -48,6 +49,7 @@ class WikidataIdentitySource:
         if not exact:
             return []
 
+        organization_ids = self._organization_ids(organization) if organization else set()
         output = []
         for item in exact:
             description = str(item.get("description") or "")
@@ -56,7 +58,39 @@ class WikidataIdentitySource:
             facts = self._entity_facts(item.get("id"), item.get("label") or name, description, entity_type)
             if facts:
                 output.append(facts)
+        if organization_ids:
+            contextual = [facts for facts in output if organization_ids.intersection(facts.get("organization_ids") or [])]
+            # An exact organization match can safely narrow multiple identical names.
+            if contextual:
+                return contextual
         return output
+
+    def _organization_ids(self, name):
+        try:
+            response = requests.get(
+                WIKIDATA_API,
+                params={
+                    "action": "wbsearchentities",
+                    "search": name,
+                    "language": "en",
+                    "type": "item",
+                    "limit": 8,
+                    "format": "json",
+                    "maxlag": 5,
+                },
+                headers=self.headers,
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            search = response.json().get("search") or []
+        except (ValueError, requests.RequestException):
+            return set()
+        return {
+            item["id"]
+            for item in search
+            if self._same_name(name, item.get("label"))
+            and any(term in str(item.get("description") or "").casefold() for term in _ORGANIZATION_TERMS)
+        }
 
     def _entity_facts(self, qid, fallback_name, description, entity_type):
         if not qid:
@@ -90,6 +124,7 @@ class WikidataIdentitySource:
             "birth_date": self._claim_time(claims, "P569"),
             "nationality_ids": self._claim_ids(claims, "P27"),
             "position_ids": self._claim_ids(claims, "P413"),
+            "organization_ids": self._claim_ids(claims, "P54"),
             "source_url": f"https://www.wikidata.org/wiki/{qid}",
             "source": "wikidata",
             "verified_at": datetime.now(timezone.utc).isoformat(),
@@ -143,24 +178,23 @@ class IdentityResolver:
         self.registry = registry
         self.source = source or WikidataIdentitySource()
 
-    def resolve(self, data, name, entity_type):
+    def resolve(self, data, name, entity_type, organization=None):
         local = self.registry.find_people_by_name(data, name, entity_type)
-        verified = [card for card in local if card.get("identity_key") and card.get("identity_status") == "VERIFIED"]
-        if len(verified) == 1:
-            return {"status": "EXISTING", "card": verified[0], "facts": None}
-        if len(verified) > 1:
-            return {"status": "AMBIGUOUS", "candidates": verified}
-
-        remote = self.source.candidates(name, entity_type)
+        remote = self.source.candidates(name, entity_type, organization=organization)
         unique_by_key = {item["identity_key"]: item for item in remote if item.get("identity_key")}
         if len(unique_by_key) != 1:
-            return {"status": "AMBIGUOUS" if unique_by_key else "NOT_FOUND", "candidates": list(unique_by_key.values())}
+            return {
+                "status": "AMBIGUOUS" if unique_by_key or local else "NOT_FOUND",
+                "candidates": list(unique_by_key.values()) or local,
+            }
 
         facts = next(iter(unique_by_key.values()))
         same_key = self.registry.find_person_by_identity_key(data, facts["identity_key"])
         if same_key:
             return {"status": "EXISTING", "card": same_key, "facts": facts}
         if len(local) == 1:
+            if local[0].get("identity_key"):
+                return {"status": "AMBIGUOUS", "candidates": local}
             return {"status": "VERIFY_EXISTING", "card": local[0], "facts": facts}
         if len(local) > 1:
             return {"status": "AMBIGUOUS", "candidates": local}

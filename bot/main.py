@@ -43,7 +43,12 @@ def _resolve_media(
     """
     identity = None
     if identity_registry and identity_data and person:
-        identity = IdentityResolver(identity_registry, identity_source).resolve(identity_data, person, entity_type)
+        identity = IdentityResolver(identity_registry, identity_source).resolve(
+            identity_data,
+            person,
+            entity_type,
+            organization=club,
+        )
     person_card = identity.get("card") if identity else None
     person_id = person_card.get("person_id") if person_card else None
 

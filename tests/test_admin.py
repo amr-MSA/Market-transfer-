@@ -165,7 +165,7 @@ def test_addmedia_archives_a_contextual_club_image(tmp_path, monkeypatch):
         def __init__(self, *args, **kwargs):
             pass
 
-        def candidates(self, name, entity_type):
+        def candidates(self, name, entity_type, organization=None):
             return [{
                 "identity_key": "wikidata:Q99",
                 "canonical_name": name,
