@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T08:28:37.556210+00:00",
+  "updated_at": "2026-08-25T09:09:17.534874+00:00",
   "events": [],
   "articles": [
     {
@@ -210,6 +210,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr59zj42plvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-25T07:52:45.810607+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr4v0p1xqryo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T09:09:11.746673+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gql9p0qn2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T09:09:13.527214+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/football-transfer-rumours-manchester-city-tottenham-cody-gakpo",
+      "seen_at": "2026-08-25T09:09:17.534874+00:00"
     }
   ]
 }
