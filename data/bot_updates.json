@@ -1,5 +1,7 @@
 {
-  "offset": 735878817,
+  "offset": 735878818,
   "addchannel_mode": false,
-  "media_library_mode": false
+  "media_library_mode": false,
+  "identity_cards_mode": false,
+  "manual_media": null
 }
