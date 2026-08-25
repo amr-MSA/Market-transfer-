@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T10:16:48.497542+00:00",
+  "updated_at": "2026-08-25T10:53:23.089569+00:00",
   "events": [],
   "articles": [
     {
@@ -242,6 +242,10 @@
     {
       "id": "https://www.theguardian.com/football/picture/2026/aug/25/david-squires-on-boos-barcodes-buzzcuts-premier-league-returns",
       "seen_at": "2026-08-25T10:16:48.497542+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/c790wyyv71vo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T10:53:23.089569+00:00"
     }
   ]
 }
