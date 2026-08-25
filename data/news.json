@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T16:24:33.016951+00:00",
+  "updated_at": "2026-08-25T17:04:27.215815+00:00",
   "events": [],
   "articles": [
     {
@@ -270,6 +270,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/manchester-united-sign-carlos-baleba-brighton",
       "seen_at": "2026-08-25T16:24:33.016951+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cgk5ylln5l5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T17:04:26.892308+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c1mv0rxpd1no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T17:04:27.060559+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gkekgvz7go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T17:04:27.215815+00:00"
     }
   ]
 }
