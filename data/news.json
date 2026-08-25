@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T09:49:58.488610+00:00",
+  "updated_at": "2026-08-25T10:16:48.497542+00:00",
   "events": [],
   "articles": [
     {
@@ -234,6 +234,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/bangladesh-soccer-team-ronan-declan-sullivan",
       "seen_at": "2026-08-25T09:49:58.488610+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cn8e7q501j3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T10:16:47.396336+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/picture/2026/aug/25/david-squires-on-boos-barcodes-buzzcuts-premier-league-returns",
+      "seen_at": "2026-08-25T10:16:48.497542+00:00"
     }
   ]
 }
