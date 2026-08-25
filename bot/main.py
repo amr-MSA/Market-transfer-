@@ -33,7 +33,7 @@ _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
 def _resolve_media(
     selector, library, library_data, archive, person, entity_type, source_url,
     identity_registry=None, identity_data=None, identity_cards=None, identity_source=None,
-    club=None, year=None,
+    ambiguity_notifier=None, club=None, year=None,
 ):
     """Reuse the best approved club-context image before external lookup.
 
@@ -49,6 +49,8 @@ def _resolve_media(
             entity_type,
             organization=club,
         )
+    if identity and identity.get("status") == "AMBIGUOUS" and ambiguity_notifier:
+        ambiguity_notifier(person, entity_type, club, identity.get("candidates") or [])
     person_card = identity.get("card") if identity else None
     person_id = person_card.get("person_id") if person_card else None
 
@@ -145,6 +147,7 @@ def main():
         )
     else:
         admin = None
+    ambiguity_notifier = admin.report_identity_ambiguity if admin else None
 
     channels_config = load_json(ROOT/"config/channels.json")["channels"]
     channels = [c for c in channels_config if c.get("enabled", True)]
@@ -371,6 +374,7 @@ def main():
                     identity_data,
                     identity_cards,
                     identity_source,
+                    ambiguity_notifier=ambiguity_notifier,
                     club=event.get("from") or event.get("to"),
                 )
                 media_library_dirty = media_library_dirty or archived
@@ -493,6 +497,7 @@ def main():
                     identity_data,
                     identity_cards,
                     identity_source,
+                    ambiguity_notifier=ambiguity_notifier,
                     club=t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
@@ -550,6 +555,7 @@ def main():
                     identity_data,
                     identity_cards,
                     identity_source,
+                    ambiguity_notifier=ambiguity_notifier,
                     club=t.get("from_club") or t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived

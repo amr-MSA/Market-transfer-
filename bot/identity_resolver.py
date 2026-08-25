@@ -65,6 +65,12 @@ class WikidataIdentitySource:
                 return contextual
         return output
 
+    def facts_for_identity_key(self, identity_key, entity_type):
+        prefix, separator, qid = str(identity_key or "").partition(":")
+        if prefix != "wikidata" or not separator or not re.fullmatch(r"Q\d+", qid):
+            return None
+        return self._entity_facts(qid, qid, "manual identity selection", entity_type)
+
     def _organization_ids(self, name):
         try:
             response = requests.get(
@@ -185,7 +191,7 @@ class IdentityResolver:
         if len(unique_by_key) != 1:
             return {
                 "status": "AMBIGUOUS" if unique_by_key or local else "NOT_FOUND",
-                "candidates": list(unique_by_key.values()) or local,
+                "candidates": self._combine_candidates(list(unique_by_key.values()), local),
             }
 
         facts = next(iter(unique_by_key.values()))
@@ -194,11 +200,27 @@ class IdentityResolver:
             return {"status": "EXISTING", "card": same_key, "facts": facts}
         if len(local) == 1:
             if local[0].get("identity_key"):
-                return {"status": "AMBIGUOUS", "candidates": local}
+                return {"status": "AMBIGUOUS", "candidates": self._combine_candidates([facts], local)}
             return {"status": "VERIFY_EXISTING", "card": local[0], "facts": facts}
         if len(local) > 1:
-            return {"status": "AMBIGUOUS", "candidates": local}
+            return {"status": "AMBIGUOUS", "candidates": self._combine_candidates([facts], local)}
         return {"status": "CREATE_VERIFIED", "facts": facts}
+
+    @staticmethod
+    def _combine_candidates(remote, local):
+        combined = []
+        positions = {}
+        for candidate in [*(remote or []), *(local or [])]:
+            key = candidate.get("identity_key") or candidate.get("person_id") or repr(candidate)
+            if key not in positions:
+                positions[key] = len(combined)
+                combined.append(dict(candidate))
+                continue
+            existing = combined[positions[key]]
+            for field, value in candidate.items():
+                if value and not existing.get(field):
+                    existing[field] = value
+        return combined
 
 
 def normalize_name(value):
@@ -206,3 +228,49 @@ def normalize_name(value):
     value = "".join(char for char in value if not unicodedata.combining(char))
     value = re.sub(r"[^\w\s]", " ", value)
     return " ".join(value.casefold().split())
+
+
+def ambiguity_report(name, entity_type, organization, candidates):
+    """Return a readable admin report. It deliberately exposes source keys.
+
+    The administrator needs enough source data to make an explicit selection,
+    but a Telegram message must remain below the platform's message limit.
+    """
+    role = "لاعب" if entity_type == "player" else "مدرب"
+    lines = [
+        "⚠️ هوية ملتبسة — لم تُحفظ الصورة",
+        f"الاسم الوارد: {name}",
+        f"النوع: {role}",
+        f"سياق الخبر: {organization or 'غير متوفر'}",
+        "",
+        f"المرشحون ({len(candidates)}):",
+    ]
+    for index, candidate in enumerate(candidates or [], start=1):
+        aliases = ", ".join((candidate.get("aliases") or [])[:4]) or "—"
+        nationality = ", ".join(candidate.get("nationality_ids") or []) or "—"
+        positions = ", ".join(candidate.get("position_ids") or []) or "—"
+        organizations = ", ".join(candidate.get("organization_ids") or []) or "—"
+        lines.extend(
+            [
+                "",
+                f"{index}) الاسم: {candidate.get('canonical_name') or candidate.get('name') or '—'}",
+                f"   person_id المحلي: {candidate.get('person_id') or '—'}",
+                f"   identity_key: {candidate.get('identity_key') or '—'}",
+                f"   الميلاد: {candidate.get('birth_date') or '—'}",
+                f"   الجنسية (QID): {nationality}",
+                f"   المركز (QID): {positions}",
+                f"   الأندية/الجهات (QID): {organizations}",
+                f"   أسماء بديلة: {aliases}",
+                f"   الوصف: {candidate.get('description') or '—'}",
+                f"   السجل: {candidate.get('source') or 'محلي'}",
+                f"   المصدر: {candidate.get('source_url') or '—'}",
+            ]
+        )
+    lines.extend(
+        [
+            "",
+            "للاعتماد اليدوي، أعد أمر /addmedia نفسه وأضف identity_key المختار كمعامل أخير.",
+            "لن يدمج البوت أي لاعب حتى يتم الحسم صراحة.",
+        ]
+    )
+    return "\n".join(lines)[:3900]

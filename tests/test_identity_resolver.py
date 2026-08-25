@@ -83,3 +83,5 @@ def test_one_local_verified_name_does_not_bypass_multiple_external_candidates(tm
     ).resolve(data, "Alex Silva", "player", organization="Arsenal")
 
     assert decision["status"] == "AMBIGUOUS"
+    assert {candidate["identity_key"] for candidate in decision["candidates"]} == {"wikidata:Q1", "wikidata:Q2"}
+    assert any(candidate.get("person_id") == "P0000001" for candidate in decision["candidates"])

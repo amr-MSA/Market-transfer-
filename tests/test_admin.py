@@ -223,3 +223,65 @@ def test_addmedia_archives_a_contextual_club_image(tmp_path, monkeypatch):
     assert cards["people"]["P0000001"]["identity_status"] == "VERIFIED"
     assert cards["organizations"]["C0001"]["canonical_name"] == "Arsenal"
     assert any("أُضيفت الصورة" in text for _, text in sent)
+
+
+def test_unknown_command_returns_structured_arabic_help(tmp_path):
+    admin = make_admin(tmp_path)
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+    admin._api = lambda method, payload=None: [
+        {"update_id": 1, "message": {"from": {"id": 7}, "chat": {"id": 7}, "text": "/help"}},
+    ] if method == "getUpdates" else None
+
+    admin.process(Publisher())
+
+    assert "📡 القنوات والنشر" in sent[0][1]
+    assert "🖼 مكتبة الصور والهوية" in sent[0][1]
+    assert "/addmedia" in sent[0][1]
+
+
+def test_addmedia_reports_all_ambiguous_identity_candidates(tmp_path, monkeypatch):
+    admin = make_admin(tmp_path)
+    (tmp_path / "settings.json").write_text(
+        json.dumps({"media_library_enabled": True, "media_library_channel_id": "-100777"}),
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(admin_module, "ROOT", tmp_path)
+
+    class IdentitySource:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def candidates(self, name, entity_type, organization=None):
+            return [
+                {"identity_key": "wikidata:Q1", "canonical_name": name, "aliases": ["Alias 1"], "birth_date": "1990-01-01", "nationality_ids": ["Q1"], "position_ids": ["Q2"], "organization_ids": ["Q3"], "source_url": "https://www.wikidata.org/wiki/Q1"},
+                {"identity_key": "wikidata:Q2", "canonical_name": name, "aliases": ["Alias 2"], "birth_date": "1995-01-01", "nationality_ids": ["Q4"], "position_ids": ["Q5"], "organization_ids": ["Q6"], "source_url": "https://www.wikidata.org/wiki/Q2"},
+            ]
+
+    monkeypatch.setattr(admin_module, "WikidataIdentitySource", IdentitySource)
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+    admin._api = lambda method, payload=None: [
+        {"update_id": 1, "message": {"from": {"id": 7}, "chat": {"id": 7}, "text": '/addmedia "Alex Silva" player Arsenal 2026 https://commons.example/alex "CC BY-SA 4.0"'}},
+        {"update_id": 2, "message": {"from": {"id": 7}, "chat": {"id": 7}, "photo": [{"file_id": "incoming"}]}},
+    ] if method == "getUpdates" else None
+
+    admin.process(Publisher())
+
+    report = sent[-1][1]
+    assert "هوية ملتبسة" in report
+    assert "wikidata:Q1" in report
+    assert "wikidata:Q2" in report
+    assert not (tmp_path / "data" / "media_library.json").exists()
+
+
+def test_ambiguity_report_is_sent_to_every_admin(tmp_path):
+    admin = make_admin(tmp_path)
+    admin.admin_ids = {"7", "8"}
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+
+    admin.report_identity_ambiguity("Alex Silva", "player", "Arsenal", [{"identity_key": "wikidata:Q1", "canonical_name": "Alex Silva"}])
+
+    assert {str(chat_id) for chat_id, _ in sent} == {"7", "8"}
+    assert all("wikidata:Q1" in text for _, text in sent)

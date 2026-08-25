@@ -7,7 +7,7 @@ from pathlib import Path
 import requests
 from .content_types import ALL, CONTENT_TYPES, normalize_content_types
 from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
-from .identity_resolver import IdentityResolver, WikidataIdentitySource
+from .identity_resolver import IdentityResolver, WikidataIdentitySource, ambiguity_report, normalize_name
 from .media_library import MediaLibrary, TelegramMediaArchive
 
 
@@ -95,6 +95,40 @@ class TelegramAdmin:
 
     def _send(self, chat_id, text):
         return self._api("sendMessage", {"chat_id": chat_id, "text": text})
+
+    def report_identity_ambiguity(self, name, entity_type, organization, candidates):
+        text = ambiguity_report(name, entity_type, organization, candidates)
+        for admin_id in self.admin_ids:
+            try:
+                self._send(admin_id, text)
+            except (RuntimeError, requests.RequestException):
+                continue
+
+    @staticmethod
+    def _help_message():
+        return (
+            "🤖 لوحة تحكم البوت\n\n"
+            "أرسل أي أمر أدناه وسيرد البوت بالنتيجة أو بالخطوة التالية.\n\n"
+            "📡 القنوات والنشر\n"
+            "• /addchannel <رابط القناة> — إضافة قناة عامة للنشر.\n"
+            "• /channels — عرض القنوات وحالتها.\n"
+            "• /settypes <معرف القناة> <الأنواع> — تحديد الأخبار المسموح بها.\n"
+            "• /types — عرض أنواع المحتوى.\n"
+            "• /enablechannel أو /disablechannel أو /removechannel <معرف القناة> — إدارة قناة.\n\n"
+            "🖼 مكتبة الصور والهوية\n"
+            "• /setmedialibrary — ربط قناة الصور الخاصة.\n"
+            "• /medialibrary — عرض حالة مكتبة الصور.\n"
+            "• /setidentitylibrary — ربط قناة بطاقات الهوية.\n"
+            "• /identitycards — عرض حالة بطاقات الهوية.\n"
+            "• /addmedia — بدء إضافة صورة موثقة يدويًا.\n\n"
+            "🧪 الفحص والمساعدة\n"
+            "• /health — حالة البوت والتشغيل.\n"
+            "• /testchannel — اختبار الإرسال إلى القنوات.\n"
+            "• /test — اختبار تحليل نموذج انتقال.\n"
+            "• /myid — إظهار معرف Telegram الخاص بك.\n"
+            "• /cancel — إلغاء العملية الحالية.\n\n"
+            "⚠️ عند التباس اسم لاعب أو مدرب، يرسل البوت تلقائيًا تقريرًا بالمرشحين ومفاتيح Wikidata للمدراء."
+        )
 
     def _admin(self, user_id):
         return str(user_id) in self.admin_ids
@@ -263,11 +297,11 @@ class TelegramAdmin:
 
     @staticmethod
     def _manual_media_context(args):
-        if len(args) != 6:
+        if len(args) not in {6, 7}:
             raise ValueError(
-                'الاستخدام: /addmedia "اسم الشخص" player "النادي أو -" "السنة أو -" "رابط المصدر" "الرخصة"'
+                'الاستخدام: /addmedia "اسم الشخص" player "النادي أو -" "السنة أو -" "رابط المصدر" "الرخصة" [wikidata:Q...]'
             )
-        person, raw_type, raw_club, raw_year, source_url, license_name = args
+        person, raw_type, raw_club, raw_year, source_url, license_name, *identity_key = args
         entity_type = {"player": "player", "لاعب": "player", "manager": "manager", "مدرب": "manager"}.get(raw_type.casefold())
         if not entity_type:
             raise ValueError("النوع يجب أن يكون player أو manager.")
@@ -281,6 +315,9 @@ class TelegramAdmin:
             raise ValueError("أدخل رابط المصدر الكامل للصورة.")
         if len(license_name.strip()) < 2:
             raise ValueError("أدخل الرخصة أو وصفًا واضحًا لحق الاستخدام.")
+        selected_key = identity_key[0].strip() if identity_key else None
+        if selected_key and not re.fullmatch(r"wikidata:Q\d+", selected_key):
+            raise ValueError("المعرف المرجعي يجب أن يكون بالصيغة wikidata:Q123.")
         return {
             "person": person.strip(),
             "entity_type": entity_type,
@@ -288,6 +325,7 @@ class TelegramAdmin:
             "start_year": int(year) if year else None,
             "source_url": source_url.strip(),
             "license": license_name.strip(),
+            "identity_key": selected_key,
         }
 
     def _archive_manual_media(self, file_id, context):
@@ -299,12 +337,29 @@ class TelegramAdmin:
         data = library.load()
         registry = IdentityCardRegistry(ROOT / settings.get("identity_cards_path", "data/identity_cards.json"))
         registry_data = registry.load()
-        decision = IdentityResolver(
-            registry,
-            WikidataIdentitySource(self.timeout, settings.get("user_agent", "TransferConfirmationBot/5.0")),
-        ).resolve(registry_data, context["person"], context["entity_type"])
+        source = WikidataIdentitySource(self.timeout, settings.get("user_agent", "TransferConfirmationBot/5.0"))
+        if context.get("identity_key"):
+            facts = source.facts_for_identity_key(context["identity_key"], context["entity_type"])
+            if not facts or normalize_name(facts.get("canonical_name")) != normalize_name(context["person"]):
+                raise ValueError("المعرف المرجعي لا يطابق الاسم المدخل أو تعذر التحقق منه.")
+            existing = registry.find_person_by_identity_key(registry_data, facts["identity_key"])
+            decision = {"status": "EXISTING" if existing else "CREATE_VERIFIED", "card": existing, "facts": facts}
+        else:
+            decision = IdentityResolver(registry, source).resolve(
+                registry_data,
+                context["person"],
+                context["entity_type"],
+                organization=context.get("club"),
+            )
         if decision["status"] in {"AMBIGUOUS", "NOT_FOUND"}:
-            raise ValueError("تعذر حسم هوية الشخص بأمان. لم تُحفظ الصورة؛ راجع الاسم أو أضف بيانات هوية موثوقة أولًا.")
+            if decision["status"] == "AMBIGUOUS":
+                raise ValueError(ambiguity_report(
+                    context["person"],
+                    context["entity_type"],
+                    context.get("club"),
+                    decision.get("candidates") or [],
+                ))
+            raise ValueError("تعذر العثور على هوية مرجعية مؤكدة. لم تُحفظ الصورة؛ راجع الاسم أو استخدم identity_key موثوقًا.")
 
         known_card = decision.get("card")
         person_id = known_card.get("person_id") if known_card else None
@@ -561,12 +616,7 @@ class TelegramAdmin:
                 updates_state["manual_media"] = None
                 self._send(chat_id, "🛑 تم إلغاء العملية الحالية.")
             elif command.startswith("/"):
-                self._send(
-                    chat_id,
-                    "الأوامر: /myid /health /test /testchannel /channels /types /addchannel "
-                    "/settypes /removechannel /enablechannel /disablechannel /setmedialibrary "
-                    "/medialibrary /setidentitylibrary /identitycards /addmedia /cancel"
-                )
+                self._send(chat_id, self._help_message())
             else:
                 channel = self._forwarded_channel(message)
                 photos = message.get("photo") or []

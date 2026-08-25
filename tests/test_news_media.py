@@ -3,6 +3,9 @@ from bot.fabrizio import FabrizioSource
 from bot.media import NewsImageSelector
 from bot.publisher import TelegramPublisher
 from bot.formatting import football_news_message
+from bot.main import _resolve_media
+from bot.media_library import MediaLibrary
+from bot.identity_cards import IdentityCardRegistry
 
 
 def test_rss_image_is_extracted_from_media_content():
@@ -138,3 +141,38 @@ def test_wikimedia_attribution_is_shown_in_the_caption():
     assert "📷" in text
     assert "Jane Photographer" in text
     assert "CC BY-SA 4.0" in text
+
+
+def test_automatic_archive_reports_ambiguous_identity_without_archiving(tmp_path):
+    class Selector:
+        def select(self, *args):
+            return {"url": "https://commons.example/alex.jpg", "source": "wikimedia", "credit_license": "CC BY-SA 4.0"}
+
+    class Source:
+        def candidates(self, *args, **kwargs):
+            return [
+                {"identity_key": "wikidata:Q1", "canonical_name": "Alex Silva"},
+                {"identity_key": "wikidata:Q2", "canonical_name": "Alex Silva"},
+            ]
+
+    class Archive:
+        enabled = True
+
+        def archive(self, *args):
+            raise AssertionError("must not archive an ambiguous person")
+
+    registry = IdentityCardRegistry(tmp_path / "identity_cards.json")
+    library = MediaLibrary(tmp_path / "media_library.json")
+    notices = []
+
+    media, archived, identity_updated = _resolve_media(
+        Selector(), library, library.load(), Archive(), "Alex Silva", "player", "https://example.test/article",
+        registry, registry.load(), None, Source(),
+        ambiguity_notifier=lambda *args: notices.append(args), club="Arsenal",
+    )
+
+    assert media["url"] == "https://commons.example/alex.jpg"
+    assert archived is False
+    assert identity_updated is False
+    assert notices[0][0:3] == ("Alex Silva", "player", "Arsenal")
+    assert {candidate["identity_key"] for candidate in notices[0][3]} == {"wikidata:Q1", "wikidata:Q2"}
