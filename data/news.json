@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T04:59:21.090896+00:00",
+  "updated_at": "2026-08-25T05:37:25.101776+00:00",
   "events": [],
   "articles": [
     {
@@ -194,6 +194,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cg59814gvj9o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T23:25:53.545436+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cd7llw7yzggo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T05:37:25.101776+00:00"
     }
   ]
 }
