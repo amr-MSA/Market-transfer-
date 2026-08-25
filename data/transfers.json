@@ -215,5 +215,20 @@
     "official_delivery": {},
     "unconfirmed_sent": false,
     "unconfirmed_delivery": {}
+  },
+  {
+    "transfer_id": "056842a50891f5dbae33",
+    "player": "Dominik Livaković",
+    "to_club": "Barcelona",
+    "from_club": "Fenerbahçe",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65245",
+    "fabrizio_text": "🚨 🔵 🔴 Barcelona have just signed all the documents for Dominik Livaković deal; here we go now confirmed. Fenerbahçe receive €2m plus €2m possible add-ons. Plan for Livaković to become Barça backup GK from June 2027 when Szczesny leaves, if they can find a good loan move now. https://t.co/feSZ4Fw7VC — Fabrizio Romano ( @FabrizioRomano ) Aug 25, 2026",
+    "discovered_at": "2026-08-25T11:17:57.664704+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {}
   }
 ]
