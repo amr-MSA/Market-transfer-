@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T23:00:03.580069+00:00",
+  "updated_at": "2026-08-25T23:31:49.297090+00:00",
   "events": [],
   "articles": [
     {
@@ -330,6 +330,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/carabao-cup-round-up-leeds-nottingham-forest-brentford-birmingham",
       "seen_at": "2026-08-25T23:00:03.580069+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crerjz8814qo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T23:31:46.003787+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/womens-super-league-2026-27-preview-no-5-charlton-athletic",
+      "seen_at": "2026-08-25T23:31:49.297090+00:00"
     }
   ],
   "published": {}
