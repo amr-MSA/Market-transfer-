@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T20:47:03.326709+00:00",
+  "updated_at": "2026-08-25T21:12:22.104098+00:00",
   "events": [],
   "articles": [
     {
@@ -306,6 +306,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/xavi-hernandez-university-of-football-netherlands-head-coach-barcelona",
       "seen_at": "2026-08-25T20:19:16.494703+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/plymouth-coventry-carabao-cup-match-report",
+      "seen_at": "2026-08-25T21:12:22.104098+00:00"
     }
   ],
   "published": {}
