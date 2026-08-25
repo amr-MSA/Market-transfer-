@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T20:12:54.157831+00:00",
+  "updated_at": "2026-08-25T20:19:16.494703+00:00",
   "events": [],
   "articles": [
     {
@@ -298,6 +298,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4g5zg526gdo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-25T20:12:54.157831+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ce8e0l7prg6o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T20:19:16.353821+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/xavi-hernandez-university-of-football-netherlands-head-coach-barcelona",
+      "seen_at": "2026-08-25T20:19:16.494703+00:00"
     }
   ],
   "published": {}
