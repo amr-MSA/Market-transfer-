@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote, urljoin, urlparse
 import requests, feedparser
 from bs4 import BeautifulSoup
-from .normalize import clean_text, name_match
+from .normalize import clean_text, has_transfer_intent, name_match
 from .clubs import find_club
 
 # Words that need to appear near the player's name for a mention to count
@@ -12,12 +12,9 @@ from .clubs import find_club
 # style article, or an unrelated mention of the player, being mistaken for
 # an announcement. Deliberately broad (covers signing, official, loan,
 # medical-passed style wording) since official club copy varies a lot.
-_TRANSFER_KEYWORDS = re.compile(
-    r"\b(sign(?:s|ed|ing)?|join(?:s|ed|ing)?|official|confirm(?:s|ed)?|"
-    r"complet(?:e|es|ed|ion)|welcome|unveil(?:s|ed)?|deal|transfer|"
-    r"loan|permanent|medical|contract)\b",
-    re.I,
-)
+# Kept for compatibility with imports and documentation; the actual gate is
+# ``has_transfer_intent`` below, which requires movement context.
+_TRANSFER_KEYWORDS = re.compile(r"\b(transfer|loan|signed|joined|welcome|confirmed)\b", re.I)
 
 
 class OfficialVerifier:
@@ -158,7 +155,7 @@ class OfficialVerifier:
         unrelated article (e.g. "Former Arsenal player X now at...") from
         being read as today's confirmation.
         """
-        return name_match(player, text) and bool(_TRANSFER_KEYWORDS.search(text))
+        return name_match(player, text) and has_transfer_intent(text)
 
     @staticmethod
     def _entry_recent_enough(entry, cutoff):

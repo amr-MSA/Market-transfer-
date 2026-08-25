@@ -62,6 +62,7 @@ class GeminiNewsExtractor:
                 "Return JSON only and do not write commentary.",
                 "type MUST be exactly one value from allowed_types.",
                 "player is the full player name when a player is central to the news; otherwise null.",
+                "person is the full original-language name of the player or manager central to the news; for player-led news it MUST equal player, and otherwise it is null.",
                 "from is the club or national team currently concerned by the news. It is required for every event.",
                 "to is ONLY used when type is انتقال or إعارة. For every other type it MUST be null.",
                 "For انتقال and إعارة, from is the club the player leaves and to is the destination club.",
@@ -78,6 +79,7 @@ class GeminiNewsExtractor:
                 "from": "club or national-team name",
                 "to": "destination club only for انتقال or إعارة; otherwise null",
                 "player": "full player name or null",
+                "person": "full original player or manager name, or null",
                 "entity_type": "player|club|manager|match",
             },
             "article": {
@@ -124,6 +126,7 @@ class GeminiNewsExtractor:
         frm = self._clean(obj.get("from"))
         to = self._clean(obj.get("to"))
         player = self._clean(obj.get("player"))
+        person = self._clean(obj.get("person")) or player
         entity_type = self._clean(obj.get("entity_type")) or "club"
 
         if event_type not in CONTENT_TYPES or not frm or entity_type not in _ALLOWED_ENTITIES:
@@ -137,14 +140,48 @@ class GeminiNewsExtractor:
             return None
         if entity_type == "player" and not player:
             return None
+        if entity_type == "manager" and not person:
+            return None
 
         return {
             "type": event_type,
             "from": frm,
             "to": to if event_type in _TRANSFER_TYPES else None,
             "player": player,
+            "person": person,
             "entity_type": entity_type,
         }
+
+    @staticmethod
+    def _supported(value, source_text):
+        if not value:
+            return False
+        normalized_value = re.sub(r"[^\w\s]", " ", value.casefold())
+        normalized_text = re.sub(r"[^\w\s]", " ", source_text.casefold())
+        if re.search(r"\b" + r"\s+".join(re.escape(part) for part in normalized_value.split()) + r"\b", normalized_text):
+            return True
+        parts = [part for part in normalized_value.split() if len(part) > 2]
+        return bool(parts) and all(re.search(r"\b" + re.escape(part) + r"\b", normalized_text) for part in parts)
+
+    @classmethod
+    def validate_event(cls, event, item):
+        """Reject structured entities not supported by the source text."""
+        if not isinstance(event, dict) or not isinstance(item, dict):
+            return False
+        source_text = " ".join(str(item.get(key) or "") for key in ("title", "summary", "content"))
+        if not source_text.strip():
+            return False
+        for field in ("from", "player", "person"):
+            value = event.get(field)
+            if value and not cls._supported(value, source_text):
+                return False
+        if event.get("to") and not cls._supported(event["to"], source_text):
+            return False
+        if event.get("type") in _TRANSFER_TYPES:
+            movement_words = r"\b(sign|signed|signing|join|joined|move|moves|transfer|loan|deal|agreement)\b"
+            if not re.search(movement_words, source_text, re.I):
+                return False
+        return True
 
     def _read_prompt(self, name):
         if not self.prompt_dir:

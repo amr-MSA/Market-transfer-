@@ -1,5 +1,16 @@
 import hashlib
 import re
+
+_TRANSFER_INTENT = re.compile(
+    r"\b(sign(?:s|ed|ing)?|join(?:s|ed|ing)?|welcome|confirmed?|"
+    r"complet(?:e|es|ed|ion)|transfer(?:red)?|loan|unveil(?:s|ed)?)\b",
+    re.I,
+)
+_AGREEMENT_INTENT = re.compile(
+    r"\b(agreement|agreed|deal)\b.{0,80}\b(sign|move|transfer|join|loan)\b|"
+    r"\b(sign|move|transfer|join|loan)\b.{0,80}\b(agreement|agreed|deal)\b",
+    re.I,
+)
 import unicodedata
 
 def clean_text(text):
@@ -18,6 +29,12 @@ def fingerprint(*parts):
 
 def contains_here_we_go(text):
     return bool(re.search(r"\bhere\s+we\s+go\b", clean_text(text), re.I))
+
+def has_transfer_intent(text):
+    """Require event-specific movement evidence, not a generic keyword."""
+    text = clean_text(text)
+    return bool(_TRANSFER_INTENT.search(text) or _AGREEMENT_INTENT.search(text))
+
 
 def name_match(name, text):
     """Word-boundary, case-insensitive check that `name` appears as a whole

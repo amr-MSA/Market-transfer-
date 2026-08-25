@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 from .normalize import clean_text, contains_here_we_go
@@ -25,6 +26,11 @@ class FabrizioSource:
             if not url:
                 continue
 
+            image_node = node.select_one(".tgme_widget_message_photo_wrap")
+            image_url = self._background_image_url(
+                image_node.get("style", "") if image_node else ""
+            )
+
             date_node = node.select_one(".tgme_widget_message_date")
             published_at = None
             if date_node and date_node.get("datetime"):
@@ -41,7 +47,13 @@ class FabrizioSource:
             out.append({
                 "url": url,
                 "text": text,
+                "image_url": image_url,
                 "published_at": published_at,
                 "discovered_at": datetime.now(timezone.utc).isoformat(),
             })
         return out
+
+    @staticmethod
+    def _background_image_url(style):
+        match = re.search(r"url\(['\"]?([^'\")]+)", style or "", flags=re.I)
+        return match.group(1).strip() if match else None

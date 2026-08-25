@@ -7,7 +7,8 @@ from .fabrizio import FabrizioSource
 from .formatting import official_message, here_we_go_message, football_news_message
 from .analysis import analyze_news_event, analyze_transfer
 from .news_sources import FootballNewsSource
-from .news_dedup import NewsDedupStore
+from .news_state import NewsState
+from .media import NewsImageSelector
 from .content_types import channels_for_content
 from .gemini_extractor import GeminiExtractor
 from .editorial import GeminiEditorialWriter
@@ -30,7 +31,7 @@ def load_json(path):
     with path.open(encoding="utf-8") as f: return json.load(f)
 
 
-def _deliver(publisher, channels, text, delivery_state):
+def _deliver(publisher, channels, text, delivery_state, image_url=None):
     """Send `text` only to channels not already marked SENT in
     delivery_state, and merge the results back in. Returns True once every
     currently-enabled channel is marked SENT (i.e. delivery is complete).
@@ -42,7 +43,7 @@ def _deliver(publisher, channels, text, delivery_state):
     """
     pending = [c for c in channels if delivery_state.get(c["id"]) != "SENT"]
     if pending:
-        results = publisher.send(text, channels=pending)
+        results = publisher.send(text, channels=pending, image_url=image_url)
         for r in results:
             delivery_state[r["id"]] = "SENT" if r["ok"] else "FAILED"
             if not r["ok"]:
@@ -143,6 +144,15 @@ def main():
         settings["request_timeout_seconds"],
         settings.get("channel_send_delay_seconds", 0.35)
     )
+    image_selector = NewsImageSelector(
+        timeout=settings.get("news_image_timeout_seconds", settings["request_timeout_seconds"]),
+        user_agent=settings.get("user_agent", "TransferConfirmationBot/5.0"),
+        min_short_edge=settings.get("news_image_min_short_edge", 640),
+        min_pixels=settings.get("news_image_min_pixels", 600000),
+        max_download_bytes=settings.get("news_image_max_download_bytes", 8_000_000),
+        wikimedia_enabled=settings.get("wikimedia_fallback_enabled", True),
+        wikimedia_thumbnail_width=settings.get("wikimedia_thumbnail_width", 960),
+    )
 
     news_source = None
     news_state = None
@@ -156,7 +166,7 @@ def main():
                 settings.get("user_agent", "TransferConfirmationBot/5.0"),
                 settings.get("news_max_age_hours", 2),
             )
-            news_state = NewsDedupStore(
+            news_state = NewsState(
                 ROOT / "data/news.json",
                 settings.get("news_state_retention_days", 7),
             )
@@ -207,43 +217,81 @@ def main():
             if not extractor:
                 continue
 
-            if news_state.has_article(news_data, item["id"]):
+            existing = news_state.find_by_article(news_data, item["id"])
+            if news_state.has_article(news_data, item["id"]) and not existing:
                 continue
 
-            event = extractor.extract(item)
-            classified_this_run += 1
-            if not event:
+            if existing:
+                event = {
+                    "type": existing.get("type"),
+                    "from": existing.get("from"),
+                    "to": existing.get("to"),
+                    "player": existing.get("player"),
+                    "person": existing.get("person"),
+                    "entity_type": existing.get("entity_type"),
+                }
+            else:
+                event = extractor.extract(item)
+                classified_this_run += 1
+                if not event:
+                    news_state.mark_article(news_data, item["id"])
+                    print(f"[news-skip] Gemini rejected: {item['title']!r}")
+                    continue
+                if not GeminiNewsExtractor.validate_event(event, item):
+                    news_state.mark_article(news_data, item["id"])
+                    print(f"[news-skip] Gemini facts not supported by source: {item['title']!r}")
+                    continue
+
+                if news_state.contains(news_data, event):
+                    news_state.mark_article(news_data, item["id"])
+                    print(f"[news-duplicate] {event}")
+                    continue
+
+            news_targets = channels_for_content(channels, event["type"])
+            if not news_targets:
                 news_state.mark_article(news_data, item["id"])
-                print(f"[news-skip] Gemini rejected: {item['title']!r}")
+                print(f"[news-no-target] type={event['type']} title={item['title']!r}")
                 continue
 
-            if news_state.contains(news_data, event):
-                news_state.mark_article(news_data, item["id"])
-                print(f"[news-duplicate] {event}")
+            event_id = news_state.event_id(event)
+            record = news_state.get_record(news_data, event_id) or existing
+            if record is None:
+                record = news_state.mark_result(
+                    news_data,
+                    event_id,
+                    [],
+                    event={**event, "article_id": str(item["id"]), "target_channel_ids": [str(c["id"]) for c in news_targets]},
+                )
+            pending = news_state.pending_channels(record, news_targets)
+            news_state.mark_article(news_data, item["id"])
+            if not pending:
                 continue
 
+            if "media" not in record:
+                record["media"] = image_selector.select(
+                    item.get("image_url"),
+                    event.get("person") or event.get("player"),
+                    event.get("entity_type"),
+                )
+            media = record.get("media") if isinstance(record.get("media"), dict) else None
             analysis = analyze_news_event(event, item)
             editorial = None
             if editorial_writer:
                 editorial = editorial_writer.write(item, event, status="خبر صحفي")
-            text = football_news_message(item, analysis, editorial)
-            news_targets = channels_for_content(channels, event["type"])
-            if not news_targets:
-                print(f"[news-no-target] type={event['type']} title={item['title']!r}")
-                news_state.add(news_data, event)
-                news_state.mark_article(news_data, item["id"])
-                continue
+            text = football_news_message(item, analysis, editorial, media=media)
             results = publisher.send(
                 text,
-                channels=news_targets,
-                image_url=item.get("image_url"),
+                channels=pending,
+                image_url=media.get("url") if media else None,
             )
-
-            if results and all(result["ok"] for result in results):
-                news_state.add(news_data, event)
-                news_state.mark_article(news_data, item["id"])
+            news_state.mark_result(news_data, event_id, results, event={
+                **event,
+                "article_id": str(item["id"]),
+                "target_channel_ids": [str(c["id"]) for c in news_targets],
+            })
+            if results and any(result.get("ok") for result in results):
                 sent_this_run += 1
-            else:
+            if not results or not all(result.get("ok") for result in results):
                 print(f"[news-publish-failed] title={item['title']!r}")
 
         news_state.save(news_data)
@@ -284,6 +332,7 @@ def main():
                 "extraction_method":extraction_method,
                 "fabrizio_url":post["url"],
                 "fabrizio_text":post["text"],
+                "fabrizio_image_url":post.get("image_url"),
                 "discovered_at":post["discovered_at"],
                 "status":"WAITING_OFFICIAL",
                 "official_sent":False,
@@ -327,9 +376,18 @@ def main():
                     editorial_event,
                     status="رسمي",
                 )
-            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial)
+            if "media" not in t:
+                t["media"] = image_selector.select(t.get("fabrizio_image_url"), t.get("player"), "player")
+            media = t.get("media") if isinstance(t.get("media"), dict) else None
+            text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
-            delivered = _deliver(publisher, transfer_targets, text, t["official_delivery"])
+            delivered = _deliver(
+                publisher,
+                transfer_targets,
+                text,
+                t["official_delivery"],
+                image_url=media.get("url") if media else None,
+            )
             if delivered:
                 t.update(
                     status="OFFICIAL",
@@ -360,9 +418,18 @@ def main():
                     editorial_event,
                     status="Here We Go",
                 )
-            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial)
+            if "media" not in t:
+                t["media"] = image_selector.select(t.get("fabrizio_image_url"), t.get("player"), "player")
+            media = t.get("media") if isinstance(t.get("media"), dict) else None
+            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
-            delivered = _deliver(publisher, transfer_targets, text, t["unconfirmed_delivery"])
+            delivered = _deliver(
+                publisher,
+                transfer_targets,
+                text,
+                t["unconfirmed_delivery"],
+                image_url=media.get("url") if media else None,
+            )
             if delivered:
                 t.update(status="HERE_WE_GO", unconfirmed_sent=True, unconfirmed_published_at=now.isoformat())
             # else: retried next cycle

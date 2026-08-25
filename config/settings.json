@@ -28,5 +28,11 @@
   "news_gemini_timeout_seconds": 30,
   "editorial_enabled": true,
   "editorial_prompt_dir": "prompts",
-  "editorial_timeout_seconds": 30
+  "editorial_timeout_seconds": 30,
+  "news_image_timeout_seconds": 12,
+  "news_image_min_short_edge": 640,
+  "news_image_min_pixels": 600000,
+  "news_image_max_download_bytes": 8000000,
+  "wikimedia_fallback_enabled": true,
+  "wikimedia_thumbnail_width": 960
 }

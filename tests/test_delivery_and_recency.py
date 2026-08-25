@@ -54,6 +54,24 @@ def test_retry_only_targets_previously_failed_channels():
     assert complete is True
 
 
+def test_delivery_keeps_the_selected_image_during_a_channel_retry():
+    channels = _channels()
+    pub = TelegramPublisher("FAKE", channels, send_delay_seconds=0)
+    calls = []
+
+    def send_with_image(chat_id, text, image_url=None):
+        calls.append((chat_id, image_url))
+        return {"ok": True}
+
+    pub._send_to_chat = send_with_image
+    delivery = {"-1001": "SENT", "-1002": "FAILED", "-1003": "SENT"}
+
+    complete = _deliver(pub, channels, "msg", delivery, image_url="https://commons.test/player.jpg")
+
+    assert complete is True
+    assert calls == [("-1002", "https://commons.test/player.jpg")]
+
+
 def test_total_telegram_outage_leaves_nothing_marked_sent():
     channels = _channels()
     pub = TelegramPublisher("FAKE", channels, send_delay_seconds=0)
@@ -115,3 +133,16 @@ def test_official_recency_rejects_old_dated_entries():
     assert v._entry_recent_enough(recent_entry, cutoff) is True
     # No date at all: don't block, fall back to the keyword gate instead.
     assert v._entry_recent_enough(no_date_entry, cutoff) is True
+
+
+def test_official_verification_rejects_medical_or_contract_alone():
+    verifier = OfficialVerifier(clubs=[])
+    assert verifier._is_transfer_mention("Ezri Konsa", "Aston Villa discuss Ezri Konsa's contract") is False
+    assert verifier._is_transfer_mention("Ezri Konsa", "Ezri Konsa undergoes a medical") is False
+
+
+def test_official_verification_accepts_supported_joining_language():
+    verifier = OfficialVerifier(clubs=[])
+    assert verifier._is_transfer_mention(
+        "Ezri Konsa", "Arsenal welcome Ezri Konsa after he joins the club"
+    ) is True

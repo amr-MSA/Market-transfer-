@@ -29,7 +29,7 @@ def test_invalid_content_type_is_rejected():
         normalize_content_types(["إشاعة"])
 
 
-def test_weekly_reset_discards_previous_week_events(tmp_path):
+def test_calendar_week_change_keeps_recent_event(tmp_path):
     store = NewsDedupStore(tmp_path / "news.json")
     sunday = datetime(2026, 8, 23, 23, 59, tzinfo=timezone.utc)
     monday = datetime(2026, 8, 24, 0, 1, tzinfo=timezone.utc)
@@ -37,9 +37,9 @@ def test_weekly_reset_discards_previous_week_events(tmp_path):
     data = {"week_start": None, "updated_at": None, "events": []}
     store.add(data, event, sunday)
     assert store.contains(data, event)
-    store.reset_for_week(data, monday)
-    assert data["week_start"] == "2026-08-24"
-    assert data["events"] == []
+    store.prune(data, monday)
+    assert data["week_start"] is None
+    assert len(data["events"]) == 1
 
 
 def test_admin_can_update_channel_content_types(tmp_path):

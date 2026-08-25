@@ -6,24 +6,16 @@ from pathlib import Path
 
 
 class NewsDedupStore:
-    """Weekly cache of Gemini-classified football event identities.
+    """TTL cache for Gemini-classified events and inspected article IDs.
 
-    The cache begins afresh every Monday at 00:00 UTC. Event identity is built
-    only from the fields agreed for Gemini output: type, from, to and player.
-    A separate weekly article-ID list prevents the same RSS item from being
-    sent to Gemini again in every polling cycle.
+    Event identity is built from type, from, to and the named person/player. Records remain
+    for a full retention window from their own ``seen_at`` timestamp; calendar
+    week boundaries never delete recent records.
     """
 
     def __init__(self, path, retention_days=7):
         self.path = Path(path)
         self.retention = timedelta(days=retention_days)  # Compatibility for callers from older versions.
-
-    @staticmethod
-    def week_start(now=None):
-        now = now or datetime.now(timezone.utc)
-        now = now.astimezone(timezone.utc)
-        monday = (now - timedelta(days=now.weekday())).date().isoformat()
-        return monday
 
     def load(self):
         empty = {"week_start": None, "updated_at": None, "events": [], "articles": []}
@@ -43,19 +35,26 @@ class NewsDedupStore:
             "articles": data.get("articles", []) if isinstance(data.get("articles", []), list) else [],
         }
 
-    def reset_for_week(self, data, now=None):
-        now = now or datetime.now(timezone.utc)
-        current_week = self.week_start(now)
-        if data.get("week_start") != current_week:
-            data["week_start"] = current_week
-            data["events"] = []
-            data["articles"] = []
-        data["updated_at"] = now.isoformat()
-        return data
-
-    # Kept as an alias so existing callers migrate safely to weekly resets.
     def prune(self, data, now=None):
-        return self.reset_for_week(data, now)
+        now = now or datetime.now(timezone.utc)
+        cutoff = now.astimezone(timezone.utc) - self.retention
+
+        def recent(record):
+            try:
+                seen = datetime.fromisoformat(str(record.get("seen_at")).replace("Z", "+00:00"))
+                if seen.tzinfo is None:
+                    seen = seen.replace(tzinfo=timezone.utc)
+                return seen.astimezone(timezone.utc) >= cutoff
+            except (AttributeError, TypeError, ValueError):
+                # Legacy records without timestamps are retained once rather
+                # than discarded silently during migration.
+                return True
+
+        data["events"] = [record for record in data.get("events", []) if recent(record)]
+        data["articles"] = [record for record in data.get("articles", []) if recent(record)]
+        data["week_start"] = None
+        data["updated_at"] = now.astimezone(timezone.utc).isoformat()
+        return data
 
     @staticmethod
     def normalize(value):
@@ -67,6 +66,7 @@ class NewsDedupStore:
             self.normalize(event.get("from")),
             self.normalize(event.get("to")),
             self.normalize(event.get("player")),
+            self.normalize(event.get("person")),
         )
 
     def contains(self, data, event):
@@ -81,19 +81,20 @@ class NewsDedupStore:
         if not article_id:
             return
         now = now or datetime.now(timezone.utc)
-        self.reset_for_week(data, now)
+        self.prune(data, now)
         if not self.has_article(data, article_id):
             data.setdefault("articles", []).append({"id": str(article_id), "seen_at": now.isoformat()})
         data["updated_at"] = now.isoformat()
 
     def add(self, data, event, now=None):
         now = now or datetime.now(timezone.utc)
-        self.reset_for_week(data, now)
+        self.prune(data, now)
         record = {
             "type": event.get("type"),
             "from": event.get("from"),
             "to": event.get("to"),
             "player": event.get("player"),
+            "person": event.get("person"),
             "entity_type": event.get("entity_type"),
             "seen_at": now.isoformat(),
         }

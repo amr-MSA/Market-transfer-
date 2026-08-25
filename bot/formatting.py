@@ -72,7 +72,19 @@ def _source_line(source, url):
     return f"🗞 <i>{_text(source, 'مصدر إخباري')}</i> · <a href=\"{_url(url)}\">المصدر</a>"
 
 
-def official_message(player, frm, to, url, analysis=None, editorial=None):
+def _media_credit(media):
+    if not isinstance(media, dict) or media.get("source") != "wikimedia":
+        return ""
+    label_parts = [_text(media.get("credit_name"), "Wikimedia Commons")]
+    license_name = _text(media.get("credit_license"))
+    if license_name:
+        label_parts.append(license_name)
+    label = " · ".join(label_parts)
+    credit_url = media.get("credit_url")
+    return f"📷 <a href=\"{_url(credit_url)}\">{label}</a>" if credit_url else f"📷 {label}"
+
+
+def official_message(player, frm, to, url, analysis=None, editorial=None, media=None):
     body = _editorial_body(editorial)
     move = _move_line(editorial, player, frm, to)
     if not body:
@@ -82,10 +94,13 @@ def official_message(player, frm, to, url, analysis=None, editorial=None):
         parts.insert(2, move)
     parts.append(f"✅ {_text('تأكيد رسمي من النادي')}")
     parts.append(_source_line("المصدر الرسمي", url))
+    media_credit = _media_credit(media)
+    if media_credit:
+        parts.append(media_credit)
     return "\n".join(parts)
 
 
-def here_we_go_message(player, frm, to, url, analysis=None, editorial=None):
+def here_we_go_message(player, frm, to, url, analysis=None, editorial=None, media=None):
     body = _editorial_body(editorial)
     move = _move_line(editorial, player, frm, to)
     if not body:
@@ -95,10 +110,13 @@ def here_we_go_message(player, frm, to, url, analysis=None, editorial=None):
         parts.insert(2, move)
     parts.append("⏳ الإعلان الرسمي لم يصدر بعد")
     parts.append(_source_line("Fabrizio Romano", url))
+    media_credit = _media_credit(media)
+    if media_credit:
+        parts.append(media_credit)
     return "\n".join(parts)
 
 
-def football_news_message(item, analysis=None, editorial=None):
+def football_news_message(item, analysis=None, editorial=None, media=None):
     item = item or {}
     analysis = analysis or {}
     editorial = editorial or {}
@@ -109,8 +127,12 @@ def football_news_message(item, analysis=None, editorial=None):
         title = _text(item.get("title"), "خبر كرة قدم")
         summary = _text(analysis.get("summary"), "تفاصيل الخبر في المصدر.")
         body = f"<b>{title}</b>\n{summary}"
-    return "\n".join([
+    parts = [
         f"{icon} <b>{_text(event_type)}</b>",
         body,
         _source_line(item.get("source"), item.get("url")),
-    ])
+    ]
+    media_credit = _media_credit(media)
+    if media_credit:
+        parts.append(media_credit)
+    return "\n".join(parts)
