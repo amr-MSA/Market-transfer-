@@ -15,12 +15,13 @@ class TelegramAdmin:
     per workflow run and persists the update offset in data/bot_updates.json.
     """
 
-    def __init__(self, token, admin_ids, channels_path, state_path, updates_path, timeout=20):
+    def __init__(self, token, admin_ids, channels_path, state_path, updates_path, timeout=20, settings_path=None):
         self.token = token
         self.admin_ids = {str(x).strip() for x in admin_ids if str(x).strip()}
         self.channels_path = Path(channels_path)
         self.state_path = Path(state_path)
         self.updates_path = Path(updates_path)
+        self.settings_path = Path(settings_path) if settings_path else None
         self.timeout = timeout
         self.api = f"https://api.telegram.org/bot{token}"
 
@@ -34,16 +35,17 @@ class TelegramAdmin:
 
     def _load_updates(self):
         if not self.updates_path.exists():
-            return {"offset": 0, "addchannel_mode": False}
+            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
         try:
             with self.updates_path.open(encoding="utf-8") as f:
                 data = json.load(f)
             if not isinstance(data, dict):
-                return {"offset": 0, "addchannel_mode": False}
+                return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
             data.setdefault("addchannel_mode", False)
+            data.setdefault("media_library_mode", False)
             return data
         except (OSError, ValueError):
-            return {"offset": 0, "addchannel_mode": False}
+            return {"offset": 0, "addchannel_mode": False, "media_library_mode": False}
 
     def _save_updates(self, data):
         self.updates_path.parent.mkdir(parents=True, exist_ok=True)
@@ -63,6 +65,25 @@ class TelegramAdmin:
             json.dump(data, f, ensure_ascii=False, indent=2)
             f.write("\n")
         os.replace(tmp, self.channels_path)
+
+    def _load_settings(self):
+        if not self.settings_path or not self.settings_path.exists():
+            return {}
+        try:
+            with self.settings_path.open(encoding="utf-8") as handle:
+                data = json.load(handle)
+            return data if isinstance(data, dict) else {}
+        except (OSError, ValueError):
+            return {}
+
+    def _save_settings(self, data):
+        if not self.settings_path:
+            raise RuntimeError("Media library settings are unavailable.")
+        tmp = self.settings_path.with_suffix(".tmp")
+        with tmp.open("w", encoding="utf-8") as handle:
+            json.dump(data, handle, ensure_ascii=False, indent=2)
+            handle.write("\n")
+        os.replace(tmp, self.settings_path)
 
     def _send(self, chat_id, text):
         return self._api("sendMessage", {"chat_id": chat_id, "text": text})
@@ -153,6 +174,30 @@ class TelegramAdmin:
         self._save_channels(data)
         return True
 
+    def _set_media_library(self, channel):
+        channel_id = self._normalize_channel_id(channel.get("id"))
+        if not channel_id:
+            raise ValueError("Invalid library channel ID.")
+        settings = self._load_settings()
+        settings["media_library_enabled"] = True
+        settings["media_library_auto_archive"] = True
+        settings["media_library_channel_id"] = channel_id
+        settings["media_library_channel_name"] = channel.get("name") or channel_id
+        self._save_settings(settings)
+        return settings["media_library_channel_name"], channel_id
+
+    def _media_library_status(self):
+        settings = self._load_settings()
+        channel_id = settings.get("media_library_channel_id")
+        if not channel_id:
+            return "🗂 مكتبة الصور: غير مربوطة بعد. استخدم /setmedialibrary ثم أعد توجيه منشور من القناة الخاصة."
+        return (
+            "🗂 مكتبة الصور: مفعّلة\n"
+            f"القناة: {settings.get('media_library_channel_name') or channel_id}\n"
+            f"المعرّف: {channel_id}\n"
+            "الحفظ التلقائي: مفعّل"
+        )
+
     def _list_channels(self):
         channels = self._load_channels().get("channels", [])
         if not channels:
@@ -224,6 +269,7 @@ class TelegramAdmin:
             chat_id = message.get("chat", {}).get("id")
             args, command = self._command_parts(text)
             addchannel_mode = bool(updates_state.get("addchannel_mode", False))
+            media_library_mode = bool(updates_state.get("media_library_mode", False))
 
             if command == "/myid":
                 self._send(chat_id, f"🆔 Your Telegram ID is:\n{user_id}")
@@ -238,6 +284,27 @@ class TelegramAdmin:
                 self._send(chat_id, f"🧪 Channel test complete: {ok}/{total} channels succeeded.")
             elif command == "/channels":
                 self._send(chat_id, self._list_channels())
+            elif command == "/medialibrary":
+                self._send(chat_id, self._media_library_status())
+            elif command == "/setmedialibrary":
+                if args:
+                    try:
+                        channel_id = args[0]
+                        name = " ".join(args[1:]).strip() or channel_id
+                        name, channel_id = self._set_media_library({"id": channel_id, "name": name})
+                        updates_state["media_library_mode"] = False
+                        self._send(chat_id, f"✅ تم ربط مكتبة الصور تلقائيًا.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+                else:
+                    updates_state["media_library_mode"] = True
+                    updates_state["addchannel_mode"] = False
+                    self._send(
+                        chat_id,
+                        "🗂 أعد توجيه أي منشور من قناة مكتبة الصور الخاصة الآن.\n"
+                        "يجب أن يكون البوت مشرفًا فيها بصلاحية نشر الرسائل.\n\n"
+                        "لإلغاء العملية استخدم /cancel.",
+                    )
             elif command == "/types":
                 self._send(
                     chat_id,
@@ -297,16 +364,25 @@ class TelegramAdmin:
                         self._send(chat_id, f"❌ {exc}\nاستخدم /types لعرض الخيارات.")
             elif command == "/cancel":
                 updates_state["addchannel_mode"] = False
+                updates_state["media_library_mode"] = False
                 self._send(chat_id, "🛑 تم إلغاء وضع إضافة القناة.")
             elif command.startswith("/"):
                 self._send(
                     chat_id,
                     "الأوامر: /myid /health /test /testchannel /channels /types /addchannel "
-                    "/settypes /removechannel /enablechannel /disablechannel /cancel"
+                    "/settypes /removechannel /enablechannel /disablechannel /setmedialibrary "
+                    "/medialibrary /cancel"
                 )
             else:
                 channel = self._forwarded_channel(message)
-                if channel and addchannel_mode:
+                if channel and media_library_mode:
+                    try:
+                        name, channel_id = self._set_media_library(channel)
+                        updates_state["media_library_mode"] = False
+                        self._send(chat_id, f"✅ تم ربط مكتبة الصور.\n\nالقناة: {name}\nالمعرّف: {channel_id}")
+                    except ValueError as exc:
+                        self._send(chat_id, f"❌ {exc}")
+                elif channel and addchannel_mode:
                     try:
                         added = self._add_channel(channel)
                         updates_state["addchannel_mode"] = False

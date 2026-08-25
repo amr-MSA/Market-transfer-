@@ -34,5 +34,10 @@
   "news_image_min_pixels": 600000,
   "news_image_max_download_bytes": 8000000,
   "wikimedia_fallback_enabled": true,
-  "wikimedia_thumbnail_width": 960
+  "wikimedia_thumbnail_width": 960,
+  "media_library_enabled": true,
+  "media_library_auto_archive": true,
+  "media_library_channel_id": null,
+  "media_library_channel_name": null,
+  "media_library_path": "data/media_library.json"
 }

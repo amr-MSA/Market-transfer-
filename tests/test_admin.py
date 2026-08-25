@@ -16,7 +16,12 @@ def make_admin(tmp_path):
     channels = tmp_path / "channels.json"
     channels.write_text(json.dumps({"channels": []}), encoding="utf-8")
     updates = tmp_path / "updates.json"
-    return TelegramAdmin("token", ["7"], channels, tmp_path / "state.json", updates, timeout=1)
+    settings = tmp_path / "settings.json"
+    settings.write_text(json.dumps({"media_library_enabled": True}), encoding="utf-8")
+    return TelegramAdmin(
+        "token", ["7"], channels, tmp_path / "state.json", updates,
+        timeout=1, settings_path=settings,
+    )
 
 
 def test_channel_id_validation():
@@ -66,3 +71,31 @@ def test_addchannel_command_works_without_forwarded_message(tmp_path):
         "content_types": ["*"],
     }]
     assert "تمت الإضافة" in sent[0][1]
+
+
+def test_medialibrary_command_links_a_forwarded_private_channel(tmp_path):
+    admin = make_admin(tmp_path)
+    sent = []
+    admin._send = lambda chat_id, text: sent.append((chat_id, text))
+    admin._api = lambda method, payload=None: [
+        {
+            "update_id": 1,
+            "message": {"from": {"id": 7}, "chat": {"id": 7}, "text": "/setmedialibrary"},
+        },
+        {
+            "update_id": 2,
+            "message": {
+                "from": {"id": 7},
+                "chat": {"id": 7},
+                "forward_origin": {"type": "channel", "chat": {"id": -100777, "title": "Media Vault"}},
+            },
+        },
+    ] if method == "getUpdates" else None
+
+    admin.process(Publisher())
+
+    settings = json.loads((tmp_path / "settings.json").read_text(encoding="utf-8"))
+    assert settings["media_library_channel_id"] == "-100777"
+    assert settings["media_library_channel_name"] == "Media Vault"
+    assert settings["media_library_auto_archive"] is True
+    assert any("تم ربط مكتبة الصور" in text for _, text in sent)

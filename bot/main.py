@@ -9,6 +9,7 @@ from .analysis import analyze_news_event, analyze_transfer
 from .news_sources import FootballNewsSource
 from .news_state import NewsState
 from .media import NewsImageSelector
+from .media_library import MediaLibrary, TelegramMediaArchive
 from .content_types import channels_for_content
 from .gemini_extractor import GeminiExtractor
 from .editorial import GeminiEditorialWriter
@@ -25,6 +26,24 @@ ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
 
 _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
+
+
+def _resolve_media(selector, library, library_data, archive, person, entity_type, source_url):
+    """Reuse a private approved image before making an external lookup."""
+    if library:
+        stored = library.find_media(library_data, person, entity_type)
+        if stored:
+            return stored, False
+
+    media = selector.select(source_url, person, entity_type)
+    if not media or not library or not archive or not archive.enabled or not MediaLibrary.is_archivable(media):
+        return media, False
+
+    person_record, asset_id = library.reserve_ids(library_data, person, entity_type)
+    archived = archive.archive(media, person_record, asset_id)
+    if not archived or not archived.get("file_id"):
+        return media, False
+    return library.add_archived_media(library_data, person_record, asset_id, media, archived), True
 
 
 def load_json(path):
@@ -85,7 +104,8 @@ def main():
     if admin_ids:
         admin = TelegramAdmin(
             token, admin_ids, ROOT/"config/channels.json", ROOT/"data/transfers.json",
-            ROOT/"data/bot_updates.json", settings["request_timeout_seconds"]
+            ROOT/"data/bot_updates.json", settings["request_timeout_seconds"],
+            settings_path=ROOT / "config/settings.json",
         )
     else:
         admin = None
@@ -153,6 +173,19 @@ def main():
         wikimedia_enabled=settings.get("wikimedia_fallback_enabled", True),
         wikimedia_thumbnail_width=settings.get("wikimedia_thumbnail_width", 960),
     )
+    media_library = None
+    media_library_data = None
+    media_archive = None
+    media_library_dirty = False
+    if settings.get("media_library_enabled", True):
+        media_library = MediaLibrary(ROOT / settings.get("media_library_path", "data/media_library.json"))
+        media_library_data = media_library.load()
+        if settings.get("media_library_auto_archive", True):
+            media_archive = TelegramMediaArchive(
+                token,
+                settings.get("media_library_channel_id"),
+                settings.get("request_timeout_seconds", 20),
+            )
 
     news_source = None
     news_state = None
@@ -268,11 +301,16 @@ def main():
                 continue
 
             if "media" not in record:
-                record["media"] = image_selector.select(
-                    item.get("image_url"),
+                record["media"], archived = _resolve_media(
+                    image_selector,
+                    media_library,
+                    media_library_data,
+                    media_archive,
                     event.get("person") or event.get("player"),
                     event.get("entity_type"),
+                    item.get("image_url"),
                 )
+                media_library_dirty = media_library_dirty or archived
             media = record.get("media") if isinstance(record.get("media"), dict) else None
             analysis = analyze_news_event(event, item)
             editorial = None
@@ -295,6 +333,8 @@ def main():
                 print(f"[news-publish-failed] title={item['title']!r}")
 
         news_state.save(news_data)
+        if media_library and media_library_dirty:
+            media_library.save(media_library_data)
 
     for post in source.fetch():
         text = post["text"]
@@ -377,7 +417,16 @@ def main():
                     status="رسمي",
                 )
             if "media" not in t:
-                t["media"] = image_selector.select(t.get("fabrizio_image_url"), t.get("player"), "player")
+                t["media"], archived = _resolve_media(
+                    image_selector,
+                    media_library,
+                    media_library_data,
+                    media_archive,
+                    t.get("player"),
+                    "player",
+                    t.get("fabrizio_image_url"),
+                )
+                media_library_dirty = media_library_dirty or archived
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -419,7 +468,16 @@ def main():
                     status="Here We Go",
                 )
             if "media" not in t:
-                t["media"] = image_selector.select(t.get("fabrizio_image_url"), t.get("player"), "player")
+                t["media"], archived = _resolve_media(
+                    image_selector,
+                    media_library,
+                    media_library_data,
+                    media_archive,
+                    t.get("player"),
+                    "player",
+                    t.get("fabrizio_image_url"),
+                )
+                media_library_dirty = media_library_dirty or archived
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -436,6 +494,8 @@ def main():
 
     by_id = _prune_old_state(by_id, now, settings.get("state_retention_days", 60))
     store.save(list(by_id.values()))
+    if media_library and media_library_dirty:
+        media_library.save(media_library_data)
 
 if __name__ == "__main__":
     main()
