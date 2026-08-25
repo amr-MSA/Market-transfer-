@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T19:51:14.858664+00:00",
+  "updated_at": "2026-08-25T20:12:54.157831+00:00",
   "events": [],
   "articles": [
     {
@@ -290,6 +290,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/liam-delap-nottingham-forest-chelsea-nicholas-jackson-aston-villa-transfer-window",
       "seen_at": "2026-08-25T19:22:24.703637+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckgwj62e5yno?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T20:12:54.001592+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4g5zg526gdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T20:12:54.157831+00:00"
     }
   ],
   "published": {}

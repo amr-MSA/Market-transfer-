@@ -37,7 +37,7 @@
   "wikimedia_thumbnail_width": 960,
   "media_library_enabled": true,
   "media_library_auto_archive": true,
-  "media_library_channel_id": null,
-  "media_library_channel_name": null,
+  "media_library_channel_id": "-1004403267589",
+  "media_library_channel_name": "Foootballdb",
   "media_library_path": "data/media_library.json"
 }
