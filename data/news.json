@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T11:48:42.032289+00:00",
+  "updated_at": "2026-08-25T13:15:44.538826+00:00",
   "events": [],
   "articles": [
     {
@@ -250,6 +250,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/wsl-academy-teams-third-tier-fa-approves-plan",
       "seen_at": "2026-08-25T11:48:42.032289+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zyzvvvzpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T13:15:44.538826+00:00"
     }
   ]
 }
