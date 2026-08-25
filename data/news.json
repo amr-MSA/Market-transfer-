@@ -1,6 +1,6 @@
 {
   "week_start": "2026-08-24",
-  "updated_at": "2026-08-25T09:09:17.534874+00:00",
+  "updated_at": "2026-08-25T09:49:58.488610+00:00",
   "events": [],
   "articles": [
     {
@@ -222,6 +222,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/football-transfer-rumours-manchester-city-tottenham-cody-gakpo",
       "seen_at": "2026-08-25T09:09:17.534874+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/savinho-completes-spurs-move-manchester-city-changes-name-to-savio",
+      "seen_at": "2026-08-25T09:49:53.454097+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cy7z637nj8jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-25T09:49:55.861326+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/bangladesh-soccer-team-ronan-declan-sullivan",
+      "seen_at": "2026-08-25T09:49:58.488610+00:00"
     }
   ]
 }
