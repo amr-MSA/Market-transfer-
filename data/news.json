@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-25T18:52:50.840196+00:00",
+  "updated_at": "2026-08-25T19:22:24.703637+00:00",
   "events": [],
   "articles": [
     {
@@ -286,6 +286,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/gary-lineker-roy-keane-the-rest-is-football",
       "seen_at": "2026-08-25T18:52:50.840196+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/25/liam-delap-nottingham-forest-chelsea-nicholas-jackson-aston-villa-transfer-window",
+      "seen_at": "2026-08-25T19:22:24.703637+00:00"
     }
   ],
   "published": {}
