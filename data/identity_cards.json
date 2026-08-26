@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-26T11:38:12.284797+00:00",
+  "updated_at": "2026-08-26T19:14:29.269680+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -23,11 +23,74 @@
       "identity_status": "VERIFIED",
       "card_message_id": 3,
       "created_at": "2026-08-26T11:38:12.284782+00:00"
+    },
+    "P0000002": {
+      "person_id": "P0000002",
+      "canonical_name": "Ayyoub Bouaddi",
+      "canonical_name_ar": "أيوب بوعدي",
+      "canonical_name_original": "Ayyoub Bouaddi",
+      "aliases": [
+        "Ayyoub Bouaddi"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q122971833",
+      "birth_date": "2007-10-02",
+      "nationality_ids": [
+        "Q142",
+        "Q1028"
+      ],
+      "nationality_names": [
+        "فرنسا",
+        "المغرب"
+      ],
+      "position_ids": [
+        "Q193592"
+      ],
+      "position_names": [
+        "لاعب وسط"
+      ],
+      "national_team_ids": [
+        "Q142",
+        "Q1028"
+      ],
+      "national_team_names": [
+        "فرنسا",
+        "المغرب"
+      ],
+      "organization_ids": [
+        "Q2867528",
+        "Q19516",
+        "Q3590033",
+        "Q1450568",
+        "Q1450557",
+        "Q1344163",
+        "Q1277549",
+        "Q207337",
+        "Q50602"
+      ],
+      "organization_names": [
+        "AFC Creil",
+        "نادي ليل",
+        "منتخب فرنسا تحت 16 سنة لكرة القدم",
+        "منتخب فرنسا تحت 17 سنة لكرة القدم",
+        "منتخب فرنسا تحت 18 سنة لكرة القدم",
+        "منتخب فرنسا تحت 20 سنة لكرة القدم",
+        "منتخب فرنسا تحت 21 سنة لكرة القدم",
+        "منتخب المغرب لكرة القدم",
+        "مانشستر سيتي"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q122971833",
+      "identity_verified_at": "2026-08-26T19:14:28.510788+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 4,
+      "created_at": "2026-08-26T19:14:29.269666+00:00"
     }
   },
   "organizations": {},
   "identity_index": {
-    "wikidata:Q18207229": "P0000001"
+    "wikidata:Q18207229": "P0000001",
+    "wikidata:Q122971833": "P0000002"
   },
   "name_index": {
     "dominik livakovic": [
@@ -35,6 +98,9 @@
     ],
     "dominik livakoviс": [
       "P0000001"
+    ],
+    "ayyoub bouaddi": [
+      "P0000002"
     ]
   }
 }

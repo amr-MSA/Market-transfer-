@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated_at": "2026-08-26T11:38:13.143482+00:00",
-  "next_person_number": 2,
+  "updated_at": "2026-08-26T19:14:30.296374+00:00",
+  "next_person_number": 3,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -14,6 +14,17 @@
       ],
       "stint_ids": [],
       "created_at": "2026-08-26T11:38:12.284754+00:00"
+    },
+    "null": {
+      "person_id": "P0000002",
+      "name": "Ayyoub Bouaddi",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [
+        "IMG-GEN-0000002-01"
+      ],
+      "stint_ids": [],
+      "created_at": "2026-08-26T19:14:29.269640+00:00"
     }
   },
   "clubs": {},
@@ -39,6 +50,27 @@
       "quality_score": 100,
       "status": "APPROVED",
       "added_at": "2026-08-26T11:38:13.143462+00:00"
+    },
+    "IMG-GEN-0000002-01": {
+      "asset_id": "IMG-GEN-0000002-01",
+      "person_id": "P0000002",
+      "club_id": null,
+      "stint_id": null,
+      "start_year": null,
+      "context_type": "generic",
+      "visual_key": "GEN-0000002",
+      "telegram_file_id": "AgACAgQAAyEGAAMBBnSIBQADBGqPOxXM4q81jaahTc0vj4rYKJ03AAJoDmsbvTx1UZYgNrwbyeDMAQADAgADdwADPQQ",
+      "telegram_file_unique_id": "AQADaA5rG708dVF8",
+      "telegram_message_id": 4,
+      "source": "wikimedia",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ayyoub_Bouaddi_Morocco_v_Norway_7_June_2026-71.jpg",
+      "credit_name": "Bryan Berlin",
+      "credit_license": "CC BY-SA 4.0",
+      "width": 960,
+      "height": 1440,
+      "quality_score": 100,
+      "status": "APPROVED",
+      "added_at": "2026-08-26T19:14:30.296356+00:00"
     }
   }
 }

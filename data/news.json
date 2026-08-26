@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T13:08:48.261186+00:00",
+  "updated_at": "2026-08-26T19:13:20.660436+00:00",
   "events": [],
   "articles": [
     {
@@ -418,6 +418,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/26/uefa-poised-lift-boycott-threat-fifa-promises-no-world-cup-sale-repeat-gianni-infantino",
       "seen_at": "2026-08-26T11:38:05.163102+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/26/newcastle-v-west-brom-tottenham-v-charlton-preston-v-everton-carabao-cup-live",
+      "seen_at": "2026-08-26T19:12:58.968491+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqjkrg54wwko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T19:13:20.660436+00:00"
     }
   ],
   "published": {}
