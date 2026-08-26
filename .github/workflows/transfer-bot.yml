@@ -29,7 +29,29 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      - name: Defer while fast monitor is healthy
+        id: fast_monitor
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path("data/fast_monitor.json")
+          fresh = False
+          try:
+              updated = json.loads(path.read_text(encoding="utf-8")).get("updated_at")
+              then = datetime.fromisoformat(updated.replace("Z", "+00:00"))
+              fresh = (datetime.now(timezone.utc) - then).total_seconds() < 360
+          except (OSError, TypeError, ValueError, json.JSONDecodeError):
+              pass
+          print(f"healthy={'true' if fresh else 'false'}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"healthy={'true' if fresh else 'false'}\n")
+          PY
       - name: Run bot
+        if: steps.fast_monitor.outputs.healthy != 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_ADMIN_IDS: ${{ secrets.TELEGRAM_ADMIN_IDS }}
@@ -45,7 +67,7 @@ jobs:
         run: |
           git config user.name "transfer-confirmation-bot"
           git config user.email "actions@github.com"
-          git add data/transfers.json data/bot_updates.json data/news.json data/media_library.json data/identity_cards.json config/channels.json config/settings.json
+          git add data/transfers.json data/bot_updates.json data/news.json data/media_library.json data/identity_cards.json data/fast_monitor.json config/channels.json config/settings.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore: update transfer state"
           git push origin "HEAD:${GITHUB_REF_NAME}"

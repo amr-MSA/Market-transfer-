@@ -4,6 +4,8 @@
   "request_timeout_seconds": 20,
   "official_max_age_hours": 24,
   "publish_unconfirmed": true,
+  "publish_here_we_go_immediately": true,
+  "fast_monitor_interval_seconds": 75,
   "google_news_enabled": true,
   "user_agent": "TransferConfirmationBot/4.0",
   "social_verification_enabled": true,

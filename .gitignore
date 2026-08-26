@@ -1,5 +1,6 @@
 # Secrets — never commit real tokens/keys
 .env
+.fast-monitor.lock
 
 # Python
 __pycache__/

@@ -5,7 +5,7 @@ import calendar
 import time
 from datetime import datetime, timedelta, timezone
 
-from bot.main import _deliver, _prune_old_state
+from bot.main import _deliver, _prune_old_state, _should_publish_here_we_go
 from bot.normalize import name_match
 from bot.official import OfficialVerifier
 from bot.publisher import TelegramPublisher
@@ -104,6 +104,23 @@ def test_state_pruning_keeps_pending_and_recent_drops_old_terminal():
     assert "old_official" not in pruned
     assert "recent_official" in pruned
     assert "old_pending" in pruned  # never pruned regardless of age
+
+
+def test_here_we_go_can_publish_immediately_from_primary_source():
+    now = datetime.now(timezone.utc)
+    transfer = {"discovered_at": now.isoformat(), "unconfirmed_sent": False}
+    settings = {"publish_unconfirmed": True, "publish_here_we_go_immediately": True, "official_max_age_hours": 24}
+
+    assert _should_publish_here_we_go(transfer, now, settings) is True
+
+
+def test_legacy_here_we_go_delay_remains_available_when_immediate_mode_is_off():
+    now = datetime.now(timezone.utc)
+    settings = {"publish_unconfirmed": True, "publish_here_we_go_immediately": False, "official_max_age_hours": 24}
+
+    assert _should_publish_here_we_go({"discovered_at": (now - timedelta(hours=23)).isoformat()}, now, settings) is False
+    assert _should_publish_here_we_go({"discovered_at": (now - timedelta(hours=24)).isoformat()}, now, settings) is True
+    assert _should_publish_here_we_go({"discovered_at": (now - timedelta(days=2)).isoformat(), "unconfirmed_sent": True}, now, settings) is False
 
 
 def test_name_match_uses_word_boundaries():

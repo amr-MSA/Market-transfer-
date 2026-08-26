@@ -130,7 +130,25 @@ def _prune_old_state(by_id, now, retention_days):
     return kept
 
 
-def main():
+def _should_publish_here_we_go(transfer, now, settings):
+    """Publish a primary-source Here We Go immediately when enabled.
+
+    The later official verification remains active and can promote the same
+    record to OFFICIAL. This avoids turning the 24-hour verification window
+    into a 24-hour publishing delay.
+    """
+    if not settings.get("publish_unconfirmed", False) or transfer.get("unconfirmed_sent"):
+        return False
+    if settings.get("publish_here_we_go_immediately", False):
+        return True
+    try:
+        discovered = datetime.fromisoformat(transfer["discovered_at"].replace("Z", "+00:00"))
+    except (KeyError, TypeError, ValueError):
+        return False
+    return now - discovered >= timedelta(hours=settings.get("official_max_age_hours", 24))
+
+
+def main(fast_mode=False):
     settings = load_json(ROOT/"config/settings.json")
     clubs = load_json(ROOT/"config/clubs.json")["clubs"]
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -259,7 +277,7 @@ def main():
                 settings.get("news_state_retention_days", 7),
             )
 
-    if admin:
+    if admin and not fast_mode:
         print("[telegram-admin]", admin.process(publisher))
         if media_library:
             # An administrator can add a club-context image in this same
@@ -282,7 +300,7 @@ def main():
     # --------------------------------------------------------------
     # Year-round football news layer
     # --------------------------------------------------------------
-    if news_source and news_state:
+    if news_source and news_state and not fast_mode:
         from .news_extractor import GeminiNewsExtractor
 
         news_data = news_state.prune(news_state.load())
@@ -450,12 +468,58 @@ def main():
             }
 
     now = datetime.now(timezone.utc)
-    expiry = timedelta(hours=settings["official_max_age_hours"])
-
     for t in by_id.values():
-        if t["status"] not in {"WAITING_OFFICIAL"}: continue
+        if t["status"] not in {"WAITING_OFFICIAL", "HERE_WE_GO"}: continue
         t.setdefault("official_delivery", {})
         t.setdefault("unconfirmed_delivery", {})
+
+        if _should_publish_here_we_go(t, now, settings):
+            analysis = analyze_transfer(t, "HERE_WE_GO")
+            t["analysis"] = analysis
+            editorial = None
+            if editorial_writer:
+                editorial_event = {
+                    "type": "انتقال",
+                    "from": t.get("from_club"),
+                    "to": t.get("to_club"),
+                    "player": t.get("player"),
+                    "entity_type": "player",
+                }
+                editorial = editorial_writer.write(
+                    {"title": t.get("fabrizio_text"), "summary": t.get("fabrizio_text"), "source": "Fabrizio Romano"},
+                    editorial_event,
+                    status="Here We Go",
+                )
+            if "media" not in t:
+                t["media"], archived, identity_updated = _resolve_media(
+                    image_selector,
+                    media_library,
+                    media_library_data,
+                    media_archive,
+                    t.get("player"),
+                    "player",
+                    t.get("fabrizio_image_url"),
+                    identity_registry,
+                    identity_data,
+                    identity_cards,
+                    identity_source,
+                    ambiguity_notifier=ambiguity_notifier,
+                    club=t.get("from_club") or t.get("to_club"),
+                )
+                media_library_dirty = media_library_dirty or archived
+                identity_dirty = identity_dirty or identity_updated
+            media = t.get("media") if isinstance(t.get("media"), dict) else None
+            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
+            transfer_targets = channels_for_content(channels, "انتقال")
+            delivered = _deliver(
+                publisher,
+                transfer_targets,
+                text,
+                t["unconfirmed_delivery"],
+                image_url=media.get("url") if media else None,
+            )
+            if delivered:
+                t.update(status="HERE_WE_GO", unconfirmed_sent=True, unconfirmed_published_at=now.isoformat())
 
         # Cache evidence once found so a channel outage doesn't force us to
         # re-run web/API verification every cycle — we only need to keep
@@ -523,56 +587,6 @@ def main():
                 )
             # else: stays WAITING_OFFICIAL with evidence cached; retried next cycle
             continue
-
-        discovered = datetime.fromisoformat(t["discovered_at"].replace("Z","+00:00"))
-        if now - discovered >= expiry and settings["publish_unconfirmed"]:
-            analysis = analyze_transfer(t, "HERE_WE_GO")
-            t["analysis"] = analysis
-            editorial = None
-            if editorial_writer:
-                editorial_event = {
-                    "type": "انتقال",
-                    "from": t.get("from_club"),
-                    "to": t.get("to_club"),
-                    "player": t.get("player"),
-                    "entity_type": "player",
-                }
-                editorial = editorial_writer.write(
-                    {"title": t.get("fabrizio_text"), "summary": t.get("fabrizio_text"), "source": "Fabrizio Romano"},
-                    editorial_event,
-                    status="Here We Go",
-                )
-            if "media" not in t:
-                t["media"], archived, identity_updated = _resolve_media(
-                    image_selector,
-                    media_library,
-                    media_library_data,
-                    media_archive,
-                    t.get("player"),
-                    "player",
-                    t.get("fabrizio_image_url"),
-                    identity_registry,
-                    identity_data,
-                    identity_cards,
-                    identity_source,
-                    ambiguity_notifier=ambiguity_notifier,
-                    club=t.get("from_club") or t.get("to_club"),
-                )
-                media_library_dirty = media_library_dirty or archived
-                identity_dirty = identity_dirty or identity_updated
-            media = t.get("media") if isinstance(t.get("media"), dict) else None
-            text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
-            transfer_targets = channels_for_content(channels, "انتقال")
-            delivered = _deliver(
-                publisher,
-                transfer_targets,
-                text,
-                t["unconfirmed_delivery"],
-                image_url=media.get("url") if media else None,
-            )
-            if delivered:
-                t.update(status="HERE_WE_GO", unconfirmed_sent=True, unconfirmed_published_at=now.isoformat())
-            # else: retried next cycle
 
     by_id = _prune_old_state(by_id, now, settings.get("state_retention_days", 60))
     store.save(list(by_id.values()))

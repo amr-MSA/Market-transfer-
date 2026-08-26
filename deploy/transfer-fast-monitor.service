@@ -1,0 +1,16 @@
+[Unit]
+Description=Transfer Confirmation fast Fabrizio monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Market-transfer-verify
+EnvironmentFile=/home/ubuntu/Market-transfer-verify/.env
+ExecStart=/usr/bin/python3 -m bot.fast_monitor --interval 75 --sync-git
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
