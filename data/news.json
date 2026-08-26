@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T06:48:54.268606+00:00",
+  "updated_at": "2026-08-26T07:35:14.430767+00:00",
   "events": [],
   "articles": [
     {
@@ -358,6 +358,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2zgzydd16o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T06:48:54.268606+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/dom-ballard-backheel-what-is-the-earliest-goal-of-the-season-to-be-scored",
+      "seen_at": "2026-08-26T07:34:48.500269+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjdv5xvgv9lo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T07:35:14.430767+00:00"
     }
   ],
   "published": {}
