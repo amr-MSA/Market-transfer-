@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T19:13:20.660436+00:00",
+  "updated_at": "2026-08-26T19:34:05.985006+00:00",
   "events": [],
   "articles": [
     {
@@ -426,6 +426,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqjkrg54wwko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T19:13:20.660436+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/forest-in-talks-with-celta-vigo-over-javi-rueda-as-axel-disasi-joins-palace-on-loan",
+      "seen_at": "2026-08-26T19:33:50.848123+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crk3dr5pnyjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T19:34:05.985006+00:00"
     }
   ],
   "published": {}
