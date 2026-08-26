@@ -169,35 +169,65 @@ class IdentityCardRegistry:
         role = "لاعب" if card.get("entity_type") == "player" else "مدرب"
         icon = "⚽" if role == "لاعب" else "🧠"
         display_ar = card.get("canonical_name_ar") or card.get("canonical_name") or "غير معروف"
-        original = card.get("canonical_name_original") or next((alias for alias in card.get("aliases") or [] if alias != display_ar), None)
-        display_name = f"{display_ar} ({original})" if original and original != display_ar else display_ar
         positions = ", ".join(card.get("position_names") or card.get("position_ids") or []) or "غير متوفر"
         national_team = ", ".join(card.get("national_team_names") or card.get("national_team_ids") or []) or "غير متوفر"
-        nationality = ", ".join(card.get("nationality_names") or card.get("nationality_ids") or []) or "غير متوفر"
         organizations = ", ".join(card.get("organization_names") or card.get("organization_ids") or []) or "غير متوفر"
         lines = [
-            f"{icon} <b>بطاقة {role}</b>",
-            f"👤 <b>{display_name}</b>",
+            f"{icon} <b>بطاقة الموسم</b>",
+            f"👤 <b>{display_ar}</b>",
             f"📍 المركز: {positions}",
             f"🌍 المنتخب: {national_team}",
-            f"🏳 الجنسية: {nationality}",
-            f"🏟 الأندية الموثقة: {organizations}",
-            f"🎂 الميلاد: {card.get('birth_date') or 'غير متوفر'}",
+            f"🏟 النادي المرجعي: {organizations}",
         ]
-        stats = card.get("current_stats")
-        if isinstance(stats, dict) and stats:
-            season = stats.get("season")
-            stat_items = []
-            for key, label in (("appearances", "مشاركة"), ("goals", "أهداف"), ("assists", "تمريرات حاسمة"), ("minutes", "دقائق")):
-                if stats.get(key) is not None:
-                    stat_items.append(f"{label}: {stats[key]}")
-            if stat_items:
-                lines.append(f"📊 {season + ' · ' if season else ''}{' · '.join(stat_items)}")
-            if stats.get("source_url"):
-                lines.append(f"🔗 <a href=\"{stats['source_url']}\">مصدر الإحصاءات</a>")
-        if card.get("identity_source_url"):
-            lines.append(f"🔎 <a href=\"{card['identity_source_url']}\">التحقق المرجعي</a>")
+        stats = card.get("season_stats")
+        if isinstance(stats, dict) and stats.get("metrics"):
+            lines.extend(IdentityCardRegistry._season_lines(stats))
+        else:
+            lines.append("📊 الإحصاءات الموسمية تُضاف بعد توفر مصدرها الموثق.")
         return "\n".join(lines)
+
+    @staticmethod
+    def season_detail_text(card):
+        stats = card.get("season_stats") or {}
+        competitions = stats.get("competitions") or []
+        if not competitions:
+            return None
+        display_ar = card.get("canonical_name_ar") or card.get("canonical_name") or "غير معروف"
+        lines = [
+            "📋 <b>تفصيل البطولات</b>",
+            f"👤 <b>{display_ar}</b>",
+            f"🗓 {stats.get('season') or 'الموسم المرجعي'} · {stats.get('as_of') or ''}",
+        ]
+        for competition in competitions:
+            values = IdentityCardRegistry._metric_texts(competition, stats.get("position_group"))
+            if values:
+                lines.append(f"• <b>{competition.get('name_ar', 'بطولة')}</b>: {' · '.join(values)}")
+        source_url = stats.get("source_url")
+        if source_url:
+            lines.append(f"🔗 <a href=\"{source_url}\">مصدر الإحصاءات</a>")
+        return "\n".join(lines)
+
+    @staticmethod
+    def _season_lines(stats):
+        lines = [f"🗓 {stats.get('season') or 'الموسم المرجعي'} · {stats.get('scope') or 'جميع المسابقات'}"]
+        values = IdentityCardRegistry._metric_texts(stats.get("metrics") or {}, stats.get("position_group"))
+        if values:
+            lines.append(f"📊 {' · '.join(values)}")
+        if stats.get("as_of"):
+            lines.append(f"⏱ حتى {stats['as_of']}")
+        if stats.get("source_url"):
+            lines.append(f"🔗 <a href=\"{stats['source_url']}\">مصدر الإحصاءات</a>")
+        return lines
+
+    @staticmethod
+    def _metric_texts(metrics, position_group):
+        labels = {
+            "attacker": (("appearances", "مباريات"), ("minutes", "دقائق"), ("goals", "أهداف"), ("assists", "صناعات")),
+            "midfielder": (("appearances", "مباريات"), ("minutes", "دقائق"), ("goals", "أهداف"), ("assists", "صناعات"), ("key_passes", "فرص مصنوعة")),
+            "defender": (("appearances", "مباريات"), ("minutes", "دقائق"), ("tackles", "تدخلات"), ("interceptions", "اعتراضات"), ("blocks", "إبعادات")),
+            "goalkeeper": (("appearances", "مباريات"), ("minutes", "دقائق"), ("conceded", "أهداف مستقبلة"), ("saves", "تصديات")),
+        }
+        return [f"{label}: {metrics[key]}" for key, label in labels.get(position_group, labels["attacker"]) if metrics.get(key) is not None]
 
     @staticmethod
     def organization_text(card):

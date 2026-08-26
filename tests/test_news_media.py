@@ -82,6 +82,22 @@ def test_selector_uses_wikimedia_only_after_source_image_fails_quality_check(mon
     assert selector.select("https://source.test/tiny.jpg", "Ezri Konsa", "player") == fallback
 
 
+def test_strict_modesty_mode_uses_only_a_safe_club_fallback(monkeypatch):
+    selector = NewsImageSelector()
+    safe_club_media = {"url": "https://commons.test/crest.jpg", "source": "wikimedia"}
+    monkeypatch.setattr(selector, "club_fallback", lambda club: safe_club_media)
+    monkeypatch.setattr(selector, "_source_media", lambda url: (_ for _ in ()).throw(AssertionError("must not use player source")))
+
+    assert selector.select("https://source.test/player.jpg", "Ezri Konsa", "player", strict_modesty=True, club="Arsenal") == safe_club_media
+
+
+def test_strict_modesty_mode_can_publish_text_only_when_no_safe_visual_exists(monkeypatch):
+    selector = NewsImageSelector()
+    monkeypatch.setattr(selector, "club_fallback", lambda club: None)
+
+    assert selector.select("https://source.test/player.jpg", "Ezri Konsa", "player", strict_modesty=True, club="Arsenal") is None
+
+
 def test_selector_never_uses_wikimedia_for_an_unnamed_or_non_person_event(monkeypatch):
     selector = NewsImageSelector()
     monkeypatch.setattr(selector, "_is_usable_image", lambda url: False)

@@ -67,7 +67,7 @@ class MediaLibrary:
             if os.path.exists(tmp_name):
                 os.unlink(tmp_name)
 
-    def find_media(self, data, person, entity_type, club=None, year=None, person_id=None):
+    def find_media(self, data, person, entity_type, club=None, year=None, person_id=None, require_modesty_approved=False):
         """Return the best approved image for a person in the requested club.
 
         A generic approved portrait may serve as a fallback. An image tied to
@@ -86,6 +86,8 @@ class MediaLibrary:
         for asset_id in person_record.get("asset_ids", []):
             asset = data.get("assets", {}).get(asset_id)
             if not asset or asset.get("status") != "APPROVED" or not asset.get("telegram_file_id"):
+                continue
+            if require_modesty_approved and not asset.get("modesty_approved"):
                 continue
 
             asset_club_id = asset.get("club_id")
@@ -130,7 +132,7 @@ class MediaLibrary:
                 "stint_ids": [],
                 "created_at": self._now(),
             }
-            data.setdefault("people", {})[person_id] = person_record
+            data.setdefault("people", {})[resolved_person_id] = person_record
 
         club_record = None
         stint_record = None
@@ -203,6 +205,7 @@ class MediaLibrary:
             "height": archive.get("height"),
             "quality_score": self._quality_score(archive),
             "status": "APPROVED",
+            "modesty_approved": bool(media.get("modesty_approved")),
             "added_at": self._now(),
         }
         data.setdefault("assets", {})[asset_id] = asset
@@ -229,6 +232,7 @@ class MediaLibrary:
             "credit_url": source_url,
             "credit_name": credit_name,
             "credit_license": license_name,
+            "modesty_approved": True,
         }
 
     @staticmethod

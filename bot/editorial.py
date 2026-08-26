@@ -79,7 +79,7 @@ class GeminiEditorialWriter:
                 "Do not add emojis, HTML, markdown, URLs, source names or hashtags.",
                 "Keep the result suitable for a compact Telegram caption of 3-5 short lines.",
                 "For transfer and loan events, comment_ar must be one short useful observation based only on the source; never write a paragraph.",
-                "Use Arabic names followed by the original name in parentheses on first mention.",
+                "Use common Arabic names only; never place original-language names in parentheses.",
                 "Never invent a quote, score, fee, date, injury duration or transfer status.",
                 f"The event section is exactly: {section}.",
                 f"The event status is exactly: {status}.",

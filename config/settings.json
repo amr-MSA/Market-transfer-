@@ -34,6 +34,7 @@
   "editorial_enabled": true,
   "editorial_prompt_dir": "prompts",
   "editorial_timeout_seconds": 30,
+  "require_arabic_transfer_editorial": true,
   "news_image_timeout_seconds": 12,
   "news_image_min_short_edge": 640,
   "news_image_min_pixels": 600000,
@@ -48,5 +49,10 @@
   "identity_cards_enabled": true,
   "identity_cards_channel_id": "-1004312139219",
   "identity_cards_channel_name": "بطائق اللاعبين",
-  "identity_cards_path": "data/identity_cards.json"
+  "identity_cards_path": "data/identity_cards.json",
+  "player_statistics_enabled": true,
+  "player_statistics_cache_path": "data/player_stats.json",
+  "player_statistics_cache_days": 30,
+  "player_statistics_timeout_seconds": 20,
+  "strict_modesty_images": true
 }

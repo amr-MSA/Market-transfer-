@@ -106,7 +106,7 @@ def test_telegram_archive_returns_reusable_file_ids(monkeypatch):
     }
 
 
-def test_person_card_is_publishable_and_shows_optional_profile_data():
+def test_person_card_is_arabic_and_shows_role_specific_season_statistics():
     card = {
         "person_id": "P0000001",
         "canonical_name": "Dominik Livakovic",
@@ -115,21 +115,32 @@ def test_person_card_is_publishable_and_shows_optional_profile_data():
         "entity_type": "player",
         "position_names": ["حارس مرمى"],
         "national_team_names": ["كرواتيا"],
-        "nationality_names": ["كرواتيا"],
         "organization_names": ["فنربخشة"],
-        "birth_date": "1995-01-09",
-        "current_stats": {"season": "2025/26", "appearances": 18, "goals": 0, "source_url": "https://stats.example.test/livakovic"},
-        "identity_source_url": "https://www.wikidata.org/wiki/Q18207229",
+        "season_stats": {
+            "season": "2025–2026",
+            "scope": "جميع المسابقات",
+            "as_of": "2026-08-26",
+            "position_group": "goalkeeper",
+            "metrics": {"appearances": 18, "minutes": 1620, "conceded": 16, "saves": 57},
+            "competitions": [{"name_ar": "الدوري التركي", "appearances": 16, "minutes": 1440, "conceded": 14, "saves": 50}],
+            "source_url": "https://stats.example.test/livakovic",
+        },
     }
 
     text = IdentityCardRegistry.person_text(card)
 
-    assert "بطاقة لاعب" in text
-    assert "دومينيك ليفاكوفيتش (Dominik Livakovic)" in text
+    assert "بطاقة الموسم" in text
+    assert "دومينيك ليفاكوفيتش" in text
+    assert "Dominik" not in text
     assert "المركز: حارس مرمى" in text
     assert "المنتخب: كرواتيا" in text
-    assert "مشاركة: 18" in text
+    assert "تصديات: 57" in text
+    assert "أهداف مستقبلة: 16" in text
     assert "مصدر الإحصاءات" in text
+    detail = IdentityCardRegistry.season_detail_text(card)
+    assert "تفصيل البطولات" in detail
+    assert "الدوري التركي" in detail
+    assert "تصديات: 50" in detail
 
 
 def test_identity_card_uses_telegram_html_format(monkeypatch):

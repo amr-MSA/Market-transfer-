@@ -32,10 +32,9 @@ def _url(value):
 
 def _name(ar, original):
     ar = str(ar or "").strip()
-    original = str(original or "").strip()
-    if ar and original and original.casefold() not in ar.casefold():
-        return f"{_text(ar)} ({_text(original)})"
-    return _text(ar or original)
+    # Public channel copy is Arabic-only. The original spelling remains in
+    # verified identity storage, never in a visible parenthesis.
+    return _text(ar)
 
 
 def _move_line(editorial=None, player=None, frm=None, to=None):
@@ -43,9 +42,6 @@ def _move_line(editorial=None, player=None, frm=None, to=None):
     player_line = _name(editorial.get("player_ar"), editorial.get("player_original"))
     from_line = _name(editorial.get("from_ar"), editorial.get("from_original"))
     to_line = _name(editorial.get("to_ar"), editorial.get("to_original"))
-    player_line = player_line or _text(player)
-    from_line = from_line or _text(frm)
-    to_line = to_line or _text(to)
     if player_line and from_line and to_line:
         return f"{player_line} · {from_line} → {to_line}"
     if player_line and from_line:
@@ -67,8 +63,8 @@ def _editorial_body(editorial):
 
 def _route_line(editorial=None, frm=None, to=None):
     editorial = editorial or {}
-    from_line = _name(editorial.get("from_ar"), editorial.get("from_original")) or _text(frm)
-    to_line = _name(editorial.get("to_ar"), editorial.get("to_original")) or _text(to)
+    from_line = _name(editorial.get("from_ar"), editorial.get("from_original"))
+    to_line = _name(editorial.get("to_ar"), editorial.get("to_original"))
     if from_line and to_line:
         return f"🔁 {from_line} → {to_line}"
     return ""
@@ -77,10 +73,13 @@ def _route_line(editorial=None, frm=None, to=None):
 def _compact_transfer_body(editorial=None, player=None, frm=None, to=None):
     editorial = editorial or {}
     headline = _text(editorial.get("headline"))
-    lines = [f"<b>{headline}</b>" if headline else _text(player, "لاعب")]
+    lines = [f"<b>{headline}</b>" if headline else "<b>تفاصيل الصفقة</b>"]
     move = _move_line(editorial, player, frm, to)
     if move:
         lines.append(f"🔁 {move}")
+    lead = _text(editorial.get("lead"))
+    if lead:
+        lines.append(lead)
     comment = _text(editorial.get("comment_ar"))
     if comment:
         lines.append(f"❝{comment}❞")

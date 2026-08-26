@@ -33,17 +33,27 @@ def test_messages_include_analysis_and_escape_html():
         {"player": "A < B", "from_club": "Club A", "to_club": "Club B"},
         "OFFICIAL",
     )
-    message = official_message("A < B", "Club A", "Club B", "https://example.test?a=1&b=2", analysis)
-    assert "A &lt; B" in message
+    message = official_message(
+        "A < B", "Club A", "Club B", "https://example.test?a=1&b=2", analysis,
+        editorial={"headline": "أ < ب", "lead": "أعلن النادي الصفقة رسميًا."},
+    )
+    assert "أ &lt; ب" in message
     assert "تحليل سريع" not in message
     assert "a=1&amp;b=2" in message
+
+
+def test_transfer_message_never_falls_back_to_latin_names_without_editorial():
+    message = official_message("Ayyoub Bouaddi", "Lille", "Barcelona", "https://example.test")
+    assert "Ayyoub" not in message
+    assert "Lille" not in message
+    assert "Barcelona" not in message
 
 
 def test_editorial_transfer_message_is_short_and_uses_arabic_names():
     editorial = {
         "section": "انتقال",
         "headline": "أرسنال يتوصل إلى اتفاق لضم إزري كونسا",
-        "lead": "إزري كونسا (Ezri Konsa) ينتقل من أستون فيلا (Aston Villa) إلى أرسنال (Arsenal).",
+        "lead": "أعلن أرسنال التعاقد مع إزري كونسا قادمًا من أستون فيلا ضمن تدعيماته للموسم الجديد.",
         "detail": "التفاصيل الرسمية قيد الانتظار.",
         "player_ar": "إزري كونسا",
         "player_original": "Ezri Konsa",
@@ -57,9 +67,11 @@ def test_editorial_transfer_message_is_short_and_uses_arabic_names():
     message = official_message(
         "Ezri Konsa", "Aston Villa", "Arsenal", "https://example.test", editorial=editorial
     )
-    assert "إزري كونسا (Ezri Konsa)" in message
+    assert "إزري كونسا" in message
+    assert "Ezri Konsa" not in message
+    assert "أعلن أرسنال التعاقد" in message
     assert "تحليل سريع" not in message
-    assert message.count("إزري كونسا (Ezri Konsa)") == 1
+    assert message.count("إزري كونسا") >= 1
     assert "❝إضافة تمنح أرسنال خيارًا جديدًا في الخط الخلفي.❞" in message
     assert "التفاصيل الرسمية قيد الانتظار" not in message
 

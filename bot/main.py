@@ -24,6 +24,7 @@ from .publisher import TelegramPublisher
 from .state import StateStore
 from .admin import TelegramAdmin
 from .gemini_rate_limit import GeminiRateLimiter
+from .player_statistics import ApiFootballPlayerStatistics
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
@@ -34,7 +35,8 @@ _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
 def _resolve_media(
     selector, library, library_data, archive, person, entity_type, source_url,
     identity_registry=None, identity_data=None, identity_cards=None, identity_source=None,
-    ambiguity_notifier=None, club=None, year=None,
+    ambiguity_notifier=None, club=None, year=None, strict_modesty=False,
+    statistics_service=None, statistics_club=None,
 ):
     """Reuse the best approved club-context image before external lookup.
 
@@ -53,20 +55,56 @@ def _resolve_media(
     if identity and identity.get("status") == "AMBIGUOUS" and ambiguity_notifier:
         ambiguity_notifier(person, entity_type, club, identity.get("candidates") or [])
     person_card = identity.get("card") if identity else None
+    library_changed = False
+    identity_changed = False
+    # A verified person deserves a stable card even when strict image policy
+    # deliberately refuses their photo. Reserve only the identity record, not
+    # a visual asset, so club/stadium fallback cannot be misfiled as a portrait.
+    if (
+        library and identity_registry and identity_data and identity
+        and identity.get("status") not in {"AMBIGUOUS", "NOT_FOUND"}
+    ):
+        if not person_card:
+            person_record, _ = library.reserve_ids(library_data, person, entity_type)
+            person_card = identity_registry.ensure_person(identity_data, person_record)
+            library_changed = True
+            identity_changed = True
+        if identity.get("facts"):
+            identity_registry.apply_facts(identity_data, person_card, identity["facts"])
+            identity_changed = True
+        if statistics_service and statistics_service.refresh_card(person_card, statistics_club or club):
+            identity_changed = True
+        if person_card and identity_cards and identity_cards.enabled:
+            message_id = identity_cards.upsert(person_card, identity_registry.person_text(person_card))
+            if message_id:
+                person_card["card_message_id"] = message_id
+                identity_changed = True
+            detail_text = identity_registry.season_detail_text(person_card)
+            if detail_text:
+                detail_message_id = identity_cards.upsert({"card_message_id": person_card.get("season_detail_message_id")}, detail_text)
+                if detail_message_id:
+                    person_card["season_detail_message_id"] = detail_message_id
+                    identity_changed = True
     person_id = person_card.get("person_id") if person_card else None
 
     if library and person_id:
-        stored = library.find_media(library_data, person, entity_type, club=club, year=year, person_id=person_id)
+        stored = library.find_media(
+            library_data, person, entity_type, club=club, year=year, person_id=person_id,
+            require_modesty_approved=strict_modesty,
+        )
         if stored:
-            return stored, False, False
+            return stored, library_changed, identity_changed
 
-    media = selector.select(source_url, person, entity_type)
+    if strict_modesty:
+        media = selector.select(source_url, person, entity_type, strict_modesty=True, club=club)
+    else:
+        media = selector.select(source_url, person, entity_type)
     if not media or not library or not archive or not archive.enabled or not MediaLibrary.is_archivable(media):
-        return media, False, False
+        return media, library_changed, identity_changed
 
     # A name-only match is never enough to create a reusable identity asset.
     if not identity or identity.get("status") in {"AMBIGUOUS", "NOT_FOUND"}:
-        return media, False, False
+        return media, library_changed, identity_changed
 
     person_record, asset_id = library.reserve_ids(library_data, person, entity_type, person_id=person_id)
     if identity_registry and identity_data:
@@ -76,7 +114,7 @@ def _resolve_media(
     archived = archive.archive(media, person_record, asset_id)
     if not archived or not archived.get("file_id"):
         return media, False, False
-    identity_changed = bool(person_card and identity_registry)
+    identity_changed = bool(person_card and identity_registry) or identity_changed
     if person_card and identity_cards and identity_cards.enabled:
         message_id = identity_cards.upsert(person_card, identity_registry.person_text(person_card))
         if message_id:
@@ -250,6 +288,12 @@ def main(fast_mode=False):
         settings.get("request_timeout_seconds", 20),
         settings.get("user_agent", "TransferConfirmationBot/5.0"),
     )
+    statistics_service = ApiFootballPlayerStatistics(
+        os.getenv("API_FOOTBALL_KEY"),
+        ROOT / settings.get("player_statistics_cache_path", "data/player_stats.json"),
+        timeout=settings.get("player_statistics_timeout_seconds", 20),
+        cache_days=settings.get("player_statistics_cache_days", 30),
+    ) if settings.get("player_statistics_enabled", True) else None
     if settings.get("media_library_enabled", True):
         media_library = MediaLibrary(ROOT / settings.get("media_library_path", "data/media_library.json"))
         media_library_data = media_library.load()
@@ -405,6 +449,9 @@ def main(fast_mode=False):
                     identity_source,
                     ambiguity_notifier=ambiguity_notifier,
                     club=event.get("from") or event.get("to"),
+                    strict_modesty=settings.get("strict_modesty_images", True),
+                    statistics_service=statistics_service,
+                    statistics_club=event.get("from") or event.get("to"),
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated
@@ -501,6 +548,9 @@ def main(fast_mode=False):
                     editorial_event,
                     status="Here We Go",
                 )
+            if settings.get("require_arabic_transfer_editorial", True) and not editorial:
+                print(f"[transfer-retry-later] Arabic Here We Go editorial unavailable: {t['player']!r}")
+                continue
             if "media" not in t:
                 t["media"], archived, identity_updated = _resolve_media(
                     image_selector,
@@ -516,6 +566,9 @@ def main(fast_mode=False):
                     identity_source,
                     ambiguity_notifier=ambiguity_notifier,
                     club=t.get("from_club") or t.get("to_club"),
+                    strict_modesty=settings.get("strict_modesty_images", True),
+                    statistics_service=statistics_service,
+                    statistics_club=t.get("from_club") or t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated
@@ -559,6 +612,9 @@ def main(fast_mode=False):
                     editorial_event,
                     status="رسمي",
                 )
+            if settings.get("require_arabic_transfer_editorial", True) and not editorial:
+                print(f"[transfer-retry-later] Arabic official editorial unavailable: {t['player']!r}")
+                continue
             if "media" not in t:
                 t["media"], archived, identity_updated = _resolve_media(
                     image_selector,
@@ -574,6 +630,9 @@ def main(fast_mode=False):
                     identity_source,
                     ambiguity_notifier=ambiguity_notifier,
                     club=t.get("to_club"),
+                    strict_modesty=settings.get("strict_modesty_images", True),
+                    statistics_service=statistics_service,
+                    statistics_club=t.get("from_club") or t.get("to_club"),
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated

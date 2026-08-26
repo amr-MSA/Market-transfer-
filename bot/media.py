@@ -43,18 +43,39 @@ class NewsImageSelector:
         self.wikimedia_enabled = bool(wikimedia_enabled)
         self.wikimedia_thumbnail_width = max(320, int(wikimedia_thumbnail_width))
 
-    def select(self, source_url, person=None, entity_type=None):
+    def select(self, source_url, person=None, entity_type=None, strict_modesty=False, club=None):
         """Return media metadata, preferring a good source image.
 
         A ``None`` result is deliberate: publishing a text-only post is safer
         than attaching an unclear image to an unrelated person or team.
         """
+        if strict_modesty:
+            return self.club_fallback(club)
         source = self._source_media(source_url)
         if source:
             return source
         if not self.wikimedia_enabled or entity_type not in _PERSON_ENTITY_TYPES or not person:
             return None
         return self._wikimedia_media(person)
+
+    def club_fallback(self, club):
+        """Return only a club crest or stadium visual, never an uncertain photo.
+
+        P154 is a logo image. P18 is accepted only when its file name signals a
+        non-person club/stadium visual; otherwise text-only is safer.
+        """
+        if not club:
+            return None
+        entity_id = self._club_entity_id(club)
+        if not entity_id:
+            return None
+        logo = self._entity_image_file(entity_id, properties=("P154",))
+        if logo:
+            return self._commons_file_media(logo)
+        image = self._entity_image_file(entity_id, properties=("P18",))
+        if image and re.search(r"(?:logo|crest|badge|stadium|arena|ground|estadio|park)", image, re.I):
+            return self._commons_file_media(image)
+        return None
 
     def _source_media(self, url):
         if not self._http_url(url):
@@ -99,7 +120,20 @@ class NewsImageSelector:
         # football professional with the same name.
         return matches[0] if len(matches) == 1 else None
 
-    def _entity_image_file(self, entity_id):
+    def _club_entity_id(self, club):
+        data = self._get_json(
+            _WIKIDATA_API,
+            {"action": "wbsearchentities", "format": "json", "language": "en", "uselang": "en", "type": "item", "limit": 5, "search": club},
+        )
+        matches = []
+        for candidate in (data or {}).get("search", []):
+            description = str(candidate.get("description") or "").casefold()
+            label = candidate.get("label") or candidate.get("display", {}).get("label", {}).get("value")
+            if candidate.get("id") and self._normalized_name(label) == self._normalized_name(club) and "football club" in description:
+                matches.append(candidate["id"])
+        return matches[0] if len(matches) == 1 else None
+
+    def _entity_image_file(self, entity_id, properties=("P18",)):
         data = self._get_json(
             _WIKIDATA_API,
             {
@@ -111,7 +145,10 @@ class NewsImageSelector:
         )
         try:
             claims = data["entities"][entity_id]["claims"]
-            return claims["P18"][0]["mainsnak"]["datavalue"]["value"]
+            for prop in properties:
+                if claims.get(prop):
+                    return claims[prop][0]["mainsnak"]["datavalue"]["value"]
+            return None
         except (KeyError, IndexError, TypeError):
             return None
 
@@ -147,6 +184,7 @@ class NewsImageSelector:
                 "credit_name": credit or "Wikimedia Commons",
                 "credit_license": license_name,
                 "credit_url": image.get("descriptionurl"),
+                "modesty_approved": False,
             }
         return None
 
