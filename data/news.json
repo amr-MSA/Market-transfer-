@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T09:07:33.734408+00:00",
+  "updated_at": "2026-08-26T09:54:33.750546+00:00",
   "events": [],
   "articles": [
     {
@@ -390,6 +390,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwy0dp85688o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T09:07:33.734408+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/manchester-city-omar-marmoush-spurs-loan-obligation-buy-nico-gonzalez-newcastle",
+      "seen_at": "2026-08-26T09:54:31.335550+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/martin-oneill-celtic-champions-league-collapse-lask-painful",
+      "seen_at": "2026-08-26T09:54:33.750546+00:00"
     }
   ],
   "published": {}
