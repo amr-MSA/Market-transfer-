@@ -239,10 +239,34 @@
     "fabrizio_url": "https://t.me/FabrizioRomanoTG/65245",
     "fabrizio_text": "🚨 🔵 🔴 Barcelona have just signed all the documents for Dominik Livaković deal; here we go now confirmed. Fenerbahçe receive €2m plus €2m possible add-ons. Plan for Livaković to become Barça backup GK from June 2027 when Szczesny leaves, if they can find a good loan move now. https://t.co/feSZ4Fw7VC — Fabrizio Romano ( @FabrizioRomano ) Aug 25, 2026",
     "discovered_at": "2026-08-25T11:17:57.664704+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {}
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Dominik Livaković من Fenerbahçe إلى Barcelona — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": {
+      "url": "AgACAgQAAyEGAAMBBnSIBQADA2qO0CS4pvMvYRGrWAABnqsOG0cbJAACAw5rG2rHFFOg8c8kJ-Gh8QEAAwIAA3cAAz0E",
+      "source": "wikimedia",
+      "credit_name": "Bryan Berlin / WikiPortraits",
+      "credit_license": "CC BY-SA 4.0",
+      "credit_url": "https://commons.wikimedia.org/wiki/File:Dominik_Livakovic_Croatia_v_Portugal_2_July_2026-063.jpg",
+      "library_asset_id": "IMG-GEN-0000001-01",
+      "library_person_id": "P0000001",
+      "library_club_id": null,
+      "library_stint_id": null
+    },
+    "unconfirmed_published_at": "2026-08-26T11:38:05.889848+00:00"
   }
 ]

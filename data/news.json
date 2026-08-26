@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T11:02:19.929096+00:00",
+  "updated_at": "2026-08-26T11:38:05.163102+00:00",
   "events": [],
   "articles": [
     {
@@ -414,6 +414,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/26/bristol-city-women-wsl2-wsl-womens-football",
       "seen_at": "2026-08-26T11:02:19.929096+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/uefa-poised-lift-boycott-threat-fifa-promises-no-world-cup-sale-repeat-gianni-infantino",
+      "seen_at": "2026-08-26T11:38:05.163102+00:00"
     }
   ],
   "published": {}

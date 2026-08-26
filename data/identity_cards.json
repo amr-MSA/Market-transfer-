@@ -1,6 +1,40 @@
 {
-  "version": 1,
-  "updated_at": null,
-  "people": {},
-  "organizations": {}
+  "version": 2,
+  "updated_at": "2026-08-26T11:38:12.284797+00:00",
+  "people": {
+    "P0000001": {
+      "person_id": "P0000001",
+      "canonical_name": "Dominik Livaković",
+      "aliases": [
+        "Dominik Livaković",
+        "Dominik Livakoviс"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q18207229",
+      "birth_date": "1995-01-09",
+      "nationality_ids": [
+        "Q224"
+      ],
+      "position_ids": [
+        "Q201330"
+      ],
+      "identity_source_url": "https://www.wikidata.org/wiki/Q18207229",
+      "identity_verified_at": "2026-08-26T11:38:11.633259+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 3,
+      "created_at": "2026-08-26T11:38:12.284782+00:00"
+    }
+  },
+  "organizations": {},
+  "identity_index": {
+    "wikidata:Q18207229": "P0000001"
+  },
+  "name_index": {
+    "dominik livakovic": [
+      "P0000001"
+    ],
+    "dominik livakoviс": [
+      "P0000001"
+    ]
+  }
 }

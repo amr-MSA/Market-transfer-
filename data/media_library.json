@@ -1,10 +1,44 @@
 {
   "version": 2,
-  "updated_at": null,
-  "next_person_number": 1,
+  "updated_at": "2026-08-26T11:38:13.143482+00:00",
+  "next_person_number": 2,
   "next_club_number": 1,
-  "people": {},
+  "people": {
+    "null": {
+      "person_id": "P0000001",
+      "name": "Dominik Livaković",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [
+        "IMG-GEN-0000001-01"
+      ],
+      "stint_ids": [],
+      "created_at": "2026-08-26T11:38:12.284754+00:00"
+    }
+  },
   "clubs": {},
   "stints": {},
-  "assets": {}
+  "assets": {
+    "IMG-GEN-0000001-01": {
+      "asset_id": "IMG-GEN-0000001-01",
+      "person_id": "P0000001",
+      "club_id": null,
+      "stint_id": null,
+      "start_year": null,
+      "context_type": "generic",
+      "visual_key": "GEN-0000001",
+      "telegram_file_id": "AgACAgQAAyEGAAMBBnSIBQADA2qO0CS4pvMvYRGrWAABnqsOG0cbJAACAw5rG2rHFFOg8c8kJ-Gh8QEAAwIAA3cAAz0E",
+      "telegram_file_unique_id": "AQADAw5rG2rHFFN8",
+      "telegram_message_id": 3,
+      "source": "wikimedia",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Dominik_Livakovic_Croatia_v_Portugal_2_July_2026-063.jpg",
+      "credit_name": "Bryan Berlin / WikiPortraits",
+      "credit_license": "CC BY-SA 4.0",
+      "width": 960,
+      "height": 1440,
+      "quality_score": 100,
+      "status": "APPROVED",
+      "added_at": "2026-08-26T11:38:13.143462+00:00"
+    }
+  }
 }
