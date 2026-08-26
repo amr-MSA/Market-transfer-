@@ -42,9 +42,10 @@ jobs:
           fresh = False
           try:
               updated = json.loads(path.read_text(encoding="utf-8")).get("updated_at")
-              then = datetime.fromisoformat(updated.replace("Z", "+00:00"))
-              fresh = (datetime.now(timezone.utc) - then).total_seconds() < 360
-          except (OSError, TypeError, ValueError, json.JSONDecodeError):
+              if updated:
+                  then = datetime.fromisoformat(updated.replace("Z", "+00:00"))
+                  fresh = (datetime.now(timezone.utc) - then).total_seconds() < 360
+          except (OSError, TypeError, ValueError, AttributeError, json.JSONDecodeError):
               pass
           print(f"healthy={'true' if fresh else 'false'}")
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
