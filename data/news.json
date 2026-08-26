@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T10:27:37.349774+00:00",
+  "updated_at": "2026-08-26T11:02:19.929096+00:00",
   "events": [],
   "articles": [
     {
@@ -402,6 +402,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cgewvygeq8vo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T10:27:37.349774+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62kd8027w1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T11:02:13.410387+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8d3jej2lqlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T11:02:16.048743+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/bristol-city-women-wsl2-wsl-womens-football",
+      "seen_at": "2026-08-26T11:02:19.929096+00:00"
     }
   ],
   "published": {}
