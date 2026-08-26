@@ -23,6 +23,7 @@ from .social_instagram import InstagramVerifier
 from .publisher import TelegramPublisher
 from .state import StateStore
 from .admin import TelegramAdmin
+from .gemini_rate_limit import GeminiRateLimiter
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
@@ -192,11 +193,17 @@ def main(fast_mode=False):
     gemini_key = os.getenv("GEMINI_API_KEY")
     gemini_extractor = None
     editorial_writer = None
+    gemini_rate_limiter = GeminiRateLimiter(
+        min_interval_seconds=settings.get("gemini_min_interval_seconds", 4),
+        max_retries=settings.get("gemini_max_retries", 2),
+        retry_backoff_seconds=settings.get("gemini_retry_backoff_seconds", 4),
+    )
     if settings.get("gemini_enabled", True) and gemini_key:
         gemini_extractor = GeminiExtractor(
             gemini_key,
             settings["request_timeout_seconds"],
-            settings.get("gemini_model", "gemini-3.6-flash")
+            settings.get("gemini_model", "gemini-3.6-flash"),
+            rate_limiter=gemini_rate_limiter,
         )
     if settings.get("editorial_enabled", True) and gemini_key:
         editorial_writer = GeminiEditorialWriter(
@@ -204,6 +211,7 @@ def main(fast_mode=False):
             ROOT / settings.get("editorial_prompt_dir", "prompts"),
             settings.get("editorial_timeout_seconds", 30),
             settings.get("news_gemini_model", "gemini-3.6-flash"),
+            rate_limiter=gemini_rate_limiter,
         )
 
     verifier = OfficialVerifier(
@@ -346,6 +354,9 @@ def main(fast_mode=False):
                 event = extractor.extract(item)
                 classified_this_run += 1
                 if not event:
+                    if extractor.last_failure_transient:
+                        print(f"[news-retry-later] Gemini temporarily unavailable: {item['title']!r}")
+                        continue
                     news_state.mark_article(news_data, item["id"])
                     print(f"[news-skip] Gemini rejected: {item['title']!r}")
                     continue

@@ -3,6 +3,7 @@ import re
 from pathlib import Path
 
 import requests
+from .gemini_rate_limit import GeminiRateLimiter, GeminiTransientError
 
 
 # These values are deliberately human-readable because they are also used in
@@ -42,17 +43,20 @@ class GeminiNewsExtractor:
     is populated only for transfers and loans.
     """
 
-    def __init__(self, api_key, timeout=30, model="gemini-3.6-flash", prompt_dir=None):
+    def __init__(self, api_key, timeout=30, model="gemini-3.6-flash", prompt_dir=None, rate_limiter=None):
         self.api_key = api_key
         self.timeout = timeout
         self.model = model
         self.prompt_dir = Path(prompt_dir) if prompt_dir else None
+        self.rate_limiter = rate_limiter or GeminiRateLimiter(min_interval_seconds=0)
+        self.last_failure_transient = False
         self.endpoint = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{model}:generateContent"
         )
 
     def extract(self, item):
+        self.last_failure_transient = False
         prompt = {
             "task": "Classify one football news article into one structured event. "
                     "Return null only when the article is not a meaningful football news item.",
@@ -91,7 +95,8 @@ class GeminiNewsExtractor:
         }
 
         try:
-            response = requests.post(
+            response = self.rate_limiter.post(
+                requests.post,
                 self.endpoint,
                 headers={
                     "Content-Type": "application/json",
@@ -115,6 +120,10 @@ class GeminiNewsExtractor:
             data = response.json()
             raw = data["candidates"][0]["content"]["parts"][0]["text"]
             obj = json.loads(re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip())
+        except GeminiTransientError as exc:
+            self.last_failure_transient = True
+            print(f"[news-gemini] temporary classification failure: {exc}")
+            return None
         except Exception as exc:
             print(f"[news-gemini] classification failed: {exc}")
             return None

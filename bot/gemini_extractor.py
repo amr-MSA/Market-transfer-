@@ -1,6 +1,7 @@
 import json
 import re
 import requests
+from .gemini_rate_limit import GeminiRateLimiter, GeminiTransientError
 
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
@@ -34,10 +35,11 @@ class GeminiExtractor:
     paying an API call for the majority of posts the regex already handles.
     """
 
-    def __init__(self, api_key, timeout=20, model="gemini-3.6-flash"):
+    def __init__(self, api_key, timeout=20, model="gemini-3.6-flash", rate_limiter=None):
         self.api_key = api_key
         self.timeout = timeout
         self.model = model
+        self.rate_limiter = rate_limiter or GeminiRateLimiter(min_interval_seconds=0)
 
     def extract(self, text):
         url = _ENDPOINT.format(model=self.model)
@@ -55,7 +57,8 @@ class GeminiExtractor:
             },
         }
         try:
-            r = requests.post(
+            r = self.rate_limiter.post(
+                requests.post,
                 url,
                 headers={
                     "Content-Type": "application/json",
@@ -66,7 +69,7 @@ class GeminiExtractor:
             )
             r.raise_for_status()
             data = r.json()
-        except requests.RequestException:
+        except (requests.RequestException, GeminiTransientError):
             # Network/API failure must never crash the run — just means no
             # extraction happened this cycle; the post is retried next poll
             # since state is only saved for posts we could parse.

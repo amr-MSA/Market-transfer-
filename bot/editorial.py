@@ -12,6 +12,7 @@ import re
 from pathlib import Path
 
 import requests
+from .gemini_rate_limit import GeminiRateLimiter, GeminiTransientError
 
 
 _SECTION_PROMPTS = {
@@ -35,11 +36,12 @@ _ALLOWED_STATUSES = {"رسمي", "Here We Go", "خبر صحفي", "غير محد
 
 
 class GeminiEditorialWriter:
-    def __init__(self, api_key, prompt_dir, timeout=30, model="gemini-3.6-flash"):
+    def __init__(self, api_key, prompt_dir, timeout=30, model="gemini-3.6-flash", rate_limiter=None):
         self.api_key = api_key
         self.prompt_dir = Path(prompt_dir)
         self.timeout = timeout
         self.model = model
+        self.rate_limiter = rate_limiter or GeminiRateLimiter(min_interval_seconds=0)
         self.endpoint = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{model}:generateContent"
@@ -100,7 +102,8 @@ class GeminiEditorialWriter:
 
     def _request(self, payload):
         try:
-            response = requests.post(
+            response = self.rate_limiter.post(
+                requests.post,
                 self.endpoint,
                 headers={
                     "Content-Type": "application/json",
@@ -125,6 +128,9 @@ class GeminiEditorialWriter:
             raw = data["candidates"][0]["content"]["parts"][0]["text"]
             raw = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
             return json.loads(raw)
+        except GeminiTransientError as exc:
+            print(f"[news-editorial] temporary writing failure: {exc}")
+            return None
         except Exception as exc:
             print(f"[news-editorial] writing failed: {exc}")
             return None
