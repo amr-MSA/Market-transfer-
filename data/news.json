@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T19:34:05.985006+00:00",
+  "updated_at": "2026-08-26T22:06:54.212893+00:00",
   "events": [],
   "articles": [
     {
@@ -434,6 +434,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crk3dr5pnyjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T19:34:05.985006+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/real-madrid-real-sociedad-la-liga-match-report-jose-mourinho-kylian-mbappe",
+      "seen_at": "2026-08-26T22:06:52.225585+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62mr6pv65zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-26T22:06:54.212893+00:00"
     }
   ],
   "published": {}
