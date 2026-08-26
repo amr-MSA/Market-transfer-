@@ -51,13 +51,17 @@ def test_editorial_transfer_message_is_short_and_uses_arabic_names():
         "from_original": "Aston Villa",
         "to_ar": "أرسنال",
         "to_original": "Arsenal",
-    }
+        "comment_ar": "إضافة تمنح أرسنال خيارًا جديدًا في الخط الخلفي.",
+        }
+
     message = official_message(
         "Ezri Konsa", "Aston Villa", "Arsenal", "https://example.test", editorial=editorial
     )
     assert "إزري كونسا (Ezri Konsa)" in message
     assert "تحليل سريع" not in message
     assert message.count("إزري كونسا (Ezri Konsa)") == 1
+    assert "❝إضافة تمنح أرسنال خيارًا جديدًا في الخط الخلفي.❞" in message
+    assert "التفاصيل الرسمية قيد الانتظار" not in message
 
 
 def test_news_message_contains_structured_summary():

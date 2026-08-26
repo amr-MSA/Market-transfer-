@@ -63,12 +63,21 @@ class IdentityCardRegistry:
             {
                 "person_id": person_id,
                 "canonical_name": person_record["name"],
+                "canonical_name_ar": None,
+                "canonical_name_original": person_record["name"],
                 "aliases": list(person_record.get("aliases") or []),
                 "entity_type": person_record.get("entity_type"),
                 "identity_key": None,
                 "birth_date": None,
                 "nationality_ids": [],
+                "nationality_names": [],
                 "position_ids": [],
+                "position_names": [],
+                "national_team_ids": [],
+                "national_team_names": [],
+                "organization_ids": [],
+                "organization_names": [],
+                "current_stats": None,
                 "identity_source_url": None,
                 "identity_verified_at": None,
                 "identity_status": "PENDING_VERIFICATION",
@@ -98,11 +107,20 @@ class IdentityCardRegistry:
             raise ValueError("identity key conflict")
         card["identity_key"] = incoming_key or existing_key
         card["canonical_name"] = facts.get("canonical_name") or card.get("canonical_name")
+        card["canonical_name_ar"] = facts.get("canonical_name_ar") or card.get("canonical_name_ar")
+        card["canonical_name_original"] = facts.get("canonical_name_original") or card.get("canonical_name_original") or card.get("canonical_name")
         aliases = [card.get("canonical_name"), *(card.get("aliases") or []), *(facts.get("aliases") or [])]
         card["aliases"] = list(dict.fromkeys(alias for alias in aliases if alias))
         card["birth_date"] = facts.get("birth_date") or card.get("birth_date")
         card["nationality_ids"] = facts.get("nationality_ids") or card.get("nationality_ids") or []
+        card["nationality_names"] = facts.get("nationality_names") or card.get("nationality_names") or []
         card["position_ids"] = facts.get("position_ids") or card.get("position_ids") or []
+        card["position_names"] = facts.get("position_names") or card.get("position_names") or []
+        card["national_team_ids"] = facts.get("national_team_ids") or card.get("national_team_ids") or []
+        card["national_team_names"] = facts.get("national_team_names") or card.get("national_team_names") or []
+        card["organization_ids"] = facts.get("organization_ids") or card.get("organization_ids") or []
+        card["organization_names"] = facts.get("organization_names") or card.get("organization_names") or []
+        card["current_stats"] = facts.get("current_stats") or card.get("current_stats")
         card["identity_source_url"] = facts.get("source_url") or card.get("identity_source_url")
         card["identity_verified_at"] = facts.get("verified_at") or card.get("identity_verified_at")
         card["identity_status"] = "VERIFIED" if card.get("identity_key") else "PENDING_VERIFICATION"
@@ -148,20 +166,38 @@ class IdentityCardRegistry:
 
     @staticmethod
     def person_text(card):
-        return "\n".join(
-            [
-                "IDENTITY_CARD",
-                "entity=person",
-                f"person_id={card['person_id']}",
-                f"name={card['canonical_name']}",
-                f"role={card.get('entity_type') or 'unknown'}",
-                f"identity_key={card.get('identity_key') or 'PENDING'}",
-                f"birth_date={card.get('birth_date') or 'PENDING'}",
-                f"nationality_ids={','.join(card.get('nationality_ids') or []) or 'PENDING'}",
-                f"position_ids={','.join(card.get('position_ids') or []) or 'PENDING'}",
-                f"status={card.get('identity_status') or 'PENDING_VERIFICATION'}",
-            ]
-        )
+        role = "لاعب" if card.get("entity_type") == "player" else "مدرب"
+        icon = "⚽" if role == "لاعب" else "🧠"
+        display_ar = card.get("canonical_name_ar") or card.get("canonical_name") or "غير معروف"
+        original = card.get("canonical_name_original") or next((alias for alias in card.get("aliases") or [] if alias != display_ar), None)
+        display_name = f"{display_ar} ({original})" if original and original != display_ar else display_ar
+        positions = ", ".join(card.get("position_names") or card.get("position_ids") or []) or "غير متوفر"
+        national_team = ", ".join(card.get("national_team_names") or card.get("national_team_ids") or []) or "غير متوفر"
+        nationality = ", ".join(card.get("nationality_names") or card.get("nationality_ids") or []) or "غير متوفر"
+        organizations = ", ".join(card.get("organization_names") or card.get("organization_ids") or []) or "غير متوفر"
+        lines = [
+            f"{icon} <b>بطاقة {role}</b>",
+            f"👤 <b>{display_name}</b>",
+            f"📍 المركز: {positions}",
+            f"🌍 المنتخب: {national_team}",
+            f"🏳 الجنسية: {nationality}",
+            f"🏟 الأندية الموثقة: {organizations}",
+            f"🎂 الميلاد: {card.get('birth_date') or 'غير متوفر'}",
+        ]
+        stats = card.get("current_stats")
+        if isinstance(stats, dict) and stats:
+            season = stats.get("season")
+            stat_items = []
+            for key, label in (("appearances", "مشاركة"), ("goals", "أهداف"), ("assists", "تمريرات حاسمة"), ("minutes", "دقائق")):
+                if stats.get(key) is not None:
+                    stat_items.append(f"{label}: {stats[key]}")
+            if stat_items:
+                lines.append(f"📊 {season + ' · ' if season else ''}{' · '.join(stat_items)}")
+            if stats.get("source_url"):
+                lines.append(f"🔗 <a href=\"{stats['source_url']}\">مصدر الإحصاءات</a>")
+        if card.get("identity_source_url"):
+            lines.append(f"🔎 <a href=\"{card['identity_source_url']}\">التحقق المرجعي</a>")
+        return "\n".join(lines)
 
     @staticmethod
     def organization_text(card):
@@ -201,7 +237,7 @@ class TelegramIdentityCards:
             if message_id:
                 response = requests.post(
                     f"{self.endpoint}/editMessageText",
-                    json={"chat_id": self.chat_id, "message_id": message_id, "text": text},
+                    json={"chat_id": self.chat_id, "message_id": message_id, "text": text, "parse_mode": "HTML", "disable_web_page_preview": True},
                     timeout=self.timeout,
                 )
                 response.raise_for_status()
@@ -211,7 +247,7 @@ class TelegramIdentityCards:
 
             response = requests.post(
                 f"{self.endpoint}/sendMessage",
-                json={"chat_id": self.chat_id, "text": text},
+                json={"chat_id": self.chat_id, "text": text, "parse_mode": "HTML", "disable_web_page_preview": True},
                 timeout=self.timeout,
             )
             response.raise_for_status()

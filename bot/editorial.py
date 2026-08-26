@@ -59,7 +59,8 @@ class GeminiEditorialWriter:
             "required_output": {
                 "headline": "Arabic headline, 8-14 words",
                 "lead": "One concise Arabic sentence",
-                "detail": "Optional second sentence or null",
+                "detail": "Optional second sentence or null; do not use it for transfer captions",
+                "comment_ar": "One short editorial observation, maximum 140 characters, or null",
                 "player_ar": "Arabic player name or null",
                 "player_original": "Original player name or null",
                 "from_ar": "Arabic source club or null",
@@ -74,7 +75,8 @@ class GeminiEditorialWriter:
                 "Return JSON only.",
                 "Use only facts from the article and structured event.",
                 "Do not add emojis, HTML, markdown, URLs, source names or hashtags.",
-                "Keep the result suitable for a Telegram caption of 3-5 lines.",
+                "Keep the result suitable for a compact Telegram caption of 3-5 short lines.",
+                "For transfer and loan events, comment_ar must be one short useful observation based only on the source; never write a paragraph.",
                 "Use Arabic names followed by the original name in parentheses on first mention.",
                 "Never invent a quote, score, fee, date, injury duration or transfer status.",
                 f"The event section is exactly: {section}.",
@@ -140,9 +142,10 @@ class GeminiEditorialWriter:
         headline = self._clean(obj.get("headline"))
         lead = self._clean(obj.get("lead"))
         detail = self._clean(obj.get("detail"))
+        comment = self._clean(obj.get("comment_ar"))
         if not headline or not lead:
             return None
-        if len(headline) > 180 or len(lead) > 360 or (detail and len(detail) > 360):
+        if len(headline) > 180 or len(lead) > 360 or (detail and len(detail) > 360) or (comment and len(comment) > 140):
             return None
         return {
             "section": section,
@@ -150,6 +153,7 @@ class GeminiEditorialWriter:
             "headline": headline,
             "lead": lead,
             "detail": detail,
+            "comment_ar": comment,
             "player_ar": self._clean(obj.get("player_ar")),
             "player_original": self._clean(obj.get("player_original")),
             "from_ar": self._clean(obj.get("from_ar")),

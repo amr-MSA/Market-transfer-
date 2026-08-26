@@ -1,4 +1,5 @@
 from bot.media_library import MediaLibrary, TelegramMediaArchive
+from bot.identity_cards import IdentityCardRegistry, TelegramIdentityCards
 
 
 def _wikimedia_media():
@@ -103,3 +104,48 @@ def test_telegram_archive_returns_reusable_file_ids(monkeypatch):
         "width": 960,
         "height": 1200,
     }
+
+
+def test_person_card_is_publishable_and_shows_optional_profile_data():
+    card = {
+        "person_id": "P0000001",
+        "canonical_name": "Dominik Livakovic",
+        "canonical_name_ar": "دومينيك ليفاكوفيتش",
+        "canonical_name_original": "Dominik Livakovic",
+        "entity_type": "player",
+        "position_names": ["حارس مرمى"],
+        "national_team_names": ["كرواتيا"],
+        "nationality_names": ["كرواتيا"],
+        "organization_names": ["فنربخشة"],
+        "birth_date": "1995-01-09",
+        "current_stats": {"season": "2025/26", "appearances": 18, "goals": 0, "source_url": "https://stats.example.test/livakovic"},
+        "identity_source_url": "https://www.wikidata.org/wiki/Q18207229",
+    }
+
+    text = IdentityCardRegistry.person_text(card)
+
+    assert "بطاقة لاعب" in text
+    assert "دومينيك ليفاكوفيتش (Dominik Livakovic)" in text
+    assert "المركز: حارس مرمى" in text
+    assert "المنتخب: كرواتيا" in text
+    assert "مشاركة: 18" in text
+    assert "مصدر الإحصاءات" in text
+
+
+def test_identity_card_uses_telegram_html_format(monkeypatch):
+    calls = []
+
+    class Response:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"ok": True, "result": {"message_id": 12}}
+
+    monkeypatch.setattr("bot.identity_cards.requests.post", lambda *args, **kwargs: (calls.append(kwargs["json"]) or Response()))
+    cards = TelegramIdentityCards("TOKEN", "-100777")
+    message_id = cards.upsert({"card_message_id": None}, "⚽ <b>بطاقة لاعب</b>")
+
+    assert message_id == 12
+    assert calls[0]["parse_mode"] == "HTML"
+    assert calls[0]["disable_web_page_preview"] is True

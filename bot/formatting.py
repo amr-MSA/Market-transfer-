@@ -58,14 +58,33 @@ def _editorial_body(editorial):
     lines = []
     headline = _text(editorial.get("headline"))
     lead = _text(editorial.get("lead"))
-    detail = _text(editorial.get("detail"))
     if headline:
         lines.append(f"<b>{headline}</b>")
     if lead:
         lines.append(lead)
-    if detail:
-        lines.append(detail)
     return "\n".join(lines)
+
+
+def _route_line(editorial=None, frm=None, to=None):
+    editorial = editorial or {}
+    from_line = _name(editorial.get("from_ar"), editorial.get("from_original")) or _text(frm)
+    to_line = _name(editorial.get("to_ar"), editorial.get("to_original")) or _text(to)
+    if from_line and to_line:
+        return f"🔁 {from_line} → {to_line}"
+    return ""
+
+
+def _compact_transfer_body(editorial=None, player=None, frm=None, to=None):
+    editorial = editorial or {}
+    headline = _text(editorial.get("headline"))
+    lines = [f"<b>{headline}</b>" if headline else _text(player, "لاعب")]
+    move = _move_line(editorial, player, frm, to)
+    if move:
+        lines.append(f"🔁 {move}")
+    comment = _text(editorial.get("comment_ar"))
+    if comment:
+        lines.append(f"❝{comment}❞")
+    return "\n".join(line for line in lines if line)
 
 
 def _source_line(source, url):
@@ -85,14 +104,8 @@ def _media_credit(media):
 
 
 def official_message(player, frm, to, url, analysis=None, editorial=None, media=None):
-    body = _editorial_body(editorial)
-    move = _move_line(editorial, player, frm, to)
-    if not body:
-        body = f"<b>{_text(player, 'لاعب')}</b>\nتم تأكيد انتقاله رسميًا إلى {_text(to, 'الوجهة الجديدة')} من جانب النادي."
-    parts = ["🟢 <b>انتقال رسمي</b>", body]
-    if not editorial and move:
-        parts.insert(2, move)
-    parts.append(f"✅ {_text('تأكيد رسمي من النادي')}")
+    body = _compact_transfer_body(editorial, player, frm, to)
+    parts = ["🟢 <b>انتقال رسمي</b>", body, "✅ تأكيد رسمي من النادي"]
     parts.append(_source_line("المصدر الرسمي", url))
     media_credit = _media_credit(media)
     if media_credit:
@@ -101,14 +114,8 @@ def official_message(player, frm, to, url, analysis=None, editorial=None, media=
 
 
 def here_we_go_message(player, frm, to, url, analysis=None, editorial=None, media=None):
-    body = _editorial_body(editorial)
-    move = _move_line(editorial, player, frm, to)
-    if not body:
-        body = f"<b>{_text(player, 'لاعب')}</b>\nتأكيد Here We Go من Fabrizio، بانتظار الإعلان الرسمي."
-    parts = ["🟡 <b>Here We Go</b>", body]
-    if not editorial and move:
-        parts.insert(2, move)
-    parts.append("⏳ الإعلان الرسمي لم يصدر بعد")
+    body = _compact_transfer_body(editorial, player, frm, to)
+    parts = ["🟡 <b>Here We Go</b>", body, "⏳ الإعلان الرسمي لم يصدر بعد"]
     parts.append(_source_line("Fabrizio Romano", url))
     media_credit = _media_credit(media)
     if media_credit:

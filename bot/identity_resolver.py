@@ -121,21 +121,63 @@ class WikidataIdentitySource:
             return None
 
         claims = entity.get("claims") or {}
-        name = self._label(entity, "en") or self._label(entity, "ar") or fallback_name
+        name_en = self._label(entity, "en")
+        name_ar = self._label(entity, "ar")
+        name = name_en or name_ar or fallback_name
         aliases = self._aliases(entity)
+        nationality_ids = self._claim_ids(claims, "P27")
+        position_ids = self._claim_ids(claims, "P413")
+        organization_ids = self._claim_ids(claims, "P54")
+        national_team_ids = self._claim_ids(claims, "P1532")
+        labels = self._labels_for_ids(set(nationality_ids + position_ids + organization_ids + national_team_ids))
         return {
+
             "identity_key": f"wikidata:{qid}",
             "canonical_name": name,
+            "canonical_name_ar": name_ar,
+            "canonical_name_original": name_en or name,
             "aliases": aliases,
             "birth_date": self._claim_time(claims, "P569"),
-            "nationality_ids": self._claim_ids(claims, "P27"),
-            "position_ids": self._claim_ids(claims, "P413"),
-            "organization_ids": self._claim_ids(claims, "P54"),
+            "nationality_ids": nationality_ids,
+            "nationality_names": [labels[qid] for qid in nationality_ids if labels.get(qid)],
+            "position_ids": position_ids,
+            "position_names": [labels[qid] for qid in position_ids if labels.get(qid)],
+            "organization_ids": organization_ids,
+            "organization_names": [labels[qid] for qid in organization_ids if labels.get(qid)],
+            "national_team_ids": national_team_ids,
+            "national_team_names": [labels[qid] for qid in national_team_ids if labels.get(qid)],
             "source_url": f"https://www.wikidata.org/wiki/{qid}",
             "source": "wikidata",
             "verified_at": datetime.now(timezone.utc).isoformat(),
             "entity_type": entity_type,
             "description": description,
+        }
+
+    def _labels_for_ids(self, qids):
+        if not qids:
+            return {}
+        try:
+            response = requests.get(
+                WIKIDATA_API,
+                params={
+                    "action": "wbgetentities",
+                    "ids": "|".join(sorted(qids)),
+                    "props": "labels",
+                    "languages": "ar|en",
+                    "format": "json",
+                    "maxlag": 5,
+                },
+                headers=self.headers,
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            entities = response.json().get("entities") or {}
+        except (ValueError, requests.RequestException):
+            return {}
+        return {
+            qid: self._label(entity, "ar") or self._label(entity, "en")
+            for qid, entity in entities.items()
+            if self._label(entity, "ar") or self._label(entity, "en")
         }
 
     @staticmethod
