@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-26T22:06:54.212893+00:00",
+  "updated_at": "2026-08-27T03:07:56.456825+00:00",
   "events": [],
   "articles": [
     {
@@ -442,6 +442,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c62mr6pv65zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T22:06:54.212893+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/27/womens-super-league-2026-27-preview-no-6-chelsea",
+      "seen_at": "2026-08-27T03:07:28.463784+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwyz3ky2kqdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-27T03:07:42.548190+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/26/chelsea-emiliano-martinez-aston-villa-goalkeeper",
+      "seen_at": "2026-08-27T03:07:56.456825+00:00"
     }
   ],
   "published": {}
