@@ -291,5 +291,35 @@
       "library_stint_id": null
     },
     "unconfirmed_published_at": "2026-08-26T11:38:05.889848+00:00"
+  },
+  {
+    "transfer_id": "bcc3d8be1809fc4044ad",
+    "player": "Emiliano Martínez",
+    "to_club": "Chelsea",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65447",
+    "fabrizio_text": "🚨 💣 BREAKING: Chelsea reach verbal agreement to sign Emiliano Martínez, HERE WE GO! 🔵 🇦🇷 Club to club agreement with Aston Villa on fee worth £7.5m for permanent move. Dibu gave green light to #CFC yesterday and clubs agreed on terms today, as @TeleFootball reported. https://t.co/YXs62PwB2s — Fabrizio Romano ( @FabrizioRomano ) Aug 27, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-27T23:45:29.660535+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Emiliano Martínez إلى Chelsea — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-27T23:45:29.665383+00:00"
   }
 ]

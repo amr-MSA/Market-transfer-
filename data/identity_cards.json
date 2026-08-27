@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-26T19:14:29.269680+00:00",
+  "updated_at": "2026-08-27T23:45:47.472641+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -85,12 +85,81 @@
       "identity_status": "VERIFIED",
       "card_message_id": 4,
       "created_at": "2026-08-26T19:14:29.269666+00:00"
+    },
+    "P0000003": {
+      "person_id": "P0000003",
+      "canonical_name": "Emiliano Martínez",
+      "canonical_name_ar": "إيميليانو مارتينيز",
+      "canonical_name_original": "Emiliano Martínez",
+      "aliases": [
+        "Emiliano Martínez",
+        "Damián Emiliano Martínez",
+        "Emiliano Martinez",
+        "Damian Emiliano Martinez",
+        "Emi Martínez",
+        "Emi Martinez",
+        "Dibu"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q3275904",
+      "birth_date": "1992-09-01",
+      "nationality_ids": [
+        "Q414"
+      ],
+      "nationality_names": [
+        "الأرجنتين"
+      ],
+      "position_ids": [
+        "Q201330"
+      ],
+      "position_names": [
+        "حارس مرمى"
+      ],
+      "national_team_ids": [
+        "Q414"
+      ],
+      "national_team_names": [
+        "الأرجنتين"
+      ],
+      "organization_ids": [
+        "Q19498",
+        "Q48946",
+        "Q48950",
+        "Q19500",
+        "Q2902690",
+        "Q1187790",
+        "Q9617",
+        "Q18729",
+        "Q8806",
+        "Q18711",
+        "Q79800"
+      ],
+      "organization_names": [
+        "شيفيلد وينزداي",
+        "أكسفورد يونايتد",
+        "نادي روذرهام يونايتد",
+        "وولفرهامبتون واندررز",
+        "منتخب الأرجنتين تحت 17 سنة لكرة القدم",
+        "منتخب الأرجنتين تحت 20 سنة لكرة القدم",
+        "نادي آرسنال",
+        "نادي ريدنغ",
+        "نادي خيتافي",
+        "أستون فيلا",
+        "منتخب الأرجنتين لكرة القدم"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q3275904",
+      "identity_verified_at": "2026-08-27T23:45:47.470777+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 5,
+      "created_at": "2026-08-27T23:45:47.472622+00:00"
     }
   },
   "organizations": {},
   "identity_index": {
     "wikidata:Q18207229": "P0000001",
-    "wikidata:Q122971833": "P0000002"
+    "wikidata:Q122971833": "P0000002",
+    "wikidata:Q3275904": "P0000003"
   },
   "name_index": {
     "dominik livakovic": [
@@ -101,6 +170,18 @@
     ],
     "ayyoub bouaddi": [
       "P0000002"
+    ],
+    "emiliano martinez": [
+      "P0000003"
+    ],
+    "damian emiliano martinez": [
+      "P0000003"
+    ],
+    "emi martinez": [
+      "P0000003"
+    ],
+    "dibu": [
+      "P0000003"
     ]
   }
 }
