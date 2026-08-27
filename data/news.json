@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-27T03:07:56.456825+00:00",
+  "updated_at": "2026-08-27T14:06:15.345215+00:00",
   "events": [],
   "articles": [
     {
@@ -454,6 +454,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/26/chelsea-emiliano-martinez-aston-villa-goalkeeper",
       "seen_at": "2026-08-27T03:07:56.456825+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c0qxzqdwekwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-27T14:06:11.542101+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwyz9lllx3xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-27T14:06:13.051665+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr4vl0lw4qwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-27T14:06:15.345215+00:00"
     }
   ],
   "published": {}
