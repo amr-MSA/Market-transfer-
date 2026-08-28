@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-27T23:45:29.117616+00:00",
+  "updated_at": "2026-08-28T07:06:30.218153+00:00",
   "events": [],
   "articles": [
     {
@@ -478,6 +478,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/27/atletico-madrid-julian-alvarez-barcelona-transfer-news",
       "seen_at": "2026-08-27T23:45:29.117616+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj3d1ky2642o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-28T07:05:59.563478+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvg967e3qqdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-28T07:06:01.887488+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwyz7481wr7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-28T07:06:30.218153+00:00"
     }
   ],
   "published": {}
