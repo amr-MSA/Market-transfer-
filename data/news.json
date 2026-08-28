@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-28T07:06:30.218153+00:00",
+  "updated_at": "2026-08-28T19:24:15.529537+00:00",
   "events": [],
   "articles": [
     {
@@ -490,6 +490,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwyz7481wr7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-28T07:06:30.218153+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/czjz9j3r8p8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-28T19:24:09.696034+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/28/crystal-palace-v-manchester-city-premier-league-live",
+      "seen_at": "2026-08-28T19:24:12.332568+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gk206k95xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-28T19:24:15.529537+00:00"
     }
   ],
   "published": {}
