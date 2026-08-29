@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-28T19:24:15.529537+00:00",
+  "updated_at": "2026-08-29T02:20:32.004384+00:00",
   "events": [],
   "articles": [
     {
@@ -502,6 +502,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4gk206k95xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-28T19:24:15.529537+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/29/european-football-psg-scramble-another-draw-while-bayern-make-flying-start",
+      "seen_at": "2026-08-29T02:20:21.562448+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/29/womens-super-league-2026-27-preview-no-8-everton",
+      "seen_at": "2026-08-29T02:20:24.203969+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c24j5jnnr9eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-29T02:20:32.004384+00:00"
     }
   ],
   "published": {}
