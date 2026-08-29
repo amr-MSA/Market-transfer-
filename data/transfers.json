@@ -321,5 +321,35 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-27T23:45:29.665383+00:00"
+  },
+  {
+    "transfer_id": "91bba6fb289b01f89399",
+    "player": "Bradley Barcola",
+    "to_club": "Liverpool",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65535",
+    "fabrizio_text": "RT @FabrizioRomano : 🚨 💣 BREAKING: Liverpool reach verbal agreement to sign Bradley Barcola, HERE WE GO! 🔴 Initial fee worth £100m plus add-ons — up to €140m possible total package for PSG. Documents to be exchanged in 24 hours. #LFC get their top target: never in doubt and now done. https://t.co/ruDJAbIhtK — Fabrizio Romano ( @FabrizioRomano ) Aug 29, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-29T09:10:41.641327+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Bradley Barcola إلى Liverpool — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-29T09:10:45.358118+00:00"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-27T23:45:47.472641+00:00",
+  "updated_at": "2026-08-29T09:11:03.792370+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -153,13 +153,71 @@
       "identity_status": "VERIFIED",
       "card_message_id": 5,
       "created_at": "2026-08-27T23:45:47.472622+00:00"
+    },
+    "P0000004": {
+      "person_id": "P0000004",
+      "canonical_name": "Bradley Barcola",
+      "canonical_name_ar": "برادلي باركولا",
+      "canonical_name_original": "Bradley Barcola",
+      "aliases": [
+        "Bradley Barcola",
+        "Bradley Jean-Manuel Essolisam Addo Barcola"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q99670930",
+      "birth_date": "2002-09-02",
+      "nationality_ids": [
+        "Q142",
+        "Q945"
+      ],
+      "nationality_names": [
+        "فرنسا",
+        "توغو"
+      ],
+      "position_ids": [
+        "Q280658"
+      ],
+      "position_names": [
+        "مهاجم"
+      ],
+      "national_team_ids": [
+        "Q142"
+      ],
+      "national_team_names": [
+        "فرنسا"
+      ],
+      "organization_ids": [
+        "Q3924852",
+        "Q704",
+        "Q483020",
+        "Q1344163",
+        "Q1277549",
+        "Q23886907",
+        "Q47774"
+      ],
+      "organization_names": [
+        "أكاديمية واحتياط أولمبيك ليون",
+        "أولمبيك ليون",
+        "باريس سان جيرمان",
+        "منتخب فرنسا تحت 20 سنة لكرة القدم",
+        "منتخب فرنسا تحت 21 سنة لكرة القدم",
+        "منتخب فرنسا تحت 23 سنة لكرة القدم",
+        "منتخب فرنسا لكرة القدم"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q99670930",
+      "identity_verified_at": "2026-08-29T09:11:03.790949+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 6,
+      "created_at": "2026-08-29T09:11:03.792354+00:00"
     }
   },
   "organizations": {},
   "identity_index": {
     "wikidata:Q18207229": "P0000001",
     "wikidata:Q122971833": "P0000002",
-    "wikidata:Q3275904": "P0000003"
+    "wikidata:Q3275904": "P0000003",
+    "wikidata:Q99670930": "P0000004"
   },
   "name_index": {
     "dominik livakovic": [
@@ -182,6 +240,12 @@
     ],
     "dibu": [
       "P0000003"
+    ],
+    "bradley barcola": [
+      "P0000004"
+    ],
+    "bradley jean manuel essolisam addo barcola": [
+      "P0000004"
     ]
   }
 }
