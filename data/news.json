@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-29T09:10:41.038915+00:00",
+  "updated_at": "2026-08-29T14:28:29.949137+00:00",
   "events": [],
   "articles": [
     {
@@ -526,6 +526,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd94xd9j7z5o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-29T09:10:41.038915+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cwyz8dr7jz3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-29T14:28:07.482149+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/29/premier-league-bournemouth-everton-coventry-hull-efl-clockwatch-live",
+      "seen_at": "2026-08-29T14:28:27.131931+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/29/liverpool-nottingham-forest-premier-league-match-report",
+      "seen_at": "2026-08-29T14:28:29.949137+00:00"
     }
   ],
   "published": {}

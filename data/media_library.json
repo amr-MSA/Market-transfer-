@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 5,
+  "next_person_number": 7,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -32,6 +32,24 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-08-29T09:11:03.792331+00:00"
+    },
+    "P0000005": {
+      "person_id": "P0000005",
+      "name": "Andria Bartishvili",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-08-29T14:30:13.510865+00:00"
+    },
+    "P0000006": {
+      "person_id": "P0000006",
+      "name": "Sergio Martínez",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-08-29T14:30:42.399435+00:00"
     }
   },
   "clubs": {},

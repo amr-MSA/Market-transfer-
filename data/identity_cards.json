@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-29T09:11:03.792370+00:00",
+  "updated_at": "2026-08-29T14:30:42.399473+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -210,6 +210,93 @@
       "identity_status": "VERIFIED",
       "card_message_id": 6,
       "created_at": "2026-08-29T09:11:03.792354+00:00"
+    },
+    "P0000005": {
+      "person_id": "P0000005",
+      "canonical_name": "Andria Bartishvili",
+      "canonical_name_ar": null,
+      "canonical_name_original": "Andria Bartishvili",
+      "aliases": [
+        "Andria Bartishvili"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q133850566",
+      "birth_date": "2009-03-30",
+      "nationality_ids": [
+        "Q230"
+      ],
+      "nationality_names": [
+        "جورجيا"
+      ],
+      "position_ids": [],
+      "position_names": [],
+      "national_team_ids": [],
+      "national_team_names": [],
+      "organization_ids": [],
+      "organization_names": [],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q133850566",
+      "identity_verified_at": "2026-08-29T14:30:13.509186+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 7,
+      "created_at": "2026-08-29T14:30:13.510887+00:00"
+    },
+    "P0000006": {
+      "person_id": "P0000006",
+      "canonical_name": "Sergio Martínez",
+      "canonical_name_ar": "سيرخيو دانييل مارتينيز",
+      "canonical_name_original": "Sergio Martínez",
+      "aliases": [
+        "Sergio Martínez",
+        "Sergio Daniel Martinez",
+        "Sergio Martínez Aranda",
+        "سيرجيو مارتينيز أراندا"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q667939",
+      "birth_date": "1969-02-15",
+      "nationality_ids": [
+        "Q77",
+        "Q29"
+      ],
+      "nationality_names": [
+        "الأوروغواي",
+        "إسبانيا"
+      ],
+      "position_ids": [
+        "Q280658"
+      ],
+      "position_names": [
+        "مهاجم"
+      ],
+      "national_team_ids": [
+        "Q77"
+      ],
+      "national_team_names": [
+        "الأوروغواي"
+      ],
+      "organization_ids": [
+        "Q8760",
+        "Q844238",
+        "Q499616",
+        "Q170703",
+        "Q16320",
+        "Q134916"
+      ],
+      "organization_names": [
+        "ديبورتيفو لاكورونيا",
+        "ديفينسور سبورتينغ",
+        "ناسيونال مونتيفيديو",
+        "بوكا جونيورز",
+        "بنيارول",
+        "منتخب الأوروغواي لكرة القدم"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q667939",
+      "identity_verified_at": "2026-08-29T14:30:42.397690+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 8,
+      "created_at": "2026-08-29T14:30:42.399455+00:00"
     }
   },
   "organizations": {},
@@ -217,7 +304,9 @@
     "wikidata:Q18207229": "P0000001",
     "wikidata:Q122971833": "P0000002",
     "wikidata:Q3275904": "P0000003",
-    "wikidata:Q99670930": "P0000004"
+    "wikidata:Q99670930": "P0000004",
+    "wikidata:Q133850566": "P0000005",
+    "wikidata:Q667939": "P0000006"
   },
   "name_index": {
     "dominik livakovic": [
@@ -246,6 +335,21 @@
     ],
     "bradley jean manuel essolisam addo barcola": [
       "P0000004"
+    ],
+    "andria bartishvili": [
+      "P0000005"
+    ],
+    "sergio martinez": [
+      "P0000006"
+    ],
+    "sergio daniel martinez": [
+      "P0000006"
+    ],
+    "sergio martinez aranda": [
+      "P0000006"
+    ],
+    "سيرجيو مارتينيز اراندا": [
+      "P0000006"
     ]
   }
 }

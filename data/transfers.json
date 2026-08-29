@@ -351,5 +351,65 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-29T09:10:45.358118+00:00"
+  },
+  {
+    "transfer_id": "c07336ea67d38bc0fda9",
+    "player": "Andria Bartishvili",
+    "to_club": "Arsenal",
+    "from_club": null,
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65546",
+    "fabrizio_text": "🚨 🔴 ⚪️ Arsenal agree deal to sign 17 year old Georgian talent Andria Bartishvili, here we go! 17 year old midfielder has medical booked in London at #AFC next week then signing a five year contract. He’s joining from 2027 when turning 18. Deal worth €4.5m. @Geo__team 🇬🇪 https://t.co/8BwkyoAypG — Fabrizio Romano ( @FabrizioRomano ) Aug 29, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-29T14:28:30.448161+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Andria Bartishvili إلى Arsenal — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-29T14:29:34.603720+00:00"
+  },
+  {
+    "transfer_id": "066bbfd3209acb7eaec2",
+    "player": "Sergio Martínez",
+    "to_club": "Real Madrid",
+    "from_club": "Racing Santander",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65559",
+    "fabrizio_text": "🚨 ⚪️ Real Madrid have agreed deal to sign 19 year old midfielder Sergio Martínez from Racing Santander, here we go! Martínez will join Real immediately, no loan to Racing; contract until 2030, deal worth €3m. The defender said no to English, German and Saudi clubs for Madrid. https://t.co/IKI9LDBLNK — Fabrizio Romano ( @FabrizioRomano ) Aug 29, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-29T14:28:30.452923+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Sergio Martínez من Racing Santander إلى Real Madrid — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-29T14:29:34.603720+00:00"
   }
 ]
