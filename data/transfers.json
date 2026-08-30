@@ -441,5 +441,35 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-30T10:43:06.720669+00:00"
+  },
+  {
+    "transfer_id": "27b1d92065afacc8e01f",
+    "player": "Gabriel Jesus",
+    "to_club": "Barcelona",
+    "from_club": "Arsenal",
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65636",
+    "fabrizio_text": "🚨 🔵 🔴 BREAKING: Barcelona agree deal to sign Gabriel Jesus from Arsenal, here we go! Exclusive details: medical booked on Monday, #AFC to receive €10m package plus add-ons for permament deal. Gabriel Jesus will travel for medical as authorized by Arsenal. https://t.co/Y4nFKERn3y — Fabrizio Romano ( @FabrizioRomano ) Aug 30, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-30T15:02:40.763591+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Gabriel Jesus من Arsenal إلى Barcelona — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-30T15:02:40.767975+00:00"
   }
 ]

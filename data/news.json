@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T10:43:06.216931+00:00",
+  "updated_at": "2026-08-30T15:02:40.032898+00:00",
   "events": [],
   "articles": [
     {
@@ -574,7 +574,41 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2zvw14e8zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-30T10:43:06.216931+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/30/manchester-united-v-ipswich-town-premier-league-live",
+      "seen_at": "2026-08-30T15:02:03.047977+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/30/chelsea-brighton-leeds-brentford-sunderland-fulham-premier-league-live",
+      "seen_at": "2026-08-30T15:02:08.542259+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c9qr79jr1qqo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-30T15:02:40.032898+00:00"
     }
   ],
-  "published": {}
+  "published": {
+    "3fb35b690dd16640a744d2be": {
+      "type": "مباراة",
+      "from": "Chelsea",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.theguardian.com/football/live/2026/aug/30/chelsea-brighton-leeds-brentford-sunderland-fulham-premier-league-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "3fb35b690dd16640a744d2be",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-08-30T15:02:13.754181+00:00",
+      "updated_at": "2026-08-30T15:02:13.754181+00:00",
+      "media": null
+    }
+  }
 }

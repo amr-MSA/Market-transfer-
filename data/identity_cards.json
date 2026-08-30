@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-30T10:43:26.994917+00:00",
+  "updated_at": "2026-08-30T15:03:57.399206+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -332,6 +332,60 @@
       "identity_status": "VERIFIED",
       "card_message_id": 9,
       "created_at": "2026-08-30T10:43:26.994900+00:00"
+    },
+    "P0000008": {
+      "person_id": "P0000008",
+      "canonical_name": "Gabriel Jesus",
+      "canonical_name_ar": "غابرييل جيسوس",
+      "canonical_name_original": "Gabriel Jesus",
+      "aliases": [
+        "Gabriel Jesus",
+        "Gabriel Fernando de Jesus",
+        "غابرييل خيسوس"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q19708656",
+      "birth_date": "1997-04-03",
+      "nationality_ids": [
+        "Q155"
+      ],
+      "nationality_names": [
+        "البرازيل"
+      ],
+      "position_ids": [
+        "Q280658"
+      ],
+      "position_names": [
+        "مهاجم"
+      ],
+      "national_team_ids": [
+        "Q155"
+      ],
+      "national_team_names": [
+        "البرازيل"
+      ],
+      "organization_ids": [
+        "Q50602",
+        "Q2308235",
+        "Q899189",
+        "Q80964",
+        "Q83459",
+        "Q9617"
+      ],
+      "organization_names": [
+        "مانشستر سيتي",
+        "منتخب البرازيل تحت 20 سنة لكرة القدم",
+        "منتخب البرازيل تحت 23 سنة لكرة القدم",
+        "نادي بالميراس",
+        "منتخب البرازيل لكرة القدم",
+        "نادي آرسنال"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q19708656",
+      "identity_verified_at": "2026-08-30T15:03:57.397590+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 10,
+      "created_at": "2026-08-30T15:03:57.399191+00:00"
     }
   },
   "organizations": {},
@@ -342,7 +396,8 @@
     "wikidata:Q99670930": "P0000004",
     "wikidata:Q133850566": "P0000005",
     "wikidata:Q667939": "P0000006",
-    "wikidata:Q111145131": "P0000007"
+    "wikidata:Q111145131": "P0000007",
+    "wikidata:Q19708656": "P0000008"
   },
   "name_index": {
     "dominik livakovic": [
@@ -392,6 +447,15 @@
     ],
     "omari elijah giraud hutchinson": [
       "P0000007"
+    ],
+    "gabriel jesus": [
+      "P0000008"
+    ],
+    "gabriel fernando de jesus": [
+      "P0000008"
+    ],
+    "غابرييل خيسوس": [
+      "P0000008"
     ]
   }
 }
