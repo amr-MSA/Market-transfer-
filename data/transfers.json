@@ -422,11 +422,14 @@
     "fabrizio_text": "🚨 🔴 ⚫️ AC Milan reach verbal agreement with Nottingham Forest to sign Omari Hutchinson, here we go! Initial loan deal with salary covered and authorization to travel from #NFFC . ✈️ AC Milan are working to book his medical. https://t.co/rVrLwQjMQO — Fabrizio Romano ( @FabrizioRomano ) Aug 29, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-08-29T22:35:41.786364+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -435,6 +438,8 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Omari Hutchinson من Nottingham Forest إلى AC Milan — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-30T10:43:06.720669+00:00"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-29T14:30:42.399473+00:00",
+  "updated_at": "2026-08-30T10:43:26.994917+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -297,6 +297,41 @@
       "identity_status": "VERIFIED",
       "card_message_id": 8,
       "created_at": "2026-08-29T14:30:42.399455+00:00"
+    },
+    "P0000007": {
+      "person_id": "P0000007",
+      "canonical_name": "Omari Hutchinson",
+      "canonical_name_ar": "أوماري هاتشينسون",
+      "canonical_name_original": "Omari Hutchinson",
+      "aliases": [
+        "Omari Hutchinson",
+        "Omari Elijah Giraud-Hutchinson"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q111145131",
+      "birth_date": "2003-10-29",
+      "nationality_ids": [
+        "Q145"
+      ],
+      "nationality_names": [
+        "المملكة المتحدة"
+      ],
+      "position_ids": [],
+      "position_names": [],
+      "national_team_ids": [
+        "Q21"
+      ],
+      "national_team_names": [
+        "إنجلترا"
+      ],
+      "organization_ids": [],
+      "organization_names": [],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q111145131",
+      "identity_verified_at": "2026-08-30T10:43:26.993297+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 9,
+      "created_at": "2026-08-30T10:43:26.994900+00:00"
     }
   },
   "organizations": {},
@@ -306,7 +341,8 @@
     "wikidata:Q3275904": "P0000003",
     "wikidata:Q99670930": "P0000004",
     "wikidata:Q133850566": "P0000005",
-    "wikidata:Q667939": "P0000006"
+    "wikidata:Q667939": "P0000006",
+    "wikidata:Q111145131": "P0000007"
   },
   "name_index": {
     "dominik livakovic": [
@@ -350,6 +386,12 @@
     ],
     "سيرجيو مارتينيز اراندا": [
       "P0000006"
+    ],
+    "omari hutchinson": [
+      "P0000007"
+    ],
+    "omari elijah giraud hutchinson": [
+      "P0000007"
     ]
   }
 }

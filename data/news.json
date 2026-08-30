@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T05:48:40.802721+00:00",
+  "updated_at": "2026-08-30T10:43:06.216931+00:00",
   "events": [],
   "articles": [
     {
@@ -562,6 +562,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/29/european-football-elversberg-dortmund-juventus-sevilla-atletico",
       "seen_at": "2026-08-29T22:35:15.817361+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crl631pgxj7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-30T10:43:00.706264+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/30/transfer-latest-premier-league-buildup-and-more-matchday-live",
+      "seen_at": "2026-08-30T10:43:03.351734+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zvw14e8zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-30T10:43:06.216931+00:00"
     }
   ],
   "published": {}

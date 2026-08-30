@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 7,
+  "next_person_number": 8,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -50,6 +50,15 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-08-29T14:30:42.399435+00:00"
+    },
+    "P0000007": {
+      "person_id": "P0000007",
+      "name": "Omari Hutchinson",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-08-30T10:43:26.994878+00:00"
     }
   },
   "clubs": {},
