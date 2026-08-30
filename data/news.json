@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T21:29:08.924646+00:00",
+  "updated_at": "2026-08-30T23:44:49.461702+00:00",
   "events": [],
   "articles": [
     {
@@ -606,6 +606,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/30/michael-carrick-manchester-united-ipswich-premier-league",
       "seen_at": "2026-08-30T21:29:08.924646+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/31/womens-super-league-2026-27-preview-no-10-london-city-lionesses",
+      "seen_at": "2026-08-30T23:44:49.461702+00:00"
     }
   ],
   "published": {
