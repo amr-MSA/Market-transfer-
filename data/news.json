@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T18:34:06.131819+00:00",
+  "updated_at": "2026-08-30T21:29:08.924646+00:00",
   "events": [],
   "articles": [
     {
@@ -598,6 +598,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/30/lionel-messi-inter-miami-mls-nashville-sc-dejan-joveljic-seattle-sounders",
       "seen_at": "2026-08-30T18:34:06.131819+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c89jxnelpywo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-30T21:29:02.207659+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/30/michael-carrick-manchester-united-ipswich-premier-league",
+      "seen_at": "2026-08-30T21:29:08.924646+00:00"
     }
   ],
   "published": {
