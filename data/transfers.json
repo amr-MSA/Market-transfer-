@@ -471,5 +471,35 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-30T15:02:40.767975+00:00"
+  },
+  {
+    "transfer_id": "7e1d8b97f3f45bb633ca",
+    "player": "Taylor Harwood Bellis",
+    "to_club": "Aston Villa",
+    "from_club": "Southampton",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65650",
+    "fabrizio_text": "🚨 🟣 🔵 Aston Villa have reached a verbal agreement to sign Taylor Harwood Bellis from Southampton, here we go! #AVFC closed the verbal agreement for £25m plus £5m add-ons. Green light from the player. Documents yet to be exchanged but verbal agreement done. https://t.co/dIbdyzDvdv — Fabrizio Romano ( @FabrizioRomano ) Aug 30, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-30T18:34:06.755555+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Taylor Harwood Bellis من Southampton إلى Aston Villa — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-30T18:34:47.504946+00:00"
   }
 ]

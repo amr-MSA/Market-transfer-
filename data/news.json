@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T15:02:40.032898+00:00",
+  "updated_at": "2026-08-30T18:34:06.131819+00:00",
   "events": [],
   "articles": [
     {
@@ -586,6 +586,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c9qr79jr1qqo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-30T15:02:40.032898+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/30/european-football-real-madrid-malaga-napoli-como-inter",
+      "seen_at": "2026-08-30T18:33:43.423115+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62ewy19w2ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-30T18:33:45.628563+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/30/lionel-messi-inter-miami-mls-nashville-sc-dejan-joveljic-seattle-sounders",
+      "seen_at": "2026-08-30T18:34:06.131819+00:00"
     }
   ],
   "published": {
