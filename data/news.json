@@ -1,72 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-31T15:27:36.116463+00:00",
+  "updated_at": "2026-08-31T20:57:14.690842+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/toddler-pitch-invader-mls-minnesota-united-san-jose-earthquakes",
-      "seen_at": "2026-08-24T15:37:00.431842+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cpwl87rlqjvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T15:37:02.643842+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/julian-alvarez-walks-alone-at-atletico-madrid-barcelona-transfer-saga-la-liga",
-      "seen_at": "2026-08-24T15:37:05.309345+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/liverpool-newcastle-united-premier-league-andoni-iraola",
-      "seen_at": "2026-08-24T16:07:57.838534+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-soap-opera-tottenham-hotspur-football-daily-newsletter",
-      "seen_at": "2026-08-24T16:07:57.998658+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq63ry9q6jzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T16:53:17.541038+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/sport/2026/aug/24/san-francisco-49ers-owner-jed-york-pleads-no-contest-after-arrest-at-ohio-trailer-park",
-      "seen_at": "2026-08-24T16:53:17.731483+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c750nd7yq7yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T16:53:23.462386+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/24/fulham-v-chelsea-premier-league-live",
-      "seen_at": "2026-08-24T17:53:59.546886+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c0469r217q5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T19:09:47.783464+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/gianni-infantino-fifa-players-resign-football-politics",
-      "seen_at": "2026-08-24T19:09:50.971057+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cj4jxwxxvqyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T19:09:51.102335+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/post-pep-premier-league-era-begins-with-blast-of-hyper-managed-shock-and-awe",
-      "seen_at": "2026-08-24T19:43:31.471748+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cpveylz0n8go?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T19:43:31.638547+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8xkl50ylweo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T19:43:31.796210+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/manchester-city-agree-34m-deal-for-allan-elias-as-nico-gonzalez-nears-newcastle-move",
-      "seen_at": "2026-08-24T20:42:49.182679+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2d2w7z190o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T21:06:43.209726+00:00"
@@ -554,6 +490,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2zq97w28eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-31T15:27:36.116463+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/aug/31/aston-villa-v-arsenal-premier-league-live",
+      "seen_at": "2026-08-31T20:57:08.741187+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwyz130nxkro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T20:57:14.690842+00:00"
     }
   ],
   "published": {
