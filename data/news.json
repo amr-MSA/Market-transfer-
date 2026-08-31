@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-30T23:44:49.461702+00:00",
+  "updated_at": "2026-08-31T01:38:26.315160+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c0kmk6rd30no?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T00:27:16.052486+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ce343r7245no?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T00:27:16.215287+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/womens-super-league-2026-27-preview-no-3-birmingham-city",
-      "seen_at": "2026-08-24T00:27:16.461001+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/aleksander-ceferin-gianni-infantino-world-cup-fifa-uefa-super-league",
       "seen_at": "2026-08-24T02:07:53.440542+00:00"
@@ -610,6 +598,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/aug/31/womens-super-league-2026-27-preview-no-10-london-city-lionesses",
       "seen_at": "2026-08-30T23:44:49.461702+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/30/mikel-arteta-premier-league-matchday-squad-player-welfare-arsenal",
+      "seen_at": "2026-08-31T01:38:23.276570+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cpwl248p5vgo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T01:38:26.315160+00:00"
     }
   ],
   "published": {
