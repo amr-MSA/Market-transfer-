@@ -501,5 +501,35 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-30T18:34:47.504946+00:00"
+  },
+  {
+    "transfer_id": "d19db1b8937e47d41781",
+    "player": "Pape Matar Sarr",
+    "to_club": "Juventus",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65697",
+    "fabrizio_text": "🚨 ⚪️ ⚫️ EXCL: Juventus agree deal to sign Pape Matar Sarr, here we go! 🇸🇳 Deal agreed between clubs with Tottenham on initial loan plus buy option clause to become mandatory under certain conditions. Total package worth €30m fee for #THFC . Sarr wanted Juventus, deal now done. https://t.co/RRYPcn0GUd — Fabrizio Romano ( @FabrizioRomano ) Aug 31, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-08-31T07:39:10.678785+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Pape Matar Sarr إلى Juventus — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-08-31T07:39:34.202200+00:00"
   }
 ]

@@ -1,36 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-31T01:38:26.315160+00:00",
+  "updated_at": "2026-08-31T07:39:10.111371+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/aleksander-ceferin-gianni-infantino-world-cup-fifa-uefa-super-league",
-      "seen_at": "2026-08-24T02:07:53.440542+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cwy4y5k4kg4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T02:07:53.601220+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/23/european-football-psg-rennes-torino-milan-elche-barcelona-bayern-munich-harry-kane",
-      "seen_at": "2026-08-24T02:07:56.816564+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5yrrzn1dnno?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T05:41:58.338145+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-10-talking-points-from-opening-weekend-action",
-      "seen_at": "2026-08-24T07:35:38.614597+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/chelsea-change-course-with-alonso-primed-to-banish-the-chaos-of-youth",
-      "seen_at": "2026-08-24T07:35:46.393810+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckge725zy1zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T07:36:01.141838+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cz6465pj4njo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-24T08:23:40.715618+00:00"
@@ -606,6 +578,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cpwl248p5vgo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-31T01:38:26.315160+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/aug/31/premier-league-10-talking-points-from-the-weekend-action",
+      "seen_at": "2026-08-31T07:37:54.878434+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c7v433lejveo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T07:38:49.513028+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4g7ljprwzmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T07:39:10.111371+00:00"
     }
   ],
   "published": {
