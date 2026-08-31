@@ -1,52 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-31T07:39:10.111371+00:00",
+  "updated_at": "2026-08-31T15:27:36.116463+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cz6465pj4njo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T08:23:40.715618+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cgmkmpj03zmo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T08:23:48.527257+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/football-transfer-rumour-mill-julian-alvarez-arsenal-booed-atletico",
-      "seen_at": "2026-08-24T08:23:58.314109+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqxvj8j7gy8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T09:11:46.667817+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/efl-and-scottish-league-matches-broadcast-russia",
-      "seen_at": "2026-08-24T11:14:40.587527+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/ruben-amorim-milan-live-up-to-billing-as-teenage-star-alphadjo-cisse-upstages-signings",
-      "seen_at": "2026-08-24T11:45:56.445033+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr50n2d4rj0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T11:45:58.523206+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zn8ynj9eo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T13:17:02.174218+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5y589nwjk9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T14:56:07.112333+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c750nd2419ko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T14:56:09.021970+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/rennes-psg-best-rest-ligue-1-ferran-torres",
-      "seen_at": "2026-08-24T14:56:13.086552+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/24/toddler-pitch-invader-mls-minnesota-united-san-jose-earthquakes",
       "seen_at": "2026-08-24T15:37:00.431842+00:00"
@@ -590,6 +546,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4g7ljprwzmo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-31T07:39:10.111371+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c780wzlzl45o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T15:27:11.108427+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zq97w28eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-08-31T15:27:36.116463+00:00"
     }
   ],
   "published": {

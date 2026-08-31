@@ -332,9 +332,12 @@
     "fabrizio_text": "RT @FabrizioRomano : 🚨 💣 BREAKING: Liverpool reach verbal agreement to sign Bradley Barcola, HERE WE GO! 🔴 Initial fee worth £100m plus add-ons — up to €140m possible total package for PSG. Documents to be exchanged in 24 hours. #LFC get their top target: never in doubt and now done. https://t.co/ruDJAbIhtK — Fabrizio Romano ( @FabrizioRomano ) Aug 29, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-08-29T09:10:41.641327+00:00",
-    "status": "HERE_WE_GO",
-    "official_sent": false,
-    "official_delivery": {},
+    "status": "OFFICIAL",
+    "official_sent": true,
+    "official_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "unconfirmed_sent": true,
     "unconfirmed_delivery": {
       "-1003938445195": "SENT",
@@ -342,15 +345,24 @@
     },
     "analysis": {
       "category": "تحليل صفقة",
-      "stage": "Here We Go غير رسمي بعد",
-      "status": "HERE_WE_GO",
-      "status_score": 75,
-      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
-      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
-      "summary": "Bradley Barcola إلى Liverpool — المرحلة: Here We Go غير رسمي بعد."
+      "stage": "رسمي",
+      "status": "OFFICIAL",
+      "status_score": 100,
+      "risk": "منخفض بعد توثيق إعلان النادي",
+      "recommendation": "يمكن نشرها كبطاقة رسمية.",
+      "summary": "Bradley Barcola إلى Liverpool — المرحلة: رسمي."
     },
     "media": null,
-    "unconfirmed_published_at": "2026-08-29T09:10:45.358118+00:00"
+    "unconfirmed_published_at": "2026-08-29T09:10:45.358118+00:00",
+    "official_evidence": {
+      "url": "https://www.liverpoolfc.com/news/liverpool-sign-bradley-barcola-paris-saint-germain",
+      "source": "Liverpool",
+      "kind": "official_site"
+    },
+    "official_url": "https://www.liverpoolfc.com/news/liverpool-sign-bradley-barcola-paris-saint-germain",
+    "official_source": "Liverpool",
+    "official_evidence_kind": "official_site",
+    "official_verified_at": "2026-08-31T15:28:47.169234+00:00"
   },
   {
     "transfer_id": "c07336ea67d38bc0fda9",
