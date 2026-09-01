@@ -638,5 +638,30 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-09-01T10:17:35.840769+00:00"
+  },
+  {
+    "transfer_id": "9dd07449d93360a238ac",
+    "player": "Enzo Fernández",
+    "to_club": "Manchester City",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65863",
+    "fabrizio_text": "🚨 💣 BREAKING: Enzo Fernández to Manchester City, HERE WE GO! 🇦🇷 Deal in place for fee over £125m after a long negotiation as Chelsea approved the sale. Enzo only wanted Manchester City and he’s now set for medical at #MCFC . https://t.co/R8rGpD24rc — Fabrizio Romano ( @FabrizioRomano ) Sep 1, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-01T18:13:06.215320+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Enzo Fernández إلى Manchester City — المرحلة: Here We Go غير رسمي بعد."
+    }
   }
 ]
