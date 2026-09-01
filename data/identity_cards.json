@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-08-30T15:03:57.399206+00:00",
+  "updated_at": "2026-09-01T10:18:08.654624+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -386,6 +386,118 @@
       "identity_status": "VERIFIED",
       "card_message_id": 10,
       "created_at": "2026-08-30T15:03:57.399191+00:00"
+    },
+    "P0000009": {
+      "person_id": "P0000009",
+      "canonical_name": "Tosin Adarabioyo",
+      "canonical_name_ar": "توسين أدارابيويو",
+      "canonical_name_original": "Tosin Adarabioyo",
+      "aliases": [
+        "Tosin Adarabioyo",
+        "Abdul-Nasir Oluwatosin Oluwadoyinsolami Adarabioyo"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q21620666",
+      "birth_date": "1997-09-24",
+      "nationality_ids": [
+        "Q145"
+      ],
+      "nationality_names": [
+        "المملكة المتحدة"
+      ],
+      "position_ids": [
+        "Q268258"
+      ],
+      "position_names": [
+        "قلب الدفاع"
+      ],
+      "national_team_ids": [
+        "Q21"
+      ],
+      "national_team_names": [
+        "إنجلترا"
+      ],
+      "organization_ids": [
+        "Q50602",
+        "Q4201740",
+        "Q2752922",
+        "Q1049171",
+        "Q2358861",
+        "Q18744",
+        "Q19446",
+        "Q18708",
+        "Q9616"
+      ],
+      "organization_names": [
+        "مانشستر سيتي",
+        "منتخب إنجلترا تحت 16 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 17 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 18 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 19 سنة لكرة القدم",
+        "وست بروميتش ألبيون",
+        "بلاكبيرن روفرز",
+        "نادي فولهام",
+        "نادي تشيلسي"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q21620666",
+      "identity_verified_at": "2026-09-01T10:18:01.565759+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 11,
+      "created_at": "2026-09-01T10:18:01.567742+00:00"
+    },
+    "P0000010": {
+      "person_id": "P0000010",
+      "canonical_name": "Mykhailo Mudryk",
+      "canonical_name_ar": "ميخايلو مودريك",
+      "canonical_name_original": "Mykhailo Mudryk",
+      "aliases": [
+        "Mykhailo Mudryk",
+        "Mykhailo Petrovych Mudryk"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q58494476",
+      "birth_date": "2001-01-05",
+      "nationality_ids": [
+        "Q212"
+      ],
+      "nationality_names": [
+        "أوكرانيا"
+      ],
+      "position_ids": [
+        "Q11681748"
+      ],
+      "position_names": [
+        "جناح"
+      ],
+      "national_team_ids": [
+        "Q212"
+      ],
+      "national_team_names": [
+        "أوكرانيا"
+      ],
+      "organization_ids": [
+        "Q172969",
+        "Q44295",
+        "Q1980760",
+        "Q1579270",
+        "Q170403",
+        "Q9616"
+      ],
+      "organization_names": [
+        "نادي شاختار دونيتسك",
+        "أرسنال كييف",
+        "ديسنا تشرنيغوف",
+        "منتخب أوكرانيا تحت 21 سنة لكرة القدم",
+        "منتخب أوكرانيا لكرة القدم",
+        "نادي تشيلسي"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q58494476",
+      "identity_verified_at": "2026-09-01T10:18:08.652802+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 12,
+      "created_at": "2026-09-01T10:18:08.654608+00:00"
     }
   },
   "organizations": {},
@@ -397,7 +509,9 @@
     "wikidata:Q133850566": "P0000005",
     "wikidata:Q667939": "P0000006",
     "wikidata:Q111145131": "P0000007",
-    "wikidata:Q19708656": "P0000008"
+    "wikidata:Q19708656": "P0000008",
+    "wikidata:Q21620666": "P0000009",
+    "wikidata:Q58494476": "P0000010"
   },
   "name_index": {
     "dominik livakovic": [
@@ -456,6 +570,18 @@
     ],
     "غابرييل خيسوس": [
       "P0000008"
+    ],
+    "tosin adarabioyo": [
+      "P0000009"
+    ],
+    "abdul nasir oluwatosin oluwadoyinsolami adarabioyo": [
+      "P0000009"
+    ],
+    "mykhailo mudryk": [
+      "P0000010"
+    ],
+    "mykhailo petrovych mudryk": [
+      "P0000010"
     ]
   }
 }

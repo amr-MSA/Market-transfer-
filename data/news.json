@@ -1,56 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-01T05:23:24.288218+00:00",
+  "updated_at": "2026-09-01T10:16:52.845863+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cd7llw7yzggo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T05:37:25.101776+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cy4zl2mz9rko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T07:02:38.640654+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cy0znx93x05o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T07:02:40.549982+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr59zj42plvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T07:52:45.810607+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr4v0p1xqryo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T09:09:11.746673+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c4gql9p0qn2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T09:09:13.527214+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/25/football-transfer-rumours-manchester-city-tottenham-cody-gakpo",
-      "seen_at": "2026-08-25T09:09:17.534874+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/25/savinho-completes-spurs-move-manchester-city-changes-name-to-savio",
-      "seen_at": "2026-08-25T09:49:53.454097+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cy7z637nj8jo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T09:49:55.861326+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/25/bangladesh-soccer-team-ronan-declan-sullivan",
-      "seen_at": "2026-08-25T09:49:58.488610+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cn8e7q501j3o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T10:16:47.396336+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/picture/2026/aug/25/david-squires-on-boos-barcodes-buzzcuts-premier-league-returns",
-      "seen_at": "2026-08-25T10:16:48.497542+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/news/articles/c790wyyv71vo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-25T10:53:23.089569+00:00"
@@ -462,6 +414,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/01/womens-super-league-preview-manchester-city",
       "seen_at": "2026-09-01T00:23:39.137040+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/01/football-transfer-deadline-day-fernandez-alvarez-mudryk-ndiaye-latest-news-updates",
+      "seen_at": "2026-09-01T10:16:34.320903+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/picture/2026/sep/01/david-squires-on-the-art-of-the-transfer-deal",
+      "seen_at": "2026-09-01T10:16:35.248500+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cgl7yw9y1weo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-01T10:16:52.845863+00:00"
     }
   ],
   "published": {

@@ -554,11 +554,14 @@
     "fabrizio_text": "🚨 ⚪️ Tosin Adarabioyo to Tottenham, here we go! Deal agreed also on personal terms. Understand #CFC receive £7m fixed fee plus add-ons for the defender who’s joining Spurs project. The story revealed in the morning, confirmed. https://t.co/F94qZypvAH — Fabrizio Romano ( @FabrizioRomano ) Aug 31, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-01T00:23:52.065442+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -567,7 +570,9 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Tosin Adarabioyo إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-01T10:17:35.840769+00:00"
   },
   {
     "transfer_id": "0390be027dbd1fda4bb8",
@@ -579,11 +584,14 @@
     "fabrizio_text": "🚨 ⚪️ BREAKING: Mykhaylo Mudryk to Tottenham, here we go! Everything agreed also on personal terms. Mudryk joins #THFC on paid loan and also understand there will be a buy option clause not mandatory in the agreement. The Ukrainian will re-join De Zerbi. 🇺🇦 https://t.co/4tEibnZVrw — Fabrizio Romano ( @FabrizioRomano ) Aug 31, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-01T00:23:52.066641+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -592,6 +600,38 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Mykhaylo Mudryk إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-01T10:17:35.840769+00:00"
+  },
+  {
+    "transfer_id": "13f032a37c9203bcdbc8",
+    "player": "Ethan Nwaneri",
+    "to_club": "Borussia Dortmund",
+    "from_club": "Arsenal",
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65818",
+    "fabrizio_text": "🚨 🟡 ⚫️ EXCLUSIVE: Borussia Dortmund reach verbal agreement to sign Ethan Nwaneri from Arsenal, here we go! Season long loan agreed from Arsenal as Nwaneri said yes to this possibility overnight. BVB sources confirm salary will be entirely covered by the Geeman club. https://t.co/V455sTaPeZ — Fabrizio Romano ( @FabrizioRomano ) Sep 1, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-01T10:16:53.349622+00:00",
+    "status": "HERE_WE_GO",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Ethan Nwaneri من Arsenal إلى Borussia Dortmund — المرحلة: Here We Go غير رسمي بعد."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-01T10:17:35.840769+00:00"
   }
 ]

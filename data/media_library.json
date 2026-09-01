@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 9,
+  "next_person_number": 11,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -68,6 +68,24 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-08-30T15:03:57.399169+00:00"
+    },
+    "P0000009": {
+      "person_id": "P0000009",
+      "name": "Tosin Adarabioyo",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-09-01T10:18:01.567721+00:00"
+    },
+    "P0000010": {
+      "person_id": "P0000010",
+      "name": "Mykhaylo Mudryk",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-09-01T10:18:08.654587+00:00"
     }
   },
   "clubs": {},
