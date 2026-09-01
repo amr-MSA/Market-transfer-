@@ -543,5 +543,55 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-08-31T07:39:34.202200+00:00"
+  },
+  {
+    "transfer_id": "2ab7a15cc966369b622a",
+    "player": "Tosin Adarabioyo",
+    "to_club": "Tottenham",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65803",
+    "fabrizio_text": "🚨 ⚪️ Tosin Adarabioyo to Tottenham, here we go! Deal agreed also on personal terms. Understand #CFC receive £7m fixed fee plus add-ons for the defender who’s joining Spurs project. The story revealed in the morning, confirmed. https://t.co/F94qZypvAH — Fabrizio Romano ( @FabrizioRomano ) Aug 31, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-01T00:23:52.065442+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Tosin Adarabioyo إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
+    }
+  },
+  {
+    "transfer_id": "0390be027dbd1fda4bb8",
+    "player": "Mykhaylo Mudryk",
+    "to_club": "Tottenham",
+    "from_club": null,
+    "extraction_method": "regex",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65804",
+    "fabrizio_text": "🚨 ⚪️ BREAKING: Mykhaylo Mudryk to Tottenham, here we go! Everything agreed also on personal terms. Mudryk joins #THFC on paid loan and also understand there will be a buy option clause not mandatory in the agreement. The Ukrainian will re-join De Zerbi. 🇺🇦 https://t.co/4tEibnZVrw — Fabrizio Romano ( @FabrizioRomano ) Aug 31, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-01T00:23:52.066641+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Mykhaylo Mudryk إلى Tottenham — المرحلة: Here We Go غير رسمي بعد."
+    }
   }
 ]

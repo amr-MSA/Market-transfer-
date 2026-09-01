@@ -1,52 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-08-31T20:57:14.690842+00:00",
+  "updated_at": "2026-09-01T00:23:39.137040+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2d2w7z190o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T21:06:43.209726+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cddv72gj7qro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T21:06:43.380250+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cgk4k444rmmo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T21:40:48.352152+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/fulham-chelsea-premier-league-match-report",
-      "seen_at": "2026-08-24T21:40:50.387028+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/ckgx2ke9jgvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T22:00:58.645900+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/nottingham-forest-liam-delap-chelsea-tranfer-window",
-      "seen_at": "2026-08-24T22:00:58.817588+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/crl6r2wgd35o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T22:36:18.846206+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62e2y1p7njo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T22:58:25.786429+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/24/premier-league-chelsea-xabi-alonso-fulham",
-      "seen_at": "2026-08-24T22:58:26.114210+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/25/womens-super-league-2026-27-preview-no-4-brighton",
-      "seen_at": "2026-08-24T23:25:52.175193+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cg59814gvj9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-24T23:25:53.545436+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd7llw7yzggo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-25T05:37:25.101776+00:00"
@@ -498,6 +454,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwyz130nxkro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-31T20:57:14.690842+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cy4z8qjx931o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-01T00:23:35.720552+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/01/womens-super-league-preview-manchester-city",
+      "seen_at": "2026-09-01T00:23:39.137040+00:00"
     }
   ],
   "published": {
