@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-01T10:16:52.845863+00:00",
+  "updated_at": "2026-09-01T15:00:10.913879+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c790wyyv71vo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T10:53:23.089569+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/25/wsl-academy-teams-third-tier-fa-approves-plan",
-      "seen_at": "2026-08-25T11:48:42.032289+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zyzvvvzpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T13:15:44.538826+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/25/football-daily-email-tottenham-savinho-savio",
       "seen_at": "2026-08-25T15:53:21.881141+00:00"
@@ -426,6 +414,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cgl7yw9y1weo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-01T10:16:52.845863+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgyxyxplkvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-01T14:57:42.176035+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c0m31m2191lo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-01T14:58:56.664123+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4grzg0jzgzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-01T15:00:10.913879+00:00"
     }
   ],
   "published": {

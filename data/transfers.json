@@ -474,15 +474,20 @@
     },
     "analysis": {
       "category": "تحليل صفقة",
-      "stage": "Here We Go غير رسمي بعد",
-      "status": "HERE_WE_GO",
-      "status_score": 75,
-      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
-      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
-      "summary": "Gabriel Jesus من Arsenal إلى Barcelona — المرحلة: Here We Go غير رسمي بعد."
+      "stage": "رسمي",
+      "status": "OFFICIAL",
+      "status_score": 100,
+      "risk": "منخفض بعد توثيق إعلان النادي",
+      "recommendation": "يمكن نشرها كبطاقة رسمية.",
+      "summary": "Gabriel Jesus من Arsenal إلى Barcelona — المرحلة: رسمي."
     },
     "media": null,
-    "unconfirmed_published_at": "2026-08-30T15:02:40.767975+00:00"
+    "unconfirmed_published_at": "2026-08-30T15:02:40.767975+00:00",
+    "official_evidence": {
+      "url": "https://www.fcbarcelona.com/en/football/first-team/news/4570072/gabriel-jesus-signs-for-fc-barcelona",
+      "source": "Barcelona",
+      "kind": "official_site"
+    }
   },
   {
     "transfer_id": "7e1d8b97f3f45bb633ca",
