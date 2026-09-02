@@ -656,20 +656,37 @@
     "fabrizio_text": "🚨 💣 BREAKING: Enzo Fernández to Manchester City, HERE WE GO! 🇦🇷 Deal in place for fee over £125m after a long negotiation as Chelsea approved the sale. Enzo only wanted Manchester City and he’s now set for medical at #MCFC . https://t.co/R8rGpD24rc — Fabrizio Romano ( @FabrizioRomano ) Sep 1, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-01T18:13:06.215320+00:00",
-    "status": "WAITING_OFFICIAL",
-    "official_sent": false,
-    "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "status": "OFFICIAL",
+    "official_sent": true,
+    "official_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
-      "stage": "Here We Go غير رسمي بعد",
-      "status": "HERE_WE_GO",
-      "status_score": 75,
-      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
-      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
-      "summary": "Enzo Fernández إلى Manchester City — المرحلة: Here We Go غير رسمي بعد."
-    }
+      "stage": "رسمي",
+      "status": "OFFICIAL",
+      "status_score": 100,
+      "risk": "منخفض بعد توثيق إعلان النادي",
+      "recommendation": "يمكن نشرها كبطاقة رسمية.",
+      "summary": "Enzo Fernández إلى Manchester City — المرحلة: رسمي."
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-02T09:55:08.423420+00:00",
+    "official_evidence": {
+      "url": "https://www.mancity.com/news/mens/enzo-fernandez-signs-for-city-63923893",
+      "source": "Manchester City",
+      "kind": "official_site"
+    },
+    "official_url": "https://www.mancity.com/news/mens/enzo-fernandez-signs-for-city-63923893",
+    "official_source": "Manchester City",
+    "official_evidence_kind": "official_site",
+    "official_verified_at": "2026-09-02T09:55:08.423420+00:00"
   },
   {
     "transfer_id": "940b1abf949bc0c91bb8",
@@ -681,11 +698,14 @@
     "fabrizio_text": "🚨 🔵 EXCLUSIVE: Chelsea agree deal in principle to sign Lamine Camara from AS Monaco, here we go! 💣 Fee worth €55m and authorization to travel for medical. Initial agreement done now running in order to complete medical and formal steps in time. https://t.co/DuCBSuZBiN — Fabrizio Romano ( @FabrizioRomano ) Sep 1, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-02T05:42:04.709624+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -694,6 +714,8 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Lamine Camara من AS Monaco إلى Chelsea — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-02T09:55:08.423420+00:00"
   }
 ]
