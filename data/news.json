@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-02T20:08:48.948228+00:00",
+  "updated_at": "2026-09-02T22:37:29.080715+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/26/real-madrid-real-sociedad-la-liga-match-report-jose-mourinho-kylian-mbappe",
-      "seen_at": "2026-08-26T22:06:52.225585+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62mr6pv65zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T22:06:54.212893+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/27/womens-super-league-2026-27-preview-no-6-chelsea",
       "seen_at": "2026-08-27T03:07:28.463784+00:00"
@@ -314,6 +306,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-spending-transfer-window-summer-2026-chelsea-enzo-fernandez",
       "seen_at": "2026-09-02T20:08:48.948228+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/championship-roundup-wrexham-millwall-qpr-cardiff-burnley-miiddlesbrough",
+      "seen_at": "2026-09-02T22:36:52.039267+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/scottish-premiership-celtic-aberdeen-kenny-dalglish-rangers-falkirk",
+      "seen_at": "2026-09-02T22:37:12.990471+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cpq02z298p7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-02T22:37:29.080715+00:00"
     }
   ],
   "published": {
