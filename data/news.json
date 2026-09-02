@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-02T14:01:20.413656+00:00",
+  "updated_at": "2026-09-02T17:50:47.614059+00:00",
   "events": [],
   "articles": [
     {
@@ -306,6 +306,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cpwldyj8yp0o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-02T09:55:06.750199+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/richarlison-could-still-leave-tottenham-as-trabzonspor-weigh-up-bid-for-striker",
+      "seen_at": "2026-09-02T17:50:22.301191+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c624z0q5y5jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-02T17:50:32.898104+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-talking-points-three-things-we-learned-from-the-data",
+      "seen_at": "2026-09-02T17:50:47.614059+00:00"
     }
   ],
   "published": {
