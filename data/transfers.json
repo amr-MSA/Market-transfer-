@@ -670,5 +670,30 @@
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Enzo Fernández إلى Manchester City — المرحلة: Here We Go غير رسمي بعد."
     }
+  },
+  {
+    "transfer_id": "940b1abf949bc0c91bb8",
+    "player": "Lamine Camara",
+    "to_club": "Chelsea",
+    "from_club": "AS Monaco",
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/65891",
+    "fabrizio_text": "🚨 🔵 EXCLUSIVE: Chelsea agree deal in principle to sign Lamine Camara from AS Monaco, here we go! 💣 Fee worth €55m and authorization to travel for medical. Initial agreement done now running in order to complete medical and formal steps in time. https://t.co/DuCBSuZBiN — Fabrizio Romano ( @FabrizioRomano ) Sep 1, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-02T05:42:04.709624+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Lamine Camara من AS Monaco إلى Chelsea — المرحلة: Here We Go غير رسمي بعد."
+    }
   }
 ]
