@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-02T17:50:47.614059+00:00",
+  "updated_at": "2026-09-02T20:08:48.948228+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/26/newcastle-v-west-brom-tottenham-v-charlton-preston-v-everton-carabao-cup-live",
-      "seen_at": "2026-08-26T19:12:58.968491+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqjkrg54wwko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T19:13:20.660436+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/26/forest-in-talks-with-celta-vigo-over-javi-rueda-as-axel-disasi-joins-palace-on-loan",
-      "seen_at": "2026-08-26T19:33:50.848123+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crk3dr5pnyjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T19:34:05.985006+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/26/real-madrid-real-sociedad-la-liga-match-report-jose-mourinho-kylian-mbappe",
       "seen_at": "2026-08-26T22:06:52.225585+00:00"
@@ -318,6 +302,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-talking-points-three-things-we-learned-from-the-data",
       "seen_at": "2026-09-02T17:50:47.614059+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c780weq4146o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-02T20:08:44.727915+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/a-commodity-ismaila-sarrs-agent-wants-respect-for-african-players-in-transfer-deals",
+      "seen_at": "2026-09-02T20:08:47.239834+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-spending-transfer-window-summer-2026-chelsea-enzo-fernandez",
+      "seen_at": "2026-09-02T20:08:48.948228+00:00"
     }
   ],
   "published": {
