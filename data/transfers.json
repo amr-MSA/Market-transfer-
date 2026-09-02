@@ -464,9 +464,12 @@
     "fabrizio_text": "🚨 🔵 🔴 BREAKING: Barcelona agree deal to sign Gabriel Jesus from Arsenal, here we go! Exclusive details: medical booked on Monday, #AFC to receive €10m package plus add-ons for permament deal. Gabriel Jesus will travel for medical as authorized by Arsenal. https://t.co/Y4nFKERn3y — Fabrizio Romano ( @FabrizioRomano ) Aug 30, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-08-30T15:02:40.763591+00:00",
-    "status": "HERE_WE_GO",
-    "official_sent": false,
-    "official_delivery": {},
+    "status": "OFFICIAL",
+    "official_sent": true,
+    "official_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "unconfirmed_sent": true,
     "unconfirmed_delivery": {
       "-1003938445195": "SENT",
@@ -487,7 +490,11 @@
       "url": "https://www.fcbarcelona.com/en/football/first-team/news/4570072/gabriel-jesus-signs-for-fc-barcelona",
       "source": "Barcelona",
       "kind": "official_site"
-    }
+    },
+    "official_url": "https://www.fcbarcelona.com/en/football/first-team/news/4570072/gabriel-jesus-signs-for-fc-barcelona",
+    "official_source": "Barcelona",
+    "official_evidence_kind": "official_site",
+    "official_verified_at": "2026-09-02T01:04:17.823773+00:00"
   },
   {
     "transfer_id": "7e1d8b97f3f45bb633ca",

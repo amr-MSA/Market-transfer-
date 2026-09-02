@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-01T23:15:17.021149+00:00",
+  "updated_at": "2026-09-02T01:03:48.570724+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crerjz8814qo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T23:31:46.003787+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/26/womens-super-league-2026-27-preview-no-5-charlton-athletic",
-      "seen_at": "2026-08-25T23:31:49.297090+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c7506lkw1gno?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-25T23:52:47.190158+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cvgxxx4r7zxo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-26T05:23:23.401676+00:00"
@@ -370,6 +358,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crr4d0x0175o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-01T23:15:17.021149+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/czxzk0znvzeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-02T01:03:28.837034+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/02/everton-in-late-scramble-to-complete-balogun-transfer-after-flurry-of-sales",
+      "seen_at": "2026-09-02T01:03:32.064042+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c0m31e8v9jgo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-02T01:03:48.570724+00:00"
     }
   ],
   "published": {
