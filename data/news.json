@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-02T09:55:06.750199+00:00",
+  "updated_at": "2026-09-02T14:01:20.413656+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cgewvygeq8vo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T10:27:37.349774+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62kd8027w1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T11:02:13.410387+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8d3jej2lqlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-26T11:02:16.048743+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/26/bristol-city-women-wsl2-wsl-womens-football",
-      "seen_at": "2026-08-26T11:02:19.929096+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/26/uefa-poised-lift-boycott-threat-fifa-promises-no-world-cup-sale-repeat-gianni-infantino",
-      "seen_at": "2026-08-26T11:38:05.163102+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/aug/26/newcastle-v-west-brom-tottenham-v-charlton-preston-v-everton-carabao-cup-live",
       "seen_at": "2026-08-26T19:12:58.968491+00:00"
