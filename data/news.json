@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-03T05:01:25.714035+00:00",
+  "updated_at": "2026-09-03T09:38:11.182020+00:00",
   "events": [],
   "articles": [
     {
@@ -310,6 +310,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/03/womens-super-league-2026-27-preview-no-13-tottenham-hotspur",
       "seen_at": "2026-09-03T05:01:25.714035+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/03/wsl-transfer-deadline-day-arsenal-elisa-de-almeida-psg",
+      "seen_at": "2026-09-03T09:38:07.352574+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/03/deadline-day-deals-premier-league-transfers",
+      "seen_at": "2026-09-03T09:38:11.182020+00:00"
     }
   ],
   "published": {
