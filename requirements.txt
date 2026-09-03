@@ -3,3 +3,5 @@ feedparser>=6.0,<7
 beautifulsoup4>=4.12,<5
 python-dotenv>=1.0,<2
 Pillow>=10.0,<12
+mediapipe>=0.10,<0.11
+numpy>=1.24,<3

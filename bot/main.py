@@ -10,6 +10,7 @@ from .news_sources import FootballNewsSource
 from .news_state import NewsState
 from .media import NewsImageSelector
 from .media_library import MediaLibrary, TelegramMediaArchive
+from .image_review import ImageReviewStore
 from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
 from .identity_resolver import IdentityResolver, WikidataIdentitySource
 from .content_types import channels_for_content
@@ -32,17 +33,63 @@ load_dotenv(ROOT / ".env")
 _TERMINAL_STATES = {"OFFICIAL", "HERE_WE_GO"}
 
 
+def _archive_selected_media(
+    library, library_data, archive, media, person, entity_type, person_id,
+    identity, identity_registry, identity_data, identity_cards,
+):
+    """Archive a chosen image into the reusable library, when eligible.
+
+    Shared by the legacy auto-selection path and by an administrator's
+    APPROVED review reply — both end up with one concrete ``media`` dict
+    that deserves the exact same archiving/identity-card treatment.
+    """
+    if not media or not library or not archive or not archive.enabled or not MediaLibrary.is_archivable(media):
+        return media, False, False
+    # A name-only match is never enough to create a reusable identity asset.
+    if not identity or identity.get("status") in {"AMBIGUOUS", "NOT_FOUND"}:
+        return media, False, False
+
+    person_record, asset_id = library.reserve_ids(library_data, person, entity_type, person_id=person_id)
+    person_card = None
+    identity_changed = False
+    if identity_registry and identity_data:
+        person_card = identity_registry.ensure_person(identity_data, person_record)
+        if identity.get("facts"):
+            identity_registry.apply_facts(identity_data, person_card, identity["facts"])
+    archived = archive.archive(media, person_record, asset_id)
+    if not archived or not archived.get("file_id"):
+        return media, False, False
+    identity_changed = bool(person_card and identity_registry) or identity_changed
+    if person_card and identity_cards and identity_cards.enabled:
+        message_id = identity_cards.upsert(person_card, identity_registry.person_text(person_card))
+        if message_id:
+            person_card["card_message_id"] = message_id
+            identity_changed = True
+    return library.add_archived_media(library_data, person_record, asset_id, media, archived), True, identity_changed
+
+
 def _resolve_media(
     selector, library, library_data, archive, person, entity_type, source_url,
     identity_registry=None, identity_data=None, identity_cards=None, identity_source=None,
     ambiguity_notifier=None, club=None, year=None, strict_modesty=False,
     statistics_service=None, statistics_club=None,
+    review_store=None, review_data=None, review_context=None,
 ):
     """Reuse the best approved club-context image before external lookup.
 
     Automatic Wikimedia imports stay generic because the source lookup cannot
     prove the kit or club shown in a portrait. Club-specific images enter via
     the explicit administrator workflow with a declared club and start year.
+
+    When ``review_store``/``review_data``/``review_context`` are supplied, a
+    freshly discovered candidate (source image, Wikimedia portrait, club
+    fallback) is never published automatically: it is offered to the
+    administrators as one numbered batch, and only an explicit numeric reply
+    turns it into published media. A previously human-approved library asset
+    (found below) is still reused automatically without review — only new
+    candidates go through the queue. The fourth return value is ``True``
+    while a review is still awaiting a reply, telling the caller to hold off
+    publishing this cycle.
     """
     identity = None
     if identity_registry and identity_data and person:
@@ -93,34 +140,46 @@ def _resolve_media(
             require_modesty_approved=strict_modesty,
         )
         if stored:
-            return stored, library_changed, identity_changed
+            return stored, library_changed, identity_changed, False
 
+    if review_store and review_data is not None and review_context:
+        target_type = review_context["target_type"]
+        target_id = review_context["target_id"]
+        review = review_store.get_for_target(review_data, target_type, target_id)
+        if not review:
+            candidates = selector.candidates(
+                source_url, person, entity_type, club=club, strict_modesty=strict_modesty
+            )
+            if not candidates:
+                return None, library_changed, identity_changed, False
+            review = review_store.create(
+                review_data, target_type, target_id, person, entity_type, club, candidates
+            )
+        if review["status"] in {"PENDING", "SENT"}:
+            # Not resolved yet — never publish, and never re-create/re-send
+            # this same batch (``create`` above and the sender are both
+            # idempotent per target).
+            return None, library_changed, identity_changed, True
+        if review["status"] == "NO_MATCH":
+            return None, library_changed, identity_changed, False
+        # APPROVED: archive the administrator's chosen candidate exactly like
+        # the legacy auto-selected path did.
+        media, archived, media_identity_changed = _archive_selected_media(
+            library, library_data, archive, review.get("resolved_media"), person, entity_type,
+            person_id, identity, identity_registry, identity_data, identity_cards,
+        )
+        return media, library_changed or archived, identity_changed or media_identity_changed, False
+
+    # Legacy path: review disabled, keep the previous automatic behavior.
     if strict_modesty:
         media = selector.select(source_url, person, entity_type, strict_modesty=True, club=club)
     else:
         media = selector.select(source_url, person, entity_type)
-    if not media or not library or not archive or not archive.enabled or not MediaLibrary.is_archivable(media):
-        return media, library_changed, identity_changed
-
-    # A name-only match is never enough to create a reusable identity asset.
-    if not identity or identity.get("status") in {"AMBIGUOUS", "NOT_FOUND"}:
-        return media, library_changed, identity_changed
-
-    person_record, asset_id = library.reserve_ids(library_data, person, entity_type, person_id=person_id)
-    if identity_registry and identity_data:
-        person_card = identity_registry.ensure_person(identity_data, person_record)
-        if identity.get("facts"):
-            identity_registry.apply_facts(identity_data, person_card, identity["facts"])
-    archived = archive.archive(media, person_record, asset_id)
-    if not archived or not archived.get("file_id"):
-        return media, False, False
-    identity_changed = bool(person_card and identity_registry) or identity_changed
-    if person_card and identity_cards and identity_cards.enabled:
-        message_id = identity_cards.upsert(person_card, identity_registry.person_text(person_card))
-        if message_id:
-            person_card["card_message_id"] = message_id
-            identity_changed = True
-    return library.add_archived_media(library_data, person_record, asset_id, media, archived), True, identity_changed
+    media, archived, media_identity_changed = _archive_selected_media(
+        library, library_data, archive, media, person, entity_type,
+        person_id, identity, identity_registry, identity_data, identity_cards,
+    )
+    return media, library_changed or archived, identity_changed or media_identity_changed, False
 
 
 def load_json(path):
@@ -196,15 +255,18 @@ def main(fast_mode=False):
     # GitHub Actions is not a permanent process. Poll Telegram for admin
     # commands once per run and persist the update offset in the repository.
     admin_ids = [x.strip() for x in os.getenv("TELEGRAM_ADMIN_IDS", "").split(",") if x.strip()]
+    image_review_path = ROOT / settings.get("image_review_path", "data/image_review.json")
     if admin_ids:
         admin = TelegramAdmin(
             token, admin_ids, ROOT/"config/channels.json", ROOT/"data/transfers.json",
             ROOT/"data/bot_updates.json", settings["request_timeout_seconds"],
             settings_path=ROOT / "config/settings.json",
+            image_review_path=image_review_path,
         )
     else:
         admin = None
     ambiguity_notifier = admin.report_identity_ambiguity if admin else None
+    image_review_store = ImageReviewStore(image_review_path) if settings.get("image_review_enabled", True) else None
 
     channels_config = load_json(ROOT/"config/channels.json")["channels"]
     channels = [c for c in channels_config if c.get("enabled", True)]
@@ -275,6 +337,8 @@ def main(fast_mode=False):
         max_download_bytes=settings.get("news_image_max_download_bytes", 8_000_000),
         wikimedia_enabled=settings.get("wikimedia_fallback_enabled", True),
         wikimedia_thumbnail_width=settings.get("wikimedia_thumbnail_width", 960),
+        modesty_pose_filter_enabled=settings.get("modesty_pose_filter_enabled", True),
+        modesty_pose_visibility_threshold=settings.get("modesty_pose_visibility_threshold", 0.5),
     )
     media_library = None
     media_library_data = None
@@ -342,6 +406,11 @@ def main(fast_mode=False):
         channels_config = load_json(ROOT/"config/channels.json")["channels"]
         channels = [c for c in channels_config if c.get("enabled", True)]
         publisher.channels = channels
+
+    # Loaded after admin.process() (above) so a numbered reply an admin just
+    # sent — resolving an image review to APPROVED/NO_MATCH — is visible to
+    # the transfer/news loops in this same run instead of one cycle later.
+    image_review_data = image_review_store.load() if image_review_store else None
 
     # An admin-only run is valid when there are no client channels yet.
     # This is what allows /addchannel to bootstrap the first channel.
@@ -435,7 +504,7 @@ def main(fast_mode=False):
                 continue
 
             if "media" not in record:
-                record["media"], archived, identity_updated = _resolve_media(
+                media, archived, identity_updated, media_pending = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -452,9 +521,19 @@ def main(fast_mode=False):
                     strict_modesty=settings.get("strict_modesty_images", True),
                     statistics_service=statistics_service,
                     statistics_club=event.get("from") or event.get("to"),
+                    review_store=image_review_store,
+                    review_data=image_review_data,
+                    review_context={"target_type": "news", "target_id": event_id},
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated
+                if media_pending:
+                    # Awaiting the administrator's numbered reply — do not
+                    # publish this article yet, and leave "media" unset so
+                    # the next run re-checks the (idempotent) review status
+                    # without re-creating or re-sending the batch.
+                    continue
+                record["media"] = media
             media = record.get("media") if isinstance(record.get("media"), dict) else None
             analysis = analyze_news_event(event, item)
             editorial = None
@@ -552,7 +631,7 @@ def main(fast_mode=False):
                 print(f"[transfer-retry-later] Arabic Here We Go editorial unavailable: {t['player']!r}")
                 continue
             if "media" not in t:
-                t["media"], archived, identity_updated = _resolve_media(
+                media, archived, identity_updated, media_pending = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -569,9 +648,18 @@ def main(fast_mode=False):
                     strict_modesty=settings.get("strict_modesty_images", True),
                     statistics_service=statistics_service,
                     statistics_club=t.get("from_club") or t.get("to_club"),
+                    review_store=image_review_store,
+                    review_data=image_review_data,
+                    review_context={"target_type": "transfer", "target_id": t["transfer_id"]},
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated
+                if media_pending:
+                    # Awaiting the administrator's numbered reply — never
+                    # publish this transfer yet, and never re-create/re-send
+                    # the same batch (both are idempotent per transfer_id).
+                    continue
+                t["media"] = media
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = here_we_go_message(t["player"], t.get("from_club"), t["to_club"], t["fabrizio_url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -616,7 +704,7 @@ def main(fast_mode=False):
                 print(f"[transfer-retry-later] Arabic official editorial unavailable: {t['player']!r}")
                 continue
             if "media" not in t:
-                t["media"], archived, identity_updated = _resolve_media(
+                media, archived, identity_updated, media_pending = _resolve_media(
                     image_selector,
                     media_library,
                     media_library_data,
@@ -633,9 +721,15 @@ def main(fast_mode=False):
                     strict_modesty=settings.get("strict_modesty_images", True),
                     statistics_service=statistics_service,
                     statistics_club=t.get("from_club") or t.get("to_club"),
+                    review_store=image_review_store,
+                    review_data=image_review_data,
+                    review_context={"target_type": "transfer", "target_id": t["transfer_id"]},
                 )
                 media_library_dirty = media_library_dirty or archived
                 identity_dirty = identity_dirty or identity_updated
+                if media_pending:
+                    continue
+                t["media"] = media
             media = t.get("media") if isinstance(t.get("media"), dict) else None
             text = official_message(t["player"], t.get("from_club"), t["to_club"], evidence["url"], analysis, editorial, media=media)
             transfer_targets = channels_for_content(channels, "انتقال")
@@ -664,6 +758,14 @@ def main(fast_mode=False):
         media_library.save(media_library_data)
     if identity_registry and identity_dirty:
         identity_registry.save(identity_data)
+    if image_review_store:
+        image_review_store.prune(image_review_data, settings.get("state_retention_days", 60), now)
+        image_review_store.save(image_review_data)
+        if admin and not fast_mode:
+            # Dispatch the next PENDING batch (if any, and if the admins are
+            # not already waiting on a previous one) so a review created
+            # earlier in this same run reaches the admin without delay.
+            print("[image-review]", admin.send_pending_image_reviews())
 
 if __name__ == "__main__":
     main()

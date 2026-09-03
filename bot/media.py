@@ -9,17 +9,40 @@ from __future__ import annotations
 
 from html import unescape
 from io import BytesIO
+from pathlib import Path
 import re
 import unicodedata
 
 import requests
 from PIL import Image, UnidentifiedImageError
 
+try:
+    import numpy as np
+    import mediapipe as mp
+except ImportError:  # pragma: no cover - optional dependency, degrades safely
+    np = None
+    mp = None
+
 
 _IMAGE_FORMATS = {"JPEG", "PNG", "WEBP"}
 _PERSON_ENTITY_TYPES = {"player", "manager"}
 _WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 _COMMONS_API = "https://commons.wikimedia.org/w/api.php"
+# MediaPipe Pose Landmarker indices for hips/knees/ankles. Any of these being
+# visible in frame means the shot extends past the waist, so it is rejected
+# as a proxy for "no knee or lower-body skin visible" — see
+# ``_shows_lower_body`` for why a landmark-presence check is used instead of
+# skin-vs-fabric classification.
+_LOWER_BODY_LANDMARK_INDICES = (23, 24, 25, 26, 27, 28)
+# The Tasks API (unlike the older bundled "solutions" API) ships no model
+# weights in the pip package; the lite pose model (~5 MB) is fetched once and
+# cached on disk. The CI workflow additionally caches this path across runs
+# via actions/cache so a normal run never needs the network for it.
+_POSE_MODEL_URL = (
+    "https://storage.googleapis.com/mediapipe-models/pose_landmarker/"
+    "pose_landmarker_lite/float16/1/pose_landmarker_lite.task"
+)
+_POSE_MODEL_CACHE_PATH = Path.home() / ".cache" / "mediapipe-models" / "pose_landmarker_lite.task"
 
 
 class NewsImageSelector:
@@ -34,6 +57,8 @@ class NewsImageSelector:
         max_download_bytes=8_000_000,
         wikimedia_enabled=True,
         wikimedia_thumbnail_width=960,
+        modesty_pose_filter_enabled=True,
+        modesty_pose_visibility_threshold=0.5,
     ):
         self.timeout = timeout
         self.headers = {"User-Agent": user_agent}
@@ -42,6 +67,11 @@ class NewsImageSelector:
         self.max_download_bytes = max(1, int(max_download_bytes))
         self.wikimedia_enabled = bool(wikimedia_enabled)
         self.wikimedia_thumbnail_width = max(320, int(wikimedia_thumbnail_width))
+        # Requires the optional mediapipe/numpy dependencies; silently
+        # disabled (never blocks publishing) when they are not installed.
+        self.modesty_pose_filter_enabled = bool(modesty_pose_filter_enabled) and mp is not None
+        self.modesty_pose_visibility_threshold = float(modesty_pose_visibility_threshold)
+        self._pose_detector = None
 
     def select(self, source_url, person=None, entity_type=None, strict_modesty=False, club=None):
         """Return media metadata, preferring a good source image.
@@ -57,6 +87,35 @@ class NewsImageSelector:
         if not self.wikimedia_enabled or entity_type not in _PERSON_ENTITY_TYPES or not person:
             return None
         return self._wikimedia_media(person)
+
+    def candidates(self, source_url, person=None, entity_type=None, club=None, strict_modesty=False):
+        """Return every distinct image worth offering an administrator.
+
+        Unlike ``select``, this never auto-picks a winner: the source image,
+        a uniquely matched Wikimedia portrait, and the safe club crest/
+        stadium fallback are all surfaced together (when available) so a
+        human makes the final call. Under ``strict_modesty`` only the club
+        fallback is offered, matching the restriction ``select`` applies in
+        that mode.
+        """
+        options = []
+        if not strict_modesty:
+            source = self._source_media(source_url)
+            if source:
+                options.append({"label": "صورة من مصدر الخبر", "media": source})
+            if self.wikimedia_enabled and entity_type in _PERSON_ENTITY_TYPES and person:
+                wikimedia = self._wikimedia_media(person)
+                if wikimedia and not self._same_media(wikimedia, options):
+                    options.append({"label": "صورة من Wikimedia Commons", "media": wikimedia})
+        club_media = self.club_fallback(club)
+        if club_media and not self._same_media(club_media, options):
+            options.append({"label": "شعار/ملعب النادي (بديل آمن)", "media": club_media})
+        return options
+
+    @staticmethod
+    def _same_media(candidate, existing_options):
+        url = candidate.get("url")
+        return any(option["media"].get("url") == url for option in existing_options)
 
     def club_fallback(self, club):
         """Return only a club crest or stadium visual, never an uncertain photo.
@@ -221,16 +280,97 @@ class NewsImageSelector:
                     return None
             if not payload:
                 return None
+            # Two separate opens by design: verify() must run on a handle
+            # that has had no other decoding performed on it, and the pose
+            # check below needs actual pixel data (which verify() must not
+            # see) from a second, fresh handle.
+            with Image.open(BytesIO(payload)) as verify_handle:
+                verify_handle.verify()
             with Image.open(BytesIO(payload)) as image:
                 width, height = image.size
                 image_format = image.format
-                image.verify()
+                if self._shows_lower_body(image):
+                    return None
             return {"width": width, "height": height, "format": image_format}
         except (OSError, ValueError, requests.RequestException, UnidentifiedImageError, Image.DecompressionBombError):
             return None
         finally:
             if response is not None:
                 response.close()
+
+    def _shows_lower_body(self, image):
+        """Reject any photo where hips/knees/ankles are visibly in frame.
+
+        Distinguishing bare skin from fabric reliably needs a heavier human-
+        parsing model than fits a periodic CI job. Instead this uses a
+        conservative proxy: if MediaPipe Pose Landmarker can locate the hip,
+        knee, or ankle joints with reasonable confidence, the shot extends
+        past the waist and is rejected outright — regardless of whether that
+        area happens to be covered by clothing. Headshot/shoulders-up
+        portraits (no lower-body landmarks in frame) pass through
+        unaffected, and non-person images such as club crests or stadiums
+        naturally have no landmarks at all.
+        """
+        if not self.modesty_pose_filter_enabled:
+            return False
+        detector = self._get_pose_detector()
+        if detector is None:
+            return False
+        try:
+            mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=np.asarray(image.convert("RGB")))
+            result = detector.detect(mp_image)
+        except Exception:
+            # A detector failure should never block an otherwise-valid image
+            # differently from "pose filtering unavailable" — fail open.
+            return False
+        for landmarks in getattr(result, "pose_landmarks", None) or []:
+            for index in _LOWER_BODY_LANDMARK_INDICES:
+                if index < len(landmarks) and landmarks[index].visibility >= self.modesty_pose_visibility_threshold:
+                    return True
+        return False
+
+    def _get_pose_detector(self):
+        if self._pose_detector is not None:
+            return self._pose_detector
+        if not self.modesty_pose_filter_enabled:
+            return None
+        model_bytes = self._load_pose_model_bytes()
+        if not model_bytes:
+            # Never let a missing/unreachable model silently block every
+            # single image for the rest of this run.
+            self.modesty_pose_filter_enabled = False
+            return None
+        try:
+            options = mp.tasks.vision.PoseLandmarkerOptions(
+                base_options=mp.tasks.BaseOptions(model_asset_buffer=model_bytes),
+                running_mode=mp.tasks.vision.RunningMode.IMAGE,
+                num_poses=1,
+                min_pose_detection_confidence=0.5,
+            )
+            self._pose_detector = mp.tasks.vision.PoseLandmarker.create_from_options(options)
+        except Exception:
+            self.modesty_pose_filter_enabled = False
+            self._pose_detector = None
+        return self._pose_detector
+
+    def _load_pose_model_bytes(self):
+        try:
+            if _POSE_MODEL_CACHE_PATH.exists():
+                return _POSE_MODEL_CACHE_PATH.read_bytes()
+        except OSError:
+            pass
+        try:
+            response = requests.get(_POSE_MODEL_URL, timeout=max(self.timeout, 15))
+            response.raise_for_status()
+            data = response.content
+        except (OSError, requests.RequestException):
+            return None
+        try:
+            _POSE_MODEL_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            _POSE_MODEL_CACHE_PATH.write_bytes(data)
+        except OSError:
+            pass  # a failed cache write shouldn't stop us from using the bytes now
+        return data
 
     def _get_json(self, endpoint, params):
         try:

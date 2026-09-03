@@ -54,5 +54,9 @@
   "player_statistics_cache_path": "data/player_stats.json",
   "player_statistics_cache_days": 30,
   "player_statistics_timeout_seconds": 20,
-  "strict_modesty_images": true
+  "strict_modesty_images": true,
+  "image_review_enabled": true,
+  "image_review_path": "data/image_review.json",
+  "modesty_pose_filter_enabled": true,
+  "modesty_pose_visibility_threshold": 0.5
 }

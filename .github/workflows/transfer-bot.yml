@@ -29,6 +29,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      - name: Cache MediaPipe pose model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/mediapipe-models
+          key: pose-landmarker-lite-v1
       - name: Defer while fast monitor is healthy
         id: fast_monitor
         run: |
@@ -69,7 +74,7 @@ jobs:
         run: |
           git config user.name "transfer-confirmation-bot"
           git config user.email "actions@github.com"
-          git add data/transfers.json data/bot_updates.json data/news.json data/media_library.json data/identity_cards.json data/player_stats.json data/fast_monitor.json config/channels.json config/settings.json
+          git add data/transfers.json data/bot_updates.json data/news.json data/media_library.json data/identity_cards.json data/player_stats.json data/image_review.json data/fast_monitor.json config/channels.json config/settings.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore: update transfer state"
           git push origin "HEAD:${GITHUB_REF_NAME}"

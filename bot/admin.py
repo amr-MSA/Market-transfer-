@@ -8,6 +8,7 @@ import requests
 from .content_types import ALL, CONTENT_TYPES, normalize_content_types
 from .identity_cards import IdentityCardRegistry, TelegramIdentityCards
 from .identity_resolver import IdentityResolver, WikidataIdentitySource, ambiguity_report, normalize_name
+from .image_review import ImageReviewStore
 from .media_library import MediaLibrary, TelegramMediaArchive
 
 
@@ -21,13 +22,14 @@ class TelegramAdmin:
     per workflow run and persists the update offset in data/bot_updates.json.
     """
 
-    def __init__(self, token, admin_ids, channels_path, state_path, updates_path, timeout=20, settings_path=None):
+    def __init__(self, token, admin_ids, channels_path, state_path, updates_path, timeout=20, settings_path=None, image_review_path=None):
         self.token = token
         self.admin_ids = {str(x).strip() for x in admin_ids if str(x).strip()}
         self.channels_path = Path(channels_path)
         self.state_path = Path(state_path)
         self.updates_path = Path(updates_path)
         self.settings_path = Path(settings_path) if settings_path else None
+        self.image_review = ImageReviewStore(image_review_path) if image_review_path else None
         self.timeout = timeout
         self.api = f"https://api.telegram.org/bot{token}"
 
@@ -96,6 +98,9 @@ class TelegramAdmin:
     def _send(self, chat_id, text):
         return self._api("sendMessage", {"chat_id": chat_id, "text": text})
 
+    def _send_photo(self, chat_id, photo, caption):
+        return self._api("sendPhoto", {"chat_id": chat_id, "photo": photo, "caption": caption})
+
     def report_identity_ambiguity(self, name, entity_type, organization, candidates):
         text = ambiguity_report(name, entity_type, organization, candidates)
         for admin_id in self.admin_ids:
@@ -103,6 +108,78 @@ class TelegramAdmin:
                 self._send(admin_id, text)
             except (RuntimeError, requests.RequestException):
                 continue
+
+    def send_pending_image_reviews(self):
+        """Dispatch the next PENDING image-review batch to every admin.
+
+        Only one batch is ever in flight (status SENT) at a time. This is
+        what stops a slow administrator reply from causing the same set of
+        numbered photos to be sent again on a later polling cycle — a fresh
+        batch is only sent once the previous one has been resolved.
+        """
+        if not self.image_review or not self.admin_ids:
+            return "image review unavailable"
+        data = self.image_review.load()
+        if self.image_review.get_awaiting_reply(data):
+            return "a review is already awaiting a reply"
+        review = self.image_review.next_pending(data)
+        if not review:
+            return "no pending reviews"
+
+        role = {"player": "لاعب", "manager": "مدرب"}.get(review.get("entity_type"), "خبر")
+        header = (
+            "🖼 مراجعة صورة مطلوبة\n"
+            f"الاسم: {review.get('person') or '—'} ({role})\n"
+            f"النادي/السياق: {review.get('club') or '—'}\n\n"
+            "أرسل رقم الصورة المطلوبة، أو 0 إن لم تكن أي صورة مناسبة."
+        )
+        message_ids = []
+        for admin_id in self.admin_ids:
+            try:
+                sent = self._send(admin_id, header)
+                if sent and sent.get("message_id"):
+                    message_ids.append(sent["message_id"])
+                for candidate in review.get("candidates", []):
+                    url = (candidate.get("media") or {}).get("url")
+                    if not url:
+                        continue
+                    caption = f"{candidate.get('code')}) {candidate.get('label') or ''}"
+                    sent_photo = self._send_photo(admin_id, url, caption)
+                    if sent_photo and sent_photo.get("message_id"):
+                        message_ids.append(sent_photo["message_id"])
+            except (RuntimeError, requests.RequestException):
+                continue
+
+        self.image_review.mark_sent(data, review["review_id"], message_ids)
+        self.image_review.save(data)
+        return f"sent review {review['review_id']}"
+
+    def _handle_image_review_reply(self, chat_id, text):
+        """Apply a plain numeric admin reply to the review currently SENT.
+
+        Returns True when the message was consumed as an image-review reply
+        (valid code, invalid code, or nothing awaiting a reply after all),
+        so the caller can skip the rest of the message-handling chain.
+        """
+        if not self.image_review or not re.fullmatch(r"\d{1,3}", text or ""):
+            return False
+        data = self.image_review.load()
+        review = self.image_review.get_awaiting_reply(data)
+        if not review:
+            return False
+        code = int(text)
+        result = self.image_review.resolve(data, review["review_id"], code)
+        if result is False:
+            valid = "، ".join(str(c["code"]) for c in review.get("candidates", []))
+            self._send(chat_id, f"❌ رمز غير صحيح. الرموز المتاحة: {valid} أو 0.")
+            return True
+        self.image_review.save(data)
+        if code == 0:
+            self._send(chat_id, "🚫 تم تسجيل: لا توجد صورة مناسبة. سيُنشر الخبر ببديل آمن إن توفر أو بدون صورة.")
+        else:
+            chosen = next((c for c in review.get("candidates", []) if c.get("code") == code), None)
+            self._send(chat_id, f"✅ تم اعتماد الصورة: {chosen.get('label') if chosen else ''}\nستُستخدم في المنشور القادم.")
+        return True
 
     @staticmethod
     def _help_message():
@@ -127,7 +204,10 @@ class TelegramAdmin:
             "• /test — اختبار تحليل نموذج انتقال.\n"
             "• /myid — إظهار معرف Telegram الخاص بك.\n"
             "• /cancel — إلغاء العملية الحالية.\n\n"
-            "⚠️ عند التباس اسم لاعب أو مدرب، يرسل البوت تلقائيًا تقريرًا بالمرشحين ومفاتيح Wikidata للمدراء."
+            "⚠️ عند التباس اسم لاعب أو مدرب، يرسل البوت تلقائيًا تقريرًا بالمرشحين ومفاتيح Wikidata للمدراء.\n\n"
+            "🖼 عند العثور على صور مرشحة لخبر أو صفقة، يرسل البوت دفعة مرقمة (بينها صورة النادي دائمًا إن توفرت) "
+            "ويطلب الرد برقم الصورة المعتمدة أو 0 لعدم وجود صورة مناسبة. لا يُرسل خبر مصحوب بصورة قبل هذا الرد، "
+            "ولا تُعاد الدفعة نفسها قبل أن يُجاب عليها."
         )
 
     def _admin(self, user_id):
@@ -618,6 +698,9 @@ class TelegramAdmin:
             elif command.startswith("/"):
                 self._send(chat_id, self._help_message())
             else:
+                if self._handle_image_review_reply(chat_id, text):
+                    processed += 1
+                    continue
                 channel = self._forwarded_channel(message)
                 photos = message.get("photo") or []
                 if manual_media:

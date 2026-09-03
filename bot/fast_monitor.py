@@ -28,6 +28,7 @@ STATE_PATHS = [
     "data/news.json",
     "data/media_library.json",
     "data/identity_cards.json",
+    "data/image_review.json",
     "config/channels.json",
     "config/settings.json",
     "data/fast_monitor.json",
