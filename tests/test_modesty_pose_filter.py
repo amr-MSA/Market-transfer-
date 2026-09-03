@@ -85,7 +85,8 @@ def test_detector_failure_fails_open():
 def test_unreachable_model_download_disables_the_filter_gracefully(monkeypatch, tmp_path):
     import bot.media as media_module
 
-    monkeypatch.setattr(media_module, "_POSE_MODEL_CACHE_PATH", tmp_path / "missing" / "pose.task")
+    monkeypatch.setattr(media_module, "_POSE_MODEL_BUNDLED_PATH", tmp_path / "missing-bundled" / "pose.task")
+    monkeypatch.setattr(media_module, "_POSE_MODEL_CACHE_PATH", tmp_path / "missing-cache" / "pose.task")
 
     def fake_get(url, timeout=None):
         raise media_module.requests.RequestException("network unavailable")
@@ -98,9 +99,28 @@ def test_unreachable_model_download_disables_the_filter_gracefully(monkeypatch, 
     assert selector.modesty_pose_filter_enabled is False
 
 
-def test_cached_model_bytes_are_reused_without_a_download(monkeypatch, tmp_path):
+def test_bundled_repo_model_is_used_without_any_download(monkeypatch, tmp_path):
     import bot.media as media_module
 
+    bundled_path = tmp_path / "models" / "pose.task"
+    bundled_path.parent.mkdir(parents=True, exist_ok=True)
+    bundled_path.write_bytes(b"bundled-model-bytes")
+    monkeypatch.setattr(media_module, "_POSE_MODEL_BUNDLED_PATH", bundled_path)
+
+    def fail_if_called(*args, **kwargs):
+        raise AssertionError("should not touch the network when a bundled model exists")
+
+    monkeypatch.setattr(media_module.requests, "get", fail_if_called)
+
+    selector = NewsImageSelector(modesty_pose_filter_enabled=True)
+
+    assert selector._load_pose_model_bytes() == b"bundled-model-bytes"
+
+
+def test_cached_model_bytes_are_reused_when_no_bundled_copy_exists(monkeypatch, tmp_path):
+    import bot.media as media_module
+
+    monkeypatch.setattr(media_module, "_POSE_MODEL_BUNDLED_PATH", tmp_path / "missing-bundled" / "pose.task")
     cache_path = tmp_path / "pose.task"
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     cache_path.write_bytes(b"fake-model-bytes")
@@ -121,7 +141,6 @@ def test_full_body_source_image_is_rejected_by_probe(monkeypatch):
     # JPEG is still rejected once the (mocked) pose detector finds knees.
     selector = NewsImageSelector(min_short_edge=10, min_pixels=100, modesty_pose_filter_enabled=True)
     selector._pose_detector = _FakeDetector([_full_body_landmarks()])
-
     buffer = BytesIO()
     Image.new("RGB", (800, 800), color=(200, 50, 50)).save(buffer, format="JPEG")
     payload = buffer.getvalue()

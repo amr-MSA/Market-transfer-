@@ -35,14 +35,19 @@ _COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 # skin-vs-fabric classification.
 _LOWER_BODY_LANDMARK_INDICES = (23, 24, 25, 26, 27, 28)
 # The Tasks API (unlike the older bundled "solutions" API) ships no model
-# weights in the pip package; the lite pose model (~5 MB) is fetched once and
-# cached on disk. The CI workflow additionally caches this path across runs
-# via actions/cache so a normal run never needs the network for it.
+# weights in the pip package. The lite pose model (~5.5 MB) is expected to be
+# committed to the repo at ``models/pose_landmarker_lite.task`` — small
+# enough for a plain git blob, and it removes any external network
+# dependency from every single Action run. See the README for the one-time
+# download command. A previously-downloaded copy in the local cache
+# directory, or a fresh download, are both kept as fallbacks in case the
+# bundled file is ever missing.
+_POSE_MODEL_BUNDLED_PATH = Path(__file__).resolve().parent.parent / "models" / "pose_landmarker_lite.task"
+_POSE_MODEL_CACHE_PATH = Path.home() / ".cache" / "mediapipe-models" / "pose_landmarker_lite.task"
 _POSE_MODEL_URL = (
     "https://storage.googleapis.com/mediapipe-models/pose_landmarker/"
     "pose_landmarker_lite/float16/1/pose_landmarker_lite.task"
 )
-_POSE_MODEL_CACHE_PATH = Path.home() / ".cache" / "mediapipe-models" / "pose_landmarker_lite.task"
 
 
 class NewsImageSelector:
@@ -355,10 +360,18 @@ class NewsImageSelector:
 
     def _load_pose_model_bytes(self):
         try:
+            if _POSE_MODEL_BUNDLED_PATH.exists():
+                return _POSE_MODEL_BUNDLED_PATH.read_bytes()
+        except OSError:
+            pass
+        try:
             if _POSE_MODEL_CACHE_PATH.exists():
                 return _POSE_MODEL_CACHE_PATH.read_bytes()
         except OSError:
             pass
+        # Last resort only: the repo copy above is expected to make this
+        # unreachable in normal operation, but a fresh download (and local
+        # cache write) keeps the filter working even if it is ever missing.
         try:
             response = requests.get(_POSE_MODEL_URL, timeout=max(self.timeout, 15))
             response.raise_for_status()

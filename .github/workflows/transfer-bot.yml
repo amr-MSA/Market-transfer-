@@ -29,11 +29,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Cache MediaPipe pose model
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/mediapipe-models
-          key: pose-landmarker-lite-v1
       - name: Defer while fast monitor is healthy
         id: fast_monitor
         run: |
