@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-03T22:18:22.429737+00:00",
+  "updated_at": "2026-09-04T00:10:43.584716+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/28/womens-super-league-2026-27-preview-no-7-crystal-palace",
-      "seen_at": "2026-08-27T23:45:25.598652+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/clyqd7lz3pno?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-27T23:45:27.500764+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/27/atletico-madrid-julian-alvarez-barcelona-transfer-news",
-      "seen_at": "2026-08-27T23:45:29.117616+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cj3d1ky2642o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-28T07:05:59.563478+00:00"
@@ -330,6 +318,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c62jgzxkjypo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-03T22:18:22.429737+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-10-things-to-look-out-for-this-weekend",
+      "seen_at": "2026-09-04T00:10:43.584716+00:00"
     }
   ],
   "published": {
