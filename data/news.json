@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-04T16:55:46.463351+00:00",
+  "updated_at": "2026-09-04T19:16:03.233237+00:00",
   "events": [],
   "articles": [
     {
@@ -350,6 +350,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c79038z3q4yo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-04T16:55:46.463351+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/04/ipswich-town-v-liverpool-premier-league-live-updates",
+      "seen_at": "2026-09-04T19:15:34.376938+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/blog/2026/sep/04/chelsea-morgan-rogers-arsenal-xabi-alonso-mikel-arteta",
+      "seen_at": "2026-09-04T19:15:47.464597+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-team-news-predicted-lineups-for-the-weekend-action",
+      "seen_at": "2026-09-04T19:16:03.233237+00:00"
     }
   ],
   "published": {
