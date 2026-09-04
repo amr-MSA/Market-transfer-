@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-04T19:16:03.233237+00:00",
+  "updated_at": "2026-09-04T21:32:39.669321+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/czjz9j3r8p8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-28T19:24:09.696034+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/28/crystal-palace-v-manchester-city-premier-league-live",
-      "seen_at": "2026-08-28T19:24:12.332568+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c4gk206k95xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-28T19:24:15.529537+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/29/european-football-psg-scramble-another-draw-while-bayern-make-flying-start",
       "seen_at": "2026-08-29T02:20:21.562448+00:00"
@@ -362,6 +350,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-team-news-predicted-lineups-for-the-weekend-action",
       "seen_at": "2026-09-04T19:16:03.233237+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clyr1ly8z4xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-04T21:32:21.376568+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c7903g4nvn3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-04T21:32:39.669321+00:00"
     }
   ],
   "published": {
