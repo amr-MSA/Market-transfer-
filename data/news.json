@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-04T00:10:43.584716+00:00",
+  "updated_at": "2026-09-04T04:29:59.376690+00:00",
   "events": [],
   "articles": [
     {
@@ -322,6 +322,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-09-04T00:10:43.584716+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/04/womens-super-league-2026-27-preview-no-14-west-ham",
+      "seen_at": "2026-09-04T04:29:47.186776+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/03/daniel-kretinsky-to-up-stake-in-west-ham-in-blow-to-amanda-staveley",
+      "seen_at": "2026-09-04T04:29:59.376690+00:00"
     }
   ],
   "published": {
