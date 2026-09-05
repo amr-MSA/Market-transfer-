@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-05T17:36:23.688819+00:00",
+  "updated_at": "2026-09-05T19:27:08.059442+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/29/tottenham-hotspur-v-newcastle-premier-league-live",
-      "seen_at": "2026-08-29T17:47:39.135645+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c7806jq0x02o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-29T17:47:46.041407+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/czjzdnj3l14o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-29T17:48:00.471258+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c39m0z4m2mpo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-29T20:00:06.526800+00:00"
@@ -378,6 +366,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/05/hull-city-v-aston-villa-premier-league-live",
       "seen_at": "2026-09-05T17:36:23.688819+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cg59dgn7jm9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T19:26:50.479259+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c9w48xp5g14o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T19:26:52.324013+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cz7z09v9pp1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T19:27:08.059442+00:00"
     }
   ],
   "published": {
