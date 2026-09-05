@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-05T12:48:34.282740+00:00",
+  "updated_at": "2026-09-05T15:37:40.043899+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cwyz8dr7jz3o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-29T14:28:07.482149+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/29/premier-league-bournemouth-everton-coventry-hull-efl-clockwatch-live",
-      "seen_at": "2026-08-29T14:28:27.131931+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/29/liverpool-nottingham-forest-premier-league-match-report",
-      "seen_at": "2026-08-29T14:28:29.949137+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/aug/29/tottenham-hotspur-v-newcastle-premier-league-live",
       "seen_at": "2026-08-29T17:47:39.135645+00:00"
@@ -374,6 +362,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c3d7483rv82o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-05T12:48:34.282740+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crr4704xvgpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T15:37:13.253170+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/05/championship-roundup-southampton-lincoln-burnley-west-ham-wrexham",
+      "seen_at": "2026-09-05T15:37:15.404062+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckg0xegkegyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T15:37:40.043899+00:00"
     }
   ],
   "published": {
