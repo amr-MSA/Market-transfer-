@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-04T23:14:11.590559+00:00",
+  "updated_at": "2026-09-05T01:00:46.687850+00:00",
   "events": [],
   "articles": [
     {
@@ -366,6 +366,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/04/jose-mourinho-sick-as-a-parrott-as-real-madrid-sunk-by-real-betis-and-irish-supersub",
       "seen_at": "2026-09-04T23:14:11.590559+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/czxz1vnwgz6o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T01:00:01.784337+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/04/david-moyes-reveals-never-spoken-everton-owner-dan-friedkin-defiant-after-transfer-blows",
+      "seen_at": "2026-09-05T01:00:46.687850+00:00"
     }
   ],
   "published": {
