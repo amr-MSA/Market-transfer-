@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-05T05:32:49.954951+00:00",
+  "updated_at": "2026-09-05T09:17:29.125261+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/29/transfer-news-liverpool-v-nottingham-forest-buildup-and-more-matchday-live",
-      "seen_at": "2026-08-29T09:10:28.564671+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5ywgjnnn74o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-29T09:10:37.421271+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cd94xd9j7z5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-29T09:10:41.038915+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cwyz8dr7jz3o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-29T14:28:07.482149+00:00"
@@ -362,6 +350,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/04/david-moyes-reveals-never-spoken-everton-owner-dan-friedkin-defiant-after-transfer-blows",
       "seen_at": "2026-09-05T01:00:46.687850+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/05/news-buildup-premier-league-newcastle-v-bournemouth-kicks-off-matchday-live",
+      "seen_at": "2026-09-05T09:17:06.332728+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sounds/play/p0p81k5b?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T09:17:08.362063+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c4gl3wx8g64o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T09:17:29.125261+00:00"
     }
   ],
   "published": {
