@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-05T09:17:29.125261+00:00",
+  "updated_at": "2026-09-05T12:48:34.282740+00:00",
   "events": [],
   "articles": [
     {
@@ -362,6 +362,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4gl3wx8g64o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-05T09:17:29.125261+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/05/newcastle-united-v-bournemouth-premier-league-live",
+      "seen_at": "2026-09-05T12:47:44.295706+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/05/premier-league-manchester-city-coventry-nottingham-forest-v-tottenham-efl-clockwatch-live",
+      "seen_at": "2026-09-05T12:48:13.657665+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3d7483rv82o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-05T12:48:34.282740+00:00"
     }
   ],
   "published": {
