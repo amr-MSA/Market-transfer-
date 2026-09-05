@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-05T15:37:40.043899+00:00",
+  "updated_at": "2026-09-05T17:36:23.688819+00:00",
   "events": [],
   "articles": [
     {
@@ -374,6 +374,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckg0xegkegyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-05T15:37:40.043899+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/05/hull-city-v-aston-villa-premier-league-live",
+      "seen_at": "2026-09-05T17:36:23.688819+00:00"
     }
   ],
   "published": {
