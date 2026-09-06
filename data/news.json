@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-06T05:39:38.169970+00:00",
+  "updated_at": "2026-09-06T09:40:20.429562+00:00",
   "events": [],
   "articles": [
     {
@@ -382,6 +382,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/05/scottish-premiership-rangers-motherwell-aberdeen-celtic",
       "seen_at": "2026-09-06T00:58:12.921403+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/06/arsenal-host-chelsea-and-manchester-united-travel-to-everton-matchday-live",
+      "seen_at": "2026-09-06T09:40:07.258181+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62jn6n0rvlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T09:40:09.030081+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cgmrgl3zerpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T09:40:20.429562+00:00"
     }
   ],
   "published": {
