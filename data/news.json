@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-06T13:07:54.016075+00:00",
+  "updated_at": "2026-09-06T16:13:52.134476+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/30/manchester-united-v-ipswich-town-premier-league-live",
-      "seen_at": "2026-08-30T15:02:03.047977+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/30/chelsea-brighton-leeds-brentford-sunderland-fulham-premier-league-live",
-      "seen_at": "2026-08-30T15:02:08.542259+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c9qr79jr1qqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-30T15:02:40.032898+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/30/european-football-real-madrid-malaga-napoli-como-inter",
       "seen_at": "2026-08-30T18:33:43.423115+00:00"
@@ -394,6 +382,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/06/brighton-v-arsenal-womens-super-league-live",
       "seen_at": "2026-09-06T13:07:54.016075+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live",
+      "seen_at": "2026-09-06T16:13:46.977436+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/06/everton-manchester-united-premier-league-match-report",
+      "seen_at": "2026-09-06T16:13:49.548063+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/06/jamie-vardy-signs-for-burnley-championship-football",
+      "seen_at": "2026-09-06T16:13:52.134476+00:00"
     }
   ],
   "published": {
