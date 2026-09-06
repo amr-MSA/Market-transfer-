@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-06T20:31:04.090633+00:00",
+  "updated_at": "2026-09-06T22:16:11.887308+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c89jxnelpywo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-30T21:29:02.207659+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/30/michael-carrick-manchester-united-ipswich-premier-league",
-      "seen_at": "2026-08-30T21:29:08.924646+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/31/womens-super-league-2026-27-preview-no-10-london-city-lionesses",
       "seen_at": "2026-08-30T23:44:49.461702+00:00"
@@ -402,6 +394,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/clyegw2re82o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-06T20:30:57.777708+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cd947djg1zpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T22:15:57.785079+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cdx5vxpl37zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T22:16:11.887308+00:00"
     }
   ],
   "published": {
