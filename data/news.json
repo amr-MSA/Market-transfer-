@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-06T18:19:02.831429+00:00",
+  "updated_at": "2026-09-06T20:31:04.090633+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/30/european-football-real-madrid-malaga-napoli-como-inter",
-      "seen_at": "2026-08-30T18:33:43.423115+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62ewy19w2ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-30T18:33:45.628563+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/30/lionel-messi-inter-miami-mls-nashville-sc-dejan-joveljic-seattle-sounders",
-      "seen_at": "2026-08-30T18:34:06.131819+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c89jxnelpywo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-30T21:29:02.207659+00:00"
@@ -406,6 +394,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c4gr71gygg8o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-06T18:19:02.831429+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqjkql0rkneo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T20:30:54.732241+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/clyegw2re82o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-06T20:30:57.777708+00:00"
     }
   ],
   "published": {
@@ -428,6 +424,27 @@
       },
       "published_at": "2026-08-30T15:02:13.754181+00:00",
       "updated_at": "2026-08-30T15:02:13.754181+00:00",
+      "media": null
+    },
+    "eb659391df780c880a8ca12e": {
+      "type": "نتيجة",
+      "from": "Chelsea",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/clyegw2re82o?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "eb659391df780c880a8ca12e",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-09-06T20:31:04.090633+00:00",
+      "updated_at": "2026-09-06T20:31:04.090633+00:00",
       "media": null
     }
   }
