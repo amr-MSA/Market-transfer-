@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-07T03:59:13.252785+00:00",
+  "updated_at": "2026-09-07T09:12:09.361959+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/31/premier-league-10-talking-points-from-the-weekend-action",
-      "seen_at": "2026-08-31T07:37:54.878434+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c7v433lejveo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-31T07:38:49.513028+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c4g7ljprwzmo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-31T07:39:10.111371+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c780wzlzl45o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-08-31T15:27:11.108427+00:00"
@@ -394,6 +382,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/06/european-football-lamine-yamal-double-barcelona-valencia-juventus-milan",
       "seen_at": "2026-09-06T23:59:09.456774+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgy8w548yyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-07T09:12:04.381627+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/czxzwd417x0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-07T09:12:05.980573+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/07/david-beckham-kim-milton-nielsen-red-card-1998-world-cup-argentina-diego-simeone",
+      "seen_at": "2026-09-07T09:12:09.361959+00:00"
     }
   ],
   "published": {
