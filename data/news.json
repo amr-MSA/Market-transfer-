@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-06T22:16:11.887308+00:00",
+  "updated_at": "2026-09-06T23:59:09.456774+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/aug/31/womens-super-league-2026-27-preview-no-10-london-city-lionesses",
-      "seen_at": "2026-08-30T23:44:49.461702+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/aug/30/mikel-arteta-premier-league-matchday-squad-player-welfare-arsenal",
       "seen_at": "2026-08-31T01:38:23.276570+00:00"
@@ -402,6 +398,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cdx5vxpl37zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-06T22:16:11.887308+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/06/european-football-lamine-yamal-double-barcelona-valencia-juventus-milan",
+      "seen_at": "2026-09-06T23:59:09.456774+00:00"
     }
   ],
   "published": {
