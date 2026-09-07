@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-07T19:07:29.568543+00:00",
+  "updated_at": "2026-09-07T21:59:28.210872+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/aug/31/aston-villa-v-arsenal-premier-league-live",
-      "seen_at": "2026-08-31T20:57:08.741187+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwyz130nxkro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-08-31T20:57:14.690842+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cy4z8qjx931o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-01T00:23:35.720552+00:00"
@@ -394,6 +386,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/07/joey-barton-to-remain-in-custody-until-trial-after-bail-application-turned-down",
       "seen_at": "2026-09-07T19:07:29.568543+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/07/emery-ready-to-ignite-aston-villas-season-at-club-brugge-after-familiar-slow-start",
+      "seen_at": "2026-09-07T21:59:28.210872+00:00"
     }
   ],
   "published": {
