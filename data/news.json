@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-08T17:24:13.166604+00:00",
+  "updated_at": "2026-09-08T19:59:18.937745+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c86xp9epl83o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-01T18:12:38.075858+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3wj80lw5q2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-01T18:12:52.914188+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ce8emxm7xmzo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-01T21:04:36.213695+00:00"
@@ -378,6 +370,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/08/harry-kane-alessia-russo-nominees-ballon-dor-2026",
       "seen_at": "2026-09-08T17:24:13.166604+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/08/porto-v-manchester-city-champions-league-live",
+      "seen_at": "2026-09-08T19:59:04.647060+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/08/real-madrid-v-inter-millwall-v-newcastle-champions-league-and-carabao-cup-live",
+      "seen_at": "2026-09-08T19:59:18.937745+00:00"
     }
   ],
   "published": {
