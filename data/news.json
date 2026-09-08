@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-08T19:59:18.937745+00:00",
+  "updated_at": "2026-09-08T22:29:56.636826+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ce8emxm7xmzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-01T21:04:36.213695+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c780e6q84l4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-01T23:15:15.060681+00:00"
@@ -378,6 +374,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/08/real-madrid-v-inter-millwall-v-newcastle-champions-league-and-carabao-cup-live",
       "seen_at": "2026-09-08T19:59:18.937745+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cy0zq59gr21o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-08T22:29:40.172657+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/08/championship-roundup-west-ham-go-top-after-bowen-double-sinks-bolton",
+      "seen_at": "2026-09-08T22:29:42.447565+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/08/real-madrid-inter-champions-league-match-report",
+      "seen_at": "2026-09-08T22:29:56.636826+00:00"
     }
   ],
   "published": {
