@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-07T21:59:28.210872+00:00",
+  "updated_at": "2026-09-08T00:08:47.066473+00:00",
   "events": [],
   "articles": [
     {
@@ -390,6 +390,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/07/emery-ready-to-ignite-aston-villas-season-at-club-brugge-after-familiar-slow-start",
       "seen_at": "2026-09-07T21:59:28.210872+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgy87d2lj9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-08T00:08:17.367901+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/07/enzo-maresca-erling-haaland-manchester-city-porto-champions-league",
+      "seen_at": "2026-09-08T00:08:47.066473+00:00"
     }
   ],
   "published": {
