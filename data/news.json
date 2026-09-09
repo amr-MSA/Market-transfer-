@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-09T19:56:53.011295+00:00",
+  "updated_at": "2026-09-09T22:16:20.175860+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c780weq4146o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T20:08:44.727915+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/a-commodity-ismaila-sarrs-agent-wants-respect-for-african-players-in-transfer-deals",
-      "seen_at": "2026-09-02T20:08:47.239834+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-spending-transfer-window-summer-2026-chelsea-enzo-fernandez",
-      "seen_at": "2026-09-02T20:08:48.948228+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/02/championship-roundup-wrexham-millwall-qpr-cardiff-burnley-miiddlesbrough",
       "seen_at": "2026-09-02T22:36:52.039267+00:00"
@@ -350,6 +338,10 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/09/napoli-v-arsenal-champions-league-live-updates",
       "seen_at": "2026-09-09T19:56:53.011295+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/crk3z3x6rxeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-09T22:16:20.175860+00:00"
     }
   ],
   "published": {
