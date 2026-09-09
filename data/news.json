@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-09T17:26:23.754122+00:00",
+  "updated_at": "2026-09-09T19:56:53.011295+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/richarlison-could-still-leave-tottenham-as-trabzonspor-weigh-up-bid-for-striker",
-      "seen_at": "2026-09-02T17:50:22.301191+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c624z0q5y5jo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T17:50:32.898104+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-talking-points-three-things-we-learned-from-the-data",
-      "seen_at": "2026-09-02T17:50:47.614059+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c780weq4146o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-02T20:08:44.727915+00:00"
@@ -354,6 +342,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/08/real-madrid-inter-champions-league-match-report",
       "seen_at": "2026-09-08T22:29:56.636826+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/09/liverpool-atletico-madrid-psg-slovan-bratislava-chelsea-leeds-united-live",
+      "seen_at": "2026-09-09T19:56:49.724963+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/09/napoli-v-arsenal-champions-league-live-updates",
+      "seen_at": "2026-09-09T19:56:53.011295+00:00"
     }
   ],
   "published": {
