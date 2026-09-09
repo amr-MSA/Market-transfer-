@@ -1,40 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-08T22:29:56.636826+00:00",
+  "updated_at": "2026-09-09T17:26:23.754122+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c780e6q84l4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-01T23:15:15.060681+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crr4d0x0175o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-01T23:15:17.021149+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/czxzk0znvzeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T01:03:28.837034+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/everton-in-late-scramble-to-complete-balogun-transfer-after-flurry-of-sales",
-      "seen_at": "2026-09-02T01:03:32.064042+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c0m31e8v9jgo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T01:03:48.570724+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zg85eyrqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T09:55:02.028385+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/premier-league-transfer-window-club-analysis-summer-2026",
-      "seen_at": "2026-09-02T09:55:04.932281+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cpwldyj8yp0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T09:55:06.750199+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/02/richarlison-could-still-leave-tottenham-as-trabzonspor-weigh-up-bid-for-striker",
       "seen_at": "2026-09-02T17:50:22.301191+00:00"
