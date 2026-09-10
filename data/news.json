@@ -1,44 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-10T04:54:20.326316+00:00",
+  "updated_at": "2026-09-10T23:37:15.126577+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/womens-super-league-2026-27-preview-no-13-tottenham-hotspur",
-      "seen_at": "2026-09-03T05:01:25.714035+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/wsl-transfer-deadline-day-arsenal-elisa-de-almeida-psg",
-      "seen_at": "2026-09-03T09:38:07.352574+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/deadline-day-deals-premier-league-transfers",
-      "seen_at": "2026-09-03T09:38:11.182020+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/andoni-iraola-defends-liverpool-transfer-strategy-turned-down-options",
-      "seen_at": "2026-09-03T13:51:54.579286+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/thierry-henry-fifa-scandal-players",
-      "seen_at": "2026-09-03T19:56:49.648020+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8e3p780n3do?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-03T19:57:09.681047+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cdr7gy1lz13o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-03T19:57:30.998452+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cly45z47543o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-03T22:18:19.992721+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62jgzxkjypo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-03T22:18:22.429737+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-09-04T00:10:43.584716+00:00"
@@ -342,6 +306,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cp84m835vm2o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-10T04:54:20.326316+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
+      "seen_at": "2026-09-10T23:37:08.712104+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-european-odyssey-champions-league-analysis",
+      "seen_at": "2026-09-10T23:37:15.126577+00:00"
     }
   ],
   "published": {
