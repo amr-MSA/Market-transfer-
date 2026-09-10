@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-09T22:16:20.175860+00:00",
+  "updated_at": "2026-09-10T04:54:20.326316+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/championship-roundup-wrexham-millwall-qpr-cardiff-burnley-miiddlesbrough",
-      "seen_at": "2026-09-02T22:36:52.039267+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/02/scottish-premiership-celtic-aberdeen-kenny-dalglish-rangers-falkirk",
-      "seen_at": "2026-09-02T22:37:12.990471+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cpq02z298p7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-02T22:37:29.080715+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/03/womens-super-league-2026-27-preview-no-13-tottenham-hotspur",
       "seen_at": "2026-09-03T05:01:25.714035+00:00"
@@ -342,6 +330,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/crk3z3x6rxeo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-09T22:16:20.175860+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2zx9n29glo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-10T04:54:00.466116+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crl6zyr1gw5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-10T04:54:15.289230+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cp84m835vm2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-10T04:54:20.326316+00:00"
     }
   ],
   "published": {
