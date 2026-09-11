@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-10T23:37:15.126577+00:00",
+  "updated_at": "2026-09-11T06:23:25.260861+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-10-things-to-look-out-for-this-weekend",
-      "seen_at": "2026-09-04T00:10:43.584716+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/04/womens-super-league-2026-27-preview-no-14-west-ham",
-      "seen_at": "2026-09-04T04:29:47.186776+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/03/daniel-kretinsky-to-up-stake-in-west-ham-in-blow-to-amanda-staveley",
-      "seen_at": "2026-09-04T04:29:59.376690+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/04/mike-dean-refereeing-ipswich-liverpool-wsl-wcl-transfers-live",
       "seen_at": "2026-09-04T09:00:09.079074+00:00"
@@ -314,6 +302,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-european-odyssey-champions-league-analysis",
       "seen_at": "2026-09-10T23:37:15.126577+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cd08728rz0xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-11T06:23:25.260861+00:00"
     }
   ],
   "published": {
