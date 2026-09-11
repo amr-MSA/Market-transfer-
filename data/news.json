@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-11T18:31:43.755592+00:00",
+  "updated_at": "2026-09-11T21:13:20.691831+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/04/ipswich-town-v-liverpool-premier-league-live-updates",
-      "seen_at": "2026-09-04T19:15:34.376938+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/blog/2026/sep/04/chelsea-morgan-rogers-arsenal-xabi-alonso-mikel-arteta",
-      "seen_at": "2026-09-04T19:15:47.464597+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/04/premier-league-team-news-predicted-lineups-for-the-weekend-action",
-      "seen_at": "2026-09-04T19:16:03.233237+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/clyr1ly8z4xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-04T21:32:21.376568+00:00"
@@ -282,6 +270,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c8jdmdjydp1o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-11T18:31:43.755592+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr50q58vqggo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-11T21:13:02.893799+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/11/ballon-dor-shortlist-shows-up-premier-leagues-attacking-failings-but-tide-could-be-turning",
+      "seen_at": "2026-09-11T21:13:18.643353+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/11/kobbie-mainoo-outsider-main-man-summer-of-hurt-derby",
+      "seen_at": "2026-09-11T21:13:20.691831+00:00"
     }
   ],
   "published": {
