@@ -1,40 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-11T06:23:25.260861+00:00",
+  "updated_at": "2026-09-11T18:31:43.755592+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/04/mike-dean-refereeing-ipswich-liverpool-wsl-wcl-transfers-live",
-      "seen_at": "2026-09-04T09:00:09.079074+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq8j0vg4y7po?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T09:00:10.991167+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c86xj375x2yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T09:00:18.046348+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm2mxe7g3gyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T13:24:50.989854+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ce8x2j8kl3do?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T13:26:36.083868+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/czjzn84wn9wo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T16:54:58.058329+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckgw249w3dgo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T16:55:22.610038+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c79038z3q4yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-04T16:55:46.463351+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/04/ipswich-town-v-liverpool-premier-league-live-updates",
       "seen_at": "2026-09-04T19:15:34.376938+00:00"
@@ -306,6 +274,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cd08728rz0xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-11T06:23:25.260861+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/11/premier-league-team-news-predicted-lineups-for-the-weekend-action",
+      "seen_at": "2026-09-11T18:31:41.797814+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8jdmdjydp1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-11T18:31:43.755592+00:00"
     }
   ],
   "published": {
