@@ -1,60 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-12T05:48:45.509616+00:00",
+  "updated_at": "2026-09-12T20:48:58.772422+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/05/news-buildup-premier-league-newcastle-v-bournemouth-kicks-off-matchday-live",
-      "seen_at": "2026-09-05T09:17:06.332728+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sounds/play/p0p81k5b?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T09:17:08.362063+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c4gl3wx8g64o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T09:17:29.125261+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/05/newcastle-united-v-bournemouth-premier-league-live",
-      "seen_at": "2026-09-05T12:47:44.295706+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/05/premier-league-manchester-city-coventry-nottingham-forest-v-tottenham-efl-clockwatch-live",
-      "seen_at": "2026-09-05T12:48:13.657665+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3d7483rv82o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T12:48:34.282740+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crr4704xvgpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T15:37:13.253170+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/05/championship-roundup-southampton-lincoln-burnley-west-ham-wrexham",
-      "seen_at": "2026-09-05T15:37:15.404062+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckg0xegkegyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T15:37:40.043899+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/05/hull-city-v-aston-villa-premier-league-live",
-      "seen_at": "2026-09-05T17:36:23.688819+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cg59dgn7jm9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T19:26:50.479259+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c9w48xp5g14o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T19:26:52.324013+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cz7z09v9pp1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T19:27:08.059442+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cy8zd574yzyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-05T21:30:34.709451+00:00"
@@ -270,6 +218,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cy5zp9llp3ro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-12T05:48:45.509616+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/12/sunderland-v-arsenal-premier-league-live",
+      "seen_at": "2026-09-12T20:48:54.523998+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cvgydkv0yxdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-12T20:48:56.049440+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c62j0lr1rzmo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-12T20:48:58.772422+00:00"
     }
   ],
   "published": {
