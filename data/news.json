@@ -1,132 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-12T22:38:12.399733+00:00",
+  "updated_at": "2026-09-15T18:50:29.635879+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3eq5pl3y41o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T23:12:00.416128+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cg49v57rxvgo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-05T23:12:02.054663+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/05/scottish-premiership-rangers-motherwell-aberdeen-celtic",
-      "seen_at": "2026-09-06T00:58:12.921403+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/06/arsenal-host-chelsea-and-manchester-united-travel-to-everton-matchday-live",
-      "seen_at": "2026-09-06T09:40:07.258181+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62jn6n0rvlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T09:40:09.030081+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cgmrgl3zerpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T09:40:20.429562+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c99d1dlpkp4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T13:07:27.003242+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/06/everton-v-manchester-united-premier-league-live",
-      "seen_at": "2026-09-06T13:07:29.017166+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/06/brighton-v-arsenal-womens-super-league-live",
-      "seen_at": "2026-09-06T13:07:54.016075+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/06/arsenal-v-chelsea-premier-league-live",
-      "seen_at": "2026-09-06T16:13:46.977436+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/06/everton-manchester-united-premier-league-match-report",
-      "seen_at": "2026-09-06T16:13:49.548063+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/06/jamie-vardy-signs-for-burnley-championship-football",
-      "seen_at": "2026-09-06T16:13:52.134476+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/06/manchester-uniteds-front-four-show-flashes-but-need-more-time-to-become-fantastic",
-      "seen_at": "2026-09-06T18:18:54.318481+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/06/arsenal-chelsea-premier-league-match-report",
-      "seen_at": "2026-09-06T18:19:01.424970+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c4gr71gygg8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T18:19:02.831429+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqjkql0rkneo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T20:30:54.732241+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/clyegw2re82o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T20:30:57.777708+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cd947djg1zpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T22:15:57.785079+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cdx5vxpl37zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-06T22:16:11.887308+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/06/european-football-lamine-yamal-double-barcelona-valencia-juventus-milan",
-      "seen_at": "2026-09-06T23:59:09.456774+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cvgy8w548yyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-07T09:12:04.381627+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/czxzwd417x0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-07T09:12:05.980573+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/07/david-beckham-kim-milton-nielsen-red-card-1998-world-cup-argentina-diego-simeone",
-      "seen_at": "2026-09-07T09:12:09.361959+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/07/safety-security-and-service-behind-the-scenes-with-police-at-arsenal-v-chelsea",
-      "seen_at": "2026-09-07T19:07:02.813050+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/07/joey-barton-to-remain-in-custody-until-trial-after-bail-application-turned-down",
-      "seen_at": "2026-09-07T19:07:29.568543+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/07/emery-ready-to-ignite-aston-villas-season-at-club-brugge-after-familiar-slow-start",
-      "seen_at": "2026-09-07T21:59:28.210872+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cvgy87d2lj9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-08T00:08:17.367901+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/07/enzo-maresca-erling-haaland-manchester-city-porto-champions-league",
-      "seen_at": "2026-09-08T00:08:47.066473+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/08/club-brugge-v-aston-villa-champions-league-live",
-      "seen_at": "2026-09-08T17:23:15.025405+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c86x0q008e5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-08T17:24:06.986409+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/08/harry-kane-alessia-russo-nominees-ballon-dor-2026",
-      "seen_at": "2026-09-08T17:24:13.166604+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/08/porto-v-manchester-city-champions-league-live",
       "seen_at": "2026-09-08T19:59:04.647060+00:00"
@@ -230,6 +106,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c5ympj1m71ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-12T22:38:12.399733+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/15/ipswich-town-v-arsenal-carabao-cup-third-round-live",
+      "seen_at": "2026-09-15T18:50:23.793365+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/15/liverpool-v-tottenham-hotspur-carabao-cup-third-round-live",
+      "seen_at": "2026-09-15T18:50:29.635879+00:00"
     }
   ],
   "published": {
