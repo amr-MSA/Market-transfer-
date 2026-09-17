@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-17T18:59:29.745176+00:00",
+  "updated_at": "2026-09-17T22:00:54.357657+00:00",
   "events": [],
   "articles": [
     {
@@ -94,6 +94,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/17/thomas-tuchel-england-cole-palmer-nations-league-alex-scott-morgan-gibbs-white",
       "seen_at": "2026-09-17T18:59:29.745176+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/17/real-sociedad-bournemouth-europa-league-match-report",
+      "seen_at": "2026-09-17T22:00:38.077618+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/17/crystal-palace-lech-poznan-europa-league-match-report",
+      "seen_at": "2026-09-17T22:00:40.324060+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crn8ez44ywqdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-17T22:00:54.357657+00:00"
     }
   ],
   "published": {
