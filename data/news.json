@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-15T23:46:06.039988+00:00",
+  "updated_at": "2026-09-17T00:51:26.016510+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/09/liverpool-atletico-madrid-psg-slovan-bratislava-chelsea-leeds-united-live",
-      "seen_at": "2026-09-09T19:56:49.724963+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/09/napoli-v-arsenal-champions-league-live-updates",
-      "seen_at": "2026-09-09T19:56:53.011295+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/crk3z3x6rxeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-09T22:16:20.175860+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2zx9n29glo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-10T04:54:00.466116+00:00"
@@ -102,6 +90,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxj06nmjl3l6o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-15T23:46:06.039988+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmwyzr576y9zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-17T00:51:26.016510+00:00"
     }
   ],
   "published": {
