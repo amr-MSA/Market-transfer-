@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-18T17:11:29.635294+00:00",
+  "updated_at": "2026-09-18T19:35:40.794108+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/11/premier-league-team-news-predicted-lineups-for-the-weekend-action",
-      "seen_at": "2026-09-11T18:31:41.797814+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8jdmdjydp1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-11T18:31:43.755592+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr50q58vqggo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-11T21:13:02.893799+00:00"
@@ -102,6 +94,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6158x85pv19o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-18T17:11:29.635294+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/18/brentford-v-chelsea-premier-league-live-score-updates",
+      "seen_at": "2026-09-18T19:35:38.710933+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/18/trent-alexander-arnold-returns-england-squad-cole-palmer-rio-ngumoha-alex-scott-thomas-tuchel",
+      "seen_at": "2026-09-18T19:35:40.794108+00:00"
     }
   ],
   "published": {
