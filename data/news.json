@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-17T22:00:54.357657+00:00",
+  "updated_at": "2026-09-18T17:11:29.635294+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/11/premier-league-10-things-to-look-out-for-this-weekend",
-      "seen_at": "2026-09-10T23:37:08.712104+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/10/manchester-united-sabah-european-odyssey-champions-league-analysis",
-      "seen_at": "2026-09-10T23:37:15.126577+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cd08728rz0xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-11T06:23:25.260861+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/11/premier-league-team-news-predicted-lineups-for-the-weekend-action",
       "seen_at": "2026-09-11T18:31:41.797814+00:00"
@@ -106,6 +94,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crn8ez44ywqdo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-17T22:00:54.357657+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/18/england-squad-to-be-announced-premier-league-latest-european-reaction-football-news-live",
+      "seen_at": "2026-09-18T17:11:12.088191+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6158x85pv19o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-18T17:11:29.635294+00:00"
     }
   ],
   "published": {
