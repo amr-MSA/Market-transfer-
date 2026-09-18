@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-18T19:35:40.794108+00:00",
+  "updated_at": "2026-09-18T21:50:20.434092+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr50q58vqggo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-11T21:13:02.893799+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/11/ballon-dor-shortlist-shows-up-premier-leagues-attacking-failings-but-tide-could-be-turning",
-      "seen_at": "2026-09-11T21:13:18.643353+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/11/kobbie-mainoo-outsider-main-man-summer-of-hurt-derby",
-      "seen_at": "2026-09-11T21:13:20.691831+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cn0jrn8n7pjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-12T01:12:10.006189+00:00"
@@ -102,6 +90,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/18/trent-alexander-arnold-returns-england-squad-cole-palmer-rio-ngumoha-alex-scott-thomas-tuchel",
       "seen_at": "2026-09-18T19:35:40.794108+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crp3k23nkl8go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-18T21:50:15.250746+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
+      "seen_at": "2026-09-18T21:50:20.434092+00:00"
     }
   ],
   "published": {
