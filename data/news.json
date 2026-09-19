@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-19T17:26:50.831840+00:00",
+  "updated_at": "2026-09-19T21:38:12.517584+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/12/sunderland-v-arsenal-premier-league-live",
-      "seen_at": "2026-09-12T20:48:54.523998+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cvgydkv0yxdo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T20:48:56.049440+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c62j0lr1rzmo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T20:48:58.772422+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c5ympj1m71ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-12T22:38:12.399733+00:00"
@@ -102,6 +90,14 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/19/arsenal-v-manchester-united-womens-super-league-live",
       "seen_at": "2026-09-19T17:26:50.831840+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq8r64ppml6lo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-19T21:38:06.260191+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/19/roma-inter-lazio-dortmund-sevilla-barcelona",
+      "seen_at": "2026-09-19T21:38:12.517584+00:00"
     }
   ],
   "published": {
