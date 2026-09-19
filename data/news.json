@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-18T21:50:20.434092+00:00",
+  "updated_at": "2026-09-19T06:34:46.318307+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cn0jrn8n7pjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T01:12:10.006189+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c99dg2gzdl4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T01:12:54.508659+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cy5zp9llp3ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T05:48:45.509616+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/12/sunderland-v-arsenal-premier-league-live",
       "seen_at": "2026-09-12T20:48:54.523998+00:00"
@@ -98,6 +86,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
       "seen_at": "2026-09-18T21:50:20.434092+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm3wjl29qp4go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-19T06:34:31.401269+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cv1j4ey5j2w4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-19T06:34:32.363374+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6ly7vg8n7geo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-19T06:34:46.318307+00:00"
     }
   ],
   "published": {

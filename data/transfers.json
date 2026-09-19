@@ -767,5 +767,30 @@
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Isaac Konde من Liverpool إلى Manchester United — المرحلة: Here We Go غير رسمي بعد."
     }
+  },
+  {
+    "transfer_id": "d0c477b78a5e5f911500",
+    "player": "Dany Freire",
+    "to_club": "Barcelona",
+    "from_club": null,
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/66575",
+    "fabrizio_text": "🚨 🔵 🔴 Barcelona sign 16 year old talent Dany Freire, deal agreed and here we go! Portuguese attacking midfielder passed the trial and signs his Barcelona contract today. All set for formal steps. 🇵🇹 https://t.co/YeDP2yVv83 — Fabrizio Romano ( @FabrizioRomano ) Sep 19, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-09-19T06:34:47.067179+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "Dany Freire إلى Barcelona — المرحلة: Here We Go غير رسمي بعد."
+    }
   }
 ]
