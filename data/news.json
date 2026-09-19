@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-19T21:38:12.517584+00:00",
+  "updated_at": "2026-09-19T23:32:45.678683+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c5ympj1m71ko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-12T22:38:12.399733+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/15/ipswich-town-v-arsenal-carabao-cup-third-round-live",
       "seen_at": "2026-09-15T18:50:23.793365+00:00"
@@ -98,6 +94,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/19/roma-inter-lazio-dortmund-sevilla-barcelona",
       "seen_at": "2026-09-19T21:38:12.517584+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm209djp8d2xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-19T23:32:45.678683+00:00"
     }
   ],
   "published": {
