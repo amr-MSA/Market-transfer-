@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-19T06:34:46.318307+00:00",
+  "updated_at": "2026-09-19T17:26:50.831840+00:00",
   "events": [],
   "articles": [
     {
@@ -98,6 +98,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6ly7vg8n7geo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-19T06:34:46.318307+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/19/arsenal-v-manchester-united-womens-super-league-live",
+      "seen_at": "2026-09-19T17:26:50.831840+00:00"
     }
   ],
   "published": {
