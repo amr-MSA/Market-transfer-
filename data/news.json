@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-20T06:53:43.126753+00:00",
+  "updated_at": "2026-09-21T00:32:51.557111+00:00",
   "events": [],
   "articles": [
     {
@@ -114,6 +114,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmg49gv74qzlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-20T06:53:43.126753+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6y8z29nxn4mo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-21T00:32:37.972715+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
+      "seen_at": "2026-09-21T00:32:51.557111+00:00"
     }
   ],
   "published": {
