@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-21T05:23:19.721552+00:00",
+  "updated_at": "2026-09-21T20:37:42.830630+00:00",
   "events": [],
   "articles": [
     {
@@ -126,6 +126,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq4g528drx79o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-21T05:23:19.721552+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/21/gianni-infantino-proposes-independent-external-review-fifa-governance",
+      "seen_at": "2026-09-21T20:37:12.125721+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c639m2yggm1ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-21T20:37:39.445438+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwx2z115lx4mo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-21T20:37:42.830630+00:00"
     }
   ],
   "published": {
