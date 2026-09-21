@@ -778,11 +778,14 @@
     "fabrizio_text": "🚨 🔵 🔴 Barcelona sign 16 year old talent Dany Freire, deal agreed and here we go! Portuguese attacking midfielder passed the trial and signs his Barcelona contract today. All set for formal steps. 🇵🇹 https://t.co/YeDP2yVv83 — Fabrizio Romano ( @FabrizioRomano ) Sep 19, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-19T06:34:47.067179+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -791,6 +794,8 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Dany Freire إلى Barcelona — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-09-21T05:23:20.430667+00:00"
   }
 ]
