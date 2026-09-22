@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-22T19:57:53.980241+00:00",
+  "updated_at": "2026-09-22T22:47:07.290628+00:00",
   "events": [],
   "articles": [
     {
@@ -146,6 +146,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmkgw0drzr38o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-22T19:57:53.980241+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6g7k421gvj4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-22T22:46:50.007761+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/22/arsenal-hb-koge-womens-champions-league-match-report",
+      "seen_at": "2026-09-22T22:46:57.118017+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmlyq01pzdy8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-22T22:47:07.290628+00:00"
     }
   ],
   "published": {
