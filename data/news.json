@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-23T15:06:14.221390+00:00",
+  "updated_at": "2026-09-23T19:00:07.525171+00:00",
   "events": [],
   "articles": [
     {
@@ -158,6 +158,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cvde0jw2l6g4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-23T15:06:14.221390+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/23/chelsea-v-austria-vienna-womens-champions-league-live-score-updates",
+      "seen_at": "2026-09-23T19:00:07.525171+00:00"
     }
   ],
   "published": {
