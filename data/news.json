@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-24T00:30:19.483269+00:00",
+  "updated_at": "2026-09-24T18:59:39.189885+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmwyzr576y9zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-17T00:51:26.016510+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/17/manchester-city-v-norwich-city-carabao-cup-third-round-live",
-      "seen_at": "2026-09-17T18:59:14.051309+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/17/real-sociedad-v-bournemouth-crystal-palace-v-lech-poznan-and-more-europa-league-live",
-      "seen_at": "2026-09-17T18:59:15.251341+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/17/thomas-tuchel-england-cole-palmer-nations-league-alex-scott-morgan-gibbs-white",
-      "seen_at": "2026-09-17T18:59:29.745176+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/17/real-sociedad-bournemouth-europa-league-match-report",
       "seen_at": "2026-09-17T22:00:38.077618+00:00"
