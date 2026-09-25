@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-24T22:11:13.209791+00:00",
+  "updated_at": "2026-09-25T22:32:00.154948+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/18/england-squad-to-be-announced-premier-league-latest-european-reaction-football-news-live",
-      "seen_at": "2026-09-18T17:11:12.088191+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6158x85pv19o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-18T17:11:29.635294+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/18/brentford-v-chelsea-premier-league-live-score-updates",
-      "seen_at": "2026-09-18T19:35:38.710933+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/18/trent-alexander-arnold-returns-england-squad-cole-palmer-rio-ngumoha-alex-scott-thomas-tuchel",
-      "seen_at": "2026-09-18T19:35:40.794108+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crp3k23nkl8go?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-18T21:50:15.250746+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/18/premier-league-news-carrick-brushes-aside-questions-over-future-arteta-salutes-extraordinary-dowman",
-      "seen_at": "2026-09-18T21:50:20.434092+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm3wjl29qp4go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-19T06:34:31.401269+00:00"
@@ -142,6 +118,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/23/chelsea-austria-vienna-womens-champions-league-match-report",
       "seen_at": "2026-09-24T00:30:19.483269+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmkgwwze9r28o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-25T22:31:44.467402+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/25/nations-league-roundup-turkey-france-kylian-mbappe-italy-belgium",
+      "seen_at": "2026-09-25T22:32:00.154948+00:00"
     }
   ],
   "published": {
