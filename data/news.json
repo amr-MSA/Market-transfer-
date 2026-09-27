@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-27T01:25:35.337653+00:00",
+  "updated_at": "2026-09-27T20:10:25.963951+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm0e35jrqyd7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-20T01:32:32.036405+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2z7ev28zeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-20T01:32:34.527006+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c9gk5863zz2po?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-20T06:53:41.288346+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmg49gv74qzlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-20T06:53:43.126753+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6y8z29nxn4mo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-21T00:32:37.972715+00:00"
@@ -138,6 +122,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/26/england-spain-nations-league-match-report",
       "seen_at": "2026-09-27T01:25:35.337653+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/27/israel-republic-of-ireland-norway-portugal-germany-greece-nations-league-live",
+      "seen_at": "2026-09-27T20:09:59.226433+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqvgyjp3lgv9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-27T20:10:25.963951+00:00"
     }
   ],
   "published": {
