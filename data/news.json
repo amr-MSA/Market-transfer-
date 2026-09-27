@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-26T23:10:30.094925+00:00",
+  "updated_at": "2026-09-27T01:25:35.337653+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm209djp8d2xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-19T23:32:45.678683+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm0e35jrqyd7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-20T01:32:32.036405+00:00"
@@ -130,6 +126,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/26/usmnt-peru-cavan-sullivan-2030-world-cup-cycle",
       "seen_at": "2026-09-26T23:10:30.094925+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/27/england-spain-nations-league-meet-new-55-minute-collapse-not-same-as-old",
+      "seen_at": "2026-09-27T01:25:19.891414+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqx2zz6d5716o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-27T01:25:21.364389+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/26/england-spain-nations-league-match-report",
+      "seen_at": "2026-09-27T01:25:35.337653+00:00"
     }
   ],
   "published": {
