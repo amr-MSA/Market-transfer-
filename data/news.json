@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-27T20:10:25.963951+00:00",
+  "updated_at": "2026-09-29T01:08:03.505967+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6y8z29nxn4mo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-21T00:32:37.972715+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/20/michael-carrick-matheus-cunha-fulham-manchester-united-premier-league",
-      "seen_at": "2026-09-21T00:32:51.557111+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq4g528drx79o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-21T05:23:19.721552+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/21/gianni-infantino-proposes-independent-external-review-fifa-governance",
-      "seen_at": "2026-09-21T20:37:12.125721+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c639m2yggm1ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-21T20:37:39.445438+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwx2z115lx4mo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-21T20:37:42.830630+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cew9nqnz9lno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-22T06:51:58.892480+00:00"
@@ -130,6 +106,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqvgyjp3lgv9o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-27T20:10:25.963951+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/sep/28/billy-gilmour-sebastien-pocognoli-scotland-nations-league",
+      "seen_at": "2026-09-29T01:08:03.505967+00:00"
     }
   ],
   "published": {
