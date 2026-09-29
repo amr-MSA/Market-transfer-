@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-29T01:08:03.505967+00:00",
+  "updated_at": "2026-09-29T06:51:42.261897+00:00",
   "events": [],
   "articles": [
     {
@@ -110,6 +110,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/sep/28/billy-gilmour-sebastien-pocognoli-scotland-nations-league",
       "seen_at": "2026-09-29T01:08:03.505967+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjwyz0yevp40o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-29T06:51:23.655434+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5yeqj0g4ygo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-09-29T06:51:25.134698+00:00"
     }
   ],
   "published": {
@@ -174,6 +182,27 @@
       },
       "published_at": "2026-09-17T18:59:19.949309+00:00",
       "updated_at": "2026-09-17T18:59:19.949309+00:00",
+      "media": null
+    },
+    "50802f68aa2164a1f2f14dcb": {
+      "type": "مباراة",
+      "from": "Czech Republic",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/c5yeqj0g4ygo?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "50802f68aa2164a1f2f14dcb",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-09-29T06:51:42.261897+00:00",
+      "updated_at": "2026-09-29T06:51:42.261897+00:00",
       "media": null
     }
   }
