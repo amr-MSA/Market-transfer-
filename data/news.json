@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-09-29T13:25:58.508043+00:00",
+  "updated_at": "2026-09-30T18:55:43.095291+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmkgw0drzr38o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-22T19:57:53.980241+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6g7k421gvj4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-22T22:46:50.007761+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/22/arsenal-hb-koge-womens-champions-league-match-report",
-      "seen_at": "2026-09-22T22:46:57.118017+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmlyq01pzdy8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-22T22:47:07.290628+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5evwlmdmy00o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-23T15:05:18.521573+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cvde0jw2l6g4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-23T15:06:14.221390+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/23/chelsea-v-austria-vienna-womens-champions-league-live-score-updates",
       "seen_at": "2026-09-23T19:00:07.525171+00:00"
@@ -106,6 +82,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c5yeqj0g4ygo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-09-29T06:51:25.134698+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/sep/30/paris-fc-v-arsenal-womens-champions-league-live",
+      "seen_at": "2026-09-30T18:55:43.095291+00:00"
     }
   ],
   "published": {
