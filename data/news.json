@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-01T19:54:14.177586+00:00",
+  "updated_at": "2026-10-01T23:36:13.678822+00:00",
   "events": [],
   "articles": [
     {
@@ -82,6 +82,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cw8r6r0pdkyzo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-01T19:54:14.177586+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6zxzx1d484zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-01T23:36:09.592330+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/c5kg0gwwpyx8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-01T23:36:11.855538+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/01/nations-league-portugal-denmark-germany-serbia",
+      "seen_at": "2026-10-01T23:36:13.678822+00:00"
     }
   ],
   "published": {
