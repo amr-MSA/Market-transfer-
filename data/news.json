@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-01T23:36:13.678822+00:00",
+  "updated_at": "2026-10-03T17:33:23.547224+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmkgwwze9r28o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-25T22:31:44.467402+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/sep/25/nations-league-roundup-turkey-france-kylian-mbappe-italy-belgium",
-      "seen_at": "2026-09-25T22:32:00.154948+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c84gkkepxxl4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-26T00:49:37.415918+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwy7zzdmn4v7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-09-26T00:50:03.803774+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/sep/26/england-v-spain-nations-league-football-live-score-updates",
       "seen_at": "2026-09-26T17:57:15.151211+00:00"
@@ -94,6 +78,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/01/nations-league-portugal-denmark-germany-serbia",
       "seen_at": "2026-10-01T23:36:13.678822+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/03/croatia-v-england-nations-league-football-live-score-updates",
+      "seen_at": "2026-10-03T17:33:19.439979+00:00"
     }
   ],
   "published": {
@@ -179,6 +167,27 @@
       },
       "published_at": "2026-09-29T06:51:42.261897+00:00",
       "updated_at": "2026-09-29T06:51:42.261897+00:00",
+      "media": null
+    },
+    "d7831efa9c77c6c73854fe6c": {
+      "type": "مباراة",
+      "from": "England",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.theguardian.com/football/live/2026/oct/03/croatia-v-england-nations-league-football-live-score-updates",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "d7831efa9c77c6c73854fe6c",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-03T17:33:23.547224+00:00",
+      "updated_at": "2026-10-03T17:33:23.547224+00:00",
       "media": null
     }
   }
