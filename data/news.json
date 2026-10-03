@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-03T20:09:27.294991+00:00",
+  "updated_at": "2026-10-03T23:00:38.568872+00:00",
   "events": [],
   "articles": [
     {
@@ -82,6 +82,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crgjqjg1l740o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-03T20:09:27.294991+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/03/celtic-fans-throw-tennis-balls-at-club-owner-dermot-desmond-during-golf-tournament",
+      "seen_at": "2026-10-03T23:00:38.568872+00:00"
     }
   ],
   "published": {
