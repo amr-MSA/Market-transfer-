@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-06T20:08:46.513186+00:00",
+  "updated_at": "2026-10-06T23:46:57.794189+00:00",
   "events": [],
   "articles": [
     {
@@ -58,6 +58,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/05/how-do-sports-fans-end-up-as-aggressive-defenders-of-a-nation-states-regime",
       "seen_at": "2026-10-06T01:28:59.561898+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/06/usmnt-v-canada-live-updates-analysis",
+      "seen_at": "2026-10-06T23:46:44.012940+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/06/lionel-messi-farewell-match-live-updates-analysis-argentina-benin",
+      "seen_at": "2026-10-06T23:46:57.794189+00:00"
     }
   ],
   "published": {
