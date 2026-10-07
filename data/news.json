@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-06T23:46:57.794189+00:00",
+  "updated_at": "2026-10-07T02:43:47.444717+00:00",
   "events": [],
   "articles": [
     {
@@ -66,6 +66,10 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/06/lionel-messi-farewell-match-live-updates-analysis-argentina-benin",
       "seen_at": "2026-10-06T23:46:57.794189+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/06/usa-canada-report-justin-ellis",
+      "seen_at": "2026-10-07T02:43:47.444717+00:00"
     }
   ],
   "published": {
