@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-07T16:39:29.916333+00:00",
+  "updated_at": "2026-10-07T21:34:40.491121+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/sep/30/paris-fc-v-arsenal-womens-champions-league-live",
-      "seen_at": "2026-09-30T18:55:43.095291+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/sep/30/ol-lyonnes-chelsea-womens-champions-league-match-report",
       "seen_at": "2026-10-01T01:37:15.170091+00:00"
@@ -70,6 +66,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/06/usa-canada-report-justin-ellis",
       "seen_at": "2026-10-07T02:43:47.444717+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr2ke0k8g7xeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-07T21:34:40.491121+00:00"
     }
   ],
   "published": {
