@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-08T14:50:04.890467+00:00",
+  "updated_at": "2026-10-08T20:15:12.870359+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cw8r6r0pdkyzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-01T19:54:14.177586+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6zxzx1d484zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-01T23:36:09.592330+00:00"
@@ -74,6 +70,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cw5ynm4e0d68o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-08T01:16:27.666818+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmn4ex2y53l8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-08T20:15:09.472899+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/08/sergio-camello-rayo-vallecano-la-liga-interview",
+      "seen_at": "2026-10-08T20:15:12.870359+00:00"
     }
   ],
   "published": {
