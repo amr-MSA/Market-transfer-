@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-09T00:26:32.476143+00:00",
+  "updated_at": "2026-10-09T23:07:08.580927+00:00",
   "events": [],
   "articles": [
     {
@@ -74,6 +74,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crgj96ww6x4eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-09T00:26:32.476143+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq4g1xerk398o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-09T23:06:48.476145+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6d93ql8jvdko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-09T23:06:54.303305+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/09/chelsea-xabi-alonso-cole-palmer-england-thomas-tuchel",
+      "seen_at": "2026-10-09T23:07:08.580927+00:00"
     }
   ],
   "published": {
