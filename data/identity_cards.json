@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-09-01T10:18:08.654624+00:00",
+  "updated_at": "2026-10-09T00:25:46.415497+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -498,6 +498,62 @@
       "identity_status": "VERIFIED",
       "card_message_id": 12,
       "created_at": "2026-09-01T10:18:08.654608+00:00"
+    },
+    "P0000011": {
+      "person_id": "P0000011",
+      "canonical_name": "Declan Rice",
+      "canonical_name_ar": "ديكلان رايس",
+      "canonical_name_original": "Declan Rice",
+      "aliases": [
+        "Declan Rice"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q30007142",
+      "birth_date": "1999-01-14",
+      "nationality_ids": [
+        "Q145"
+      ],
+      "nationality_names": [
+        "المملكة المتحدة"
+      ],
+      "position_ids": [
+        "Q18691898"
+      ],
+      "position_names": [
+        "لاعب ارتكاز"
+      ],
+      "national_team_ids": [
+        "Q27",
+        "Q21"
+      ],
+      "national_team_names": [
+        "أيرلندا",
+        "إنجلترا"
+      ],
+      "organization_ids": [
+        "Q18747",
+        "Q3590338",
+        "Q9306853",
+        "Q1672798",
+        "Q163547",
+        "Q47762",
+        "Q9617"
+      ],
+      "organization_names": [
+        "وست هام يونايتد",
+        "منتخب جمهورية أيرلندا تحت 17 سنة لكرة القدم",
+        "منتخب جمهورية أيرلندا تحت 19 سنة لكرة القدم",
+        "منتخب جمهورية أيرلندا تحت 21 سنة لكرة القدم",
+        "منتخب جمهورية أيرلندا لكرة القدم",
+        "منتخب إنجلترا لكرة القدم",
+        "نادي آرسنال"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q30007142",
+      "identity_verified_at": "2026-10-09T00:25:46.413817+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 15,
+      "created_at": "2026-10-09T00:25:46.415475+00:00"
     }
   },
   "organizations": {},
@@ -511,7 +567,8 @@
     "wikidata:Q111145131": "P0000007",
     "wikidata:Q19708656": "P0000008",
     "wikidata:Q21620666": "P0000009",
-    "wikidata:Q58494476": "P0000010"
+    "wikidata:Q58494476": "P0000010",
+    "wikidata:Q30007142": "P0000011"
   },
   "name_index": {
     "dominik livakovic": [
@@ -582,6 +639,9 @@
     ],
     "mykhailo petrovych mudryk": [
       "P0000010"
+    ],
+    "declan rice": [
+      "P0000011"
     ]
   }
 }

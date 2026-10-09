@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 11,
+  "next_person_number": 12,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -86,6 +86,15 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-09-01T10:18:08.654587+00:00"
+    },
+    "P0000011": {
+      "person_id": "P0000011",
+      "name": "Declan Rice",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-10-09T00:25:46.415453+00:00"
     }
   },
   "clubs": {},

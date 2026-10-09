@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-08T20:15:12.870359+00:00",
+  "updated_at": "2026-10-09T00:26:32.476143+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6zxzx1d484zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-01T23:36:09.592330+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/news/articles/c5kg0gwwpyx8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-01T23:36:11.855538+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/01/nations-league-portugal-denmark-germany-serbia",
-      "seen_at": "2026-10-01T23:36:13.678822+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/03/croatia-v-england-nations-league-football-live-score-updates",
       "seen_at": "2026-10-03T17:33:19.439979+00:00"
@@ -78,6 +66,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/08/sergio-camello-rayo-vallecano-la-liga-interview",
       "seen_at": "2026-10-08T20:15:12.870359+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
+      "seen_at": "2026-10-09T00:25:44.898476+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crgj96ww6x4eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-09T00:26:32.476143+00:00"
     }
   ],
   "published": {
@@ -205,6 +201,27 @@
       },
       "published_at": "2026-10-04T02:31:01.967701+00:00",
       "updated_at": "2026-10-04T02:31:01.967701+00:00",
+      "media": null
+    },
+    "92ba069b64a34853af6ad4ef": {
+      "type": "أخبار ناد",
+      "from": "Arsenal",
+      "to": null,
+      "player": "Declan Rice",
+      "person": "Declan Rice",
+      "entity_type": "player",
+      "article_id": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "92ba069b64a34853af6ad4ef",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-09T00:26:03.319702+00:00",
+      "updated_at": "2026-10-09T00:26:03.319702+00:00",
       "media": null
     }
   }
