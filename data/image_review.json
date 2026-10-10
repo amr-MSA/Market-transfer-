@@ -1,5 +1,38 @@
 {
   "version": 1,
-  "updated_at": null,
-  "reviews": {}
+  "updated_at": "2026-10-10T22:07:17.275191+00:00",
+  "reviews": {
+    "355c362e26242b74eed4": {
+      "review_id": "355c362e26242b74eed4",
+      "target_type": "news",
+      "target_id": "21d5ca9faa0676e81ca687d9",
+      "person": "Vinícius Júnior",
+      "entity_type": "player",
+      "club": "Real Madrid",
+      "candidates": [
+        {
+          "code": 1,
+          "label": "شعار/ملعب النادي (بديل آمن)",
+          "media": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Barracas_central_logo.svg/960px-Barracas_central_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source": "wikimedia",
+            "credit_name": "Unknown author Unknown author",
+            "credit_license": "Public domain",
+            "credit_url": "https://commons.wikimedia.org/wiki/File:Barracas_central_logo.svg",
+            "modesty_approved": false
+          }
+        }
+      ],
+      "status": "SENT",
+      "selected_code": null,
+      "resolved_media": null,
+      "message_ids": [
+        112,
+        113
+      ],
+      "created_at": "2026-10-10T22:05:46.706909+00:00",
+      "sent_at": "2026-10-10T22:07:17.275174+00:00",
+      "resolved_at": null
+    }
+  }
 }

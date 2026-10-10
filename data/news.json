@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-10T02:16:57.404728+00:00",
+  "updated_at": "2026-10-10T22:05:41.398146+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/03/croatia-v-england-nations-league-football-live-score-updates",
-      "seen_at": "2026-10-03T17:33:19.439979+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/03/north-macedonia-v-scotland-spain-v-czechia-and-more-nations-league-live",
-      "seen_at": "2026-10-03T20:09:25.656541+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crgjqjg1l740o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-03T20:09:27.294991+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/03/celtic-fans-throw-tennis-balls-at-club-owner-dermot-desmond-during-golf-tournament",
       "seen_at": "2026-10-03T23:00:38.568872+00:00"
@@ -98,6 +86,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxr5y36yml21o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-10T02:16:57.404728+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/10/real-madrids-vinicius-junior-sent-off-for-hair-pulling-in-victory-over-villarreal",
+      "seen_at": "2026-10-10T22:05:41.398146+00:00"
     }
   ],
   "published": {
@@ -247,6 +239,23 @@
       "published_at": "2026-10-09T00:26:03.319702+00:00",
       "updated_at": "2026-10-09T00:26:03.319702+00:00",
       "media": null
+    },
+    "21d5ca9faa0676e81ca687d9": {
+      "type": "انضباط",
+      "from": "Real Madrid",
+      "to": null,
+      "player": "Vinícius Júnior",
+      "person": "Vinícius Júnior",
+      "entity_type": "player",
+      "article_id": "https://www.theguardian.com/football/2026/oct/10/real-madrids-vinicius-junior-sent-off-for-hair-pulling-in-victory-over-villarreal",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "21d5ca9faa0676e81ca687d9",
+      "delivery": {},
+      "published_at": null,
+      "updated_at": "2026-10-10T22:05:41.398121+00:00"
     }
   }
 }
