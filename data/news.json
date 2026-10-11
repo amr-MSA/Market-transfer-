@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-10T22:05:41.398146+00:00",
+  "updated_at": "2026-10-11T00:55:59.677614+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/03/celtic-fans-throw-tennis-balls-at-club-owner-dermot-desmond-during-golf-tournament",
-      "seen_at": "2026-10-03T23:00:38.568872+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx7vp540g75mo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-04T02:30:58.742392+00:00"
@@ -90,6 +86,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/10/real-madrids-vinicius-junior-sent-off-for-hair-pulling-in-victory-over-villarreal",
       "seen_at": "2026-10-10T22:05:41.398146+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/iplayer/episode/m0032wxj?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-11T00:55:59.677332+00:00"
     }
   ],
   "published": {
