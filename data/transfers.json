@@ -753,11 +753,14 @@
     "fabrizio_text": "🚨 🔴 Manchester United have completed deal to sign 16-year-old midfielder Isaac Konde from Liverpool, here we go! All set for #MUFC move as formal steps have been completed in the last 24 hours. https://t.co/n1vrGA5toP — Fabrizio Romano ( @FabrizioRomano ) Sep 7, 2026",
     "fabrizio_image_url": null,
     "discovered_at": "2026-09-08T04:29:04.351955+00:00",
-    "status": "WAITING_OFFICIAL",
+    "status": "HERE_WE_GO",
     "official_sent": false,
     "official_delivery": {},
-    "unconfirmed_sent": false,
-    "unconfirmed_delivery": {},
+    "unconfirmed_sent": true,
+    "unconfirmed_delivery": {
+      "-1003938445195": "SENT",
+      "@limitless_dv": "SENT"
+    },
     "analysis": {
       "category": "تحليل صفقة",
       "stage": "Here We Go غير رسمي بعد",
@@ -766,7 +769,9 @@
       "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
       "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
       "summary": "Isaac Konde من Liverpool إلى Manchester United — المرحلة: Here We Go غير رسمي بعد."
-    }
+    },
+    "media": null,
+    "unconfirmed_published_at": "2026-10-13T11:10:20.454489+00:00"
   },
   {
     "transfer_id": "d0c477b78a5e5f911500",

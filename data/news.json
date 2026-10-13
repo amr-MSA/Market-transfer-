@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-13T03:46:14.378762+00:00",
+  "updated_at": "2026-10-13T11:10:14.192983+00:00",
   "events": [],
   "articles": [
     {
@@ -86,6 +86,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cme36q1gnpnlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-13T03:45:58.855783+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cw5yng2kjg8po?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-13T11:10:10.867393+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6kgq5j5d7qro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-13T11:10:12.443843+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cxr5ydvl41dlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-13T11:10:14.192983+00:00"
     }
   ],
   "published": {
