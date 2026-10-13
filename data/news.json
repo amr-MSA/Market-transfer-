@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-12T01:21:49.294022+00:00",
+  "updated_at": "2026-10-13T03:46:14.378762+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/05/nations-league-roundup-olise-leads-late-charge-as-france-bowl-over-belgium",
-      "seen_at": "2026-10-06T01:28:57.763828+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/05/how-do-sports-fans-end-up-as-aggressive-defenders-of-a-nation-states-regime",
-      "seen_at": "2026-10-06T01:28:59.561898+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/06/usmnt-v-canada-live-updates-analysis",
       "seen_at": "2026-10-06T23:46:44.012940+00:00"
@@ -86,6 +78,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cw073z5j55y9o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-12T01:21:49.294022+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cw78p7l7rp30o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-13T03:45:45.626441+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cme36q1gnpnlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-13T03:45:58.855783+00:00"
     }
   ],
   "published": {
@@ -252,6 +252,27 @@
       "delivery": {},
       "published_at": null,
       "updated_at": "2026-10-10T22:05:41.398121+00:00"
+    },
+    "65b000ffadd01a75738fa6af": {
+      "type": "أخرى",
+      "from": "Premier League",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "club",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cme36q1gnpnlo?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "65b000ffadd01a75738fa6af",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-13T03:46:14.378762+00:00",
+      "updated_at": "2026-10-13T03:46:14.378762+00:00",
+      "media": null
     }
   }
 }
