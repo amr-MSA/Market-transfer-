@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-14T01:29:31.113625+00:00",
+  "updated_at": "2026-10-14T06:35:57.181001+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/06/usa-canada-report-justin-ellis",
-      "seen_at": "2026-10-07T02:43:47.444717+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr2ke0k8g7xeo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-07T21:34:40.491121+00:00"
@@ -94,6 +90,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmdx3nk7kwwro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-14T01:29:31.113625+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c933xdrl731lo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-14T06:35:57.181001+00:00"
     }
   ],
   "published": {
