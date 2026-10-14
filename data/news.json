@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-14T06:35:57.181001+00:00",
+  "updated_at": "2026-10-14T12:20:05.885407+00:00",
   "events": [],
   "articles": [
     {
@@ -94,6 +94,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c933xdrl731lo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-14T06:35:57.181001+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/c83vq9vpwwr1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-14T12:20:00.666571+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/14/gianni-infantino-fifa-council-meeting-opponents-world-cup-balogun-peace-prize",
+      "seen_at": "2026-10-14T12:20:04.049700+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/14/sunderland-53-years-away-europa-league-torreense",
+      "seen_at": "2026-10-14T12:20:05.885407+00:00"
     }
   ],
   "published": {
