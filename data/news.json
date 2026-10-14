@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-14T17:21:22.409628+00:00",
+  "updated_at": "2026-10-14T20:48:10.131651+00:00",
   "events": [],
   "articles": [
     {
@@ -106,6 +106,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/14/sunderland-53-years-away-europa-league-torreense",
       "seen_at": "2026-10-14T12:20:05.885407+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/14/manchester-city-v-paris-saint-germain-champions-league-live-score-updates",
+      "seen_at": "2026-10-14T20:48:02.289780+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c370pnz8d90wo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-14T20:48:03.964946+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/14/key-questions-lisandro-martinez-manchester-united-michael-carrick",
+      "seen_at": "2026-10-14T20:48:10.131651+00:00"
     }
   ],
   "published": {
