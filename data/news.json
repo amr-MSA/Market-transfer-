@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-13T22:53:42.555049+00:00",
+  "updated_at": "2026-10-14T01:29:31.113625+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/06/usmnt-v-canada-live-updates-analysis",
-      "seen_at": "2026-10-06T23:46:44.012940+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/06/lionel-messi-farewell-match-live-updates-analysis-argentina-benin",
-      "seen_at": "2026-10-06T23:46:57.794189+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/06/usa-canada-report-justin-ellis",
       "seen_at": "2026-10-07T02:43:47.444717+00:00"
@@ -98,6 +90,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxr5ydvl41dlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-13T11:10:14.192983+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmdx3nk7kwwro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-14T01:29:31.113625+00:00"
     }
   ],
   "published": {
