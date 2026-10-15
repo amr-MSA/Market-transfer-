@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-15T16:33:02.037512+00:00",
+  "updated_at": "2026-10-15T20:00:20.358371+00:00",
   "events": [],
   "articles": [
     {
@@ -130,6 +130,10 @@
     {
       "id": "https://www.theguardian.com/football/who-scored-blog/2026/oct/15/chelsea-premier-league-fun-team-sustainable-xabi-alonso-europe",
       "seen_at": "2026-10-15T16:33:02.037512+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/15/bournemouth-v-sturm-graz-benfica-v-celtic-and-more-europa-league-live",
+      "seen_at": "2026-10-15T20:00:20.358371+00:00"
     }
   ],
   "published": {
