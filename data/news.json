@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-15T20:00:20.358371+00:00",
+  "updated_at": "2026-10-15T22:59:45.222080+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmn4ex2y53l8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-08T20:15:09.472899+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/08/sergio-camello-rayo-vallecano-la-liga-interview",
-      "seen_at": "2026-10-08T20:15:12.870359+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/09/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-10-09T00:25:44.898476+00:00"
@@ -134,6 +126,10 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/15/bournemouth-v-sturm-graz-benfica-v-celtic-and-more-europa-league-live",
       "seen_at": "2026-10-15T20:00:20.358371+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6lyez88m1n2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-15T22:59:45.222080+00:00"
     }
   ],
   "published": {
