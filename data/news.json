@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-15T11:59:08.837075+00:00",
+  "updated_at": "2026-10-15T16:33:02.037512+00:00",
   "events": [],
   "articles": [
     {
@@ -122,6 +122,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c3n04gy12r91o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-15T11:59:08.837075+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/15/lyon-v-crystal-palace-torreense-v-sunderland-and-more-europa-league-live",
+      "seen_at": "2026-10-15T16:32:56.818473+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/who-scored-blog/2026/oct/15/chelsea-premier-league-fun-team-sustainable-xabi-alonso-europe",
+      "seen_at": "2026-10-15T16:33:02.037512+00:00"
     }
   ],
   "published": {
