@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-15T06:29:26.079586+00:00",
+  "updated_at": "2026-10-15T11:59:08.837075+00:00",
   "events": [],
   "articles": [
     {
@@ -110,6 +110,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckd7qg5q87qvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-15T01:44:33.040657+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm3r5p11d23no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-15T11:58:26.874126+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/15/fa-spending-wembley-hospitality-free-tickets-fa-council-rises-25-percent",
+      "seen_at": "2026-10-15T11:58:52.084424+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3n04gy12r91o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-15T11:59:08.837075+00:00"
     }
   ],
   "published": {
