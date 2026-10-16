@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-10-11T00:56:00.859672+00:00",
+  "updated_at": "2026-10-16T10:09:45.675472+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -615,6 +615,135 @@
       "identity_status": "VERIFIED",
       "card_message_id": 16,
       "created_at": "2026-10-10T22:05:45.582896+00:00"
+    },
+    "P0000013": {
+      "person_id": "P0000013",
+      "canonical_name": "Álvaro Arbeloa",
+      "canonical_name_ar": "ألفارو أربيلوا",
+      "canonical_name_original": "Álvaro Arbeloa",
+      "aliases": [
+        "Álvaro Arbeloa",
+        "آربيلوا"
+      ],
+      "entity_type": "manager",
+      "identity_key": "wikidata:Q250901",
+      "birth_date": "1983-01-17",
+      "nationality_ids": [
+        "Q29"
+      ],
+      "nationality_names": [
+        "إسبانيا"
+      ],
+      "position_ids": [
+        "Q90173132"
+      ],
+      "position_names": [
+        "ظهير"
+      ],
+      "national_team_ids": [
+        "Q29"
+      ],
+      "national_team_names": [
+        "إسبانيا"
+      ],
+      "organization_ids": [
+        "Q8682",
+        "Q8760",
+        "Q12217",
+        "Q1130849",
+        "Q10308",
+        "Q1246437",
+        "Q2310295",
+        "Q2713491",
+        "Q1129595",
+        "Q42267",
+        "Q18747"
+      ],
+      "organization_names": [
+        "ريال مدريد",
+        "ديبورتيفو لاكورونيا",
+        "ريال مدريد كاستيا",
+        "نادي ليفربول",
+        "ريال سرقسطة",
+        "ريال مدريد ج",
+        "منتخب إسبانيا تحت 17 سنة لكرة القدم",
+        "منتخب إسبانيا تحت 19 سنة لكرة القدم",
+        "منتخب إسبانيا تحت 21 سنة لكرة القدم",
+        "منتخب إسبانيا لكرة القدم",
+        "وست هام يونايتد"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q250901",
+      "identity_verified_at": "2026-10-16T10:09:38.880481+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 17,
+      "created_at": "2026-10-16T10:09:38.882399+00:00"
+    },
+    "P0000014": {
+      "person_id": "P0000014",
+      "canonical_name": "Mikel Merino",
+      "canonical_name_ar": "ميكل ميرينو",
+      "canonical_name_original": "Mikel Merino",
+      "aliases": [
+        "Mikel Merino",
+        "Mikel Merino Zazón",
+        "Mikel Merino Zazon"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q17612631",
+      "birth_date": "1996-06-22",
+      "nationality_ids": [
+        "Q29"
+      ],
+      "nationality_names": [
+        "إسبانيا"
+      ],
+      "position_ids": [
+        "Q18691898"
+      ],
+      "position_names": [
+        "لاعب ارتكاز"
+      ],
+      "national_team_ids": [
+        "Q29"
+      ],
+      "national_team_names": [
+        "إسبانيا"
+      ],
+      "organization_ids": [
+        "Q10286",
+        "Q41420",
+        "Q10315",
+        "Q1129595",
+        "Q2657829",
+        "Q2713491",
+        "Q2637337",
+        "Q42267",
+        "Q18716",
+        "Q9617",
+        "Q115816275",
+        "Q28404864"
+      ],
+      "organization_names": [
+        "أوساسونا",
+        "بوروسيا دورتموند",
+        "ريال سوسيداد",
+        "منتخب إسبانيا تحت 21 سنة لكرة القدم",
+        "أوساسونا ب",
+        "منتخب إسبانيا تحت 19 سنة لكرة القدم",
+        "منتخب إسبانيا تحت 23 سنة لكرة القدم",
+        "منتخب إسبانيا لكرة القدم",
+        "نيوكاسل يونايتد",
+        "نادي آرسنال",
+        "CD Amigó",
+        "أوساسونا كانتيرا"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q17612631",
+      "identity_verified_at": "2026-10-16T10:09:45.673552+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 18,
+      "created_at": "2026-10-16T10:09:45.675454+00:00"
     }
   },
   "organizations": {},
@@ -630,7 +759,9 @@
     "wikidata:Q21620666": "P0000009",
     "wikidata:Q58494476": "P0000010",
     "wikidata:Q30007142": "P0000011",
-    "wikidata:Q28973866": "P0000012"
+    "wikidata:Q28973866": "P0000012",
+    "wikidata:Q250901": "P0000013",
+    "wikidata:Q17612631": "P0000014"
   },
   "name_index": {
     "dominik livakovic": [
@@ -716,6 +847,18 @@
     ],
     "فينيسيوس جوزيه بايكساو دي اوليفيرا جونيور": [
       "P0000012"
+    ],
+    "alvaro arbeloa": [
+      "P0000013"
+    ],
+    "اربيلوا": [
+      "P0000013"
+    ],
+    "mikel merino": [
+      "P0000014"
+    ],
+    "mikel merino zazon": [
+      "P0000014"
     ]
   }
 }

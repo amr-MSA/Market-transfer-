@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-16T05:48:34.699750+00:00",
+  "updated_at": "2026-10-16T10:09:51.360481+00:00",
   "events": [],
   "articles": [
     {
@@ -130,6 +130,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/15/bournemouth-sturm-graz-europa-league-match-report",
       "seen_at": "2026-10-16T01:08:11.409479+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/16/martinez-sorry-outburst-european-reaction-premier-league-latest-football-news-live",
+      "seen_at": "2026-10-16T10:09:37.673391+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8dx3l9r5lqlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-16T10:09:44.355208+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-16T10:09:51.360481+00:00"
     }
   ],
   "published": {
@@ -316,6 +328,48 @@
       },
       "published_at": "2026-10-13T03:46:14.378762+00:00",
       "updated_at": "2026-10-13T03:46:14.378762+00:00",
+      "media": null
+    },
+    "8bd49e69b6ddeff836d90cc0": {
+      "type": "أخبار ناد",
+      "from": "Fulham",
+      "to": null,
+      "player": null,
+      "person": "Alvaro Arbeloa",
+      "entity_type": "manager",
+      "article_id": "https://www.theguardian.com/football/live/2026/oct/16/martinez-sorry-outburst-european-reaction-premier-league-latest-football-news-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "8bd49e69b6ddeff836d90cc0",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-16T10:09:42.929234+00:00",
+      "updated_at": "2026-10-16T10:09:42.929234+00:00",
+      "media": null
+    },
+    "1b1cd3e609553aea64d49737": {
+      "type": "تصريح",
+      "from": "Arsenal",
+      "to": null,
+      "player": "Mikel Merino",
+      "person": "Mikel Merino",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/c8dx3l9r5lqlo?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "1b1cd3e609553aea64d49737",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-16T10:09:49.753200+00:00",
+      "updated_at": "2026-10-16T10:09:49.753200+00:00",
       "media": null
     }
   }
