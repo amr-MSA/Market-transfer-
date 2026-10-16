@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-16T21:31:20.744113+00:00",
+  "updated_at": "2026-10-16T23:49:31.336731+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq4g1xerk398o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-09T23:06:48.476145+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6d93ql8jvdko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-09T23:06:54.303305+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/09/chelsea-xabi-alonso-cole-palmer-england-thomas-tuchel",
-      "seen_at": "2026-10-09T23:07:08.580927+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/09/premier-league-managers-reaction-manchester-city-verdict",
       "seen_at": "2026-10-10T02:16:52.998093+00:00"
@@ -166,6 +154,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck7vprzqmr56o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-16T21:31:20.744113+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/16/wolves-chirewa-extends-burnleys-home-woes-as-vardys-strike-is-in-vain",
+      "seen_at": "2026-10-16T23:49:24.895143+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/16/michael-carrick-lisandro-martinez-manchester-united-leeds-premier-league",
+      "seen_at": "2026-10-16T23:49:31.336731+00:00"
     }
   ],
   "published": {
