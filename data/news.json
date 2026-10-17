@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-17T16:50:09.555449+00:00",
+  "updated_at": "2026-10-17T18:53:35.166074+00:00",
   "events": [],
   "articles": [
     {
@@ -194,6 +194,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/17/brentford-liverpool-premier-league-match-report",
       "seen_at": "2026-10-17T16:50:09.555449+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c38xzv091v5go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-17T18:53:17.027338+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c9vgr6vj4mnyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-17T18:53:35.166074+00:00"
     }
   ],
   "published": {
