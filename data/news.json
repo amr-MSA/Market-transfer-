@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-17T21:08:36.275570+00:00",
+  "updated_at": "2026-10-17T23:06:20.701842+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/10/real-madrids-vinicius-junior-sent-off-for-hair-pulling-in-victory-over-villarreal",
-      "seen_at": "2026-10-10T22:05:41.398146+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/iplayer/episode/m0032wxj?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-11T00:55:59.677332+00:00"
@@ -210,6 +206,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckgelq3gxx49o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T21:08:36.275570+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1e15g76jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-17T23:06:20.701842+00:00"
     }
   ],
   "published": {
