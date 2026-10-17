@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-17T06:09:46.795772+00:00",
+  "updated_at": "2026-10-17T10:38:38.143281+00:00",
   "events": [],
   "articles": [
     {
@@ -162,6 +162,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/17/james-mcclean-wearing-the-poppy-was-just-never-going-to-happen",
       "seen_at": "2026-10-17T06:09:46.795772+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/17/everton-v-chelsea-premier-league-live",
+      "seen_at": "2026-10-17T10:38:33.836607+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/17/manchester-city-in-action-premier-league-buildup-and-more-matchday-live",
+      "seen_at": "2026-10-17T10:38:35.343441+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj5ynpgzly7no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-17T10:38:38.143281+00:00"
     }
   ],
   "published": {
@@ -391,6 +403,23 @@
       "published_at": "2026-10-16T10:09:49.753200+00:00",
       "updated_at": "2026-10-16T10:09:49.753200+00:00",
       "media": null
+    },
+    "17bd75207fbcc3a03750dcc4": {
+      "type": "أخرى",
+      "from": "Real Madrid",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "club",
+      "article_id": "https://www.theguardian.com/football/live/2026/oct/17/manchester-city-in-action-premier-league-buildup-and-more-matchday-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "17bd75207fbcc3a03750dcc4",
+      "delivery": {},
+      "published_at": null,
+      "updated_at": "2026-10-17T10:38:35.343415+00:00"
     }
   }
 }
