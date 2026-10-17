@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-17T13:55:51.054527+00:00",
+  "updated_at": "2026-10-17T16:50:09.555449+00:00",
   "events": [],
   "articles": [
     {
@@ -182,6 +182,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/17/manchester-city-v-ipswich-brentford-v-liverpool-and-more-football-clockwatch-live",
       "seen_at": "2026-10-17T13:55:51.054527+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/17/newcastle-v-aston-villa-premier-league-live",
+      "seen_at": "2026-10-17T16:49:30.893961+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/17/championship-roundup-middlesbrough-watford-millwall-swansea-west-ham",
+      "seen_at": "2026-10-17T16:49:32.604863+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/17/brentford-liverpool-premier-league-match-report",
+      "seen_at": "2026-10-17T16:50:09.555449+00:00"
     }
   ],
   "published": {
