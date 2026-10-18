@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-18T09:48:51.861858+00:00",
+  "updated_at": "2026-10-18T13:37:26.163942+00:00",
   "events": [],
   "articles": [
     {
@@ -222,6 +222,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/18/wigan-pine-for-fa-cup-glory-as-not-even-victory-can-lift-them-off-foot-of-league-one",
       "seen_at": "2026-10-18T09:48:51.861858+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/18/leeds-v-manchester-united-premier-league-live",
+      "seen_at": "2026-10-18T13:37:24.156199+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/18/chelsea-tottenham-wsl-match-report",
+      "seen_at": "2026-10-18T13:37:26.163942+00:00"
     }
   ],
   "published": {
