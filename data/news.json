@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-18T13:37:26.163942+00:00",
+  "updated_at": "2026-10-18T16:52:29.257209+00:00",
   "events": [],
   "articles": [
     {
@@ -230,6 +230,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/18/chelsea-tottenham-wsl-match-report",
       "seen_at": "2026-10-18T13:37:26.163942+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/18/nottingham-forest-v-arsenal-premier-league-live",
+      "seen_at": "2026-10-18T16:52:25.941821+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/18/bournemouth-sunderland-premier-league-match-report",
+      "seen_at": "2026-10-18T16:52:27.661212+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/18/leeds-manchester-united-premier-league-match-report",
+      "seen_at": "2026-10-18T16:52:29.257209+00:00"
     }
   ],
   "published": {
