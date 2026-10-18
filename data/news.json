@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-17T23:06:20.701842+00:00",
+  "updated_at": "2026-10-18T00:57:41.185427+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/iplayer/episode/m0032wxj?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-11T00:55:59.677332+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cw073z5j55y9o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-12T01:21:49.294022+00:00"
@@ -210,6 +206,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1e15g76jo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T23:06:20.701842+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/17/scottish-premiership-kilmarnock-rangers-dundee-celtic-hearts",
+      "seen_at": "2026-10-18T00:57:41.185427+00:00"
     }
   ],
   "published": {
