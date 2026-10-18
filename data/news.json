@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-18T19:03:04.701666+00:00",
+  "updated_at": "2026-10-18T21:25:33.383359+00:00",
   "events": [],
   "articles": [
     {
@@ -250,6 +250,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cw4g1dgr2v93o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-18T19:02:57.257975+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/18/manchester-united-michael-carrick-omar-berrada-leeds-premier-league",
+      "seen_at": "2026-10-18T21:25:31.360499+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3qjnyw8qe4do?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-18T21:25:33.383359+00:00"
     }
   ],
   "published": {
