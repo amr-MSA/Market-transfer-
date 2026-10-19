@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-19T13:59:20.648164+00:00",
+  "updated_at": "2026-10-19T19:44:53.109934+00:00",
   "events": [],
   "articles": [
     {
@@ -282,6 +282,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqrkyzgre7neo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T13:59:20.648164+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq2d6npjy9xlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-19T19:44:17.760602+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck9qznlywy8no?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-19T19:44:53.109934+00:00"
     }
   ],
   "published": {
@@ -548,6 +556,27 @@
       },
       "published_at": "2026-10-18T19:03:04.701666+00:00",
       "updated_at": "2026-10-18T19:03:04.701666+00:00",
+      "media": null
+    },
+    "466bcf62efa231bc8feb602e": {
+      "type": "أخبار ناد",
+      "from": "Crystal Palace",
+      "to": null,
+      "player": null,
+      "person": "Pierre Sage",
+      "entity_type": "manager",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cq2d6npjy9xlo?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "466bcf62efa231bc8feb602e",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-19T19:44:34.456580+00:00",
+      "updated_at": "2026-10-19T19:44:34.456580+00:00",
       "media": null
     }
   }
