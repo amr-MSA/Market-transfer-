@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-19T06:43:21.890278+00:00",
+  "updated_at": "2026-10-19T13:59:20.648164+00:00",
   "events": [],
   "articles": [
     {
@@ -270,6 +270,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwkg57jpj3yyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T06:43:21.890278+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5djv21rkekwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-19T13:59:10.026861+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/19/antoine-semenyo-eight-week-knee-injury-absence-manchester-city-short-cover-erling-haaland",
+      "seen_at": "2026-10-19T13:59:18.308995+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqrkyzgre7neo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-19T13:59:20.648164+00:00"
     }
   ],
   "published": {
