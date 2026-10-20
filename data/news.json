@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-19T23:06:51.039653+00:00",
+  "updated_at": "2026-10-20T01:46:19.351743+00:00",
   "events": [],
   "articles": [
     {
@@ -302,6 +302,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c9x28pyg05vyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T23:06:51.039653+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqgm0zy4d23po?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-20T01:45:46.148033+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/19/tottenham-coventry-premier-league-match-report",
+      "seen_at": "2026-10-20T01:46:02.427229+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crx23ndd337wo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-20T01:46:19.351743+00:00"
     }
   ],
   "published": {
