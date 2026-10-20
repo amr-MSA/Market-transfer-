@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-20T17:09:45.705566+00:00",
+  "updated_at": "2026-10-20T20:33:49.716459+00:00",
   "events": [],
   "articles": [
     {
@@ -322,6 +322,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/20/bayern-munich-arsenal-champions-league",
       "seen_at": "2026-10-20T17:09:45.705566+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/20/psg-v-barcelona-manchester-city-v-aek-athens-and-more-champions-league-live",
+      "seen_at": "2026-10-20T20:33:49.716459+00:00"
     }
   ],
   "published": {
