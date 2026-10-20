@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-20T12:13:25.487095+00:00",
+  "updated_at": "2026-10-20T17:09:45.705566+00:00",
   "events": [],
   "articles": [
     {
@@ -314,6 +314,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/20/erik-ten-hag-accuses-cristiano-ronaldo-of-letting-down-manchester-united",
       "seen_at": "2026-10-20T12:13:25.487095+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjkgeqxgz5d5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-20T17:09:38.377392+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/20/bayern-munich-arsenal-champions-league",
+      "seen_at": "2026-10-20T17:09:45.705566+00:00"
     }
   ],
   "published": {
@@ -601,6 +609,27 @@
       },
       "published_at": "2026-10-19T19:44:34.456580+00:00",
       "updated_at": "2026-10-19T19:44:34.456580+00:00",
+      "media": null
+    },
+    "c63930e62847e6acf61042ba": {
+      "type": "أخرى",
+      "from": "Burnley",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "club",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cjkgeqxgz5d5o?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "c63930e62847e6acf61042ba",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-20T17:09:43.429755+00:00",
+      "updated_at": "2026-10-20T17:09:43.429755+00:00",
       "media": null
     }
   }
