@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-20T01:46:19.351743+00:00",
+  "updated_at": "2026-10-20T06:41:11.370164+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cw78p7l7rp30o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-13T03:45:45.626441+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cme36q1gnpnlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-13T03:45:58.855783+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cw5yng2kjg8po?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-13T11:10:10.867393+00:00"
@@ -314,6 +306,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crx23ndd337wo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-20T01:46:19.351743+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1er9vdvyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-20T06:40:56.477951+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/sport/2026/oct/20/football-australia-chair-anter-isaac-dismisses-recent-fifa-complaints",
+      "seen_at": "2026-10-20T06:41:11.370164+00:00"
     }
   ],
   "published": {
