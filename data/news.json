@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-20T06:41:11.370164+00:00",
+  "updated_at": "2026-10-20T12:13:25.487095+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cw5yng2kjg8po?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-13T11:10:10.867393+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6kgq5j5d7qro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-13T11:10:12.443843+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cxr5ydvl41dlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-13T11:10:14.192983+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmdx3nk7kwwro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-14T01:29:31.113625+00:00"
@@ -314,6 +302,18 @@
     {
       "id": "https://www.theguardian.com/sport/2026/oct/20/football-australia-chair-anter-isaac-dismisses-recent-fifa-complaints",
       "seen_at": "2026-10-20T06:41:11.370164+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/20/amimal-rights-group-peta-urges-crystal-palace-retire-bald-eagle-mascot-phoenix-selhurst-park",
+      "seen_at": "2026-10-20T12:13:13.271257+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmx23n4qvnzeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-20T12:13:17.565040+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/20/erik-ten-hag-accuses-cristiano-ronaldo-of-letting-down-manchester-united",
+      "seen_at": "2026-10-20T12:13:25.487095+00:00"
     }
   ],
   "published": {
