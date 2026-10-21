@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-21T20:45:27.683480+00:00",
+  "updated_at": "2026-10-21T23:42:52.268245+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/14/manchester-city-v-paris-saint-germain-champions-league-live-score-updates",
-      "seen_at": "2026-10-14T20:48:02.289780+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c370pnz8d90wo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-14T20:48:03.964946+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/14/key-questions-lisandro-martinez-manchester-united-michael-carrick",
-      "seen_at": "2026-10-14T20:48:10.131651+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckd7qg5q87qvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-15T01:44:33.040657+00:00"
@@ -358,6 +346,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cme3xk2jkyv0o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-21T20:45:27.683480+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck79p7qq1q9ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-21T23:42:25.149461+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-21T23:42:52.268245+00:00"
     }
   ],
   "published": {
@@ -687,6 +683,27 @@
       },
       "published_at": "2026-10-21T17:23:37.441532+00:00",
       "updated_at": "2026-10-21T17:23:37.441532+00:00",
+      "media": null
+    },
+    "03d1b116d66d221bd6e1d9ca": {
+      "type": "تصريح",
+      "from": "Arsenal",
+      "to": null,
+      "player": "Harry Kane",
+      "person": "Declan Rice",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/ck79p7qq1q9ro?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "03d1b116d66d221bd6e1d9ca",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-21T23:42:46.315183+00:00",
+      "updated_at": "2026-10-21T23:42:46.315183+00:00",
       "media": null
     }
   }
