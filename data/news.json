@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-21T12:20:15.859793+00:00",
+  "updated_at": "2026-10-21T17:23:37.441532+00:00",
   "events": [],
   "articles": [
     {
@@ -342,6 +342,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/21/manchester-city-fifa-rules-grassroots-philipp-lahm",
       "seen_at": "2026-10-21T12:20:15.859793+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
+      "seen_at": "2026-10-21T17:23:10.850050+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crpdg2x7v1l2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-21T17:23:18.493319+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/21/champions-league-goals-football-daily-newsletter",
+      "seen_at": "2026-10-21T17:23:33.472589+00:00"
     }
   ],
   "published": {
@@ -650,6 +662,27 @@
       },
       "published_at": "2026-10-20T17:09:43.429755+00:00",
       "updated_at": "2026-10-20T17:09:43.429755+00:00",
+      "media": null
+    },
+    "6ae637fcc04f3d3b4cc32ace": {
+      "type": "أخرى",
+      "from": "Napoli",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "club",
+      "article_id": "https://www.theguardian.com/football/2026/oct/21/champions-league-goals-football-daily-newsletter",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "6ae637fcc04f3d3b4cc32ace",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-21T17:23:37.441532+00:00",
+      "updated_at": "2026-10-21T17:23:37.441532+00:00",
       "media": null
     }
   }
