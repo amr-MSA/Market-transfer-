@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-20T23:21:55.080560+00:00",
+  "updated_at": "2026-10-21T01:43:31.805136+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmdx3nk7kwwro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-14T01:29:31.113625+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c933xdrl731lo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-14T06:35:57.181001+00:00"
@@ -334,6 +330,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqx2vjdnwkyyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-20T23:21:55.080560+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/21/manchester-city-david-kogan-independent-football-regulator",
+      "seen_at": "2026-10-21T01:43:25.703364+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckg5je34l0q5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-21T01:43:31.805136+00:00"
     }
   ],
   "published": {
