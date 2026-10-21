@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-21T17:23:37.441532+00:00",
+  "updated_at": "2026-10-21T20:45:27.683480+00:00",
   "events": [],
   "articles": [
     {
@@ -354,6 +354,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/21/champions-league-goals-football-daily-newsletter",
       "seen_at": "2026-10-21T17:23:33.472589+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cme3xk2jkyv0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-21T20:45:27.683480+00:00"
     }
   ],
   "published": {
