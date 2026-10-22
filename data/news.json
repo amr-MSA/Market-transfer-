@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-21T23:42:52.268245+00:00",
+  "updated_at": "2026-10-22T01:53:04.042865+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckd7qg5q87qvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-15T01:44:33.040657+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm3r5p11d23no?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-15T11:58:26.874126+00:00"
@@ -354,6 +350,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-21T23:42:52.268245+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c8040gdrdlwwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-22T01:52:59.405184+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/21/champions-league-roundup-real-madrid-leipzig-inter-shakhtar-sporting-lask-brugge-lens-betis-feyenoord",
+      "seen_at": "2026-10-22T01:53:01.899445+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c3qjnerzngkqo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-22T01:53:04.042865+00:00"
     }
   ],
   "published": {
