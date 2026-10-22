@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-22T12:31:28.483767+00:00",
+  "updated_at": "2026-10-22T17:33:02.562841+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/15/lyon-v-crystal-palace-torreense-v-sunderland-and-more-europa-league-live",
-      "seen_at": "2026-10-15T16:32:56.818473+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/who-scored-blog/2026/oct/15/chelsea-premier-league-fun-team-sustainable-xabi-alonso-europe",
-      "seen_at": "2026-10-15T16:33:02.037512+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/15/bournemouth-v-sturm-graz-benfica-v-celtic-and-more-europa-league-live",
       "seen_at": "2026-10-15T20:00:20.358371+00:00"
@@ -370,6 +362,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp67grjro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-22T12:31:28.483767+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/22/lech-poznan-sunderland-juventus-rennes-bournemouth-milan-crystal-palace-celtic-europa-league-live",
+      "seen_at": "2026-10-22T17:32:59.105964+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/22/bruno-fernandes-betrayal-manchester-united-michael-carrick-culture-of-entitlement",
+      "seen_at": "2026-10-22T17:33:00.945432+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cked364q8jxjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-22T17:33:02.562841+00:00"
     }
   ],
   "published": {
