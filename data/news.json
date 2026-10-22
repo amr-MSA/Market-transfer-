@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-22T06:46:52.346296+00:00",
+  "updated_at": "2026-10-22T12:31:28.483767+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm3r5p11d23no?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-15T11:58:26.874126+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/15/fa-spending-wembley-hospitality-free-tickets-fa-council-rises-25-percent",
-      "seen_at": "2026-10-15T11:58:52.084424+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3n04gy12r91o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-15T11:59:08.837075+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/15/lyon-v-crystal-palace-torreense-v-sunderland-and-more-europa-league-live",
       "seen_at": "2026-10-15T16:32:56.818473+00:00"
@@ -370,6 +358,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6x2v8x7ry17o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-22T06:46:52.346296+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/22/enzo-maresca-phil-foden-manchester-city-form",
+      "seen_at": "2026-10-22T12:31:22.402864+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis",
+      "seen_at": "2026-10-22T12:31:25.330299+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp67grjro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-22T12:31:28.483767+00:00"
     }
   ],
   "published": {
