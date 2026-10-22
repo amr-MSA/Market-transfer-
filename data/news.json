@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-22T20:44:45.621013+00:00",
+  "updated_at": "2026-10-22T23:39:00.876940+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6lyez88m1n2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-15T22:59:45.222080+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-10-16T01:08:04.603831+00:00"
@@ -370,6 +366,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cked364q8jxjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-22T17:33:02.562841+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend",
+      "seen_at": "2026-10-22T23:38:54.962229+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqx287ekvvvpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-22T23:39:00.876940+00:00"
     }
   ],
   "published": {
