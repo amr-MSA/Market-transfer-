@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T12:33:42.839063+00:00",
+  "updated_at": "2026-10-23T17:23:54.041751+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g189leelno?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T14:49:33.913176+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6jrwn993y0lo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T14:49:50.585731+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/16/premier-league-news-go-bananas-maresca-loving-fans-show-of-defiance-james-injury-blow-for-blues",
       "seen_at": "2026-10-16T18:27:05.503131+00:00"
@@ -382,6 +374,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/23/manchester-united-latest-european-reaction-and-more-football-news-live",
       "seen_at": "2026-10-23T12:33:42.839063+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/23/vincent-kompany-hospital-collapsing-bayern-munich-training",
+      "seen_at": "2026-10-23T17:23:50.831121+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck3r5792en7go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T17:23:52.413732+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/sport/2026/oct/23/premier-league-antonelli-goes-for-f1-title-plus-wsl-and-clasico-action-follow-with-us",
+      "seen_at": "2026-10-23T17:23:54.041751+00:00"
     }
   ],
   "published": {
