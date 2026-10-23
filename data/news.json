@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T17:23:54.041751+00:00",
+  "updated_at": "2026-10-23T20:33:37.702941+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/16/premier-league-news-go-bananas-maresca-loving-fans-show-of-defiance-james-injury-blow-for-blues",
-      "seen_at": "2026-10-16T18:27:05.503131+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6je5lwxk5l0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T18:27:25.424969+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqn73xe5eelgo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-16T21:31:14.949852+00:00"
@@ -386,6 +378,14 @@
     {
       "id": "https://www.theguardian.com/sport/2026/oct/23/premier-league-antonelli-goes-for-f1-title-plus-wsl-and-clasico-action-follow-with-us",
       "seen_at": "2026-10-23T17:23:54.041751+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/23/ipswich-v-nottingham-forest-premier-league-live",
+      "seen_at": "2026-10-23T20:32:57.185562+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqn06r9pje93o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T20:33:23.108107+00:00"
     }
   ],
   "published": {
@@ -736,6 +736,27 @@
       },
       "published_at": "2026-10-21T23:42:46.315183+00:00",
       "updated_at": "2026-10-21T23:42:46.315183+00:00",
+      "media": null
+    },
+    "f1bd4e8f066676490bd7256e": {
+      "type": "مباراة",
+      "from": "Rangers",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "club",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cqn06r9pje93o?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "f1bd4e8f066676490bd7256e",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-23T20:33:37.702941+00:00",
+      "updated_at": "2026-10-23T20:33:37.702941+00:00",
       "media": null
     }
   }
