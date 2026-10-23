@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T01:57:10.722971+00:00",
+  "updated_at": "2026-10-23T07:00:36.447560+00:00",
   "events": [],
   "articles": [
     {
@@ -370,6 +370,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/22/europa-league-sunderland-held-in-poznan-as-juventus-denied-comeback-win",
       "seen_at": "2026-10-23T01:57:10.722971+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq1m43jee9z5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T07:00:32.402182+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3x2wpyg18j7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T07:00:34.752371+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c60qkpe0e54qo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T07:00:36.447560+00:00"
     }
   ],
   "published": {
