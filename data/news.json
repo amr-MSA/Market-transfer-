@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T07:00:36.447560+00:00",
+  "updated_at": "2026-10-23T12:33:42.839063+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/16/martinez-sorry-outburst-european-reaction-premier-league-latest-football-news-live",
-      "seen_at": "2026-10-16T10:09:37.673391+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8dx3l9r5lqlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T10:09:44.355208+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq073d9l0ly9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T10:09:51.360481+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm4g189leelno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-16T14:49:33.913176+00:00"
@@ -382,6 +370,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c60qkpe0e54qo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-23T07:00:36.447560+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6lylk1zyqd7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T12:33:32.670910+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmvg6j8jezn7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T12:33:33.630021+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/23/manchester-united-latest-european-reaction-and-more-football-news-live",
+      "seen_at": "2026-10-23T12:33:42.839063+00:00"
     }
   ],
   "published": {
