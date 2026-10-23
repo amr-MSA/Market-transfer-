@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T20:33:37.702941+00:00",
+  "updated_at": "2026-10-23T23:26:07.492205+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqn73xe5eelgo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T21:31:14.949852+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck7vprzqmr56o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-16T21:31:20.744113+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/16/wolves-chirewa-extends-burnleys-home-woes-as-vardys-strike-is-in-vain",
       "seen_at": "2026-10-16T23:49:24.895143+00:00"
@@ -386,6 +378,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqn06r9pje93o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-23T20:33:23.108107+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/23/arsenal-arteta-concerned-saka-durability-six-week-absence",
+      "seen_at": "2026-10-23T23:26:06.095182+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwn73kzzr8veo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-23T23:26:07.492205+00:00"
     }
   ],
   "published": {
