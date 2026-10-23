@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-22T23:39:00.876940+00:00",
+  "updated_at": "2026-10-23T01:57:10.722971+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/16/premier-league-10-things-to-look-out-for-this-weekend",
-      "seen_at": "2026-10-16T01:08:04.603831+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/15/bournemouth-sturm-graz-europa-league-match-report",
-      "seen_at": "2026-10-16T01:08:11.409479+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/16/martinez-sorry-outburst-european-reaction-premier-league-latest-football-news-live",
       "seen_at": "2026-10-16T10:09:37.673391+00:00"
@@ -374,6 +366,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqx287ekvvvpo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-22T23:39:00.876940+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/22/europa-league-sunderland-held-in-poznan-as-juventus-denied-comeback-win",
+      "seen_at": "2026-10-23T01:57:10.722971+00:00"
     }
   ],
   "published": {
