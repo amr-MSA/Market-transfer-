@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T11:30:41.938261+00:00",
+  "updated_at": "2026-10-24T14:47:26.545637+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c674pzzlz8zlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T13:55:49.448916+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/17/manchester-city-v-ipswich-brentford-v-liverpool-and-more-football-clockwatch-live",
-      "seen_at": "2026-10-17T13:55:51.054527+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/17/newcastle-v-aston-villa-premier-league-live",
       "seen_at": "2026-10-17T16:49:30.893961+00:00"
@@ -382,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6q8nd9g9n72o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-24T11:30:41.938261+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/24/tottenham-arsenal-wsl-premier-league-efl-football-clockwatch-live",
+      "seen_at": "2026-10-24T14:47:15.495554+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/24/championship-roundup-sheffield-united-derby-west-ham-swansea",
+      "seen_at": "2026-10-24T14:47:21.299473+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cmy0r7epegd4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T14:47:26.545637+00:00"
     }
   ],
   "published": {
