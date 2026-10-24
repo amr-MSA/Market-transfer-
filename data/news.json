@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T06:32:21.178824+00:00",
+  "updated_at": "2026-10-24T11:30:41.938261+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/17/everton-v-chelsea-premier-league-live",
-      "seen_at": "2026-10-17T10:38:33.836607+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/17/manchester-city-in-action-premier-league-buildup-and-more-matchday-live",
-      "seen_at": "2026-10-17T10:38:35.343441+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cj5ynpgzly7no?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T10:38:38.143281+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c674pzzlz8zlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T13:55:49.448916+00:00"
@@ -382,6 +370,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cknv01g9n27do?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-24T06:32:21.178824+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/articles/cmy4x7zvv28ko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T11:30:32.350060+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/24/aston-villa-v-manchester-city-premier-league-live",
+      "seen_at": "2026-10-24T11:30:34.335555+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6q8nd9g9n72o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T11:30:41.938261+00:00"
     }
   ],
   "published": {
