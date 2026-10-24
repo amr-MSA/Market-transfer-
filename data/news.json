@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T14:47:26.545637+00:00",
+  "updated_at": "2026-10-24T17:39:29.548725+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/17/newcastle-v-aston-villa-premier-league-live",
-      "seen_at": "2026-10-17T16:49:30.893961+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/17/championship-roundup-middlesbrough-watford-millwall-swansea-west-ham",
-      "seen_at": "2026-10-17T16:49:32.604863+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/17/brentford-liverpool-premier-league-match-report",
-      "seen_at": "2026-10-17T16:50:09.555449+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c38xzv091v5go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T18:53:17.027338+00:00"
@@ -386,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cmy0r7epegd4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-24T14:47:26.545637+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/24/chelsea-v-tottenham-premier-league-live",
+      "seen_at": "2026-10-24T17:39:25.348879+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ck05486e1l53o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T17:39:27.788493+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6p9gkdzzpnro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T17:39:29.548725+00:00"
     }
   ],
   "published": {
