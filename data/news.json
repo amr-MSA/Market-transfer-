@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T01:47:51.015702+00:00",
+  "updated_at": "2026-10-24T06:32:21.178824+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crp3gq832gqxo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T06:09:38.564266+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cw1l3dz2ppe0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T06:09:39.507862+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/17/james-mcclean-wearing-the-poppy-was-just-never-going-to-happen",
-      "seen_at": "2026-10-17T06:09:46.795772+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/17/everton-v-chelsea-premier-league-live",
       "seen_at": "2026-10-17T10:38:33.836607+00:00"
@@ -386,6 +374,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/23/ipswich-nottingham-forest-premier-league-match-report",
       "seen_at": "2026-10-24T01:47:51.015702+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck240l3n774zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T06:32:16.071437+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cknv01g9n27do?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T06:32:21.178824+00:00"
     }
   ],
   "published": {
