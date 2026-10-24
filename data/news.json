@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-23T23:26:07.492205+00:00",
+  "updated_at": "2026-10-24T01:47:51.015702+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/16/wolves-chirewa-extends-burnleys-home-woes-as-vardys-strike-is-in-vain",
-      "seen_at": "2026-10-16T23:49:24.895143+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/16/michael-carrick-lisandro-martinez-manchester-united-leeds-premier-league",
-      "seen_at": "2026-10-16T23:49:31.336731+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/crp3gq832gqxo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T06:09:38.564266+00:00"
@@ -386,6 +378,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwn73kzzr8veo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-23T23:26:07.492205+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/23/premier-league-news-spurs-nine-injuries-normal-says-de-zerbi-emotional-control-keeps-blues-red-free",
+      "seen_at": "2026-10-24T01:47:36.461819+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/23/ipswich-nottingham-forest-premier-league-match-report",
+      "seen_at": "2026-10-24T01:47:51.015702+00:00"
     }
   ],
   "published": {
