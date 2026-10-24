@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T17:39:29.548725+00:00",
+  "updated_at": "2026-10-24T19:47:19.931435+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c38xzv091v5go?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T18:53:17.027338+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c9vgr6vj4mnyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T18:53:35.166074+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c9gkv34kezdko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-17T21:08:22.000633+00:00"
@@ -386,6 +378,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6p9gkdzzpnro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-24T17:39:29.548725+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/24/european-football-napoli-roma-borussia-dortmund-atletico-madrid-paris-fc",
+      "seen_at": "2026-10-24T19:47:03.049577+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ckly0dnqz0r7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T19:47:05.090388+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm4gv830j73do?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-24T19:47:05.989851+00:00"
     }
   ],
   "published": {
@@ -757,6 +761,27 @@
       },
       "published_at": "2026-10-23T20:33:37.702941+00:00",
       "updated_at": "2026-10-23T20:33:37.702941+00:00",
+      "media": null
+    },
+    "ba7ab0a7d9b27ba67f3c4021": {
+      "type": "إقالة مدرب",
+      "from": "Burnley",
+      "to": null,
+      "player": null,
+      "person": "Nicky Hayen",
+      "entity_type": "manager",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cm4gv830j73do?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "ba7ab0a7d9b27ba67f3c4021",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-24T19:47:19.931435+00:00",
+      "updated_at": "2026-10-24T19:47:19.931435+00:00",
       "media": null
     }
   }
