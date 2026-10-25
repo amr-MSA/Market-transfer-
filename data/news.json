@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-25T13:46:46.680144+00:00",
+  "updated_at": "2026-10-25T17:15:04.652023+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/18/nottingham-forest-v-arsenal-premier-league-live",
-      "seen_at": "2026-10-18T16:52:25.941821+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/18/bournemouth-sunderland-premier-league-match-report",
-      "seen_at": "2026-10-18T16:52:27.661212+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/18/leeds-manchester-united-premier-league-match-report",
-      "seen_at": "2026-10-18T16:52:29.257209+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cme8rz8x6pw8o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-18T19:02:42.136730+00:00"
@@ -394,6 +382,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/25/manchester-united-v-bournemouth-liverpool-v-brighton-and-more-premier-league-live",
       "seen_at": "2026-10-25T13:46:46.680144+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/25/sunderland-v-leeds-premier-league-live",
+      "seen_at": "2026-10-25T17:14:56.182665+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-25T17:14:58.293965+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/25/hull-brentford-premier-league-match-report",
+      "seen_at": "2026-10-25T17:15:04.652023+00:00"
     }
   ],
   "published": {
