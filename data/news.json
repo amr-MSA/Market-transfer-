@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-25T17:15:04.652023+00:00",
+  "updated_at": "2026-10-25T19:42:24.808172+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cme8rz8x6pw8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-18T19:02:42.136730+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cw4g1dgr2v93o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-18T19:02:57.257975+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/18/manchester-united-michael-carrick-omar-berrada-leeds-premier-league",
       "seen_at": "2026-10-18T21:25:31.360499+00:00"
@@ -394,6 +386,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/25/hull-brentford-premier-league-match-report",
       "seen_at": "2026-10-25T17:15:04.652023+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/25/barcelona-v-real-madrid-el-clasico-live",
+      "seen_at": "2026-10-25T19:41:36.548168+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/25/manchester-united-board-crisis-talks-michael-carrick-eddie-howe-bournemouth-premier-league",
+      "seen_at": "2026-10-25T19:42:08.598975+00:00"
     }
   ],
   "published": {
@@ -807,6 +807,48 @@
       },
       "published_at": "2026-10-25T00:06:05.050405+00:00",
       "updated_at": "2026-10-25T00:06:05.050405+00:00",
+      "media": null
+    },
+    "450db760d026e50d5c1d76d9": {
+      "type": "مباراة",
+      "from": "Barcelona",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.theguardian.com/football/live/2026/oct/25/barcelona-v-real-madrid-el-clasico-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "450db760d026e50d5c1d76d9",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-25T19:42:04.557565+00:00",
+      "updated_at": "2026-10-25T19:42:04.557565+00:00",
+      "media": null
+    },
+    "b8df47a50e99ff64c1fafd62": {
+      "type": "أخبار ناد",
+      "from": "Manchester United",
+      "to": null,
+      "player": null,
+      "person": "Michael Carrick",
+      "entity_type": "manager",
+      "article_id": "https://www.theguardian.com/football/2026/oct/25/manchester-united-board-crisis-talks-michael-carrick-eddie-howe-bournemouth-premier-league",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "b8df47a50e99ff64c1fafd62",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-25T19:42:24.808172+00:00",
+      "updated_at": "2026-10-25T19:42:24.808172+00:00",
       "media": null
     }
   }

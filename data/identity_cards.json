@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-10-21T23:42:26.212869+00:00",
+  "updated_at": "2026-10-25T19:42:09.805540+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -744,6 +744,64 @@
       "identity_status": "VERIFIED",
       "card_message_id": 18,
       "created_at": "2026-10-16T10:09:45.675454+00:00"
+    },
+    "P0000015": {
+      "person_id": "P0000015",
+      "canonical_name": "Michael Carrick",
+      "canonical_name_ar": "مايكل كاريك",
+      "canonical_name_original": "Michael Carrick",
+      "aliases": [
+        "Michael Carrick"
+      ],
+      "entity_type": "manager",
+      "identity_key": "wikidata:Q29566",
+      "birth_date": "1981-07-28",
+      "nationality_ids": [
+        "Q145"
+      ],
+      "nationality_names": [
+        "المملكة المتحدة"
+      ],
+      "position_ids": [
+        "Q193592"
+      ],
+      "position_names": [
+        "لاعب وسط"
+      ],
+      "national_team_ids": [
+        "Q21"
+      ],
+      "national_team_names": [
+        "إنجلترا"
+      ],
+      "organization_ids": [
+        "Q18656",
+        "Q19444",
+        "Q18747",
+        "Q19634",
+        "Q18741",
+        "Q1049171",
+        "Q204238",
+        "Q1110944",
+        "Q47762"
+      ],
+      "organization_names": [
+        "مانشستر يونايتد",
+        "برمنغهام سيتي",
+        "وست هام يونايتد",
+        "سويندون تاون",
+        "توتنهام هوتسبير",
+        "منتخب إنجلترا تحت 18 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 21 سنة لكرة القدم",
+        "منتخب إنجلترا لكرة القدم الرديف",
+        "منتخب إنجلترا لكرة القدم"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q29566",
+      "identity_verified_at": "2026-10-25T19:42:09.803937+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 19,
+      "created_at": "2026-10-25T19:42:09.805522+00:00"
     }
   },
   "organizations": {},
@@ -761,7 +819,8 @@
     "wikidata:Q30007142": "P0000011",
     "wikidata:Q28973866": "P0000012",
     "wikidata:Q250901": "P0000013",
-    "wikidata:Q17612631": "P0000014"
+    "wikidata:Q17612631": "P0000014",
+    "wikidata:Q29566": "P0000015"
   },
   "name_index": {
     "dominik livakovic": [
@@ -859,6 +918,9 @@
     ],
     "mikel merino zazon": [
       "P0000014"
+    ],
+    "michael carrick": [
+      "P0000015"
     ]
   }
 }

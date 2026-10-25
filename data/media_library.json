@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 15,
+  "next_person_number": 16,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -122,6 +122,15 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-10-16T10:09:45.675432+00:00"
+    },
+    "P0000015": {
+      "person_id": "P0000015",
+      "name": "Michael Carrick",
+      "aliases": [],
+      "entity_type": "manager",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-10-25T19:42:09.805501+00:00"
     }
   },
   "clubs": {},
