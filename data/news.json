@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-24T21:58:31.081171+00:00",
+  "updated_at": "2026-10-25T00:06:09.484593+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1e15g76jo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-17T23:06:20.701842+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/17/scottish-premiership-kilmarnock-rangers-dundee-celtic-hearts",
       "seen_at": "2026-10-18T00:57:41.185427+00:00"
@@ -394,6 +390,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/24/chelsea-tottenham-premier-league-austin-macphee-mike-penders-roberto-de-zerbi",
       "seen_at": "2026-10-24T21:58:31.081171+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/iplayer/episode/m0033jlx?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-25T00:05:49.737046+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/24/xabia-alonso-urges-cole-palmer-to-learn-from-red-card-in-chelseas-defeat-to-tottenham",
+      "seen_at": "2026-10-25T00:06:00.765852+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/24/why-stanley-matthews-ballon-dor-triumph-echoes-for-harry-kane",
+      "seen_at": "2026-10-25T00:06:09.484593+00:00"
     }
   ],
   "published": {
@@ -786,6 +794,27 @@
       },
       "published_at": "2026-10-24T19:47:19.931435+00:00",
       "updated_at": "2026-10-24T19:47:19.931435+00:00",
+      "media": null
+    },
+    "7bc01406a88ee8b62c58a2a7": {
+      "type": "تصريح",
+      "from": "Chelsea",
+      "to": null,
+      "player": "Cole Palmer",
+      "person": "Cole Palmer",
+      "entity_type": "player",
+      "article_id": "https://www.theguardian.com/football/2026/oct/24/xabia-alonso-urges-cole-palmer-to-learn-from-red-card-in-chelseas-defeat-to-tottenham",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "7bc01406a88ee8b62c58a2a7",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-25T00:06:05.050405+00:00",
+      "updated_at": "2026-10-25T00:06:05.050405+00:00",
       "media": null
     }
   }
