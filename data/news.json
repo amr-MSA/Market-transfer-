@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-25T04:31:59.830155+00:00",
+  "updated_at": "2026-10-25T09:20:45.112514+00:00",
   "events": [],
   "articles": [
     {
@@ -398,6 +398,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/24/why-stanley-matthews-ballon-dor-triumph-echoes-for-harry-kane",
       "seen_at": "2026-10-25T00:06:09.484593+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/25/buildup-liverpool-brighton-manchester-united-bournemouth-matchday-live",
+      "seen_at": "2026-10-25T09:20:33.783078+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/25/ballon-dor-ceremony-returns-to-england-in-nod-to-revolutionary-stanley-matthews",
+      "seen_at": "2026-10-25T09:20:43.334271+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/25/ian-holloway-circus-swindon-outbursts-no-laughing-matter-fans",
+      "seen_at": "2026-10-25T09:20:45.112514+00:00"
     }
   ],
   "published": {
