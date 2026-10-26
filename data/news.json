@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-26T10:34:28.159933+00:00",
+  "updated_at": "2026-10-26T16:58:06.868213+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5djv21rkekwo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T13:59:10.026861+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/19/antoine-semenyo-eight-week-knee-injury-absence-manchester-city-short-cover-erling-haaland",
-      "seen_at": "2026-10-19T13:59:18.308995+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqrkyzgre7neo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T13:59:20.648164+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq2d6npjy9xlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T19:44:17.760602+00:00"
@@ -398,6 +386,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8e81xjy7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-26T10:34:28.159933+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmn8wzldd7q0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-26T16:57:49.483949+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/26/mourinhos-plan-comes-together-as-real-madrid-relaunch-with-clasico-statement",
+      "seen_at": "2026-10-26T16:57:55.678596+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8zv5dg42o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-26T16:58:06.868213+00:00"
     }
   ],
   "published": {
