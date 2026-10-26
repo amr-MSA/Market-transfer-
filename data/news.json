@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-26T16:58:06.868213+00:00",
+  "updated_at": "2026-10-26T21:22:52.108389+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq2d6npjy9xlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T19:44:17.760602+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck9qznlywy8no?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T19:44:53.109934+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwz0v8le7y3eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T23:06:39.248284+00:00"
@@ -398,6 +390,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8zv5dg42o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-26T16:58:06.868213+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/26/ballon-dor-2026-updates-from-70th-edition-in-london-live",
+      "seen_at": "2026-10-26T21:22:43.135938+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/26/england-under-15-walk-off-pitch-ireland-world-cup-racism-allegation",
+      "seen_at": "2026-10-26T21:22:49.946332+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/26/damning-data-michael-carrick-manchester-united-head-coach",
+      "seen_at": "2026-10-26T21:22:52.108389+00:00"
     }
   ],
   "published": {
