@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-26T04:44:59.801201+00:00",
+  "updated_at": "2026-10-26T10:34:28.159933+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cjr4yndrz1kro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T06:43:21.179822+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwkg57jpj3yyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T06:43:21.890278+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c5djv21rkekwo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-19T13:59:10.026861+00:00"
@@ -394,6 +386,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c804013klnn0o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-26T00:11:16.117405+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp680jm1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-26T10:33:48.854090+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/26/premier-league-10-talking-points-from-the-weekends-action",
+      "seen_at": "2026-10-26T10:34:07.407694+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8e81xjy7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-26T10:34:28.159933+00:00"
     }
   ],
   "published": {
