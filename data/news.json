@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-26T21:22:52.108389+00:00",
+  "updated_at": "2026-10-27T00:38:03.227695+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwz0v8le7y3eo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T23:06:39.248284+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crjwe6wyjeqwo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T23:06:45.101651+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c9x28pyg05vyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-19T23:06:51.039653+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqgm0zy4d23po?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-20T01:45:46.148033+00:00"
@@ -402,6 +390,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/26/damning-data-michael-carrick-manchester-united-head-coach",
       "seen_at": "2026-10-26T21:22:52.108389+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmly0g2y7q2zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T00:38:03.227695+00:00"
     }
   ],
   "published": {
