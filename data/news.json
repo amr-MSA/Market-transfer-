@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-27T10:54:44.757868+00:00",
+  "updated_at": "2026-10-27T16:08:58.080602+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/20/amimal-rights-group-peta-urges-crystal-palace-retire-bald-eagle-mascot-phoenix-selhurst-park",
-      "seen_at": "2026-10-20T12:13:13.271257+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmx23n4qvnzeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-20T12:13:17.565040+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/20/erik-ten-hag-accuses-cristiano-ronaldo-of-letting-down-manchester-united",
-      "seen_at": "2026-10-20T12:13:25.487095+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cjkgeqxgz5d5o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-20T17:09:38.377392+00:00"
@@ -386,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cx2ln5n7yqdo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-27T10:54:44.757868+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjr4y51g6zvvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T16:08:52.052600+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cw054vdz9g7mo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T16:08:56.012970+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6lylnkzp772o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T16:08:58.080602+00:00"
     }
   ],
   "published": {
