@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-27T05:34:33.350623+00:00",
+  "updated_at": "2026-10-27T10:54:44.757868+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1er9vdvyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-20T06:40:56.477951+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/sport/2026/oct/20/football-australia-chair-anter-isaac-dismisses-recent-fifa-complaints",
-      "seen_at": "2026-10-20T06:41:11.370164+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/20/amimal-rights-group-peta-urges-crystal-palace-retire-bald-eagle-mascot-phoenix-selhurst-park",
       "seen_at": "2026-10-20T12:13:13.271257+00:00"
@@ -382,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmly0g2y7q2zo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-27T00:38:03.227695+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/27/manchester-united-eddie-howe-newcastle-compensation-michael-carrick",
+      "seen_at": "2026-10-27T10:54:41.855617+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T10:54:42.774713+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx2ln5n7yqdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T10:54:44.757868+00:00"
     }
   ],
   "published": {
