@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-27T16:08:58.080602+00:00",
+  "updated_at": "2026-10-27T20:40:37.832778+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cjkgeqxgz5d5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-20T17:09:38.377392+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/20/bayern-munich-arsenal-champions-league",
-      "seen_at": "2026-10-20T17:09:45.705566+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/20/psg-v-barcelona-manchester-city-v-aek-athens-and-more-champions-league-live",
-      "seen_at": "2026-10-20T20:33:49.716459+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck0e0zydv33go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-20T23:21:41.104678+00:00"
@@ -386,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6lylnkzp772o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-27T16:08:58.080602+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmqlngxw6lv3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-27T20:40:14.873432+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/27/fleetwood-town-v-arsenal-carabao-cup-fourth-round-live",
+      "seen_at": "2026-10-27T20:40:22.334508+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/27/manchester-united-michael-carrick-faded-grandeur",
+      "seen_at": "2026-10-27T20:40:37.832778+00:00"
     }
   ],
   "published": {
