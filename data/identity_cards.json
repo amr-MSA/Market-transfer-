@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-10-25T19:42:09.805540+00:00",
+  "updated_at": "2026-10-28T21:42:50.404971+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -802,6 +802,65 @@
       "identity_status": "VERIFIED",
       "card_message_id": 19,
       "created_at": "2026-10-25T19:42:09.805522+00:00"
+    },
+    "P0000016": {
+      "person_id": "P0000016",
+      "canonical_name": "Jadon Sancho",
+      "canonical_name_ar": "جيدون سانشو",
+      "canonical_name_original": "Jadon Sancho",
+      "aliases": [
+        "Jadon Sancho",
+        "Jadon Malik Sancho"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q30148558",
+      "birth_date": "2000-03-25",
+      "nationality_ids": [
+        "Q145"
+      ],
+      "nationality_names": [
+        "المملكة المتحدة"
+      ],
+      "position_ids": [
+        "Q11681748"
+      ],
+      "position_names": [
+        "جناح"
+      ],
+      "national_team_ids": [
+        "Q21"
+      ],
+      "national_team_names": [
+        "إنجلترا"
+      ],
+      "organization_ids": [
+        "Q865720",
+        "Q41420",
+        "Q18656",
+        "Q4201740",
+        "Q2752922",
+        "Q2358861",
+        "Q47762",
+        "Q9616",
+        "Q18711"
+      ],
+      "organization_names": [
+        "بوروسيا دورتموند 2",
+        "بوروسيا دورتموند",
+        "مانشستر يونايتد",
+        "منتخب إنجلترا تحت 16 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 17 سنة لكرة القدم",
+        "منتخب إنجلترا تحت 19 سنة لكرة القدم",
+        "منتخب إنجلترا لكرة القدم",
+        "نادي تشيلسي",
+        "أستون فيلا"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q30148558",
+      "identity_verified_at": "2026-10-28T21:42:50.403264+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 20,
+      "created_at": "2026-10-28T21:42:50.404953+00:00"
     }
   },
   "organizations": {},
@@ -820,7 +879,8 @@
     "wikidata:Q28973866": "P0000012",
     "wikidata:Q250901": "P0000013",
     "wikidata:Q17612631": "P0000014",
-    "wikidata:Q29566": "P0000015"
+    "wikidata:Q29566": "P0000015",
+    "wikidata:Q30148558": "P0000016"
   },
   "name_index": {
     "dominik livakovic": [
@@ -921,6 +981,12 @@
     ],
     "michael carrick": [
       "P0000015"
+    ],
+    "jadon sancho": [
+      "P0000016"
+    ],
+    "jadon malik sancho": [
+      "P0000016"
     ]
   }
 }

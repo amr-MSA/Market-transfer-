@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-28T17:16:31.130130+00:00",
+  "updated_at": "2026-10-28T21:43:01.668604+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
-      "seen_at": "2026-10-21T17:23:10.850050+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crpdg2x7v1l2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T17:23:18.493319+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/21/champions-league-goals-football-daily-newsletter",
-      "seen_at": "2026-10-21T17:23:33.472589+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cme3xk2jkyv0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T20:45:27.683480+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck79p7qq1q9ro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-21T23:42:25.149461+00:00"
@@ -390,6 +374,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cky831qxdzydo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T17:16:31.130130+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c678prmye8xvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T21:42:47.749979+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckyvr1q72v84o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T21:42:49.017597+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/28/liverpool-v-chelsea-carabao-cup-fourth-round-live",
+      "seen_at": "2026-10-28T21:43:01.668604+00:00"
     }
   ],
   "published": {
@@ -845,6 +841,27 @@
       },
       "published_at": "2026-10-25T19:42:24.808172+00:00",
       "updated_at": "2026-10-25T19:42:24.808172+00:00",
+      "media": null
+    },
+    "fef9a3ff6d38296df14fbaeb": {
+      "type": "أخبار ناد",
+      "from": "Free agent",
+      "to": null,
+      "player": "Jadon Sancho",
+      "person": "Jadon Sancho",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/ckyvr1q72v84o?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "fef9a3ff6d38296df14fbaeb",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-28T21:42:54.648494+00:00",
+      "updated_at": "2026-10-28T21:42:54.648494+00:00",
       "media": null
     }
   }
