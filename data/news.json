@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-28T11:28:21.518006+00:00",
+  "updated_at": "2026-10-28T17:16:31.130130+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cxnv0ed5pz23o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T12:20:10.805046+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/21/jonas-eidevall-interview-san-diego-wave-nwsl-arsenal",
-      "seen_at": "2026-10-21T12:20:13.216818+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/21/manchester-city-fifa-rules-grassroots-philipp-lahm",
-      "seen_at": "2026-10-21T12:20:15.859793+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
       "seen_at": "2026-10-21T17:23:10.850050+00:00"
@@ -390,6 +378,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwly0myd08reo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T11:28:21.518006+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmx2w477qwjpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T17:16:13.338452+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/28/fleetwood-arsenal-carabao-cup-football-daily-newsletter",
+      "seen_at": "2026-10-28T17:16:21.604735+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cky831qxdzydo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T17:16:31.130130+00:00"
     }
   ],
   "published": {
