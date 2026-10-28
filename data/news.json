@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-28T00:00:32.327270+00:00",
+  "updated_at": "2026-10-28T05:23:45.112517+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/21/manchester-city-david-kogan-independent-football-regulator",
-      "seen_at": "2026-10-21T01:43:25.703364+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckg5je34l0q5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T01:43:31.805136+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck4g10n56jzqo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-21T06:36:03.117226+00:00"
@@ -386,6 +378,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/27/barcelona-fined-503-over-their-approach-for-atletico-madrid-star-alvarez",
       "seen_at": "2026-10-28T00:00:32.327270+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqgkv2vxeengo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T05:23:39.890552+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmg47g7dngxlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T05:23:45.112517+00:00"
     }
   ],
   "published": {
