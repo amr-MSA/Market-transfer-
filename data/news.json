@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-28T05:23:45.112517+00:00",
+  "updated_at": "2026-10-28T11:28:21.518006+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck4g10n56jzqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T06:36:03.117226+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqrky2rpkrz2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T06:36:17.098715+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxnv0ed5pz23o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-21T12:20:10.805046+00:00"
@@ -386,6 +378,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmg47g7dngxlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T05:23:45.112517+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
+      "seen_at": "2026-10-28T11:28:06.031472+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c5398300x0nyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T11:28:08.896613+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwly0myd08reo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-28T11:28:21.518006+00:00"
     }
   ],
   "published": {
