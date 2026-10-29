@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-29T19:41:34.166721+00:00",
+  "updated_at": "2026-10-29T23:36:20.943957+00:00",
   "events": [],
   "articles": [
     {
@@ -378,6 +378,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/29/everton-v-newcastle-carabao-cup-fourth-round-live",
       "seen_at": "2026-10-29T19:41:34.166721+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ckeq3v1wgxy4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T23:36:11.907497+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/29/everton-newcastle-carabao-cup-fourth-round-match-report",
+      "seen_at": "2026-10-29T23:36:14.310433+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/29/manchester-city-paris-saint-germain-womens-champions-league-match-report",
+      "seen_at": "2026-10-29T23:36:20.943957+00:00"
     }
   ],
   "published": {
