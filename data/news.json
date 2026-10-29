@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-29T01:15:32.383497+00:00",
+  "updated_at": "2026-10-29T07:10:44.218295+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c8040gdrdlwwo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T01:52:59.405184+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/21/champions-league-roundup-real-madrid-leipzig-inter-shakhtar-sporting-lask-brugge-lens-betis-feyenoord",
-      "seen_at": "2026-10-22T01:53:01.899445+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c3qjnerzngkqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T01:53:04.042865+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq80zk12krmlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T06:46:50.401678+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6x2v8x7ry17o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T06:46:52.346296+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/22/enzo-maresca-phil-foden-manchester-city-form",
       "seen_at": "2026-10-22T12:31:22.402864+00:00"
@@ -390,6 +370,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
       "seen_at": "2026-10-29T01:15:32.383497+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx05487d6r9vo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T07:10:30.112515+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqr7y1218vjvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T07:10:44.218295+00:00"
     }
   ],
   "published": {
