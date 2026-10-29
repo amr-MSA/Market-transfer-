@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-29T07:10:44.218295+00:00",
+  "updated_at": "2026-10-29T14:16:14.715398+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/22/enzo-maresca-phil-foden-manchester-city-form",
-      "seen_at": "2026-10-22T12:31:22.402864+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis",
-      "seen_at": "2026-10-22T12:31:25.330299+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp67grjro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T12:31:28.483767+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/22/lech-poznan-sunderland-juventus-rennes-bournemouth-milan-crystal-palace-celtic-europa-league-live",
       "seen_at": "2026-10-22T17:32:59.105964+00:00"
@@ -378,6 +366,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqr7y1218vjvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-29T07:10:44.218295+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/ck98zmrdz2g5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T14:15:49.604811+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cv2d6ze63gk2o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T14:16:11.796995+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/blog/2026/oct/29/serie-a-lazio-sassuolo-romano-floriani-mussolini-gennaro-gattuso",
+      "seen_at": "2026-10-29T14:16:14.715398+00:00"
     }
   ],
   "published": {
