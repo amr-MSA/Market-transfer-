@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-29T14:16:14.715398+00:00",
+  "updated_at": "2026-10-29T19:41:34.166721+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/22/lech-poznan-sunderland-juventus-rennes-bournemouth-milan-crystal-palace-celtic-europa-league-live",
-      "seen_at": "2026-10-22T17:32:59.105964+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/22/bruno-fernandes-betrayal-manchester-united-michael-carrick-culture-of-entitlement",
-      "seen_at": "2026-10-22T17:33:00.945432+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cked364q8jxjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-22T17:33:02.562841+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-10-22T23:38:54.962229+00:00"
@@ -378,6 +366,18 @@
     {
       "id": "https://www.theguardian.com/football/blog/2026/oct/29/serie-a-lazio-sassuolo-romano-floriani-mussolini-gennaro-gattuso",
       "seen_at": "2026-10-29T14:16:14.715398+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmwy4vyl9nplo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T19:41:28.635699+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/29/manchester-city-v-paris-saint-germain-womens-champions-league-live",
+      "seen_at": "2026-10-29T19:41:29.535370+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/29/everton-v-newcastle-carabao-cup-fourth-round-live",
+      "seen_at": "2026-10-29T19:41:34.166721+00:00"
     }
   ],
   "published": {
@@ -854,6 +854,27 @@
       },
       "published_at": "2026-10-28T21:42:54.648494+00:00",
       "updated_at": "2026-10-28T21:42:54.648494+00:00",
+      "media": null
+    },
+    "c15d3668db33194c1699f9c9": {
+      "type": "مباراة",
+      "from": "Manchester City",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.theguardian.com/football/live/2026/oct/29/manchester-city-v-paris-saint-germain-womens-champions-league-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "c15d3668db33194c1699f9c9",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-10-29T19:41:32.697019+00:00",
+      "updated_at": "2026-10-29T19:41:32.697019+00:00",
       "media": null
     }
   }
