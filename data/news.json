@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-28T21:43:01.668604+00:00",
+  "updated_at": "2026-10-29T01:15:32.383497+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck79p7qq1q9ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T23:42:25.149461+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckg5j1zdn4m3o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-21T23:42:52.268245+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c8040gdrdlwwo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-22T01:52:59.405184+00:00"
@@ -386,6 +378,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/28/liverpool-v-chelsea-carabao-cup-fourth-round-live",
       "seen_at": "2026-10-28T21:43:01.668604+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmp3g8vxd258o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T01:15:14.942915+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cv5ynwkndw61o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-29T01:15:17.858884+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/28/european-football-two-late-own-goals-return-inter-top-serie-a-venezia",
+      "seen_at": "2026-10-29T01:15:32.383497+00:00"
     }
   ],
   "published": {
