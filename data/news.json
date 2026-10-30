@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-30T16:01:46.290993+00:00",
+  "updated_at": "2026-10-30T20:40:36.723970+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/23/vincent-kompany-hospital-collapsing-bayern-munich-training",
-      "seen_at": "2026-10-23T17:23:50.831121+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck3r5792en7go?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T17:23:52.413732+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/sport/2026/oct/23/premier-league-antonelli-goes-for-f1-title-plus-wsl-and-clasico-action-follow-with-us",
-      "seen_at": "2026-10-23T17:23:54.041751+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/23/ipswich-v-nottingham-forest-premier-league-live",
-      "seen_at": "2026-10-23T20:32:57.185562+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqn06r9pje93o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T20:33:23.108107+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/23/arsenal-arteta-concerned-saka-durability-six-week-absence",
       "seen_at": "2026-10-23T23:26:06.095182+00:00"
@@ -386,6 +366,18 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/30/premier-league-news-carabao-cup-and-wcl-reaction-and-more-football-live",
       "seen_at": "2026-10-30T16:01:46.290993+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/30/mikel-arteta-arsenal-inspiration-george-graham-anfield-liverpool",
+      "seen_at": "2026-10-30T20:40:32.574830+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/30/manchester-city-financial-charges-guilty-marc-guehi-premier-league",
+      "seen_at": "2026-10-30T20:40:34.714502+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm3el25ez88yo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-30T20:40:36.723970+00:00"
     }
   ],
   "published": {
