@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-30T02:54:20.644033+00:00",
+  "updated_at": "2026-10-30T09:20:41.734080+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq1m43jee9z5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T07:00:32.402182+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3x2wpyg18j7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T07:00:34.752371+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c60qkpe0e54qo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T07:00:36.447560+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6lylk1zyqd7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-23T12:33:32.670910+00:00"
@@ -386,6 +374,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/29/inter-milan-generali-stadium-new-venue-san-siro-protests",
       "seen_at": "2026-10-30T02:54:20.644033+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqn73pxx8vr5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-30T09:20:38.024119+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cked3zen65d1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-30T09:20:39.607868+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqy0r31kwne0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-30T09:20:41.734080+00:00"
     }
   ],
   "published": {
