@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-31T11:03:45.848466+00:00",
+  "updated_at": "2026-10-31T16:02:06.889957+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/articles/cmy4x7zvv28ko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T11:30:32.350060+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/24/aston-villa-v-manchester-city-premier-league-live",
-      "seen_at": "2026-10-24T11:30:34.335555+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6q8nd9g9n72o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T11:30:41.938261+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/24/tottenham-arsenal-wsl-premier-league-efl-football-clockwatch-live",
-      "seen_at": "2026-10-24T14:47:15.495554+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/24/championship-roundup-sheffield-united-derby-west-ham-swansea",
-      "seen_at": "2026-10-24T14:47:21.299473+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cmy0r7epegd4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T14:47:26.545637+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/24/chelsea-v-tottenham-premier-league-live",
       "seen_at": "2026-10-24T17:39:25.348879+00:00"
@@ -382,6 +358,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6x2qr8dj81vo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T11:03:45.848466+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/31/manchester-city-v-brighton-bournemouth-v-leeds-and-more-clockwatch-live",
+      "seen_at": "2026-10-31T16:01:42.841273+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6073yeg52xeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T16:02:04.694968+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/oct/31/championship-roundup-birmingham-burnley-middlesbrough-southampton-wolves",
+      "seen_at": "2026-10-31T16:02:06.889957+00:00"
     }
   ],
   "published": {
