@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-31T19:53:39.582045+00:00",
+  "updated_at": "2026-10-31T22:55:09.723466+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c9ly0dxxgp7lo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T21:58:19.883544+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqev38dz34vxo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T21:58:25.030062+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/24/chelsea-tottenham-premier-league-austin-macphee-mike-penders-roberto-de-zerbi",
-      "seen_at": "2026-10-24T21:58:31.081171+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/iplayer/episode/m0033jlx?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-25T00:05:49.737046+00:00"
@@ -358,6 +346,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cve8rkd8r302o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T19:53:39.582045+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ckn8w20nn9g7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T22:55:06.633270+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cqx28l2gdepxo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T22:55:09.723466+00:00"
     }
   ],
   "published": {
