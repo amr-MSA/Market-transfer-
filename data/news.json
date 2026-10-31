@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-30T20:40:36.723970+00:00",
+  "updated_at": "2026-10-31T00:04:54.684658+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/23/arsenal-arteta-concerned-saka-durability-six-week-absence",
-      "seen_at": "2026-10-23T23:26:06.095182+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwn73kzzr8veo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-23T23:26:07.492205+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/23/premier-league-news-spurs-nine-injuries-normal-says-de-zerbi-emotional-control-keeps-blues-red-free",
       "seen_at": "2026-10-24T01:47:36.461819+00:00"
@@ -378,6 +370,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm3el25ez88yo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-30T20:40:36.723970+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck3r52vn758xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T00:04:48.384183+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqd09p3kppyvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T00:04:52.469689+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj5ynr23rg4ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T00:04:54.684658+00:00"
     }
   ],
   "published": {
