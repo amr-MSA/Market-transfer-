@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-31T16:02:06.889957+00:00",
+  "updated_at": "2026-10-31T19:53:39.582045+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/24/chelsea-v-tottenham-premier-league-live",
-      "seen_at": "2026-10-24T17:39:25.348879+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/ck05486e1l53o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T17:39:27.788493+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6p9gkdzzpnro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T17:39:29.548725+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/24/european-football-napoli-roma-borussia-dortmund-atletico-madrid-paris-fc",
-      "seen_at": "2026-10-24T19:47:03.049577+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/ckly0dnqz0r7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T19:47:05.090388+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4gv830j73do?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-24T19:47:05.989851+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c9ly0dxxgp7lo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-24T21:58:19.883544+00:00"
@@ -370,6 +346,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/oct/31/championship-roundup-birmingham-burnley-middlesbrough-southampton-wolves",
       "seen_at": "2026-10-31T16:02:06.889957+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.ukundefined/?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T19:53:30.256856+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/oct/31/tottenham-v-crystal-palace-premier-league-live",
+      "seen_at": "2026-10-31T19:53:37.001655+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cve8rkd8r302o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-10-31T19:53:39.582045+00:00"
     }
   ],
   "published": {
