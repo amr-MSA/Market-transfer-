@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-01T19:38:24.661006+00:00",
+  "updated_at": "2026-11-01T23:03:51.193041+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/25/barcelona-v-real-madrid-el-clasico-live",
-      "seen_at": "2026-10-25T19:41:36.548168+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/25/manchester-united-board-crisis-talks-michael-carrick-eddie-howe-bournemouth-premier-league",
-      "seen_at": "2026-10-25T19:42:08.598975+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm5ynpjx170zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-25T22:04:00.758680+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwm24jk9743yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-25T22:04:02.761828+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr3wvz20pglqo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-26T00:11:10.387727+00:00"
@@ -354,6 +338,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxr5yjpnd31eo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-01T19:38:24.661006+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/iplayer/live/bbcone?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T23:03:47.720848+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqkgk0l3zpnyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T23:03:49.456137+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cxly47pyy8j6o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T23:03:51.193041+00:00"
     }
   ],
   "published": {
