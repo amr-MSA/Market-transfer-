@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-01T08:12:22.880953+00:00",
+  "updated_at": "2026-11-01T15:09:48.702130+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/25/buildup-liverpool-brighton-manchester-united-bournemouth-matchday-live",
-      "seen_at": "2026-10-25T09:20:33.783078+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/25/ballon-dor-ceremony-returns-to-england-in-nod-to-revolutionary-stanley-matthews",
-      "seen_at": "2026-10-25T09:20:43.334271+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/25/ian-holloway-circus-swindon-outbursts-no-laughing-matter-fans",
-      "seen_at": "2026-10-25T09:20:45.112514+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/25/manchester-united-v-bournemouth-liverpool-v-brighton-and-more-premier-league-live",
-      "seen_at": "2026-10-25T13:46:46.680144+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/25/sunderland-v-leeds-premier-league-live",
       "seen_at": "2026-10-25T17:14:56.182665+00:00"
@@ -358,6 +342,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-01T08:12:22.880953+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/01/arsenal-v-aston-villa-london-city-lionesses-v-manchester-city-and-more-womens-super-league-live",
+      "seen_at": "2026-11-01T15:09:44.790157+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/01/liverpool-v-arsenal-premier-league-live",
+      "seen_at": "2026-11-01T15:09:46.440181+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/01/london-city-lionesses-manchester-city-wsl-match-report",
+      "seen_at": "2026-11-01T15:09:48.702130+00:00"
     }
   ],
   "published": {
