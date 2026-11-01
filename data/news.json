@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-01T01:47:20.249878+00:00",
+  "updated_at": "2026-11-01T08:12:22.880953+00:00",
   "events": [],
   "articles": [
     {
@@ -354,6 +354,10 @@
     {
       "id": "https://www.espn.com/soccer/story/_/id/50341573/barcelona-alaves-hansi-flick-lamine-yamal-easier-substitute-scores",
       "seen_at": "2026-11-01T01:47:20.249878+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T08:12:22.880953+00:00"
     }
   ],
   "published": {
