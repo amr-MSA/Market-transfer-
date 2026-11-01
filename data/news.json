@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-10-31T22:55:09.723466+00:00",
+  "updated_at": "2026-11-01T01:47:20.249878+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/iplayer/episode/m0033jlx?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-25T00:05:49.737046+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/24/xabia-alonso-urges-cole-palmer-to-learn-from-red-card-in-chelseas-defeat-to-tottenham",
-      "seen_at": "2026-10-25T00:06:00.765852+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/24/why-stanley-matthews-ballon-dor-triumph-echoes-for-harry-kane",
-      "seen_at": "2026-10-25T00:06:09.484593+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/25/buildup-liverpool-brighton-manchester-united-bournemouth-matchday-live",
       "seen_at": "2026-10-25T09:20:33.783078+00:00"
@@ -354,6 +342,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cqx28l2gdepxo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T22:55:09.723466+00:00"
+    },
+    {
+      "id": "https://www.espn.com/soccer/story/_/id/50336265/man-united-michael-carrick-brushes-talk-premier-league-relegation-battle",
+      "seen_at": "2026-11-01T01:47:00.342639+00:00"
+    },
+    {
+      "id": "https://www.espn.com/soccer/report/_/gameId/401879245",
+      "seen_at": "2026-11-01T01:47:06.191532+00:00"
+    },
+    {
+      "id": "https://www.espn.com/soccer/story/_/id/50341573/barcelona-alaves-hansi-flick-lamine-yamal-easier-substitute-scores",
+      "seen_at": "2026-11-01T01:47:20.249878+00:00"
     }
   ],
   "published": {
