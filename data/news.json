@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-01T15:09:48.702130+00:00",
+  "updated_at": "2026-11-01T19:38:24.661006+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/25/sunderland-v-leeds-premier-league-live",
-      "seen_at": "2026-10-25T17:14:56.182665+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-25T17:14:58.293965+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/25/hull-brentford-premier-league-match-report",
-      "seen_at": "2026-10-25T17:15:04.652023+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/25/barcelona-v-real-madrid-el-clasico-live",
       "seen_at": "2026-10-25T19:41:36.548168+00:00"
@@ -354,6 +342,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/01/london-city-lionesses-manchester-city-wsl-match-report",
       "seen_at": "2026-11-01T15:09:48.702130+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cx2d2yxv84zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T19:38:20.171531+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/01/wsl-roundup-arsenal-aston-villa-alessia-russo-renee-slegers",
+      "seen_at": "2026-11-01T19:38:22.148448+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cxr5yjpnd31eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-01T19:38:24.661006+00:00"
     }
   ],
   "published": {
