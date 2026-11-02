@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-02T02:23:17.595449+00:00",
+  "updated_at": "2026-11-02T09:42:41.614146+00:00",
   "events": [],
   "articles": [
     {
@@ -354,6 +354,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cw7vpy99y606o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-02T02:23:17.595449+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c65ynz5ve125o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T09:42:37.040055+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/02/premier-league-10-talking-points-from-the-weekends-action",
+      "seen_at": "2026-11-02T09:42:38.943589+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm70pv70jwrjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T09:42:41.614146+00:00"
     }
   ],
   "published": {
