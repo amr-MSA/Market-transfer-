@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-01T23:03:51.193041+00:00",
+  "updated_at": "2026-11-02T02:23:17.595449+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr3wvz20pglqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T00:11:10.387727+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c804013klnn0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T00:11:16.117405+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp680jm1o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-26T10:33:48.854090+00:00"
@@ -350,6 +342,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cxly47pyy8j6o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-01T23:03:51.193041+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/ck9dz227v751o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T02:23:09.065399+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cmwy4000q97ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T02:23:10.013889+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cw7vpy99y606o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T02:23:17.595449+00:00"
     }
   ],
   "published": {
@@ -847,6 +851,27 @@
       },
       "published_at": "2026-10-29T19:41:32.697019+00:00",
       "updated_at": "2026-10-29T19:41:32.697019+00:00",
+      "media": null
+    },
+    "383112b4120c68d06f443197": {
+      "type": "أخبار ناد",
+      "from": "Arsenal",
+      "to": null,
+      "player": "Ezri Konsa",
+      "person": "Ezri Konsa",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/videos/cmwy4000q97ro?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "383112b4120c68d06f443197",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-11-02T02:23:15.060581+00:00",
+      "updated_at": "2026-11-02T02:23:15.060581+00:00",
       "media": null
     }
   }

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "updated_at": "2026-08-26T19:14:30.296374+00:00",
-  "next_person_number": 17,
+  "next_person_number": 18,
   "next_club_number": 1,
   "people": {
     "null": {
@@ -140,6 +140,15 @@
       "asset_ids": [],
       "stint_ids": [],
       "created_at": "2026-10-28T21:42:50.404933+00:00"
+    },
+    "P0000017": {
+      "person_id": "P0000017",
+      "name": "Ezri Konsa",
+      "aliases": [],
+      "entity_type": "player",
+      "asset_ids": [],
+      "stint_ids": [],
+      "created_at": "2026-11-02T02:23:11.287611+00:00"
     }
   },
   "clubs": {},
