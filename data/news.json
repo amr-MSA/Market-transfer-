@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-02T09:42:41.614146+00:00",
+  "updated_at": "2026-11-02T19:48:05.714081+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq5ynp680jm1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T10:33:48.854090+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/26/premier-league-10-talking-points-from-the-weekends-action",
-      "seen_at": "2026-10-26T10:34:07.407694+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8e81xjy7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T10:34:28.159933+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmn8wzldd7q0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T16:57:49.483949+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/26/mourinhos-plan-comes-together-as-real-madrid-relaunch-with-clasico-statement",
-      "seen_at": "2026-10-26T16:57:55.678596+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqdr8zv5dg42o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-26T16:58:06.868213+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/26/ballon-dor-2026-updates-from-70th-edition-in-london-live",
       "seen_at": "2026-10-26T21:22:43.135938+00:00"
@@ -366,6 +342,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm70pv70jwrjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-02T09:42:41.614146+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/02/newcastle-united-v-everton-premier-league-live",
+      "seen_at": "2026-11-02T19:48:01.281821+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/02/florian-wirtz-andoni-iraola-liverpool-tight-defences-arsenal-anfield",
+      "seen_at": "2026-11-02T19:48:04.224273+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckpqg82yxqgyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-02T19:48:05.714081+00:00"
     }
   ],
   "published": {
