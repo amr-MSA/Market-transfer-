@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-03T16:34:51.836143+00:00",
+  "updated_at": "2026-11-03T21:57:04.149186+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmqlngxw6lv3o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T20:40:14.873432+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/27/fleetwood-town-v-arsenal-carabao-cup-fourth-round-live",
-      "seen_at": "2026-10-27T20:40:22.334508+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/27/manchester-united-michael-carrick-faded-grandeur",
-      "seen_at": "2026-10-27T20:40:37.832778+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq62y7yzjdmzo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T00:00:30.170938+00:00"
@@ -350,6 +338,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxj0l3pd9jy7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-03T16:34:31.970712+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/03/barcelona-v-aston-villa-champions-league-live",
+      "seen_at": "2026-11-03T21:56:59.387781+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/03/manchester-united-v-roma-champions-league-live",
+      "seen_at": "2026-11-03T21:57:01.760543+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3vgx8qkqx4jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T21:57:04.149186+00:00"
     }
   ],
   "published": {
