@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-03T08:40:51.306079+00:00",
+  "updated_at": "2026-11-03T16:34:51.836143+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/27/manchester-united-eddie-howe-newcastle-compensation-michael-carrick",
-      "seen_at": "2026-10-27T10:54:41.855617+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T10:54:42.774713+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx2ln5n7yqdo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T10:54:44.757868+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cjr4y51g6zvvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T16:08:52.052600+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cw054vdz9g7mo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T16:08:56.012970+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6lylnkzp772o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T16:08:58.080602+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmqlngxw6lv3o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-27T20:40:14.873432+00:00"
@@ -362,6 +338,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxj0led3jnj4o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-03T08:40:51.306079+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/articles/ck0j0l65nzlvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T16:34:18.260971+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c3vgx8qxge7zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T16:34:29.824873+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cxj0l3pd9jy7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T16:34:31.970712+00:00"
     }
   ],
   "published": {
@@ -880,6 +868,27 @@
       },
       "published_at": "2026-11-02T02:23:15.060581+00:00",
       "updated_at": "2026-11-02T02:23:15.060581+00:00",
+      "media": null
+    },
+    "0278f3b65eac3aa27a905264": {
+      "type": "عودة من إصابة",
+      "from": "Arsenal",
+      "to": null,
+      "player": "William Saliba",
+      "person": "William Saliba",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cxj0l3pd9jy7o?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "0278f3b65eac3aa27a905264",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-11-03T16:34:51.836143+00:00",
+      "updated_at": "2026-11-03T16:34:51.836143+00:00",
       "media": null
     }
   }

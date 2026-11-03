@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-02T02:23:11.287642+00:00",
+  "updated_at": "2026-11-03T16:34:32.696773+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -918,6 +918,61 @@
       "identity_status": "VERIFIED",
       "card_message_id": 21,
       "created_at": "2026-11-02T02:23:11.287628+00:00"
+    },
+    "P0000018": {
+      "person_id": "P0000018",
+      "canonical_name": "William Saliba",
+      "canonical_name_ar": "وليم صليبا",
+      "canonical_name_original": "William Saliba",
+      "aliases": [
+        "William Saliba",
+        "William Alain André Gabriel Saliba",
+        "William Alain Andre Gabriel Saliba",
+        "وليم ألان أندريه جبرييل صليبا"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q56868118",
+      "birth_date": "2001-03-24",
+      "nationality_ids": [
+        "Q142"
+      ],
+      "nationality_names": [
+        "فرنسا"
+      ],
+      "position_ids": [
+        "Q336286"
+      ],
+      "position_names": [
+        "مدافع"
+      ],
+      "national_team_ids": [
+        "Q142"
+      ],
+      "national_team_names": [
+        "فرنسا"
+      ],
+      "organization_ids": [
+        "Q19521",
+        "Q1277549",
+        "Q9617",
+        "Q132885",
+        "Q185163",
+        "Q47774"
+      ],
+      "organization_names": [
+        "نادي سانت إتيان",
+        "منتخب فرنسا تحت 21 سنة لكرة القدم",
+        "نادي آرسنال",
+        "أولمبيك مرسيليا",
+        "نادي نيس",
+        "منتخب فرنسا لكرة القدم"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q56868118",
+      "identity_verified_at": "2026-11-03T16:34:32.694702+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 22,
+      "created_at": "2026-11-03T16:34:32.696754+00:00"
     }
   },
   "organizations": {},
@@ -938,7 +993,8 @@
     "wikidata:Q17612631": "P0000014",
     "wikidata:Q29566": "P0000015",
     "wikidata:Q30148558": "P0000016",
-    "wikidata:Q27063854": "P0000017"
+    "wikidata:Q27063854": "P0000017",
+    "wikidata:Q56868118": "P0000018"
   },
   "name_index": {
     "dominik livakovic": [
@@ -1051,6 +1107,15 @@
     ],
     "ezri ngoyo konsa": [
       "P0000017"
+    ],
+    "william saliba": [
+      "P0000018"
+    ],
+    "william alain andre gabriel saliba": [
+      "P0000018"
+    ],
+    "وليم الان اندريه جبرييل صليبا": [
+      "P0000018"
     ]
   }
 }
