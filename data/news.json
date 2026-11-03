@@ -1,24 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-02T19:48:05.714081+00:00",
+  "updated_at": "2026-11-03T01:51:18.984657+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/26/ballon-dor-2026-updates-from-70th-edition-in-london-live",
-      "seen_at": "2026-10-26T21:22:43.135938+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/26/england-under-15-walk-off-pitch-ireland-world-cup-racism-allegation",
-      "seen_at": "2026-10-26T21:22:49.946332+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/26/damning-data-michael-carrick-manchester-united-head-coach",
-      "seen_at": "2026-10-26T21:22:52.108389+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmly0g2y7q2zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-27T00:38:03.227695+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/27/manchester-united-eddie-howe-newcastle-compensation-michael-carrick",
       "seen_at": "2026-10-27T10:54:41.855617+00:00"
@@ -354,6 +338,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckpqg82yxqgyo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-02T19:48:05.714081+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T01:51:15.616817+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqj346rvg3pzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T01:51:17.202486+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm70pgrd22x4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-03T01:51:18.984657+00:00"
     }
   ],
   "published": {
