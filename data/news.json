@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-04T01:55:09.616257+00:00",
+  "updated_at": "2026-11-04T16:29:18.562635+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqgkv2vxeengo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T05:23:39.890552+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmg47g7dngxlo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T05:23:45.112517+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
-      "seen_at": "2026-10-28T11:28:06.031472+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c5398300x0nyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T11:28:08.896613+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwly0myd08reo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T11:28:21.518006+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmx2w477qwjpo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T17:16:13.338452+00:00"
@@ -350,6 +330,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cjwy9496qe7ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-04T01:55:09.616257+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/04/goalkeeper-jesus-owono-jesus-de-miguel-death-tenerife-deeply-affected-andorra",
+      "seen_at": "2026-11-04T16:29:10.889456+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live",
+      "seen_at": "2026-11-04T16:29:18.562635+00:00"
     }
   ],
   "published": {
