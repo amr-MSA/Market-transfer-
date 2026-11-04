@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-03T21:57:04.149186+00:00",
+  "updated_at": "2026-11-04T01:55:09.616257+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq62y7yzjdmzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T00:00:30.170938+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/27/barcelona-fined-503-over-their-approach-for-atletico-madrid-star-alvarez",
-      "seen_at": "2026-10-28T00:00:32.327270+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqgkv2vxeengo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-28T05:23:39.890552+00:00"
@@ -350,6 +342,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c3vgx8qkqx4jo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-03T21:57:04.149186+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqkg5dgvygr1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-04T01:54:55.368068+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjwy9496qe7ko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-04T01:55:09.616257+00:00"
     }
   ],
   "published": {
