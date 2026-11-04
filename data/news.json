@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-04T16:29:18.562635+00:00",
+  "updated_at": "2026-11-04T22:05:23.024105+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmx2w477qwjpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T17:16:13.338452+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/28/fleetwood-arsenal-carabao-cup-football-daily-newsletter",
-      "seen_at": "2026-10-28T17:16:21.604735+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cky831qxdzydo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T17:16:31.130130+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c678prmye8xvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T21:42:47.749979+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckyvr1q72v84o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-28T21:42:49.017597+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/28/liverpool-v-chelsea-carabao-cup-fourth-round-live",
-      "seen_at": "2026-10-28T21:43:01.668604+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmp3g8vxd258o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-29T01:15:14.942915+00:00"
@@ -338,6 +314,14 @@
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live",
       "seen_at": "2026-11-04T16:29:18.562635+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
+      "seen_at": "2026-11-04T22:05:06.821852+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwkgjv582vj0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-04T22:05:23.024105+00:00"
     }
   ],
   "published": {
