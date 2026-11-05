@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-05T02:19:04.731359+00:00",
+  "updated_at": "2026-11-05T09:38:33.332352+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cx05487d6r9vo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-29T07:10:30.112515+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqr7y1218vjvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-29T07:10:44.218295+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/news/articles/ck98zmrdz2g5o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-29T14:15:49.604811+00:00"
@@ -318,6 +310,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/04/champions-league-roundup-aek-athens-real-madrid-borussia-dortmund-napoli",
       "seen_at": "2026-11-05T02:19:04.731359+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/05/ballon-dor-winner-harry-kane-signs-new-contract-with-bayern-munich-2029",
+      "seen_at": "2026-11-05T09:38:29.578152+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmjweqpv8vj1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-05T09:38:31.320684+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwx28z712rd8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-05T09:38:33.332352+00:00"
     }
   ],
   "published": {
