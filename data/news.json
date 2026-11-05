@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-05T09:38:33.332352+00:00",
+  "updated_at": "2026-11-05T17:38:10.827749+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/news/articles/ck98zmrdz2g5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-29T14:15:49.604811+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cv2d6ze63gk2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-29T14:16:11.796995+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/blog/2026/oct/29/serie-a-lazio-sassuolo-romano-floriani-mussolini-gennaro-gattuso",
-      "seen_at": "2026-10-29T14:16:14.715398+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmwy4vyl9nplo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-29T19:41:28.635699+00:00"
@@ -322,6 +310,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwx28z712rd8o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-05T09:38:33.332352+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/05/crystal-palace-hoffenheim-sparta-prague-bournemouth-sunderland-celtic-europa-league-live",
+      "seen_at": "2026-11-05T17:38:06.734476+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8y56z50k95xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-05T17:38:08.727874+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr62y4yj39veo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-05T17:38:10.827749+00:00"
     }
   ],
   "published": {
