@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-06T02:53:53.488299+00:00",
+  "updated_at": "2026-11-06T10:09:03.892721+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend",
-      "seen_at": "2026-10-30T02:54:13.594424+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/29/inter-milan-generali-stadium-new-venue-san-siro-protests",
-      "seen_at": "2026-10-30T02:54:20.644033+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqn73pxx8vr5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T09:20:38.024119+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cked3zen65d1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T09:20:39.607868+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqy0r31kwne0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T09:20:41.734080+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cke8rp00m87lo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-30T16:01:40.273054+00:00"
@@ -318,6 +298,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-10-things-to-look-out-for-this-weekend",
       "seen_at": "2026-11-06T02:53:53.488299+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/06/england-squad-announced-sunderland-face-jeers-and-fa-cup-first-round-football-news-live",
+      "seen_at": "2026-11-06T10:08:41.436885+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c38xzkkgg7rpo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-06T10:08:42.745446+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cr20w943gvl5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-06T10:09:03.892721+00:00"
     }
   ],
   "published": {
