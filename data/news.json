@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-06T17:27:52.540766+00:00",
+  "updated_at": "2026-11-06T22:15:28.162679+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/30/mikel-arteta-arsenal-inspiration-george-graham-anfield-liverpool",
-      "seen_at": "2026-10-30T20:40:32.574830+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/30/manchester-city-financial-charges-guilty-marc-guehi-premier-league",
-      "seen_at": "2026-10-30T20:40:34.714502+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm3el25ez88yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T20:40:36.723970+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck3r52vn758xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T00:04:48.384183+00:00"
@@ -310,6 +298,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c9e8ll62rp68o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-06T17:27:52.540766+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/06/everton-v-coventry-city-premier-league-live-updates",
+      "seen_at": "2026-11-06T22:15:24.653840+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c98rzz0rjjvdo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-06T22:15:26.272632+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/06/charlton-risk-being-chewed-up-wsl-karen-hills",
+      "seen_at": "2026-11-06T22:15:28.162679+00:00"
     }
   ],
   "published": {
