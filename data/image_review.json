@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-17T10:38:36.430691+00:00",
+  "updated_at": "2026-11-06T17:28:09.536304+00:00",
   "reviews": {
     "355c362e26242b74eed4": {
       "review_id": "355c362e26242b74eed4",
@@ -60,6 +60,35 @@
       "resolved_media": null,
       "message_ids": [],
       "created_at": "2026-10-17T10:38:36.430677+00:00",
+      "sent_at": null,
+      "resolved_at": null
+    },
+    "e4f906a3a8cae2cb01e7": {
+      "review_id": "e4f906a3a8cae2cb01e7",
+      "target_type": "transfer",
+      "target_id": "84c16c1f52e2e949e856",
+      "person": "JJ Gabriel",
+      "entity_type": "player",
+      "club": "Real Madrid",
+      "candidates": [
+        {
+          "code": 1,
+          "label": "شعار/ملعب النادي (بديل آمن)",
+          "media": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Barracas_central_logo.svg/960px-Barracas_central_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source": "wikimedia",
+            "credit_name": "Unknown author Unknown author",
+            "credit_license": "Public domain",
+            "credit_url": "https://commons.wikimedia.org/wiki/File:Barracas_central_logo.svg",
+            "modesty_approved": false
+          }
+        }
+      ],
+      "status": "PENDING",
+      "selected_code": null,
+      "resolved_media": null,
+      "message_ids": [],
+      "created_at": "2026-11-06T17:28:09.536289+00:00",
       "sent_at": null,
       "resolved_at": null
     }

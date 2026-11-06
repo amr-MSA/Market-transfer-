@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-03T16:34:32.696773+00:00",
+  "updated_at": "2026-11-06T17:28:08.518370+00:00",
   "people": {
     "P0000001": {
       "person_id": "P0000001",
@@ -973,6 +973,47 @@
       "identity_status": "VERIFIED",
       "card_message_id": 22,
       "created_at": "2026-11-03T16:34:32.696754+00:00"
+    },
+    "P0000019": {
+      "person_id": "P0000019",
+      "canonical_name": "JJ Gabriel",
+      "canonical_name_ar": null,
+      "canonical_name_original": "JJ Gabriel",
+      "aliases": [
+        "JJ Gabriel",
+        "Joseph Junior Andreou Gabriel"
+      ],
+      "entity_type": "player",
+      "identity_key": "wikidata:Q135950093",
+      "birth_date": "2010-10-06",
+      "nationality_ids": [
+        "Q27",
+        "Q145"
+      ],
+      "nationality_names": [
+        "أيرلندا",
+        "المملكة المتحدة"
+      ],
+      "position_ids": [
+        "Q280658"
+      ],
+      "position_names": [
+        "مهاجم"
+      ],
+      "national_team_ids": [],
+      "national_team_names": [],
+      "organization_ids": [
+        "Q18656"
+      ],
+      "organization_names": [
+        "مانشستر يونايتد"
+      ],
+      "current_stats": null,
+      "identity_source_url": "https://www.wikidata.org/wiki/Q135950093",
+      "identity_verified_at": "2026-11-06T17:28:08.516749+00:00",
+      "identity_status": "VERIFIED",
+      "card_message_id": 23,
+      "created_at": "2026-11-06T17:28:08.518349+00:00"
     }
   },
   "organizations": {},
@@ -994,7 +1035,8 @@
     "wikidata:Q29566": "P0000015",
     "wikidata:Q30148558": "P0000016",
     "wikidata:Q27063854": "P0000017",
-    "wikidata:Q56868118": "P0000018"
+    "wikidata:Q56868118": "P0000018",
+    "wikidata:Q135950093": "P0000019"
   },
   "name_index": {
     "dominik livakovic": [
@@ -1116,6 +1158,12 @@
     ],
     "وليم الان اندريه جبرييل صليبا": [
       "P0000018"
+    ],
+    "jj gabriel": [
+      "P0000019"
+    ],
+    "joseph junior andreou gabriel": [
+      "P0000019"
     ]
   }
 }

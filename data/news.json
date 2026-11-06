@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-06T10:09:03.892721+00:00",
+  "updated_at": "2026-11-06T17:27:52.540766+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cke8rp00m87lo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T16:01:40.273054+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c875p940g5v2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-30T16:01:42.401362+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/30/premier-league-news-carabao-cup-and-wcl-reaction-and-more-football-live",
-      "seen_at": "2026-10-30T16:01:46.290993+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/oct/30/mikel-arteta-arsenal-inspiration-george-graham-anfield-liverpool",
       "seen_at": "2026-10-30T20:40:32.574830+00:00"
@@ -310,6 +298,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cr20w943gvl5o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-06T10:09:03.892721+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crq5nnqn84zyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-06T17:27:44.403839+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-team-news-predicted-lineups-for-the-weekend-action",
+      "seen_at": "2026-11-06T17:27:50.675934+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c9e8ll62rp68o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-06T17:27:52.540766+00:00"
     }
   ],
   "published": {
