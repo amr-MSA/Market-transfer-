@@ -88,5 +88,30 @@
     },
     "media": null,
     "unconfirmed_published_at": "2026-09-21T05:23:20.430667+00:00"
+  },
+  {
+    "transfer_id": "84c16c1f52e2e949e856",
+    "player": "JJ Gabriel",
+    "to_club": "Real Madrid",
+    "from_club": null,
+    "extraction_method": "gemini",
+    "fabrizio_url": "https://t.me/FabrizioRomanoTG/68068",
+    "fabrizio_text": "🚨 💣 JJ Gabriel and Real Madrid, deal set to be sealed: the 16 year old talent’s camp has informed all interested clubs about his final decision. Formal communication to all top clubs keen: JJ Gabriel only wants Real Madrid as terms are being sealed. Here we go, soon. ⭐️ 🔜 https://t.co/AfubRCLdXQ — Fabrizio Romano ( @FabrizioRomano ) Nov 6, 2026",
+    "fabrizio_image_url": null,
+    "discovered_at": "2026-11-06T02:54:08.322167+00:00",
+    "status": "WAITING_OFFICIAL",
+    "official_sent": false,
+    "official_delivery": {},
+    "unconfirmed_sent": false,
+    "unconfirmed_delivery": {},
+    "analysis": {
+      "category": "تحليل صفقة",
+      "stage": "Here We Go غير رسمي بعد",
+      "status": "HERE_WE_GO",
+      "status_score": 75,
+      "risk": "متوسط؛ الإعلان الرسمي لم يصدر بعد",
+      "recommendation": "تُنشر بوسم Here We Go فقط، مع انتظار تأكيد رسمي ودون تقديمها كإعلان رسمي.",
+      "summary": "JJ Gabriel إلى Real Madrid — المرحلة: Here We Go غير رسمي بعد."
+    }
   }
 ]
