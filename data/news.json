@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-07T08:32:06.451575+00:00",
+  "updated_at": "2026-11-07T15:03:39.769750+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/31/chelsea-v-manchester-united-buildup-premier-league-wsl-and-more-matchday-live",
-      "seen_at": "2026-10-31T11:03:29.297090+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/31/how-alexis-mac-allister-shook-off-contract-doubts-liverpool-revival",
-      "seen_at": "2026-10-31T11:03:38.646808+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6x2qr8dj81vo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T11:03:45.848466+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/31/manchester-city-v-brighton-bournemouth-v-leeds-and-more-clockwatch-live",
       "seen_at": "2026-10-31T16:01:42.841273+00:00"
@@ -318,6 +306,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cq62yyveznrro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T08:32:06.451575+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-v-hull-city-fulham-v-newcastle-united-fa-cup-and-more-football-live",
+      "seen_at": "2026-11-07T15:03:33.215367+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/07/leeds-united-v-tottenham-hotspur-premier-league-live",
+      "seen_at": "2026-11-07T15:03:37.129293+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq70p2w3j00jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T15:03:39.769750+00:00"
     }
   ],
   "published": {
