@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-07T15:03:39.769750+00:00",
+  "updated_at": "2026-11-07T19:22:03.201660+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/31/manchester-city-v-brighton-bournemouth-v-leeds-and-more-clockwatch-live",
-      "seen_at": "2026-10-31T16:01:42.841273+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6073yeg52xeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T16:02:04.694968+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/31/championship-roundup-birmingham-burnley-middlesbrough-southampton-wolves",
-      "seen_at": "2026-10-31T16:02:06.889957+00:00"
-    },
     {
       "id": "https://www.bbc.co.ukundefined/?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T19:53:30.256856+00:00"
@@ -318,6 +306,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq70p2w3j00jo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T15:03:39.769750+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c8vgx29yyrw0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T19:21:53.766566+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/07/nottingham-forest-v-manchester-city-premier-league-live",
+      "seen_at": "2026-11-07T19:21:55.785596+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cqlyek7wpnl0o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T19:22:03.201660+00:00"
     }
   ],
   "published": {
