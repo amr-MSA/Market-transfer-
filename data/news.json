@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-07T01:58:56.382782+00:00",
+  "updated_at": "2026-11-07T08:32:06.451575+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/oct/30/aston-villa-to-take-legal-action-against-jamie-carragher-for-unacceptable-insults",
-      "seen_at": "2026-10-31T05:26:39.964576+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/oct/31/chelsea-v-manchester-united-buildup-premier-league-wsl-and-more-matchday-live",
       "seen_at": "2026-10-31T11:03:29.297090+00:00"
@@ -310,6 +306,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-news-manchester-united-baleba-manchester-city-donnarumma-arsenal-arteta-rice",
       "seen_at": "2026-11-07T01:58:56.382782+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-and-manchester-city-in-action-fa-cup-first-round-news-and-more-matchday-live",
+      "seen_at": "2026-11-07T08:31:54.269649+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/07/gianni-infantino-fifa-donald-trump-democrats-republicans",
+      "seen_at": "2026-11-07T08:32:01.910049+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cq62yyveznrro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T08:32:06.451575+00:00"
     }
   ],
   "published": {
