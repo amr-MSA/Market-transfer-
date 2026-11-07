@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-07T19:22:03.201660+00:00",
+  "updated_at": "2026-11-07T22:50:21.997189+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.ukundefined/?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T19:53:30.256856+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/oct/31/tottenham-v-crystal-palace-premier-league-live",
-      "seen_at": "2026-10-31T19:53:37.001655+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cve8rkd8r302o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T19:53:39.582045+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/ckn8w20nn9g7o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-10-31T22:55:06.633270+00:00"
@@ -318,6 +306,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/cqlyek7wpnl0o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T19:22:03.201660+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckj0l542v7pvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T22:50:18.132099+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/07/european-football-bayern-beat-mainz-but-neuers-record-breaking-day-turns-sour",
+      "seen_at": "2026-11-07T22:50:19.935471+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c54g1nepgr28o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-07T22:50:21.997189+00:00"
     }
   ],
   "published": {
