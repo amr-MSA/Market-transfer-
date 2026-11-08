@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-08T15:28:44.249524+00:00",
+  "updated_at": "2026-11-08T19:52:54.096296+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cx2d2yxv84zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T19:38:20.171531+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/01/wsl-roundup-arsenal-aston-villa-alessia-russo-renee-slegers",
-      "seen_at": "2026-11-01T19:38:22.148448+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cxr5yjpnd31eo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T19:38:24.661006+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/iplayer/live/bbcone?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-01T23:03:47.720848+00:00"
@@ -310,6 +298,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/08/liverpool-arsenal-wsl-match-report",
       "seen_at": "2026-11-08T15:28:44.249524+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c91463n3mlzlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T19:52:51.315235+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjx23rwxdn64o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T19:52:52.653681+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/c6rmyg80pk3wo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T19:52:54.096296+00:00"
     }
   ],
   "published": {
