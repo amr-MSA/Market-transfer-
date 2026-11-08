@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-08T01:54:29.392121+00:00",
+  "updated_at": "2026-11-08T08:25:44.873788+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T08:12:22.880953+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/01/arsenal-v-aston-villa-london-city-lionesses-v-manchester-city-and-more-womens-super-league-live",
       "seen_at": "2026-11-01T15:09:44.790157+00:00"
@@ -302,6 +298,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqev3rdvyvm1o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-08T01:54:29.392121+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/08/premier-league-buildup-fa-cup-first-round-wsl-and-more-matchday-live",
+      "seen_at": "2026-11-08T08:25:35.649618+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/08/julian-alvarezs-atletico-redemption-arc-in-full-focus-for-visit-of-barcelona",
+      "seen_at": "2026-11-08T08:25:43.210510+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmwyqzy934lxo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T08:25:44.873788+00:00"
     }
   ],
   "published": {
