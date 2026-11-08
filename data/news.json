@@ -1,28 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-07T22:50:21.997189+00:00",
+  "updated_at": "2026-11-08T01:54:29.392121+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/ckn8w20nn9g7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T22:55:06.633270+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cqx28l2gdepxo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-10-31T22:55:09.723466+00:00"
-    },
-    {
-      "id": "https://www.espn.com/soccer/story/_/id/50336265/man-united-michael-carrick-brushes-talk-premier-league-relegation-battle",
-      "seen_at": "2026-11-01T01:47:00.342639+00:00"
-    },
-    {
-      "id": "https://www.espn.com/soccer/report/_/gameId/401879245",
-      "seen_at": "2026-11-01T01:47:06.191532+00:00"
-    },
-    {
-      "id": "https://www.espn.com/soccer/story/_/id/50341573/barcelona-alaves-hansi-flick-lamine-yamal-easier-substitute-scores",
-      "seen_at": "2026-11-01T01:47:20.249878+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckzd6217j7pgo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-01T08:12:22.880953+00:00"
@@ -318,6 +298,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c54g1nepgr28o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T22:50:21.997189+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqev3rdvyvm1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T01:54:29.392121+00:00"
     }
   ],
   "published": {
