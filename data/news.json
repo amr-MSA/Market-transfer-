@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-08T19:52:54.096296+00:00",
+  "updated_at": "2026-11-08T23:15:43.123807+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/iplayer/live/bbcone?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T23:03:47.720848+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqkgk0l3zpnyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T23:03:49.456137+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cxly47pyy8j6o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-01T23:03:51.193041+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/ck9dz227v751o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-02T02:23:09.065399+00:00"
@@ -310,6 +298,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c6rmyg80pk3wo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-08T19:52:54.096296+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/08/atletico-madrid-barcelona-la-liga-match-report",
+      "seen_at": "2026-11-08T23:15:27.433711+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crwyd4q0k8ddo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-08T23:15:29.135523+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/08/crystal-palace-pierre-sage-thomas-frank-main-candidate-manager-selhurst-park",
+      "seen_at": "2026-11-08T23:15:43.123807+00:00"
     }
   ],
   "published": {
