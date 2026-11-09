@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-08T23:15:43.123807+00:00",
+  "updated_at": "2026-11-09T02:42:52.953168+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/ck9dz227v751o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-02T02:23:09.065399+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cmwy4000q97ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-02T02:23:10.013889+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cw7vpy99y606o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-02T02:23:17.595449+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c65ynz5ve125o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-02T09:42:37.040055+00:00"
@@ -310,6 +298,10 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/08/crystal-palace-pierre-sage-thomas-frank-main-candidate-manager-selhurst-park",
       "seen_at": "2026-11-08T23:15:43.123807+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cked3qjw1q4xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-09T02:42:52.953168+00:00"
     }
   ],
   "published": {
