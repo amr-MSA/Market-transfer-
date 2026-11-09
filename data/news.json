@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-09T02:42:52.953168+00:00",
+  "updated_at": "2026-11-09T10:22:50.740694+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c65ynz5ve125o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-02T09:42:37.040055+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/02/premier-league-10-talking-points-from-the-weekends-action",
-      "seen_at": "2026-11-02T09:42:38.943589+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm70pv70jwrjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-02T09:42:41.614146+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/02/newcastle-united-v-everton-premier-league-live",
       "seen_at": "2026-11-02T19:48:01.281821+00:00"
@@ -302,6 +290,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cked3qjw1q4xo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-09T02:42:52.953168+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqy0r0lw4l5ro?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-09T10:22:40.598609+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/09/premier-league-10-talking-points-weekend-action",
+      "seen_at": "2026-11-09T10:22:41.950640+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq98z8401zz8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-09T10:22:50.740694+00:00"
     }
   ],
   "published": {
