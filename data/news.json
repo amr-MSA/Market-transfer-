@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-10T03:02:10.958785+00:00",
+  "updated_at": "2026-11-10T10:59:57.941287+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck62yvz046pjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T08:40:46.497091+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckeq3erv529po?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T08:40:48.248627+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cxj0led3jnj4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T08:40:51.306079+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/articles/ck0j0l65nzlvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-03T16:34:18.260971+00:00"
@@ -302,6 +290,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/09/cerebral-josh-king-plots-unusual-route-into-tuchels-england-plans",
       "seen_at": "2026-11-10T03:02:10.958785+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/10/rui-pinto-lawyers-talks-uk-authorities-cooperation-deal-whistleblower",
+      "seen_at": "2026-11-10T10:59:28.163591+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/10/felix-nmecha-denies-goal-celebrations-promote-intolerance-discrimination-and-hate",
+      "seen_at": "2026-11-10T10:59:55.717957+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/10/manchester-united-jason-wilcox-omar-berrada-jim-ratcliffe-michael-carrick-should-be-sacked",
+      "seen_at": "2026-11-10T10:59:57.941287+00:00"
     }
   ],
   "published": {
