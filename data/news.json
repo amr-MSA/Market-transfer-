@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-09T20:53:50.957746+00:00",
+  "updated_at": "2026-11-10T03:02:10.958785+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmly05n114gjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T01:51:15.616817+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqj346rvg3pzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T01:51:17.202486+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm70pgrd22x4o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T01:51:18.984657+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ck62yvz046pjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-03T08:40:46.497091+00:00"
@@ -302,6 +290,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6wyrynd848jo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-09T20:53:50.957746+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/09/tom-brady-birmingham-city-investor-sale-exit",
+      "seen_at": "2026-11-10T03:01:58.379267+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmy0r041ed0po?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-10T03:02:04.685059+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/09/cerebral-josh-king-plots-unusual-route-into-tuchels-england-plans",
+      "seen_at": "2026-11-10T03:02:10.958785+00:00"
     }
   ],
   "published": {
