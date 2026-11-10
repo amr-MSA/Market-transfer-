@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-10T10:59:57.941287+00:00",
+  "updated_at": "2026-11-10T18:33:39.609499+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/articles/ck0j0l65nzlvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T16:34:18.260971+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3vgx8qxge7zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T16:34:29.824873+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cxj0l3pd9jy7o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T16:34:31.970712+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/03/barcelona-v-aston-villa-champions-league-live",
       "seen_at": "2026-11-03T21:56:59.387781+00:00"
@@ -302,6 +290,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/10/manchester-united-jason-wilcox-omar-berrada-jim-ratcliffe-michael-carrick-should-be-sacked",
       "seen_at": "2026-11-10T10:59:57.941287+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/10/inter-v-manchester-city-womens-champions-league-live",
+      "seen_at": "2026-11-10T18:33:22.098802+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8wy9yzyzxnko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-10T18:33:32.992564+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/10/mauricio-pochettino-interested-manchester-united-usmnt-release-clause",
+      "seen_at": "2026-11-10T18:33:39.609499+00:00"
     }
   ],
   "published": {
@@ -841,6 +841,27 @@
       },
       "published_at": "2026-11-03T16:34:51.836143+00:00",
       "updated_at": "2026-11-03T16:34:51.836143+00:00",
+      "media": null
+    },
+    "2ca92bf4fa480d0136def642": {
+      "type": "مباراة",
+      "from": "Inter",
+      "to": null,
+      "player": null,
+      "person": null,
+      "entity_type": "match",
+      "article_id": "https://www.theguardian.com/football/live/2026/nov/10/inter-v-manchester-city-womens-champions-league-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "2ca92bf4fa480d0136def642",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-11-10T18:33:25.846399+00:00",
+      "updated_at": "2026-11-10T18:33:25.846399+00:00",
       "media": null
     }
   }
