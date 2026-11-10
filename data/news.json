@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-10T18:33:39.609499+00:00",
+  "updated_at": "2026-11-10T23:40:55.872474+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/03/barcelona-v-aston-villa-champions-league-live",
-      "seen_at": "2026-11-03T21:56:59.387781+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/03/manchester-united-v-roma-champions-league-live",
-      "seen_at": "2026-11-03T21:57:01.760543+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c3vgx8qkqx4jo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-03T21:57:04.149186+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqkg5dgvygr1o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-04T01:54:55.368068+00:00"
@@ -302,6 +290,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/10/mauricio-pochettino-interested-manchester-united-usmnt-release-clause",
       "seen_at": "2026-11-10T18:33:39.609499+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq8jzjz9x23jo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-10T23:40:41.873143+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cwzd6d9zrlz7o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-10T23:40:55.872474+00:00"
     }
   ],
   "published": {
