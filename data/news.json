@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-11T03:02:09.455172+00:00",
+  "updated_at": "2026-11-11T10:41:55.148061+00:00",
   "events": [],
   "articles": [
     {
@@ -294,6 +294,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/10/inter-manchester-city-womens-champions-league-match-report",
       "seen_at": "2026-11-11T03:02:09.455172+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cqvg25pj36mvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-11T10:41:44.657083+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6n8d8kl125vo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-11T10:41:51.571401+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/11/mauricio-pochettino-manchester-united-usmnt",
+      "seen_at": "2026-11-11T10:41:55.148061+00:00"
     }
   ],
   "published": {
