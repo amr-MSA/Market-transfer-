@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-11T10:41:55.148061+00:00",
+  "updated_at": "2026-11-11T18:03:58.306102+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/04/goalkeeper-jesus-owono-jesus-de-miguel-death-tenerife-deeply-affected-andorra",
-      "seen_at": "2026-11-04T16:29:10.889456+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/04/fenerbahce-v-liverpool-champions-league-live",
-      "seen_at": "2026-11-04T16:29:18.562635+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/04/champions-league-slavia-prague-v-arsenal-rb-leipzig-v-manchester-city-and-more-live",
       "seen_at": "2026-11-04T22:05:06.821852+00:00"
@@ -306,6 +298,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/11/mauricio-pochettino-manchester-united-usmnt",
       "seen_at": "2026-11-11T10:41:55.148061+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm1ewpjyy3dzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-11T18:03:54.184474+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwg7l9nd0p1zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-11T18:03:56.223549+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c60qkdj4lp34o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-11T18:03:58.306102+00:00"
     }
   ],
   "published": {
