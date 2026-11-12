@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-12T00:31:32.896612+00:00",
+  "updated_at": "2026-11-12T07:39:56.085862+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cmy0rz7741ywo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-05T02:19:01.609893+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/04/champions-league-roundup-aek-athens-real-madrid-borussia-dortmund-napoli",
-      "seen_at": "2026-11-05T02:19:04.731359+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/nov/05/ballon-dor-winner-harry-kane-signs-new-contract-with-bayern-munich-2029",
       "seen_at": "2026-11-05T09:38:29.578152+00:00"
@@ -302,6 +294,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c60qkdj4lp34o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-11T18:03:58.306102+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm1j3j20r2rzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-12T07:39:56.085862+00:00"
     }
   ],
   "published": {
