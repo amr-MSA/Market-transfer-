@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-13T17:37:05.703945+00:00",
+  "updated_at": "2026-11-13T22:51:53.864647+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/06/everton-v-coventry-city-premier-league-live-updates",
-      "seen_at": "2026-11-06T22:15:24.653840+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c98rzz0rjjvdo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T22:15:26.272632+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/06/charlton-risk-being-chewed-up-wsl-karen-hills",
-      "seen_at": "2026-11-06T22:15:28.162679+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm4g114p9e7go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T01:58:44.135173+00:00"
@@ -262,6 +250,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/13/jude-bellingham-branding-it-like-beckham",
       "seen_at": "2026-11-13T17:37:05.703945+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm98xy2j8k1ko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-13T22:50:09.673525+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/13/scotland-north-macedonia-nations-league-match-report",
+      "seen_at": "2026-11-13T22:51:14.161879+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq39glw42xkjo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-13T22:51:53.864647+00:00"
     }
   ],
   "published": {
@@ -843,6 +843,27 @@
       },
       "published_at": "2026-11-13T09:59:35.641909+00:00",
       "updated_at": "2026-11-13T09:59:35.641909+00:00",
+      "media": null
+    },
+    "bf510cd2d856835dfe805bc6": {
+      "type": "انضباط",
+      "from": "Spanish football federation",
+      "to": null,
+      "player": "Jesus Owono",
+      "person": "Jesus Owono",
+      "entity_type": "player",
+      "article_id": "https://www.bbc.co.uk/sport/football/articles/cm98xy2j8k1ko?at_medium=RSS&at_campaign=rss",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "bf510cd2d856835dfe805bc6",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-11-13T22:50:22.571956+00:00",
+      "updated_at": "2026-11-13T22:50:22.571956+00:00",
       "media": null
     }
   }
