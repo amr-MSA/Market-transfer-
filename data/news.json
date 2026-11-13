@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-13T02:39:53.026679+00:00",
+  "updated_at": "2026-11-13T09:59:37.171933+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwd099ez7z4yo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T02:53:47.409754+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-10-things-to-look-out-for-this-weekend",
-      "seen_at": "2026-11-06T02:53:53.488299+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/06/england-squad-announced-sunderland-face-jeers-and-fa-cup-first-round-football-news-live",
       "seen_at": "2026-11-06T10:08:41.436885+00:00"
@@ -270,6 +262,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/12/pierre-sage-sacked-crystal-palace-manager-thomas-frank",
       "seen_at": "2026-11-12T16:14:07.955668+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm782d4pz9jyo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-13T09:59:00.779238+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/13/mauricio-pochettino-manchester-united-head-coach-football-live",
+      "seen_at": "2026-11-13T09:59:02.016915+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm2kljzkw77ko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-13T09:59:37.171933+00:00"
     }
   ],
   "published": {
@@ -830,6 +834,27 @@
       },
       "published_at": "2026-11-10T18:33:25.846399+00:00",
       "updated_at": "2026-11-10T18:33:25.846399+00:00",
+      "media": null
+    },
+    "b19fdc925e290b8d92861c2a": {
+      "type": "تعيين مدرب",
+      "from": "Manchester United",
+      "to": null,
+      "player": null,
+      "person": "Mauricio Pochettino",
+      "entity_type": "manager",
+      "article_id": "https://www.theguardian.com/football/live/2026/nov/13/mauricio-pochettino-manchester-united-head-coach-football-live",
+      "target_channel_ids": [
+        "-1003938445195",
+        "@limitless_dv"
+      ],
+      "event_id": "b19fdc925e290b8d92861c2a",
+      "delivery": {
+        "-1003938445195": "SENT",
+        "@limitless_dv": "SENT"
+      },
+      "published_at": "2026-11-13T09:59:35.641909+00:00",
+      "updated_at": "2026-11-13T09:59:35.641909+00:00",
       "media": null
     }
   }
