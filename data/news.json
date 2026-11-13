@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-13T09:59:37.171933+00:00",
+  "updated_at": "2026-11-13T17:37:05.703945+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/06/england-squad-announced-sunderland-face-jeers-and-fa-cup-first-round-football-news-live",
-      "seen_at": "2026-11-06T10:08:41.436885+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c38xzkkgg7rpo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T10:08:42.745446+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr20w943gvl5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T10:09:03.892721+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crq5nnqn84zyo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T17:27:44.403839+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-team-news-predicted-lineups-for-the-weekend-action",
-      "seen_at": "2026-11-06T17:27:50.675934+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c9e8ll62rp68o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-06T17:27:52.540766+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/06/everton-v-coventry-city-premier-league-live-updates",
       "seen_at": "2026-11-06T22:15:24.653840+00:00"
@@ -274,6 +250,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm2kljzkw77ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-13T09:59:37.171933+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/sport/2026/nov/13/rugby-league-world-cup-finals-atp-and-wta-tennis-plus-wsl-follow-with-us",
+      "seen_at": "2026-11-13T17:36:00.096678+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ck1l05drreqqo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-13T17:36:16.529695+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/13/jude-bellingham-branding-it-like-beckham",
+      "seen_at": "2026-11-13T17:37:05.703945+00:00"
     }
   ],
   "published": {
