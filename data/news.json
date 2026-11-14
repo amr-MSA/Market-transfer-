@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-13T22:51:53.864647+00:00",
+  "updated_at": "2026-11-14T02:45:41.694263+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g114p9e7go?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T01:58:44.135173+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cr15jj0yy8xeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T01:58:50.211841+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/06/premier-league-news-manchester-united-baleba-manchester-city-donnarumma-arsenal-arteta-rice",
-      "seen_at": "2026-11-07T01:58:56.382782+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-and-manchester-city-in-action-fa-cup-first-round-news-and-more-matchday-live",
       "seen_at": "2026-11-07T08:31:54.269649+00:00"
@@ -262,6 +250,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cq39glw42xkjo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-13T22:51:53.864647+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c95y10z6rpj8o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T02:45:00.483635+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c85y13pv69xwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T02:45:19.164673+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/13/jesus-owono-given-12-match-ban-for-tackle-that-resulted-in-jesus-de-miguels-death",
+      "seen_at": "2026-11-14T02:45:41.694263+00:00"
     }
   ],
   "published": {
