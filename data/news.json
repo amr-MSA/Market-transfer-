@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-14T09:29:14.929825+00:00",
+  "updated_at": "2026-11-14T15:59:16.760783+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-v-hull-city-fulham-v-newcastle-united-fa-cup-and-more-football-live",
-      "seen_at": "2026-11-07T15:03:33.215367+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/07/leeds-united-v-tottenham-hotspur-premier-league-live",
-      "seen_at": "2026-11-07T15:03:37.129293+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq70p2w3j00jo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T15:03:39.769750+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/videos/c8vgx29yyrw0o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T19:21:53.766566+00:00"
@@ -262,6 +250,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cw77p0v78exlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-14T09:29:14.929825+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cm702wwpj9keo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T15:58:48.657548+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/14/chelsea-manchester-city-womens-super-league-match-report",
+      "seen_at": "2026-11-14T15:58:59.705649+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c98r7l5yrn6go?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T15:59:16.760783+00:00"
     }
   ],
   "published": {
