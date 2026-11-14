@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-14T15:59:16.760783+00:00",
+  "updated_at": "2026-11-14T20:31:08.108307+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/c8vgx29yyrw0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T19:21:53.766566+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/07/nottingham-forest-v-manchester-city-premier-league-live",
-      "seen_at": "2026-11-07T19:21:55.785596+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cqlyek7wpnl0o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T19:22:03.201660+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/ckj0l542v7pvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-07T22:50:18.132099+00:00"
@@ -262,6 +250,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c98r7l5yrn6go?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-14T15:59:16.760783+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/14/luis-de-la-fuente-spain-england-racism-thomas-tuchel-natiions-league",
+      "seen_at": "2026-11-14T20:30:59.186980+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cq2d9l3e313zo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T20:31:05.264563+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/14/here-manchester-united-go-again-taking-the-two-ronnies-route-to-hiring-a-new-boss",
+      "seen_at": "2026-11-14T20:31:08.108307+00:00"
     }
   ],
   "published": {
