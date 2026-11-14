@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-14T02:45:41.694263+00:00",
+  "updated_at": "2026-11-14T09:29:14.929825+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-and-manchester-city-in-action-fa-cup-first-round-news-and-more-matchday-live",
-      "seen_at": "2026-11-07T08:31:54.269649+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/07/gianni-infantino-fifa-donald-trump-democrats-republicans",
-      "seen_at": "2026-11-07T08:32:01.910049+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/videos/cq62yyveznrro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-07T08:32:06.451575+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/07/arsenal-v-hull-city-fulham-v-newcastle-united-fa-cup-and-more-football-live",
       "seen_at": "2026-11-07T15:03:33.215367+00:00"
@@ -262,6 +250,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/13/jesus-owono-given-12-match-ban-for-tackle-that-resulted-in-jesus-de-miguels-death",
       "seen_at": "2026-11-14T02:45:41.694263+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c60mdzn2dk1eo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T09:29:12.370137+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/14/pochettino-to-manchester-united-latest-wsl-and-nations-league-buildup-matchday-live",
+      "seen_at": "2026-11-14T09:29:13.689414+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cw77p0v78exlo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-14T09:29:14.929825+00:00"
     }
   ],
   "published": {
