@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-15T14:08:15.650284+00:00",
+  "updated_at": "2026-11-15T19:45:08.974213+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/08/man-utd-v-aston-villa-premier-league-live",
-      "seen_at": "2026-11-08T15:28:39.140973+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/08/crystal-palace-v-liverpool-brighton-v-brentford-and-more-premier-league-live",
-      "seen_at": "2026-11-08T15:28:41.706237+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/08/liverpool-arsenal-wsl-match-report",
-      "seen_at": "2026-11-08T15:28:44.249524+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c91463n3mlzlo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-08T19:52:51.315235+00:00"
@@ -254,6 +242,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/15/record-breaking-andy-robertson-is-scotlands-finest-captain",
       "seen_at": "2026-11-15T14:08:15.650284+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/ckregz4g823xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-15T19:45:04.981127+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/15/spain-v-england-nations-league-live",
+      "seen_at": "2026-11-15T19:45:06.862605+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/15/arsenal-london-city-lionesses-womens-super-league-wsl-match-report",
+      "seen_at": "2026-11-15T19:45:08.974213+00:00"
     }
   ],
   "published": {
