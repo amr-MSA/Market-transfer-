@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-15T23:33:39.397804+00:00",
+  "updated_at": "2026-11-16T02:59:50.620012+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cked3qjw1q4xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-09T02:42:52.953168+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqy0r0lw4l5ro?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-09T10:22:40.598609+00:00"
@@ -242,6 +238,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/15/spain-england-nations-league-match-report",
       "seen_at": "2026-11-15T23:33:39.397804+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6742l4z91lwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T02:59:47.419381+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c933ge310n33o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T02:59:48.885738+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/15/england-superb-heroic-spain-nations-league",
+      "seen_at": "2026-11-16T02:59:50.620012+00:00"
     }
   ],
   "published": {
