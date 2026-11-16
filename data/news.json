@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-16T02:59:50.620012+00:00",
+  "updated_at": "2026-11-16T10:56:06.419538+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqy0r0lw4l5ro?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-09T10:22:40.598609+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/09/premier-league-10-talking-points-weekend-action",
-      "seen_at": "2026-11-09T10:22:41.950640+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq98z8401zz8o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-09T10:22:50.740694+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_five_live?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-09T20:52:56.243321+00:00"
@@ -250,6 +238,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/15/england-superb-heroic-spain-nations-league",
       "seen_at": "2026-11-16T02:59:50.620012+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/crz65j3xyn9xo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T10:55:28.362424+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6wy4y3pgpx9o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T10:55:42.316796+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6jre22p3941o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T10:56:06.419538+00:00"
     }
   ],
   "published": {
