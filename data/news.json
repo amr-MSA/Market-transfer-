@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-16T10:56:06.419538+00:00",
+  "updated_at": "2026-11-16T20:47:15.290046+00:00",
   "events": [],
   "articles": [
     {
@@ -250,6 +250,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c6jre22p3941o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-16T10:56:06.419538+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/16/switzerland-v-scotland-germany-v-netherlands-and-more-nations-league-live",
+      "seen_at": "2026-11-16T20:46:57.042090+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/16/thomas-tuchel-england-must-learn-lessons-history-seville-gareth-southgate",
+      "seen_at": "2026-11-16T20:47:12.916459+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cjp3v5r9enp1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-16T20:47:15.290046+00:00"
     }
   ],
   "published": {
