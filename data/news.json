@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-18T02:31:23.212846+00:00",
+  "updated_at": "2026-11-18T10:40:20.948780+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/10/inter-manchester-city-womens-champions-league-match-report",
-      "seen_at": "2026-11-11T03:02:09.455172+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqvg25pj36mvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-11T10:41:44.657083+00:00"
@@ -218,6 +214,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/16/mauricio-pochettino-pep-guardiola-usmnt-manchester-united",
       "seen_at": "2026-11-17T03:14:22.708907+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c8p3vwe1rrzqo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-18T10:38:48.692656+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/18/fifa-hydration-breaks-2030-world-cup-tv-right-documents",
+      "seen_at": "2026-11-18T10:40:20.948780+00:00"
     }
   ],
   "published": {
