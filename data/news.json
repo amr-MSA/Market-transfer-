@@ -1,32 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-18T10:40:20.948780+00:00",
+  "updated_at": "2026-11-18T19:01:45.958859+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cqvg25pj36mvo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-11T10:41:44.657083+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6n8d8kl125vo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-11T10:41:51.571401+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/11/mauricio-pochettino-manchester-united-usmnt",
-      "seen_at": "2026-11-11T10:41:55.148061+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm1ewpjyy3dzo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-11T18:03:54.184474+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwg7l9nd0p1zo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-11T18:03:56.223549+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c60qkdj4lp34o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-11T18:03:58.306102+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm1j3j20r2rzo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-12T07:39:56.085862+00:00"
@@ -222,6 +198,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/18/fifa-hydration-breaks-2030-world-cup-tv-right-documents",
       "seen_at": "2026-11-18T10:40:20.948780+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/18/chelsea-v-paris-saint-germain-psg-womens-champions-league-live-score-updates",
+      "seen_at": "2026-11-18T19:01:41.331861+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/18/pochettino-usmnt-manchester-united",
+      "seen_at": "2026-11-18T19:01:44.393131+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj3vgp36z063o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-18T19:01:45.958859+00:00"
     }
   ],
   "published": {
