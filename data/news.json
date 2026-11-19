@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-18T19:01:45.958859+00:00",
+  "updated_at": "2026-11-19T01:04:57.959906+00:00",
   "events": [],
   "articles": [
     {
@@ -210,6 +210,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cj3vgp36z063o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-18T19:01:45.958859+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cxnv4q2qnvjvo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-19T01:04:44.225564+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/18/manchester-united-infamous-1974-relegation-is-a-warning-from-history",
+      "seen_at": "2026-11-19T01:04:54.729278+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/18/chelsea-paris-saint-germain-womens-champions-league-match-report",
+      "seen_at": "2026-11-19T01:04:57.959906+00:00"
     }
   ],
   "published": {
