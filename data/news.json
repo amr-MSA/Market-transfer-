@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-19T17:39:12.328353+00:00",
+  "updated_at": "2026-11-19T23:49:20.412359+00:00",
   "events": [],
   "articles": [
     {
@@ -214,6 +214,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1rzjj4v2o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-19T17:39:12.328353+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/19/england-one-match-suspended-away-tickets-ban-anti-pope-chants-spain-uefa",
+      "seen_at": "2026-11-19T23:48:58.803915+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/19/arsenal-ol-lyonnes-womens-champions-league-match-report",
+      "seen_at": "2026-11-19T23:49:04.243602+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cj5y14g2wppko?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-19T23:49:20.412359+00:00"
     }
   ],
   "published": {
