@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-20T13:21:51.276881+00:00",
+  "updated_at": "2026-11-20T21:19:37.851426+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/sport/2026/nov/13/rugby-league-world-cup-finals-atp-and-wta-tennis-plus-wsl-follow-with-us",
-      "seen_at": "2026-11-13T17:36:00.096678+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ck1l05drreqqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-13T17:36:16.529695+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/13/jude-bellingham-branding-it-like-beckham",
-      "seen_at": "2026-11-13T17:37:05.703945+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cm98xy2j8k1ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-13T22:50:09.673525+00:00"
@@ -234,6 +222,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/20/liverpool-fan-not-guilty-racial-abuse-antoine-semenyo-withdraws-from-case-bournemouth-liverpool",
       "seen_at": "2026-11-20T13:21:51.276881+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c60qj1924wyeo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-20T21:19:28.619032+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/20/washington-spirit-provide-hope-and-joy-in-a-city-that-badly-needs-it",
+      "seen_at": "2026-11-20T21:19:33.086379+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/20/dele-alli-tottenham-mk-dons-england",
+      "seen_at": "2026-11-20T21:19:37.851426+00:00"
     }
   ],
   "published": {
