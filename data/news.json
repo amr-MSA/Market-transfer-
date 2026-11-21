@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-20T21:19:37.851426+00:00",
+  "updated_at": "2026-11-21T02:32:05.236099+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm98xy2j8k1ko?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-13T22:50:09.673525+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/13/scotland-north-macedonia-nations-league-match-report",
-      "seen_at": "2026-11-13T22:51:14.161879+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cq39glw42xkjo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-13T22:51:53.864647+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c95y10z6rpj8o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-14T02:45:00.483635+00:00"
@@ -234,6 +222,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/20/dele-alli-tottenham-mk-dons-england",
       "seen_at": "2026-11-20T21:19:37.851426+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwd01n9z23x5o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-21T02:31:27.356641+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/articles/c3zxvnz5x7g1o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-21T02:31:53.407901+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/20/harry-kane-ankle-ligament-injury-bayern-munich-england",
+      "seen_at": "2026-11-21T02:32:05.236099+00:00"
     }
   ],
   "published": {
