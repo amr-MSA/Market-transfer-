@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-22T17:33:45.841138+00:00",
+  "updated_at": "2026-11-22T22:44:55.652622+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/ckregz4g823xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-15T19:45:04.981127+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/15/spain-v-england-nations-league-live",
-      "seen_at": "2026-11-15T19:45:06.862605+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/15/arsenal-london-city-lionesses-womens-super-league-wsl-match-report",
-      "seen_at": "2026-11-15T19:45:08.974213+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sounds/play/p0pn5rdk?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-15T23:32:54.062472+00:00"
@@ -222,6 +210,18 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/22/european-football-barcelona-villarreal-juventus-milan-inter",
       "seen_at": "2026-11-22T17:33:45.841138+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cx30g83716lzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-22T22:44:52.911631+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm782j80yypwo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-22T22:44:54.264000+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cwd012903kvgo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-22T22:44:55.652622+00:00"
     }
   ],
   "published": {
