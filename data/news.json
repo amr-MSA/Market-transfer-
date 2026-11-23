@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-23T03:11:53.419371+00:00",
+  "updated_at": "2026-11-23T12:35:19.792103+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/crz65j3xyn9xo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-16T10:55:28.362424+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6wy4y3pgpx9o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-16T10:55:42.316796+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c6jre22p3941o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-16T10:56:06.419538+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/16/switzerland-v-scotland-germany-v-netherlands-and-more-nations-league-live",
       "seen_at": "2026-11-16T20:46:57.042090+00:00"
