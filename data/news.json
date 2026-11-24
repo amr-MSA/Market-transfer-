@@ -1,6 +1,6 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-24T10:05:06.081480+00:00",
+  "updated_at": "2026-11-24T20:38:33.727160+00:00",
   "events": [],
   "articles": [
     {
@@ -178,6 +178,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cmqx5eynvpqno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-24T00:19:55.518322+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/24/arsenal-v-borussia-dortmund-champions-league-live",
+      "seen_at": "2026-11-24T20:37:25.387067+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/24/manchester-city-v-napoli-real-madrid-v-psv-champions-league-clockwatch-live",
+      "seen_at": "2026-11-24T20:38:12.910465+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/24/galatasaray-aston-villa-champions-league-match-report",
+      "seen_at": "2026-11-24T20:38:33.727160+00:00"
     }
   ],
   "published": {
