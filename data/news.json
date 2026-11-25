@@ -1,16 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-25T03:44:01.275746+00:00",
+  "updated_at": "2026-11-25T13:32:29.261221+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c8p3vwe1rrzqo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-18T10:38:48.692656+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/18/fifa-hydration-breaks-2030-world-cup-tv-right-documents",
-      "seen_at": "2026-11-18T10:40:20.948780+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/18/chelsea-v-paris-saint-germain-psg-womens-champions-league-live-score-updates",
       "seen_at": "2026-11-18T19:01:41.331861+00:00"
@@ -202,6 +194,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cj3vgdp2edpxo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-25T03:44:01.275746+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/news/articles/cv8e04ll9dd3o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-25T13:32:26.065566+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/25/jude-bellingham-downplays-comparisons-to-zidane-after-wondergoal",
+      "seen_at": "2026-11-25T13:32:27.797972+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cxzd9ydqzylno?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-25T13:32:29.261221+00:00"
     }
   ],
   "published": {
