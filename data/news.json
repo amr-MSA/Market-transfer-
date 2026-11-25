@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-25T13:32:29.261221+00:00",
+  "updated_at": "2026-11-25T22:44:30.685591+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/18/chelsea-v-paris-saint-germain-psg-womens-champions-league-live-score-updates",
-      "seen_at": "2026-11-18T19:01:41.331861+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/18/pochettino-usmnt-manchester-united",
-      "seen_at": "2026-11-18T19:01:44.393131+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cj3vgp36z063o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-18T19:01:45.958859+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxnv4q2qnvjvo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-19T01:04:44.225564+00:00"
@@ -206,6 +194,10 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cxzd9ydqzylno?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-25T13:32:29.261221+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cq36gx1g10p6o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-25T22:44:30.685591+00:00"
     }
   ],
   "published": {
