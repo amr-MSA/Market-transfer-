@@ -1,12 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-26T14:08:13.003054+00:00",
+  "updated_at": "2026-11-26T22:58:40.098187+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cm4g1rzjj4v2o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-19T17:39:12.328353+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/2026/nov/19/england-one-match-suspended-away-tickets-ban-anti-pope-chants-spain-uefa",
       "seen_at": "2026-11-19T23:48:58.803915+00:00"
@@ -190,6 +186,14 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cvrlg074ld74o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-26T04:25:31.513396+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cmq5v84vw818o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-26T22:58:18.375692+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/26/sunderland-jagiellonia-bialystok-europa-league-match-report",
+      "seen_at": "2026-11-26T22:58:40.098187+00:00"
     }
   ],
   "published": {
