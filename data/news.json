@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-27T04:50:24.894470+00:00",
+  "updated_at": "2026-11-27T14:27:34.656028+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwm25yx3kj5lo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-20T13:20:56.490002+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/live/2026/nov/20/weekend-football-countdown-live-news-updates",
-      "seen_at": "2026-11-20T13:20:58.368341+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/20/liverpool-fan-not-guilty-racial-abuse-antoine-semenyo-withdraws-from-case-bournemouth-liverpool",
-      "seen_at": "2026-11-20T13:21:51.276881+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/c60qj1924wyeo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-20T21:19:28.619032+00:00"
@@ -178,6 +166,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cqr7g49ej14ko?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-27T04:50:24.894470+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/c6d91j5geepqo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-27T14:27:16.396696+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/live/2026/nov/27/premier-league-news-levski-fans-marseille-violence-football",
+      "seen_at": "2026-11-27T14:27:26.499866+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cw7726543kyzo?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-27T14:27:34.656028+00:00"
     }
   ],
   "published": {
