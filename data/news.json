@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-27T14:27:34.656028+00:00",
+  "updated_at": "2026-11-27T22:51:54.763089+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/c60qj1924wyeo?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-20T21:19:28.619032+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/20/washington-spirit-provide-hope-and-joy-in-a-city-that-badly-needs-it",
-      "seen_at": "2026-11-20T21:19:33.086379+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/20/dele-alli-tottenham-mk-dons-england",
-      "seen_at": "2026-11-20T21:19:37.851426+00:00"
-    },
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cwd01n9z23x5o?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-21T02:31:27.356641+00:00"
@@ -178,6 +166,18 @@
     {
       "id": "https://www.bbc.co.uk/sport/football/articles/cw7726543kyzo?at_medium=RSS&at_campaign=rss",
       "seen_at": "2026-11-27T14:27:34.656028+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/27/arteta-sets-arsenal-100-point-premier-league-target-to-emulate-manchester-city",
+      "seen_at": "2026-11-27T22:51:31.533010+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/27/roberto-de-zerbi-tottenham-sunderland",
+      "seen_at": "2026-11-27T22:51:51.293658+00:00"
+    },
+    {
+      "id": "https://www.theguardian.com/football/2026/nov/27/southampton-middlesbrough-championship-match-report-spygate-finn-azaz",
+      "seen_at": "2026-11-27T22:51:54.763089+00:00"
     }
   ],
   "published": {
