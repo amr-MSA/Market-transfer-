@@ -1,20 +1,8 @@
 {
   "week_start": null,
-  "updated_at": "2026-11-27T22:51:54.763089+00:00",
+  "updated_at": "2026-11-28T04:22:30.172983+00:00",
   "events": [],
   "articles": [
-    {
-      "id": "https://www.bbc.co.uk/sport/football/articles/cwd01n9z23x5o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-21T02:31:27.356641+00:00"
-    },
-    {
-      "id": "https://www.bbc.co.uk/sport/articles/c3zxvnz5x7g1o?at_medium=RSS&at_campaign=rss",
-      "seen_at": "2026-11-21T02:31:53.407901+00:00"
-    },
-    {
-      "id": "https://www.theguardian.com/football/2026/nov/20/harry-kane-ankle-ligament-injury-bayern-munich-england",
-      "seen_at": "2026-11-21T02:32:05.236099+00:00"
-    },
     {
       "id": "https://www.theguardian.com/football/live/2026/nov/21/premier-league-resumes-kane-facing-spell-on-sidelines-football-news-matchday-live",
       "seen_at": "2026-11-21T10:07:37.605330+00:00"
@@ -178,6 +166,14 @@
     {
       "id": "https://www.theguardian.com/football/2026/nov/27/southampton-middlesbrough-championship-match-report-spygate-finn-azaz",
       "seen_at": "2026-11-27T22:51:54.763089+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/articles/cm1dvn9w1px4o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-28T04:21:30.537656+00:00"
+    },
+    {
+      "id": "https://www.bbc.co.uk/sport/football/videos/cm5y10n8e737o?at_medium=RSS&at_campaign=rss",
+      "seen_at": "2026-11-28T04:22:30.172983+00:00"
     }
   ],
   "published": {
